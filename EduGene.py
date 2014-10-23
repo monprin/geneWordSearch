@@ -88,6 +88,5 @@ def geneWords(gene,filepath='/home/monprin/Drive/CompBio/geneWordCloud/geneMatri
 		i += 1
 	
 	wordFreq.sort(reverse=True)
-	return wordFreq;
-	print('hello')
+	return wordFreq
 	
