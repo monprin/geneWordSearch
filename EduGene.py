@@ -56,7 +56,7 @@ def geneWordSearch(gene,filepath):
 	
 	return [words,links];
 	
-def geneWords(gene,filepath='/home/monprin/Drive/CompBio/geneMatrix.txt'):
+def geneWords(gene,filepath='/home/monprin/Drive/CompBio/geneWordCloud/geneMatrix.txt'):
 	
 	try:
 		x = geneWordSearch(gene,filepath)
@@ -89,5 +89,5 @@ def geneWords(gene,filepath='/home/monprin/Drive/CompBio/geneMatrix.txt'):
 	
 	wordFreq.sort(reverse=True)
 	return wordFreq;
-	
+	print('hello')
 	
