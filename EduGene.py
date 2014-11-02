@@ -2,12 +2,12 @@
 # Joe Jeffers
 # Updated 10/21/2014
 
-def geneDBMaker(name):	
+def geneDBMaker():	
 	# Takes in tab separated text file containing genetic relation data 
 	# outputs this data in the form of a Python list of Python lists
 	import fileinput
 	
-	x = open(name)
+	x = open('geneMatrix.txt')
 	db = []
 
 	for line in x.readlines():
@@ -21,13 +21,10 @@ def geneDBMaker(name):
 		
 	return db
 
-def geneWordSearch(gene,filepath):
-	# Input: Takes in a gene identifier and filepath for construction of database
+def geneWordSearch(gene,db):
+	# Input: Takes in a gene identifier and the built database from the above function.
 	# Output: A list of seperated words from the descriptions of the genes in the database file provided, also gets rid of web links.
 	import re
-	
-	# Calls function to build the database of gene data
-	db = geneDBMaker(filepath)
 	
 	i=1
 	while i<len(db):
@@ -52,27 +49,18 @@ def geneWordSearch(gene,filepath):
 	# Splitting the various strings into individual words per list item
 	for entry in listing:
 		words += re.split(' |-|_|,|\.',entry)	
-	words = list(filter(None,words))
-	
-	return [words,links];
-	
-def geneWords(gene,filepath='/home/monprin/Drive/CompBio/geneWordCloud/geneMatrix.txt'):
-	
-	try:
-		x = geneWordSearch(gene,filepath)
-	except ValueError:
-		raise ValueError('This gene is not in the supplied database')
-		return
-	
-	wordList = x[0]
-	links = x[1]
-	del x
+	wordList = list(filter(None,words))
+
+	# Building the infrastructure for counting the words
 	freq = []
 	word = []
 	wordFreq = []
+	
+	# Adding the web link counts to the list
 	freq.append(links)
 	word.append('Web Links')
 	
+	# Counting the words while emptying the word list
 	while not(wordList == []):
 		item = wordList.pop()
 		if(item in word):
@@ -81,6 +69,8 @@ def geneWords(gene,filepath='/home/monprin/Drive/CompBio/geneWordCloud/geneMatri
 		else:
 			word.append(item)
 			freq.append(1)
+	
+	# Putting the frequency list together with the word list
 	i = 0
 	while i < len(word):
 		x = [freq[i],word[i]]
@@ -89,4 +79,20 @@ def geneWords(gene,filepath='/home/monprin/Drive/CompBio/geneWordCloud/geneMatri
 	
 	wordFreq.sort(reverse=True)
 	return wordFreq
+	
+def genePrinter(*args):
+	# Wrapper for above functions to handle indefinite arguments and prints each out. 
+	# Thoughts on what kind of output would be best besides just printing into the terminal?
+	
+	db = geneDBMaker()
+	
+	for arg in args:
+		listicle = geneWordSearch(arg,db)
+		print(arg)
+		print(listicle)
+		
+	
+	
+	
+	
 	
