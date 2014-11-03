@@ -1,5 +1,6 @@
 To-Do List of features/capabilities:
 
+- Handle multiple inputs (Done, monprin, 10/31/14)
 - Use regular expressions to make gene queries case insensitive
 - Think of a (better) name
 - Make word splitting smarter
