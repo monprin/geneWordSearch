@@ -54,6 +54,7 @@ def geneWordSearch(gene,db):
 	# Building the infrastructure for counting the words
 	freq = []
 	word = []
+	pval = []
 	wordFreq = []
 	
 	# Adding the web link counts to the list
@@ -86,9 +87,14 @@ def genePrinter(*args):
 	
 	db = geneDBMaker()
 	
+	# Making all input lower case
+	genes = []
 	for arg in args:
-		listicle = geneWordSearch(arg,db)
-		print(arg)
+		genes.append(arg.lower())
+	
+	for gene in genes:
+		listicle = geneWordSearch(gene,db)
+		print(gene)
 		print(listicle)
 		
 	
