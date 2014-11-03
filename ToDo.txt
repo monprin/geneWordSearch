@@ -1,11 +1,11 @@
 To-Do List of features/capabilities:
 
 - Handle multiple inputs (Done, monprin, 10/31/14)
-- Use regular expressions to make gene queries case insensitive
+- Make input case insensitive (Done, monprin, 11/3/14)
 - Think of a (better) name
 - Make word splitting smarter
 - Figure out way to store and present web links
 - GSEA-style statistical significance term for word list weight
 - Combining like words
-- Standardizing Database (Done for now, made entire thing lowercase, will be made default database once item 2 is done, monprin, 11/3/14)
+- Standardizing Database (Done for now, made entire thing lowercase, is now the default,  monprin, 11/3/14)
 - GUI (look at optparse or flask)
