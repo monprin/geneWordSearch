@@ -1,0 +1,10 @@
+To-Do List of features/capabilities:
+
+- Use regular expressions to make gene queries case insensitive
+- Think of a (better) name
+- Make word splitting smarter
+- Figure out way to store and present web links
+- GSEA-style statistical significance term for word list weight
+- Combining like words
+- Standardizing Database
+- GUI (look at optparse or flask)
