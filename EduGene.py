@@ -23,7 +23,7 @@ def geneDBMaker():
 
 def geneWordSearch(gene,db):
 	# Input: Takes in a gene identifier and the built database from the above function.
-	# Output: A list of seperated words from the descriptions of the genes in the database file provided, also gets rid of web links.
+	# Output: The counts of words in the description ordered by frequency, also gets rid of web links.
 	import re
 	
 	i=1
