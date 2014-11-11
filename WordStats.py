@@ -25,14 +25,13 @@ def totalWordCounts():
 	for row in db:
 		listing = row[6:]
 		for entry in listing:
-			# Removing Web links, but keeping count
+		# Removing Web links, but keeping count
 			if(entry[:4] == 'http'):
 				links += 1
 				listing.remove(entry)
-			# Splitting the word up
+		# Splitting the words up by various delimiations
 		for entry in listing:	
 			words += re.split(' |_|,|\.|/',entry)
-			#print(re.split(' |_|,|\.|/',entry))
 				
 	wordList = list(filter(None,words))
 
@@ -80,5 +79,5 @@ def numOfWords():
 		sum += int(row[0])
 		
 	return sum
-# Answer: There are 1,613,928 words in the database	
+# Answer: There are 1,398,197 words in the database	as it is split and counted now.
 
