@@ -35,6 +35,8 @@ def wordCountDBMaker():
 	return db
 	
 def findPVal(word, DBRow, wordCountsDB):
+	# Unused at the moment, will be deleted or heavily modified,
+	# for reference only.
 	# Overall population size; computed using numOfWords in WordStats.py
 	N = 1398197
 	# Finding the count of word in question
@@ -60,6 +62,7 @@ def findPVal(word, DBRow, wordCountsDB):
 	
 	
 def biCo(x,y):
+	# Unused at the momment as well, fate is tied to above function
 	# Find the binomial coefficient of the given values
 	import math
 	return (math.factorial(x)/(math.factorial(y)*math.factorial(x-y)))
@@ -100,6 +103,10 @@ def geneWordSearch(gene,db):
 	pval = []
 	wordFreq = []
 	
+	# Adding the web link counts to the list
+	freq.append(links)
+	word.append('Web Links')
+	
 	# Counting the words while emptying the word list
 	row = wordList
 	while not(wordList == []):
@@ -112,23 +119,22 @@ def geneWordSearch(gene,db):
 			freq.append(1)
 	
 	# Finding the respective P values
-	#i = 0
-	#wordCounts = wordCountDBMaker()
-	#while i < len(word):
-	#	val = findPVal(word[i], row, wordCounts)
-	#	pval.append(val)
-	#	i += 1
-	#del wordCounts
-	
-	# Adding the web link counts to the list
-	freq.append(links)
-	word.append('Web Links')
-	#pval.append(0)
+	i = 0
+	wordCounts = wordCountDBMaker()
+	while i < len(word):
+		for line in wordCounts:
+			if(line[1] == word[i]):
+				tot = int(line[0])
+				break
+		val = freq[i]/tot
+		pval.append(val)
+		i += 1
+	del wordCounts
 	
 	# Putting the frequency list together with the word list
 	i = 0
 	while i < len(word):
-		x = [freq[i],word[i]]
+		x = [round(pval[i],5),word[i],freq[i]]
 		wordFreq.append(x)
 		i += 1
 	
