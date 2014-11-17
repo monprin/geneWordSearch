@@ -33,44 +33,12 @@ def wordCountDBMaker():
 		
 	x.close()	
 	return db
-	
-def findPVal(word, DBRow, wordCountsDB):
-	# Unused at the moment, will be deleted or heavily modified,
-	# for reference only.
-	# Overall population size; computed using numOfWords in WordStats.py
-	N = 1398197
-	# Finding the count of word in question
-	K = 0
-	for row in wordCountsDB:
-		if(word == row[1]):
-			K = row[0]
-			break
-	if(K==0):
-		raise ValueError('This is not a known word, please try again')
-	# Setting the size of the row it's found in
-	n = len(DBRow)
-	# Matches in the relevant row
-	count = 0
-	for x in DBRow:
-		if(word == x):
-			count += 1
-	k = count
-	
-	# Using the Hypergeometric function, we find a weight value
-	ans = (biCo(K,k)*biCo((N-K),(n-k)))/biCo(N,n)
-	return ans
-	
-	
-def biCo(x,y):
-	# Unused at the momment as well, fate is tied to above function
-	# Find the binomial coefficient of the given values
-	import math
-	return (math.factorial(x)/(math.factorial(y)*math.factorial(x-y)))
 
 def geneWordSearch(gene,db):
 	# Input: Takes in a gene identifier and the built database from the above function.
 	# Output: The counts of words in the description ordered by frequency, also gets rid of web links.
 	import re
+	from scipy.stats import hypergeom
 	
 	i=1
 	while i<len(db):
@@ -108,7 +76,7 @@ def geneWordSearch(gene,db):
 	word.append('Web Links')
 	
 	# Counting the words while emptying the word list
-	row = wordList
+	length = int(len(wordList))
 	while not(wordList == []):
 		item = wordList.pop()
 		if(item in word):
@@ -122,11 +90,12 @@ def geneWordSearch(gene,db):
 	i = 0
 	wordCounts = wordCountDBMaker()
 	while i < len(word):
+		tot = 0
 		for line in wordCounts:
 			if(line[1] == word[i]):
 				tot = int(line[0])
 				break
-		val = freq[i]/tot
+		val = hypergeom.sf(int(freq[i]),1398197,tot,length)
 		pval.append(val)
 		i += 1
 	del wordCounts
@@ -134,11 +103,11 @@ def geneWordSearch(gene,db):
 	# Putting the frequency list together with the word list
 	i = 0
 	while i < len(word):
-		x = [round(pval[i],5),word[i],freq[i]]
+		x = [pval[i],word[i],freq[i]]
 		wordFreq.append(x)
 		i += 1
 	
-	wordFreq.sort(reverse=True)
+	wordFreq.sort(reverse=False)
 	return wordFreq
 	
 def genePrinter(*args):
