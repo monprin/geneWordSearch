@@ -34,36 +34,40 @@ def wordCountDBMaker():
 	x.close()	
 	return db
 
-def geneWordSearch(gene,db):
+def geneWordSearch(*genes,minChance=0.2):
 	# Input: Takes in a gene identifier and the built database from the above function.
 	# Output: The counts of words in the description ordered by frequency, also gets rid of web links.
 	import re
 	from scipy.stats import hypergeom
 	
-	i=1
-	while i<len(db):
-		if db[i][0] == gene:
-			break
-		i += 1
+	db = geneDBMaker()
 	
-	# Check to see if the entry was actually found or just ran out of entries
-	if i >= len(db):
-		raise ValueError('This gene is not in the supplied database')
-		return
-		
-	listing = db[i]
+	wordList = []
 	links = 0
-	listing = listing[6:]
-	words = []
-	# Removing Web links, but keeping count
-	for entry in listing:
-		if(entry[:4] == 'http'):
-			links += 1
-			listing.remove(entry)	
-	# Splitting the various strings into individual words per list item
-	for entry in listing:
-		words += re.split(' |_|,|\.',entry)	
-	wordList = list(filter(None,words))
+	for item in genes:
+		gene = item.lower()
+		i=1
+		while i<len(db):
+			if db[i][0] == gene:
+				break
+			i += 1
+	
+		# Check to see if the entry was actually found or just ran out of entries
+		if i >= len(db):
+			raise ValueError('Gene: ' + gene + ' is not in the supplied database')
+			return
+		
+		listing = db[i][6:]
+		words = []
+		# Removing Web links, but keeping count
+		for entry in listing:
+			if(entry[:4] == 'http'):
+				links += 1
+				listing.remove(entry)	
+		# Splitting the various strings into individual words per list item
+		for entry in listing:
+			words += re.split(' |_|,|\.',entry)	
+		wordList += list(filter(None,words))
 
 	# Building the infrastructure for counting the words
 	freq = []
@@ -108,26 +112,6 @@ def geneWordSearch(gene,db):
 		i += 1
 	
 	wordFreq.sort(reverse=False)
-	return wordFreq
-	
-def genePrinter(*args):
-	# Wrapper for above functions to handle indefinite arguments and prints each out. 
-	# Thoughts on what kind of output would be best besides just printing into the terminal?
-	
-	db = geneDBMaker()
-	
-	# Making all input lower case
-	genes = []
-	for arg in args:
-		genes.append(arg.lower())
-	
-	for gene in genes:
-		listicle = geneWordSearch(gene,db)
-		print(gene)
-		print(listicle)
-		
-	
-	
-	
-	
-	
+	for item in wordFreq:
+		if(item[0] <= minChance):
+			print(item)
