@@ -12,6 +12,7 @@ class WordFreq:
 		self.genes = []
 		
 	def __str__(self):
+		# Standard string output function
 		ans = 'Word: ' + self.word + '\n'
 		ans += 'P-value: ' + str(self.p) + '\n'
 		ans += 'Overlap: ' + str(self.freq) + '/' + str(self.total) + '\n'
@@ -22,12 +23,16 @@ class WordFreq:
 		return ans
 		
 	def increment(self):
+		# Adds another tick to the word count
 		self.freq += 1
 		
 	def addGene(self,gene):
+		# Adds the gene to the list of represented genes
 		self.genes.append(gene)
 		
 	def computeP(self,db,length):
+		# Computes the p value using hypergeometric distribution
+		# Also finds and assigns the total word count from the database
 		from scipy.stats import hypergeom
 		for line in db:
 			if(line[1] == self.word):
@@ -57,6 +62,8 @@ def geneDBMaker():
 	return db
 	
 def wordCountDBMaker():
+	# Much like the above function, pulls in database file for total 
+	# word counts and returns a 2 by n array. 
 	x = open('totalWordCount.txt')
 	db = []
 	
@@ -137,10 +144,14 @@ def geneWordSearch(genes,minChance=0.2):
 	# Sorting now by frequency instead of alphabetical
 	wordList = sorted(wordList, key=lambda item: item.p)
 	
+	# Print the results that are above the chance threshold
 	for item in wordList:
 		if(item.p <= minChance):
 			print(item)
 
+# Command Line interface:
+# Arguments will be interpreted as genes
+# Output will be the same as normal
 if __name__ == '__main__':
 	import sys
 	geneWordSearch(sys.argv[1:])
