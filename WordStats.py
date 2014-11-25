@@ -4,6 +4,15 @@
 
 # Function produces total word count file. Run to update as 
 # needed, takes about 10 min to run on 2011 Core i5
+
+class WordFreq:
+	# Class for keeping the words and their frequencies together
+	def __init__(self, word, freq):
+		self.word = word
+		self.freq = freq
+	def increment(self):
+		self.freq += 1
+
 def totalWordCounts():
 	import re
 	x = open('geneMatrix.txt')
@@ -21,8 +30,10 @@ def totalWordCounts():
 	
 	links = 0
 	words = []
+	genelist = []
 	
 	for row in db:
+		gene = row[0]
 		listing = row[6:]
 		for entry in listing:
 		# Removing Web links, but keeping count
@@ -33,39 +44,29 @@ def totalWordCounts():
 		for entry in listing:	
 			words += re.split(' |_|,|\.|/',entry)
 				
-	wordList = list(filter(None,words))
-
-	# Building the infrastructure for counting the words
-	freq = []
-	word = []
-	pval = []
+	# Get rid of the blank entries
+	words = list(filter(None,words))
+	
+	# Sort to put all the same words together
+	words.sort()
+	
+	# Counting the consecutive words, no membership check makes this fairly fast
 	wordFreq = []
-	
-	# Adding the web link counts to the list
-	freq.append(links)
-	word.append('Web Links')
-	
-	# Counting the words while emptying the word list
-	while not(wordList == []):
-		item = wordList.pop()
-		if(item in word):
-			index = word.index(item)
-			freq[index] += 1
+	wordFreq.append(WordFreq('Web Links',links))
+	for item in words:
+		if(wordFreq[0].word != item):
+			wordFreq.insert(0, WordFreq(item,1))
 		else:
-			word.append(item)
-			freq.append(1)
+			wordFreq[0].increment()
+	del words
 	
-	# Putting the frequency list together with the word list
-	i = 0
-	while i < len(word):
-		x = [freq[i],word[i]]
-		wordFreq.append(x)
-		i += 1
+	# Sorting now by frequency instead of alphabetical
+	wordFreq = sorted(wordFreq, key=lambda item: item.freq, reverse=True)
 	
-	wordFreq.sort(reverse=True)
+	# Printing in the proper format to the file
 	f = open('totalWordCount.txt', 'w')
 	for line in wordFreq:
-		f.write(str(line[0]) + '	' + str(line[1])+'\n')
+			f.write(str(line.freq) + '	' + str(line.word) + '\n')
 	f.close()
 	return
 
