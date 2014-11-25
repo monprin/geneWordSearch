@@ -82,3 +82,5 @@ def numOfWords():
 	return sum
 # Answer: There are 1,398,197 words in the database	as it is split and counted now.
 
+if __name__ == '__main__':
+	totalWordCounts()
