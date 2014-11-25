@@ -1,6 +1,40 @@
-# v0.1 Gene Word Cloud Program
+# v0.2 Gene Word Cloud Program
 # Joe Jeffers
-# Updated 10/21/2014
+
+class WordFreq:
+	# Class for keeping the words and their frequencies together and 
+	# and some useful functions to outsource some work
+	def __init__(self, word, freq):
+		self.word = word
+		self.p = 0
+		self.freq = freq
+		self.total = 0
+		self.genes = []
+		
+	def __str__(self):
+		ans = 'Word: ' + self.word + '\n'
+		ans += 'P-value: ' + str(self.p) + '\n'
+		ans += 'Overlap: ' + str(self.freq) + '/' + str(self.total) + '\n'
+		ans += 'Genes Appeared In: '
+		for gene in self.genes:
+			ans += gene + ' '
+		ans += '\n'
+		return ans
+		
+	def increment(self):
+		self.freq += 1
+		
+	def addGene(self,gene):
+		self.genes.append(gene)
+		
+	def computeP(self,db,length):
+		from scipy.stats import hypergeom
+		for line in db:
+			if(line[1] == self.word):
+				self.total = int(line[0])
+				break
+		self.p = hypergeom.sf(self.freq,1398197,self.total,length)
+		
 
 def geneDBMaker():	
 	# Takes in tab separated text file containing genetic relation data 
@@ -19,6 +53,7 @@ def geneDBMaker():
 		# Adds list representing row as a new item to the database list
 		db.append(row)
 		
+	x.close()
 	return db
 	
 def wordCountDBMaker():
@@ -36,14 +71,16 @@ def wordCountDBMaker():
 
 def geneWordSearch(*genes,minChance=0.2):
 	# Input: Takes in a gene identifier and the built database from the above function.
-	# Output: The counts of words in the description ordered by frequency, also gets rid of web links.
+	# Output: Prints out all the genes that have a chance probability of less than the minChance variable. 
 	import re
-	from scipy.stats import hypergeom
+	
 	
 	db = geneDBMaker()
 	
-	wordList = []
+	words = []
 	links = 0
+	# Build the word list up for all of the genes provided.
+	links = WordFreq('Web Links',0)
 	for item in genes:
 		gene = item.lower()
 		i=1
@@ -58,60 +95,48 @@ def geneWordSearch(*genes,minChance=0.2):
 			return
 		
 		listing = db[i][6:]
-		words = []
 		# Removing Web links, but keeping count
 		for entry in listing:
 			if(entry[:4] == 'http'):
-				links += 1
+				links.increment()
+				links.addGene(gene)
 				listing.remove(entry)	
 		# Splitting the various strings into individual words per list item
+		adj = []
 		for entry in listing:
-			words += re.split(' |_|,|\.',entry)	
-		wordList += list(filter(None,words))
+			adj += re.split(' |_|,|\.',entry)	
+		adj= list(filter(None,adj))
+		
+		for entry in adj:
+			words.append([entry,gene])
 
-	# Building the infrastructure for counting the words
-	freq = []
-	word = []
-	pval = []
-	wordFreq = []
+	# Sort to put words in alphabetical order for counting
+	words.sort()
+	length = len(words)
 	
 	# Adding the web link counts to the list
-	freq.append(links)
-	word.append('Web Links')
+	wordList = []
+	wordList.append(links)
 	
-	# Counting the words while emptying the word list
-	length = int(len(wordList))
-	while not(wordList == []):
-		item = wordList.pop()
-		if(item in word):
-			index = word.index(item)
-			freq[index] += 1
+	# Counting the words
+	for item in words:
+		if(wordList == [] or wordList[0].word != item[0]):
+			wordList.insert(0, WordFreq(item[0],1))
+			wordList[0].addGene(item[1])
 		else:
-			word.append(item)
-			freq.append(1)
+			wordList[0].increment()
+			wordList[0].addGene(item[1])
+	del words
 	
 	# Finding the respective P values
-	i = 0
 	wordCounts = wordCountDBMaker()
-	while i < len(word):
-		tot = 0
-		for line in wordCounts:
-			if(line[1] == word[i]):
-				tot = int(line[0])
-				break
-		val = hypergeom.sf(int(freq[i]),1398197,tot,length)
-		pval.append(val)
-		i += 1
+	for word in wordList:
+		word.computeP(wordCounts,length)
 	del wordCounts
 	
-	# Putting the frequency list together with the word list
-	i = 0
-	while i < len(word):
-		x = [pval[i],word[i],freq[i]]
-		wordFreq.append(x)
-		i += 1
+	# Sorting now by frequency instead of alphabetical
+	wordList = sorted(wordList, key=lambda item: item.p)
 	
-	wordFreq.sort(reverse=False)
-	for item in wordFreq:
-		if(item[0] <= minChance):
+	for item in wordList:
+		if(item.p <= minChance):
 			print(item)
