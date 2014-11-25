@@ -69,7 +69,7 @@ def wordCountDBMaker():
 	x.close()	
 	return db
 
-def geneWordSearch(*genes,minChance=0.2):
+def geneWordSearch(genes,minChance=0.2):
 	# Input: Takes in a gene identifier and the built database from the above function.
 	# Output: Prints out all the genes that have a chance probability of less than the minChance variable. 
 	import re
@@ -140,3 +140,8 @@ def geneWordSearch(*genes,minChance=0.2):
 	for item in wordList:
 		if(item.p <= minChance):
 			print(item)
+
+if __name__ == '__main__':
+	import sys
+	geneWordSearch(sys.argv[1:])
+		
