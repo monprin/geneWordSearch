@@ -4,9 +4,10 @@ To-Do List of features/capabilities:
 - Make word splitting smarter
 - Figure out way to store and present web links
 - Combine like words
+- Add options for "machine readable" out put and displaying web links (done 11/30/14)
 - GSEA-style statistical relationship for correlation between multiple inputs (Done, 11/23/14)
 - GSEA-style statistical significance term for word list weight (Done, but added now related task, monprin, 11/14/14)
 - Standardizing Database (Done for now, made entire thing lowercase, is now the default,  monprin, 11/3/14)
-- GUI (look at optparse or flask)
+- GUI (look at flask)
 - Handle multiple inputs (Done, monprin, 10/31/14)
 - Make input case insensitive (Done, monprin, 11/3/14)
