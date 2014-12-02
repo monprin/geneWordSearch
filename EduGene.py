@@ -11,7 +11,7 @@ class WordFreq:
 		self.total = 0
 		self.genes = []
 		
-	def __str__(self):
+	def forHuman(self):
 		# Standard string output function
 		ans = 'Word: ' + self.word + '\n'
 		ans += 'P-value: ' + str(self.p) + '\n'
@@ -21,6 +21,21 @@ class WordFreq:
 			ans += gene + ' '
 		ans += '\n'
 		return ans
+		
+	def forRobot(self):
+		# Returns the string output for machine readable tsv.
+		ans = self.word + '\t'
+		ans += str(self.p) + '\t'
+		ans += str(self.freq) + '\t'
+		ans += str(self.total) + '\t'
+		for gene in self.genes[:-1]:
+			ans += gene + '\t'
+		ans += self.genes[-1]
+		return ans
+		
+	def robotHeaders():
+		# Returns the headers for machine readable output
+		return 'Word' + '\t' + 'Pval' + '\t' + 'Ocurrances in Sample' + '\t' + 'Ocurrances in Database' + '\t' + 'Genes Appeared In'
 		
 	def increment(self):
 		# Adds another tick to the word count
@@ -76,7 +91,7 @@ def wordCountDBMaker():
 	x.close()	
 	return db
 
-def geneWordSearch(genes,minChance=0.2):
+def geneWordSearch(genes,webLinks=False,minChance=0.05,machineRead=False):
 	# Input: Takes in a gene identifier and the built database from the above function.
 	# Output: Prints out all the genes that have a chance probability of less than the minChance variable. 
 	import re
@@ -86,6 +101,7 @@ def geneWordSearch(genes,minChance=0.2):
 	
 	words = []
 	links = 0
+	webSites = []
 	# Build the word list up for all of the genes provided.
 	links = WordFreq('Web Links',0)
 	for item in genes:
@@ -103,10 +119,12 @@ def geneWordSearch(genes,minChance=0.2):
 		
 		listing = db[i][6:]
 		# Removing Web links, but keeping count
+		
 		for entry in listing:
 			if(entry[:4] == 'http'):
 				links.increment()
 				links.addGene(gene)
+				webSites.append(entry)
 				listing.remove(entry)	
 		# Splitting the various strings into individual words per list item
 		adj = []
@@ -132,7 +150,8 @@ def geneWordSearch(genes,minChance=0.2):
 			wordList[0].addGene(item[1])
 		else:
 			wordList[0].increment()
-			wordList[0].addGene(item[1])
+			if(item[1] not in wordList[0].genes):
+				wordList[0].addGene(item[1])
 	del words
 	
 	# Finding the respective P values
@@ -145,14 +164,37 @@ def geneWordSearch(genes,minChance=0.2):
 	wordList = sorted(wordList, key=lambda item: item.p)
 	
 	# Print the results that are above the chance threshold
-	for item in wordList:
-		if(item.p <= minChance):
-			print(item)
+	# machineRead Parameter prints the output as a tsv sheet to be used for a machine readable format
+	if(machineRead):
+		# Print the header for the table
+		print(WordFreq.robotHeaders())
+		
+		# Print the lines using class function
+		for item in wordList:
+			if(item.p <= minChance):
+				print(item.forRobot())
+		
+		if(webLinks):
+			for link in webSites:
+				print(link)
+		
+	else:
+		for item in wordList:
+			if(item.p <= minChance):
+				print(item.forHuman())
+		if(webLinks):
+			print('Web Links associated with these genes:'+'\n')
+			for link in webSites:
+				print(link + '\n')
 
 # Command Line interface:
-# Arguments will be interpreted as genes
-# Output will be the same as normal
 if __name__ == '__main__':
 	import sys
-	geneWordSearch(sys.argv[1:])
-		
+	import argparse
+	parser = argparse.ArgumentParser(description='Find the important words associated with supplied genes.')
+	parser.add_argument('-w',action='store_true',default=False,help='This will output associated weblinks with standard gene output.')
+	parser.add_argument('-p',action='store',type=float,default=0.05,help='This option takes one argument and sets the probability cutoff, default is 0.2.')
+	parser.add_argument('-m',action='store_true',default=False,help='This will give a tsv output for machine readable purposes. Default is human readable.')
+	parser.add_argument('genes',action='store',nargs='*')
+	args = parser.parse_args()
+	geneWordSearch(args.genes,webLinks=args.w,minChance=args.p,machineRead=args.m)
