@@ -61,7 +61,7 @@ def geneDBMaker():
 	# outputs this data in the form of a Python list of Python lists
 	import fileinput
 	
-	x = open('geneMatrix.txt')
+	x = open('databases/geneMatrix.txt')
 	db = []
 
 	for line in x.readlines():
