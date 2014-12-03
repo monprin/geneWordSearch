@@ -27,7 +27,7 @@ class GeneNote:
 		return ans + '\n'
 			
 		
-def geneWordBuilder(infile='geneMatrix.txt',outfile='geneNotes.txt'):
+def geneWordBuilder(infile='databases/geneMatrix.txt',outfile='databases/geneNotes.txt'):
 	import re
 	import pickle
 	
@@ -79,6 +79,6 @@ def geneWordBuilder(infile='geneMatrix.txt',outfile='geneNotes.txt'):
 	fin.close()
 	
 	# Pickle that stuff! (for geneWordSearch function)
-	pickle.dump(NoteDB,open('geneNotes.p','wb'))
+	pickle.dump(NoteDB,open('databases/geneNotes.p','wb'))
 	
 	return
