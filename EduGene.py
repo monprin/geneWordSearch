@@ -96,11 +96,9 @@ def geneWordSearch(genes,webLinks=False,minChance=0.05,machineRead=False):
 	# Output: Prints out all the genes that have a chance probability of less than the minChance variable. 
 	import re
 	
-	
 	db = geneDBMaker()
 	
 	words = []
-	links = 0
 	webSites = []
 	# Build the word list up for all of the genes provided.
 	links = WordFreq('Web Links',0)
