@@ -15,7 +15,7 @@ class WordFreq:
 
 def totalWordCounts():
 	import re
-	x = open('geneMatrix.txt')
+	x = open('databases/geneMatrix.txt')
 	db = []
 
 	for line in x.readlines():
@@ -64,7 +64,7 @@ def totalWordCounts():
 	wordFreq = sorted(wordFreq, key=lambda item: item.freq, reverse=True)
 	
 	# Printing in the proper format to the file
-	f = open('totalWordCount.txt', 'w')
+	f = open('/databases/totalWordCount.txt', 'w')
 	for line in wordFreq:
 			f.write(str(line.freq) + '	' + str(line.word) + '\n')
 	f.close()
@@ -72,7 +72,7 @@ def totalWordCounts():
 
 # Returns the total word count of the entire database using the totalWordCount.txt
 def numOfWords():
-	x = open('totalWordCount.txt')
+	x = open('databases/totalWordCount.txt')
 	sum = 0;
 	
 	for line in x.readlines():
