@@ -79,7 +79,7 @@ def geneDBMaker():
 def wordCountDBMaker():
 	# Much like the above function, pulls in database file for total 
 	# word counts and returns a 2 by n array. 
-	x = open('totalWordCount.txt')
+	x = open('databases/totalWordCount.txt')
 	db = []
 	
 	for line in x.readlines():
