@@ -1,81 +1,6 @@
-# v0.2 Gene Word Cloud Program
+# v0.3 Gene Word Cloud Program
 # Joe Jeffers
 
-class WordFreq:
-	# Class for keeping the words and their frequencies together and 
-	# and some useful functions to outsource some work
-	def __init__(self, word, freq):
-		self.word = word
-		self.p = 0
-		self.freq = freq
-		self.total = 0
-		self.genes = []
-		
-	def forHuman(self):
-		# Standard string output function
-		ans = 'Word: ' + self.word + '\n'
-		ans += 'P-value: ' + str(self.p) + '\n'
-		ans += 'Overlap: ' + str(self.freq) + '/' + str(self.total) + '\n'
-		ans += 'Genes Appeared In: '
-		for gene in self.genes:
-			ans += gene + ' '
-		ans += '\n'
-		return ans
-		
-	def forRobot(self):
-		# Returns the string output for machine readable tsv.
-		ans = self.word + '\t'
-		ans += str(self.p) + '\t'
-		ans += str(self.freq) + '\t'
-		ans += str(self.total) + '\t'
-		for gene in self.genes[:-1]:
-			ans += gene + '\t'
-		ans += self.genes[-1]
-		return ans
-		
-	def robotHeaders():
-		# Returns the headers for machine readable output
-		return 'Word' + '\t' + 'Pval' + '\t' + 'Ocurrances in Sample' + '\t' + 'Ocurrances in Database' + '\t' + 'Genes Appeared In'
-		
-	def increment(self):
-		# Adds another tick to the word count
-		self.freq += 1
-		
-	def addGene(self,gene):
-		# Adds the gene to the list of represented genes
-		self.genes.append(gene)
-		
-	def computeP(self,db,length):
-		# Computes the p value using hypergeometric distribution
-		# Also finds and assigns the total word count from the database
-		from scipy.stats import hypergeom
-		for line in db:
-			if(line[1] == self.word):
-				self.total = int(line[0])
-				break
-		self.p = hypergeom.sf(self.freq,1398197,self.total,length)
-		
-
-def geneDBMaker():	
-	# Takes in tab separated text file containing genetic relation data 
-	# outputs this data in the form of a Python list of Python lists
-	import fileinput
-	
-	x = open('databases/geneMatrix.txt')
-	db = []
-
-	for line in x.readlines():
-		row = line.split('\t')
-		# This section needed to remove the newline charachter off each
-		# new line read from the file
-		lastCol = len(row)-1
-		row[lastCol] = row[lastCol][:len(row[lastCol])-1]
-		# Adds list representing row as a new item to the database list
-		db.append(row)
-		
-	x.close()
-	return db
-	
 def wordCountDBMaker():
 	# Much like the above function, pulls in database file for total 
 	# word counts and returns a 2 by n array. 
@@ -95,43 +20,43 @@ def geneWordSearch(genes,webLinks=False,minChance=0.05,machineRead=False):
 	# Input: Takes in a gene identifier and the built database from the above function.
 	# Output: Prints out all the genes that have a chance probability of less than the minChance variable. 
 	import re
+	from Classes import WordFreq
+	from Classes import GeneNote
 	
-	db = geneDBMaker()
+	# Unpickle the database of words
+	dbfile = open('databases/geneNotes.p','rb')
+	db = pickle.load(dbfile)
 	
 	words = []
 	webSites = []
+	x = len(db)
 	# Build the word list up for all of the genes provided.
 	links = WordFreq('Web Links',0)
 	for item in genes:
+		# Make the input all lowercase to match the database
 		gene = item.lower()
 		i=1
-		while i<len(db):
-			if db[i][0] == gene:
+		
+		# Find the right gene
+		
+		while i<x:
+			if db[i].gene == gene:
 				break
 			i += 1
-	
+		
 		# Check to see if the entry was actually found or just ran out of entries
-		if i >= len(db):
+		if i >= x:
 			raise ValueError('Gene: ' + gene + ' is not in the supplied database')
 			return
+		geneData = db[i]
+		# Adding words related to the gene in db to the overall list
+		for word in geneData.words:
+			words.append([word,geneData.gene])
 		
-		listing = db[i][6:]
-		# Removing Web links, but keeping count
-		
-		for entry in listing:
-			if(entry[:4] == 'http'):
-				links.increment()
-				links.addGene(gene)
-				webSites.append(entry)
-				listing.remove(entry)	
-		# Splitting the various strings into individual words per list item
-		adj = []
-		for entry in listing:
-			adj += re.split(' |_|,|\.',entry)	
-		adj= list(filter(None,adj))
-		
-		for entry in adj:
-			words.append([entry,gene])
+		# Dealing with the websites
+		for link in geneData.links:
+			links.addGene(geneData.gene)
+			webSites.append(link)
 
 	# Sort to put words in alphabetical order for counting
 	words.sort()
