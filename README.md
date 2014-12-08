@@ -16,6 +16,7 @@ This code is hosted on GitHub and can be accessed [here](https://github.com/monp
 ###Example 1###
 
 Input:
+
 `$ python3 EduGene.py -w grmzm2g357124 grmzm5g845021`
 
 Output([Full Output](http://www.monprin.com/CompBio/12022014/Human.txt)):
