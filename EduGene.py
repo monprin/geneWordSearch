@@ -20,6 +20,7 @@ def geneWordSearch(genes,webLinks=False,minChance=0.05,machineRead=False):
 	# Input: Takes in a gene identifier and the built database from the above function.
 	# Output: Prints out all the genes that have a chance probability of less than the minChance variable. 
 	import re
+	import pickle
 	from Classes import WordFreq
 	from Classes import GeneNote
 	
@@ -118,6 +119,17 @@ if __name__ == '__main__':
 	parser.add_argument('-w',action='store_true',default=False,help='This will output associated weblinks with standard gene output.')
 	parser.add_argument('-p',action='store',type=float,default=0.05,help='This option takes one argument and sets the probability cutoff, default is 0.2.')
 	parser.add_argument('-m',action='store_true',default=False,help='This will give a tsv output for machine readable purposes. Default is human readable.')
-	parser.add_argument('genes',action='store',nargs='*')
+	parser.add_argument('-f',action='store_true',default=False,help='This indicates that the input strings will be files with genes in them')
+	parser.add_argument('things',action='store',nargs='*')
 	args = parser.parse_args()
-	geneWordSearch(args.genes,webLinks=args.w,minChance=args.p,machineRead=args.m)
+	if(args.f):
+		genes = []
+		for name in args.things:
+			geneList = open(name)
+			for row in geneList.readlines():
+				genes += row.split()
+
+	else:
+		genes = args.things
+	
+	geneWordSearch(genes,webLinks=args.w,minChance=args.p,machineRead=args.m)
