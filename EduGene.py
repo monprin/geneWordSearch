@@ -104,7 +104,7 @@ def geneWordSearch(genes,webLinks=False,minChance=0.05,machineRead=False):
 		
 	else:
 		for item in wordList:
-			if(item.p <= minChance and item.total >= 4):
+			if(item.p <= minChance):
 				print(item.forHuman())
 		if(webLinks):
 			print('Web Links associated with these genes:'+'\n')
