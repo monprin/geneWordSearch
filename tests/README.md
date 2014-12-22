@@ -1,3 +1,23 @@
+Zea Mays Developmental CoExpression Network
+===========================================
+
+Given no other information about a gene, a good indicator of its function it its gene expression.
+If you measure a genes expression across a slew of different experiments, you can create a gene
+*expression profile* which effectively captures, on some level, what a gene is doing (or at least
+narrow it down). For example, we measured each genes expression in ~50 different maize tissues
+at various time points in development. We can then get an idea of, for any given gene, where it is
+being expressed. It could be something like: gene a is expressed in the leaves and roots, but only
+during mature development. We then look for other genes which have those same properties. This way we
+can group similar groups of genes together based on nothing else but their gene expression profiles.
+ZmDevelopmentalNetwork.zip contains these gene-gene interactions. The score column is just a value 
+which stores the strength of the interaction (maybe for future filtering). All the interactions in
+the file are significant.
+
+** Given a single gene, give me other genes associated with that gene **
+** Given a single gene, give me word enrichment based off its nearest neighbors **
+
+
+
 Zea Mays Root MCL Clusters
 ==========================
 
