@@ -49,7 +49,7 @@ def geneWordBuilder(infile='databases/geneMatrix.txt',outfile='databases/geneNot
 	fin = open(outfile,'w',newline='')
 	for gene in NoteDB:
 		if not(gene.gene == ''):
-			fin.write(gene.toString())
+			fin.write(str(gene))
 	fin.close()
 	
 	# Pickle that stuff! (for geneWordSearch function)
