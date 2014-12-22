@@ -45,11 +45,9 @@ class WordFreq:
 	def computeP(self,db,length):
 		# Computes the p value using hypergeometric distribution
 		# Also finds and assigns the total word count from the database
+		# Word count database must be dictionary with 'word' as the key, and count as value
 		from scipy.stats import hypergeom
-		for line in db:
-			if(line[1] == self.word):
-				self.total = int(line[0])
-				break
+		self.total = db[self.word]
 		self.p = hypergeom.sf(self.freq,1398197,self.total,length)
 		
 class GeneNote:
