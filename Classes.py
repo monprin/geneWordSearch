@@ -48,7 +48,7 @@ class WordFreq:
 		# Word count database must be dictionary with 'word' as the key, and count as value
 		from scipy.stats import hypergeom
 		self.total = db[self.word]
-		self.p = hypergeom.sf(self.freq,1398197,self.total,length)
+		self.p = hypergeom.sf((self.freq-1),1398197,self.total,length)
 		
 class GeneNote:
 	# Class for holding a gene and all of the words that anotate it for the database.
