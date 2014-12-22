@@ -5,16 +5,16 @@ def wordCountDBMaker():
 	# Much like the above function, pulls in database file for total 
 	# word counts and returns a 2 by n array. 
 	x = open('databases/totalWordCount.txt')
-	db = []
+	dictDB = dict()
 	
 	for line in x.readlines():
 		row = line.split('\t')
 		row[1] = row[1][:len(row[1])-1]
 		row[0] = int(row[0])
-		db.append(row)
+		dictDB[row[1]] = row[0]
 		
 	x.close()	
-	return db
+	return dictDB
 
 def geneWordSearch(genes,webLinks=False,minChance=0.05,machineRead=False):
 	# Input: Takes in a gene identifier and the built database from the above function.
@@ -104,7 +104,7 @@ def geneWordSearch(genes,webLinks=False,minChance=0.05,machineRead=False):
 		
 	else:
 		for item in wordList:
-			if(item.p <= minChance):
+			if(item.p <= minChance and item.total >= 4):
 				print(item.forHuman())
 		if(webLinks):
 			print('Web Links associated with these genes:'+'\n')
