@@ -118,5 +118,6 @@ def numOfWords():
 	
 # Command Line interface:
 if __name__ == '__main__':
+	geneWordBuilder()
 	totalWordCounts()
 		
