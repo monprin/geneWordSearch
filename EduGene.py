@@ -1,21 +1,6 @@
 # v0.3 Gene Word Cloud Program
 # Joe Jeffers
 
-def wordCountDBMaker():
-	# Much like the above function, pulls in database file for total 
-	# word counts and returns a 2 by n array. 
-	x = open('databases/totalWordCount.txt')
-	dictDB = dict()
-	
-	for line in x.readlines():
-		row = line.split('\t')
-		row[1] = row[1][:len(row[1])-1]
-		row[0] = int(row[0])
-		dictDB[row[1]] = row[0]
-		
-	x.close()	
-	return dictDB
-
 def geneWordSearch(genes,webLinks=False,minChance=0.05,machineRead=False):
 	# Input: Takes in a gene identifier and the built database from the above function.
 	# Output: Prints out all the genes that have a chance probability of less than the minChance variable. 
@@ -79,7 +64,8 @@ def geneWordSearch(genes,webLinks=False,minChance=0.05,machineRead=False):
 	del words
 	
 	# Finding the respective P values
-	wordCounts = wordCountDBMaker()
+	pickleDict = open('databases/totalWordCounts.p','rb')
+	wordCounts = pickle.load(pickleDict)
 	for word in wordList:
 		word.computeP(wordCounts,length)
 	del wordCounts
