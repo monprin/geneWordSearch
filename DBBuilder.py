@@ -56,3 +56,67 @@ def geneWordBuilder(infile='databases/geneMatrix.txt',outfile='databases/geneNot
 	pickle.dump(NoteDB,open('databases/geneNotes.p','wb'))
 	
 	return
+	
+def totalWordCounts():
+	import pickle
+	from Classes import WordFreq
+	from Classes import GeneNote
+	
+	# Unpickle the database of words
+	dbfile = open('databases/geneNotes.p','rb')
+	db = pickle.load(dbfile)
+	
+	# Make a list of all the words associated genes in the database
+	words = []
+	links = []
+	for gene in db:
+		words += gene.words
+		links += gene.links
+	
+	# Sorting the words into alphabetical order
+	words.sort()
+
+	# Counting the words
+	wordList = []
+	wordList.append(WordFreq('Web Links',len(links)))
+	del links
+	for item in words:
+		if(wordList == [] or wordList[0].word != item):
+			wordList.insert(0, WordFreq(item,1))
+		else:
+			wordList[0].increment()
+	del words
+	
+	# Sorting now by frequency instead of alphabetical
+	wordList = sorted(wordList, key=lambda item: item.freq,reverse=True)
+	
+	# Building the dictionary of the words
+	dictDB = dict()
+	for word in wordList:
+		dictDB[word.word] = word.freq
+		
+	# Print file
+	totalsFile = open('databases/totalWordCounts.txt','w')
+	for word in wordList:
+		totalsFile.write(str(word.freq) + '\t' + str(word.word) + '\n')
+	totalsFile.close()
+	
+	# Pickle the dictionary
+	pickle.dump(dictDB,open('databases/totalWordCounts.p','wb'))
+	
+# Returns the total word count of the entire database using the totalWordCount.txt
+def numOfWords():
+	x = open('databases/totalWordCounts.txt')
+	sum = 0;
+	
+	for line in x.readlines():
+		row = line.split()
+		sum += int(row[0])
+		
+	return sum
+# Answer: There are 1,398,197 words in the database	as it is split and counted now.
+	
+# Command Line interface:
+if __name__ == '__main__':
+	totalWordCounts()
+		
