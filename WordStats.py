@@ -2,6 +2,9 @@
 # Joe Jeffers
 # 11/9/2014
 
+
+# Deprecaated, all function moved to DBBuilder file and re written.
+
 # Function produces total word count file. Run to update as 
 # needed, takes about 10 min to run on 2011 Core i5
 
@@ -72,7 +75,7 @@ def totalWordCounts():
 
 # Returns the total word count of the entire database using the totalWordCount.txt
 def numOfWords():
-	x = open('databases/totalWordCount.txt')
+	x = open('databases/totalWordCounts.txt')
 	sum = 0;
 	
 	for line in x.readlines():
