@@ -1,4 +1,4 @@
-def geneWordSearch(genes,webLinks=False,minChance=0.05,machineRead=False):
+def geneWordSearch(genes,minChance=0.05):
 	# Input: Takes in a gene identifier and the built database from the above function.
 	# Output: Prints out all the genes that have a chance probability of less than the minChance variable. 
 	import re
@@ -70,26 +70,7 @@ def geneWordSearch(genes,webLinks=False,minChance=0.05,machineRead=False):
 	# Sorting now by frequency instead of alphabetical
 	wordList = sorted(wordList, key=lambda item: item.p)
 	
-	# Print the results that are above the chance threshold
-	# machineRead Parameter prints the output as a tsv sheet to be used for a machine readable format
-	if(machineRead):
-		# Print the header for the table
-		print(WordFreq.robotHeaders())
-		
-		# Print the lines using class function
-		for item in wordList:
-			if(item.p <= minChance):
-				print(item.forRobot())
-		
-		if(webLinks):
-			for link in webSites:
-				print(link)
-		
-	else:
-		for item in wordList:
-			if(item.p <= minChance):
-				print(item.forHuman())
-		if(webLinks):
-			print('Web Links associated with these genes:'+'\n')
-			for link in webSites:
-				print(link + '\n')
+	# FIltering out results that are higher than the minimum chance threshold
+	wordList = filter(lambda x: x.p <= minChance,wordList)
+	
+	return (wordList,webSites)
