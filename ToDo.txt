@@ -1,20 +1,7 @@
 To-Do List of features/capabilities:
 
-- Think of a (better) name (probably going to be Gene Word Search)
-- Check edge cases of p-val, to possibly get rid of the 1/1 cases
-- Get rid of underscore in word splitting
 - Make word splitting smarter (piece by piece)
-- Play around with cut off for minimum word frequency (make flag)
-- Test on large gene clusters
-- Move documetation from web page to readme
 - Different input modes (more from rob later)
 - Add more gene info (.obo files, Rob to find sources)
 - Combine like words (low priority, unless I have a breakthrough idea on doing this)
-- Figure out way to store and present web links (Done, 12/1/14)
-- Add options for "machine readable" out put and displaying web links (done 11/30/14)
-- GSEA-style statistical relationship for correlation between multiple inputs (Done, 11/23/14)
-- GSEA-style statistical significance term for word list weight (Done, but added now related task, monprin, 11/14/14)
-- Standardizing Database (Done for now, made entire thing lowercase, is now the default,  monprin, 11/3/14)
 - GUI (look at flask)
-- Handle multiple inputs (Done, monprin, 10/31/14)
-- Make input case insensitive (Done, monprin, 11/3/14)
