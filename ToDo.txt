@@ -5,3 +5,4 @@ To-Do List of features/capabilities:
 - Add more gene info (.obo files, Rob to find sources)
 - Combine like words (low priority, unless I have a breakthrough idea on doing this)
 - GUI (look at flask)
+- Create a gene neighborhood function using the networks (in test dir)
