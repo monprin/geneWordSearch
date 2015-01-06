@@ -1,7 +1,11 @@
 To-Do List of features/capabilities:
 
+- Make setup.py and look at disttools
+- Create a gene neighborhood function using the networks (in test dir) (Print genes, then print results for network)
+- Give context for word (Surrounding sentance, may reserve for gui version)
+- GUI (look at flask)
 - Make word splitting smarter (piece by piece)
 - Different input modes (more from rob later)
 - Add more gene info (.obo files, Rob to find sources)
 - Combine like words (low priority, unless I have a breakthrough idea on doing this)
-- GUI (look at flask)
+
