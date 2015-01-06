@@ -114,7 +114,7 @@ def numOfWords():
 		sum += int(row[0])
 		
 	return sum
-# Answer: There are 1,398,197 words in the database	as it is split and counted now.
+# Answer: There are 1,398,154 words in the database	as it is split and counted now.
 	
 # Command Line interface:
 if __name__ == '__main__':
