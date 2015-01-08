@@ -1,6 +1,6 @@
 # Function to build the gene annotation database and pickle it
 
-def geneWordBuilder(infile='databases/geneMatrix.txt',outfile='databases/geneNotes.txt'):
+def geneWordBuilder(infile,outfile='databases/geneNotes.tsv'):
 	import re
 	import pickle
 	from Classes import GeneNote
@@ -96,7 +96,7 @@ def totalWordCounts():
 		dictDB[word.word] = word.freq
 		
 	# Print file
-	totalsFile = open('databases/totalWordCounts.txt','w')
+	totalsFile = open('databases/totalWordCounts.tsv','w')
 	for word in wordList:
 		totalsFile.write(str(word.freq) + '\t' + str(word.word) + '\n')
 	totalsFile.close()
@@ -106,7 +106,7 @@ def totalWordCounts():
 	
 # Returns the total word count of the entire database using the totalWordCount.txt
 def numOfWords():
-	x = open('databases/totalWordCounts.txt')
+	x = open('databases/totalWordCounts.tsv')
 	sum = 0;
 	
 	for line in x.readlines():
@@ -118,6 +118,7 @@ def numOfWords():
 	
 # Command Line interface:
 if __name__ == '__main__':
+	
 	geneWordBuilder()
 	totalWordCounts()
 		
