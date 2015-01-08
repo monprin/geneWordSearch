@@ -1,11 +1,15 @@
 To-Do List of features/capabilities:
 
-- Make setup.py and look at disttools
+- Make setup.py with setuptool (Done)
 - Create a gene neighborhood function using the networks (in test dir) (Print genes, then print results for network)
+- Look into License
 - Give context for word (Surrounding sentance, may reserve for gui version)
 - GUI (look at flask)
 - Make word splitting smarter (piece by piece)
 - Different input modes (more from rob later)
 - Add more gene info (.obo files, Rob to find sources)
 - Combine like words (low priority, unless I have a breakthrough idea on doing this)
-
+- Custom Database (give columns and make db from there)
+- Look at sqlite for data structure (included and custom built) (Along with Arabadopsis move)
+- Network analysis further (How many networks, etc.)
+- Be able to change the universe of genes (Subset of all genes)
