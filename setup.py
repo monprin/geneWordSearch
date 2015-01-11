@@ -12,5 +12,3 @@ packages=find_packages(),
 package_data={'databases':['*.p','*.tsv']},
 long_description=open('README').read(),
 install_requires=['scipy'])
-
-#packages=['src.Classes','src.GeneWordSearch','src.CLI','src.DBBuilder']
