@@ -1,6 +1,6 @@
 # Function to build the gene annotation database and pickle it
 
-def geneWordBuilder(infile,outfile='databases/geneNotes.tsv'):
+def geneWordBuilder(infile,outfile='databases/geneNotes.tsv',headers=True):
 	import re
 	import pickle
 	from Classes import GeneNote
@@ -10,8 +10,9 @@ def geneWordBuilder(infile,outfile='databases/geneNotes.tsv'):
 	NoteDB = []
 	
 	# Get rid of headers
-	garb = matrix.readline()
-	del garb
+	if(headers):
+		garb = matrix.readline()
+		del garb
 	
 	for line in matrix.readlines():
 		row = line.split('\t')
@@ -104,6 +105,55 @@ def totalWordCounts():
 	# Pickle the dictionary
 	pickle.dump(dictDB,open('databases/totalWordCounts.p','wb'))
 	
+	
+def networksBuilder(infile,outfile='databases/networks',headers=True):
+	import pickle
+	
+	sheet = open(infile)
+	networks = {}
+	
+	if(headers):
+		garb = sheet.readline()
+		del garb
+	
+	gene = ''
+	related = []
+	for line in sheet.readlines():
+		relation = line.split()
+		relation = relation[:2]
+		if(relation[0] == gene):
+			# Building up gene relation list
+			related.append(relation[1])
+		elif(gene == ''):
+			# Special Case for first entry
+			gene = relation[0]
+			related.append(relation[1])
+		else:
+			# Add list to Dictionary
+			networks[gene] = related
+			# Clearign variables
+			gene = ''
+			related = []
+			# Starting new gene for listing
+			gene = relation[0]
+			related.append(relation[1])
+			
+	# Pickle the dictionary
+	pic = outfile + '.p'
+	pickle.dump(networks,open(pic,'wb'))
+	
+	# Print file
+	tex = outfile + '.txt'
+	networkFile = open(tex,'w')
+	while(True):
+		try:
+			thing = networks.popitem()
+		except KeyError:
+			break
+		networkFile.write(thing[0] + '\t' + str(thing[1]) + '\n')
+	networkFile.close()
+
+	
 # Returns the total word count of the entire database using the totalWordCount.txt
 def numOfWords():
 	x = open('databases/totalWordCounts.tsv')
@@ -115,10 +165,4 @@ def numOfWords():
 		
 	return sum
 # Answer: There are 1,398,154 words in the database	as it is split and counted now.
-	
-# Command Line interface:
-if __name__ == '__main__':
-	
-	geneWordBuilder()
-	totalWordCounts()
-		
+
