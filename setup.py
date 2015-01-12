@@ -1,6 +1,10 @@
 # Basic Setup Script
 # Requires Python3
 
+# Written by Joseph Jeffers
+# Updated Jan 12 2015
+
+# Installs setuptools if needed
 import ez_setup
 ez_setup.use_setuptools()
 
@@ -14,5 +18,5 @@ author='Joe Jeffers',
 author_email='jeffe174@umn.edu',
 packages=find_packages(),
 package_data={'databases':['totalWordCounts.*','geneNotes.*','networks.*']},
-long_description=open('README').read(),
+long_description=open('README.rst').read(),
 install_requires=['scipy'])
