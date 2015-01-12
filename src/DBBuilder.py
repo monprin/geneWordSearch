@@ -1,6 +1,12 @@
-# Function to build the gene annotation database and pickle it
+# Function to build the various needed databases for this function
+# These functions will be generalized to be able to make databases for any input
+# but that is for a future versaion, included now for reference.
+
+# Written by Joseph Jeffers
+# Updated Jan 12 2015
 
 def geneWordBuilder(infile,outfile='databases/geneNotes.tsv',headers=True):
+# Function that makes the annotation database
 	import re
 	import pickle
 	from Classes import GeneNote
@@ -9,11 +15,12 @@ def geneWordBuilder(infile,outfile='databases/geneNotes.tsv',headers=True):
 	db = []
 	NoteDB = []
 	
-	# Get rid of headers
+	# Get rid of headers if so indicated
 	if(headers):
 		garb = matrix.readline()
 		del garb
 	
+	# Process file line by line, each line has different gene.
 	for line in matrix.readlines():
 		row = line.split('\t')
 		# This section needed to remove the newline charachter off each
@@ -59,6 +66,7 @@ def geneWordBuilder(infile,outfile='databases/geneNotes.tsv',headers=True):
 	return
 	
 def totalWordCounts():
+# Creates the dictionary of word occurances for use in geneWordSearch
 	import pickle
 	from Classes import WordFreq
 	from Classes import GeneNote
@@ -107,17 +115,21 @@ def totalWordCounts():
 	
 	
 def networksBuilder(infile,outfile='databases/networks',headers=True):
+# Creates dictionary for gene networks. Used by CLI for network finder
 	import pickle
 	
 	sheet = open(infile)
 	networks = {}
 	
+	# Get rid of headers if indicated
 	if(headers):
 		garb = sheet.readline()
 		del garb
 	
 	gene = ''
 	related = []
+	
+	# Each line of the data file is gone through, and it is presumed to be in order.
 	for line in sheet.readlines():
 		relation = line.split()
 		relation = relation[:2]

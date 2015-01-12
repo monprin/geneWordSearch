@@ -1,3 +1,8 @@
+# File contains the custom classes need for the operation of the program.
+
+# Written by Joe Jeffers
+# Updated Jan 12 2015
+
 class WordFreq:
 	# Class for keeping the words and their frequencies together and 
 	# and some useful functions to outsource some work
@@ -58,12 +63,15 @@ class GeneNote:
 		self.links = []
 		
 	def addWord(self,word):
+	# Adds word to the list of associated words
 		self.words.append(word)
 		
 	def addLink(self,link):
+	# Adds link to the list of associated links
 		self.links.append(link)
 		
 	def __str__(self):
+	# Method for implicit string conversion, usually for printing
 		ans = self.gene + '\t'
 		for word in self.words[:-1]:
 			ans += word + '\t'

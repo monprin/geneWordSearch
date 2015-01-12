@@ -1,6 +1,12 @@
+# Main logic function for finding the annotations associated with the genes.
+
+# Written by Joe Jeffers
+# Updated on Jan 12 2015
+
 def geneWordSearch(genes,minChance=0.05):
-	# Input: Takes in a gene identifier and the built database from the above function.
-	# Output: Prints out all the genes that have a chance probability of less than the minChance variable. 
+	# Input: Takes in a list of genes and the probability cutoff.
+	# Output: Returns tuple of words and links. Only returns the genes that have a 
+	# chance probability of less than the minChance variable. 
 	import re
 	import pickle
 	from Classes import WordFreq
@@ -70,7 +76,7 @@ def geneWordSearch(genes,minChance=0.05):
 	# Sorting now by frequency instead of alphabetical
 	wordList = sorted(wordList, key=lambda item: item.p)
 	
-	# FIltering out results that are higher than the minimum chance threshold
+	# Filtering out results that are higher than the minimum chance threshold
 	wordList = filter(lambda x: x.p <= minChance,wordList)
 	
 	return (wordList,webSites)

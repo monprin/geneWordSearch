@@ -1,25 +1,34 @@
+# This is the Command Line interface for geneWordSearch.
+# Needs to be run from the main program folder.
 
-# Command Line interface for geneWordSearch:
+# Written by Joe Jeffers 
+# Updated Jan 12 2015
+
 from GeneWordSearch import geneWordSearch
 import sys
 import pickle
 import argparse
 from Classes import WordFreq
 
+# Setup the Parser
 parser = argparse.ArgumentParser(description='Find the important words associated with supplied genes.')
-parser.add_argument('-d',action='store_true',default=False,help='Indicates that the input is a directory and will process all files in the directory.')
-parser.add_argument('-f',action='store_true',default=False,help='This indicates that the input strings will be files with genes in them.')
-parser.add_argument('-n',action='store_true',default=False,help='Indicates that the input is the starting point of a network, will first return list of genes in those networks, then the traditional output on that list of genes.')
+parser.add_argument('-d',action='store_true',default=False,help='Indicates that the input is a directory and will process all files in the directory. (Incompatible with \'-f\' and \'-n\')')
+parser.add_argument('-f',action='store_true',default=False,help='This indicates that the input strings will be a file with genes in it. (Incompatible with \'-d\' and \'-n\')')
+parser.add_argument('-n',action='store_true',default=False,help='Indicates that the input is the starting point of a network, will first return list of genes in those networks, then the traditional output on that list of genes. (Incompatible with \'-d\' and \'-f\')')
 parser.add_argument('-o',action='store',type=str,default='out.txt',help='Location to write the file that contains the results, default is out.txt in current folder.')
 parser.add_argument('-p',action='store',type=float,default=0.05,help='This option takes one argument and sets the probability cutoff, default is 0.2.')
 parser.add_argument('-t',action='store_true',default=False,help='This will give a tsv output for machine readable purposes. Default is human readable output.')
 parser.add_argument('-w',action='store_true',default=False,help='This will output associated weblinks with standard gene output.')
 parser.add_argument('things',action='store',nargs='*')
+
+# Parse the arguments
 args = parser.parse_args()
 
+# Open the output file for writing
 out = open(args.o,'w')
 
 if(args.f):
+# Deals with input if it is a file name
 	genes = []
 	for name in args.things:
 		geneList = open(name)
@@ -28,6 +37,7 @@ if(args.f):
 		results = geneWordSearch(genes,minChance=args.p)
 
 elif(args.n):
+# Deals with finding the gene network
 	genes = []
 	nets = open('databases/networks.p','rb')
 	networks = pickle.load(nets)
@@ -43,6 +53,7 @@ elif(args.n):
 	results = geneWordSearch(genes,minChance=args.p)
 
 elif(args.d):
+# Deals with directory option
 	import glob
 	
 	results = []
@@ -63,6 +74,7 @@ elif(args.d):
 			geneList.close()
 
 else:
+# Handles normal gene list input
 	genes = args.things
 	results = geneWordSearch(genes,minChance=args.p)
 
@@ -80,15 +92,17 @@ if(args.t):
 	for item in words:
 		out.write(item.forRobot() + '\n')
 	
+	# Prints out web links if needed
 	if(args.w):
 		for link in links:
 			out.write(link + '\n')
 	
 else:
-	
+	# Prints out human readable for all the words.
 	for item in words:
 		out.write(item.forHuman() + '\n')
-		
+	
+	# Prints out web links if needed
 	if(args.w):
 		out.write('Web Links associated with these genes:'+'\n' + '\n')
 		for link in links:
