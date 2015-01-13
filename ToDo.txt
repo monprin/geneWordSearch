@@ -1,8 +1,7 @@
 To-Do List of features/capabilities:
 
-- Add to PyPI and make sure install works:
+- Add to PyPI and make sure install works
 - Create a gene neighborhood function using the networks (in test dir) (Print genes, then print results for geneWordSearch) (Done, 1/11/15)
-- Look into License
 - Give context for word (Surrounding sentance, may reserve for gui version)
 - GUI (look at flask)
 - Make word splitting smarter (piece by piece)
