@@ -5,7 +5,7 @@
 # Updated Jan 12 2015
 
 # Installs setuptools if needed
-import ez_setup
+import src.z_setup
 ez_setup.use_setuptools()
 
 from setuptools import setup, find_packages
