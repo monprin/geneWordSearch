@@ -5,7 +5,7 @@
 # Updated Jan 12 2015
 
 # Installs setuptools if needed
-from src import ez_setup
+from GeneWordSearch.src import ez_setup
 ez_setup.use_setuptools()
 
 from setuptools import setup, find_packages
@@ -18,6 +18,6 @@ author='Joe Jeffers',
 author_email='jeffe174@umn.edu',
 url='https://github.com/monprin/geneWordSearch/',
 packages=find_packages(),
-package_data={'databases':['totalWordCounts.*','geneNotes.*','networks.*']},
+package_data={'GeneWordSearch.databases':['totalWordCounts.*','geneNotes.*','networks.*']},
 long_description=open('README.rst').read(),
 install_requires=['numpy','scipy'])
