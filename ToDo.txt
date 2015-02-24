@@ -1,14 +1,23 @@
 To-Do List of features/capabilities:
+(In categorical, but not priority order)
 
+Database Things
+- Look at sqlite for new data structure (along with code generalization for other species)
+- Custom Database (give columns and make db from there)
+- Be able to change the universe of genes (Subset of all genes)
+
+Word Analysis Things
+- Give context for word (Surrounding sentance, may reserve for gui version)
+- Make word splitting smarter (piece by piece)
+- Combine like words (low priority, unless I have a breakthrough idea on doing this)
+
+Other Things
+- GUI (look at flask)
+- Multiple network deep search
+
+Recently Done
 - Add to PyPI and make sure install works
 - Create a gene neighborhood function using the networks (in test dir) (Print genes, then print results for geneWordSearch) (Done, 1/11/15)
-- Give context for word (Surrounding sentance, may reserve for gui version)
-- GUI (look at flask)
-- Make word splitting smarter (piece by piece)
-- Different input modes (more from rob later)
-- Add more gene info (.obo files, Rob to find sources)
-- Combine like words (low priority, unless I have a breakthrough idea on doing this)
-- Custom Database (give columns and make db from there)
-- Look at sqlite for data structure (included and custom built) (Along with Arabadopsis move)
-- Network analysis further (How many networks, etc.)
-- Be able to change the universe of genes (Subset of all genes)
+- Different input modes (Added some (file, directory, and network) if there are more, let me know)
+- Add more gene info (Don't seen to have any more for maize)
+- Add maize gene networks for input into main function
