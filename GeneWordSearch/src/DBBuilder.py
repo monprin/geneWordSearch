@@ -5,7 +5,7 @@
 # Written by Joseph Jeffers
 # Updated Jan 12 2015
 
-def geneWordBuilder(infile='databases/OldGeneTables/geneMatrix_v3.txt',outfile='databases/geneNotes.tsv',headers=True):
+def geneWordBuilder(infile='databases/OldGeneTables/geneMatrix_v2.txt',outfile='databases/geneNotes.tsv',headers=True):
 # Function that makes the annotation database
 	import re
 	import pickle
