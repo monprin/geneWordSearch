@@ -1,23 +1,17 @@
 To-Do List of features/capabilities:
 (In categorical, but not priority order)
 
+Enrichment Things
+- Have duplicate words in an entry only count once toward statistics
+-- This implies reworking the database to reflect this change
+- Deal with the multiple hypothesis problem 
+- Give context for word (Surrounding sentance, may reserve for gui version)
+
 Database Things
 - Look at sqlite for new data structure (along with code generalization for other species)
 - Custom Database (give columns and make db from there)
 - Be able to change the universe of genes (Subset of all genes)
 
-Word Analysis Things
-- Give context for word (Surrounding sentance, may reserve for gui version)
-- Make word splitting smarter (piece by piece)
-- Combine like words (low priority, unless I have a breakthrough idea on doing this)
-
 Other Things
-- GUI (look at flask)
+- GUI (look at flask) (On ice for the time being)
 - Multiple network deep search
-
-Recently Done
-- Add to PyPI and make sure install works
-- Create a gene neighborhood function using the networks (in test dir) (Print genes, then print results for geneWordSearch) (Done, 1/11/15)
-- Different input modes (Added some (file, directory, and network) if there are more, let me know)
-- Add more gene info (Don't seen to have any more for maize)
-- Add maize gene networks for input into main function
