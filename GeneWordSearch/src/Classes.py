@@ -53,33 +53,28 @@ class WordFreq:
 		# Word count database must be dictionary with 'word' as the key, and count as value
 		from scipy.stats import hypergeom
 		self.total = db[self.word]
-		self.p = hypergeom.sf((self.freq-1),1398197,self.total,length)
+		self.p = hypergeom.sf((self.freq-1),986373,self.total,length)
 		
 class GeneNote:
 	# Class for holding a gene and all of the words that anotate it for the database.
 	def __init__(self, gene):
 		self.gene = gene
-		self.words = []
-		self.links = []
+		self.words = set()
+		self.links = set()
 		
 	def addWord(self,word):
 	# Adds word to the list of associated words
-		self.words.append(word)
+		self.words.add(word)
 		
 	def addLink(self,link):
 	# Adds link to the list of associated links
-		self.links.append(link)
+		self.links.add(link)
 		
 	def __str__(self):
 	# Method for implicit string conversion, usually for printing
 		ans = self.gene + '\t'
-		for word in self.words[:-1]:
+		for word in self.words:
 			ans += word + '\t'
-		if(self.links == [] and not(self.words == [])):
-			ans += self.words[-1]
-			return ans + '\n'
-		for link in self.links[:-1]:
+		for link in self.links:
 			ans += link + '\t'
-		if not(self.links == []):
-			ans += self.links[-1]
 		return ans + '\n'

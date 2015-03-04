@@ -4,10 +4,10 @@
 # Written by Joe Jeffers 
 # Updated Jan 12 2015
 
-from GeneWordSearch import geneWordSearch
 import sys
 import pickle
 import argparse
+from GeneWordSearch import geneWordSearch
 from Classes import WordFreq
 
 # Function to print the results 

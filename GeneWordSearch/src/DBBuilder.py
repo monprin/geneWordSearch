@@ -5,7 +5,7 @@
 # Written by Joseph Jeffers
 # Updated Jan 12 2015
 
-def geneWordBuilder(infile,outfile='databases/geneNotes.tsv',headers=True):
+def geneWordBuilder(infile='databases/OldGeneTables/geneMatrix_v3.txt',outfile='databases/geneNotes.tsv',headers=True):
 # Function that makes the annotation database
 	import re
 	import pickle
@@ -176,5 +176,14 @@ def numOfWords():
 		sum += int(row[0])
 		
 	return sum
-# Answer: There are 1,398,154 words in the database	as it is split and counted now.
+# Answer: There are 989,373 words in the database as it is split and counted now.
 
+# Just run it from the command line to rebuild and count everything.
+print('Building Database...')
+geneWordBuilder()
+print('Done')
+print('Counting Word Instances...')
+totalWordCounts()
+print('Done')
+print('Total Words in the Database:')
+print(numOfWords())
