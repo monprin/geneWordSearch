@@ -11,7 +11,7 @@ from GeneWordSearch import geneWordSearch
 from Classes import WordFreq
 
 # Function to print the results 
-def resultsPrinter(results, web, table, outfile):
+def resultsPrinter(results, web, table, outfile, singles):
 	# Input: 
 	#	The results from the geneWordSearch function
 	#	a boolean for wheather to print links
@@ -26,22 +26,38 @@ def resultsPrinter(results, web, table, outfile):
 		# Print the header for the table
 		outfile.write(WordFreq.robotHeaders()+ '\n')
 	
-		# Print the lines using class function
+		# Print the genes by category of multiples and singles
+		outfile.write('Multiple Gene Words:' + '\n' + '\n')
 		for item in words:
-			outfile.write(item.forRobot() + '\n')
-	
+			if(item.freq > 1):
+				outfile.write(item.forRobot() + '\n')
+		
+		if(singles):
+			outfile.write('Single Gene Words:' + '\n' + '\n')
+			for item in words:
+				if(item.freq == 1):
+					outfile.write(item.forRobot() + '\n')
+		
 	# Prints out web links if needed
-		if(args.w):
+		if(web):
 			for link in links:
 				outfile.write(link + '\n')
 	
 	else:
-	# Prints out human readable for all the words.
+		# Print the genes by category of multiples and singles
+		outfile.write('Multiple Gene Words:' + '\n' + '\n')
 		for item in words:
-			outfile.write(item.forHuman() + '\n')
+			if(item.freq > 1):
+				outfile.write(item.forHuman() + '\n')
+		
+		if(singles):
+			outfile.write('Single Gene Words:' + '\n' + '\n')
+			for item in words:
+				if(item.freq == 1):
+					outfile.write(item.forHuman() + '\n')
 	
 	# Prints out web links if needed
-		if(args.w):
+		if(web):
 			outfile.write('Web Links associated with these genes:'+'\n' + '\n')
 			for link in links:
 				outfile.write(link + '\n' + '\n')
@@ -53,6 +69,7 @@ parser.add_argument('-f',action='store_true',default=False,help='This indicates 
 parser.add_argument('-n',action='store_true',default=False,help='Indicates that the input is the starting point of a network, will first return list of genes in those networks, then the traditional output on that list of genes. (Incompatible with -d and -f)')
 parser.add_argument('-o',action='store',type=str,default='out.txt',help='Location to write the file that contains the results, default is out.txt in current folder.')
 parser.add_argument('-p',action='store',type=float,default=0.05,help='This option takes one argument and sets the probability cutoff, default is 0.2.')
+parser.add_argument('-s',action='store_false',default=True,help='This prevents the writing of the words that only occur in one of the genes inputed.')
 parser.add_argument('-t',action='store_true',default=False,help='This will give a tsv output for machine readable purposes. Default is human readable output.')
 parser.add_argument('-w',action='store_true',default=False,help='This will output associated weblinks with standard gene output.')
 parser.add_argument('things',action='store',nargs='*')
@@ -71,7 +88,7 @@ if(args.f):
 		for row in geneList.readlines():
 			genes += row.split()
 	results = geneWordSearch(genes,minChance=args.p)
-	resultsPrinter(results,args.w,args.t,out)
+	resultsPrinter(results,args.w,args.t,out,args.s)
 
 elif(args.n):
 # Deals with finding the gene network
@@ -88,7 +105,7 @@ elif(args.n):
 	
 	out.write('\n' + 'Results from this list:' + '\n' + '\n')
 	results = geneWordSearch(genes,minChance=args.p)
-	resultsPrinter(results,args.w,args.t,out)
+	resultsPrinter(results,args.w,args.t,out,args.s)
 
 elif(args.d):
 # Deals with directory option
@@ -109,14 +126,14 @@ elif(args.d):
 				out.write('Results for ' + fileName + ':')
 				out.write('\n' + '\n')
 				results = (geneWordSearch(genes,minChance=args.p))
-				resultsPrinter(results,args.w,args.t,out)
+				resultsPrinter(results,args.w,args.t,out,args.s)
 			geneList.close()
 
 else:
 # Handles normal gene list input
 	genes = args.things
 	results = geneWordSearch(genes,minChance=args.p)
-	resultsPrinter(results,args.w,args.t,out)
+	resultsPrinter(results,args.w,args.t,out,args.s)
 
 out.close()
 print('Completed! Check ' + args.o + ' for your results.')
