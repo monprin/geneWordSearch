@@ -79,4 +79,4 @@ def geneWordSearch(genes,minChance=0.05):
 	# Filtering out results that are higher than the minimum chance threshold
 	wordList = filter(lambda x: x.p <= minChance,wordList)
 	
-	return (wordList,webSites)
+	return (list(wordList),list(webSites))
