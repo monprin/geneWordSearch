@@ -3,7 +3,7 @@
 # Written by Joe Jeffers
 # Updated on Jan 12 2015
 
-def geneWordSearch(genes,minChance=0.05):
+def geneWordSearch(genes,minChance=0.05,corrected=False):
 	# Input: Takes in a list of genes and the probability cutoff.
 	# Output: Returns tuple of words and links. Only returns the genes that have a 
 	# chance probability of less than the minChance variable. 
@@ -27,7 +27,6 @@ def geneWordSearch(genes,minChance=0.05):
 		i=1
 		
 		# Find the right gene
-		
 		while i<x:
 			if db[i].gene == gene:
 				break
@@ -73,8 +72,20 @@ def geneWordSearch(genes,minChance=0.05):
 		word.computeP(wordCounts,length)
 	del wordCounts
 	
-	# Sorting now by frequency instead of alphabetical
+	# Sorting now by P Value instead of alphabetical
 	wordList = sorted(wordList, key=lambda item: item.p)
+	
+	# Finding corrected P Values using Holm–Bonferroni method
+	i = 0
+	count = len(wordList)
+	while(i < count):
+		wordList[i].pCorrect(count,(i+1))
+		i += 1
+	
+	# Sort by corrected P Value instead of original P value
+	if(corrected):
+		print('hllo')
+		wordList = sorted(wordList, key=lambda item: item.pCor)
 	
 	# Filtering out results that are higher than the minimum chance threshold
 	wordList = filter(lambda x: x.p <= minChance,wordList)
