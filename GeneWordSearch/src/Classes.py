@@ -9,6 +9,7 @@ class WordFreq:
 	def __init__(self, word, freq):
 		self.word = word
 		self.p = 0
+		self.pCor = 0
 		self.freq = freq
 		self.total = 0
 		self.genes = []
@@ -17,6 +18,7 @@ class WordFreq:
 		# Standard string output function
 		ans = 'Word: ' + self.word + '\n'
 		ans += 'P-value: ' + str(self.p) + '\n'
+		ans += 'Corrected P-value: ' + str(self.pCor) + '\n'
 		ans += 'Overlap: ' + str(self.freq) + '/' + str(self.total) + '\n'
 		ans += 'Genes Appeared In: '
 		for gene in self.genes:
@@ -28,6 +30,7 @@ class WordFreq:
 		# Returns the string output for machine readable tsv.
 		ans = self.word + '\t'
 		ans += str(self.p) + '\t'
+		ans += str(self.pCor) + '\t'
 		ans += str(self.freq) + '\t'
 		ans += str(self.total) + '\t'
 		for gene in self.genes[:-1]:
@@ -37,7 +40,7 @@ class WordFreq:
 		
 	def robotHeaders():
 		# Returns the headers for machine readable output
-		return 'Word' + '\t' + 'Pval' + '\t' + 'Ocurrances in Sample' + '\t' + 'Ocurrances in Database' + '\t' + 'Genes Appeared In'
+		return 'Word' + '\t' + 'Pval' + '\t' + 'CorPval' + '\t' + 'Ocurrances in Sample' + '\t' + 'Ocurrances in Database' + '\t' + 'Genes Appeared In'
 		
 	def increment(self):
 		# Adds another tick to the word count
@@ -54,6 +57,9 @@ class WordFreq:
 		from scipy.stats import hypergeom
 		self.total = db[self.word]
 		self.p = hypergeom.sf((self.freq-1),986373,self.total,length)
+		
+	def pCorrect(self,tot,pos):
+		self.pCor = (self.p * (tot-pos))
 		
 class GeneNote:
 	# Class for holding a gene and all of the words that anotate it for the database.
