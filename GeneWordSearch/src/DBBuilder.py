@@ -5,63 +5,108 @@
 # Written by Joseph Jeffers
 # Updated Jan 12 2015
 
-def geneWordBuilder(infile='databases/OldGeneTables/geneMatrix_v2.txt',outfile='databases/geneNotes.tsv',headers=True):
+def geneWordBuilder(infile,species):
 # Function that makes the annotation database
 	import re
 	import pickle
 	from Classes import GeneNote
+	skippedRows = 0
+
+	print('For file \'' + infile + '\', please answer the following questions:')
+	geneCol = input('What column contains the gene identifiers (numbered from 1)? ')
+	desCol = input('What columns contain the description fields (please type each number seperated by a space)? ')
+	
+	# Convert from human column numbering to computer column numbering
+	geneCol = int(geneCol)-1
+	desCol = desCol.split(' ')
+	desCol = [int(x)-1 for x in desCol]
+	maxDes = max(desCol)
+	print(desCol)
+	print(maxDes)
 	
 	matrix = open(infile)
-	db = []
-	NoteDB = []
+	db = dict()
 	
-	# Get rid of headers if so indicated
+	# Figure out the file type
+	if(infile[-3:] == 'tsv'):
+		splitter = '\t'
+	elif(infile[-3:] == 'csv'):
+		splitter = ','
+	else:
+		splitter = input('Please type the charachter used to seperate columns in this document (tab = \t, rest are just the charachter): ')
+	
+	# Dealing with headers
+	headers = input('Does this file have headers (y or n)? ')
+	if(headers == 'y' or headers == 'Y'):
+		headers == True
+	elif(headers == 'n' or headers == 'N'):
+		headers == False
+	else:
+		raise ValueError('Please indicate whether your data has headers using y or n.')
 	if(headers):
 		garb = matrix.readline()
 		del garb
 	
 	# Process file line by line, each line has different gene.
 	for line in matrix.readlines():
-		row = line.split('\t')
-		# This section needed to remove the newline charachter off each
-		# new line read from the file
-		lastCol = len(row)-1
-		row[lastCol] = row[lastCol][:len(row[lastCol])-1]
-		# Adds list representing row as a new item to the database list
-		db.append(row)
+		# Get rid of newline char, make fully lowercase, and split into columns
+		line = line[:-1]
+		row = line.split(splitter)
+		
+		# Handle short lines in the database
+		if(len(row) <= maxDes):
+			skippedRows += 1
+			continue
+		
+		# Get the gene name, free of an sublocus notation
+		geneName = row[geneCol].lower()
+		geneName = re.split('\.',geneName)
+		geneName = geneName[0]
+		
+		# Add Gene Object to db if not there already
+		if(geneName not in db):
+			db[geneName] = GeneNote(geneName)
+		
+		# Getting the columns that have the descriptions
+		rowed = [row[x] for x in desCol]
+		row = rowed
+		words = []
+		
+		# Putting weblinks in their container if needed
+		for entry in row:
+			if(entry[:4] == 'http'):
+				db[geneName].addLink(entry)
+				row.remove(entry)
+		
+		# Splitting the words up by various delimiations
+		for entry in row:
+			words += re.split(' |_|,|\.|/|\(|\)|\;|\:',entry.lower())
+		
+		# Get rid of the blank entries, and other useless stuff
+		f = lambda x: not((x == '-') or (x == None) or (x.isdigit()) or (x == ''))
+		words = list(filter(f,words))
+		
+		# Add all of the words into the database
+		db[geneName].addWords(words)
 		
 	matrix.close()
 	
-	for row in db:
-		words = []
-		NoteDB.append(GeneNote(row[0]))
-		listing = row[6:]
-		
-		# Putting weblinks in their container
-		for entry in listing:
-			if(entry[:4] == 'http'):
-				NoteDB[-1].addLink(entry)
-				listing.remove(entry)
-		# Splitting the words up by various delimiations
-		for entry in listing:	
-			words += re.split(' |_|,|\.|/',entry)
-		
-		# Get rid of the blank entries
-		words = list(filter(None,words))
-		
-		# Add all of the words in the 
-		for word in words:
-			NoteDB[-1].addWord(word)
+	print('Number of rows skipped due to different formatting: ' + str(skippedRows))
 	
-	# Make a text version for posterity?
-	fin = open(outfile,'w',newline='')
-	for gene in NoteDB:
+	# Determine outfile locations
+	species = species.lower()
+	folder = 'databases/' + species + '/'
+	
+	# Make a text version for posterity (and error checking)
+	printList = list(db.values())
+	fin = open(folder+'geneNotes.tsv','w',newline='')
+	for gene in printList:
 		if not(gene.gene == ''):
 			fin.write(str(gene))
 	fin.close()
 	
 	# Pickle that stuff! (for geneWordSearch function)
-	pickle.dump(NoteDB,open('databases/geneNotes.p','wb'))
+	pickle.dump(db,open(folder+'geneNotes.p','wb'))
 	
 	return
 	
@@ -179,11 +224,18 @@ def numOfWords():
 # Answer: There are 989,373 words in the database as it is split and counted now.
 
 # Just run it from the command line to rebuild and count everything.
+import argparse
+parser = argparse.ArgumentParser(description='Build the database for geneWordSearch.')
+parser.add_argument('-s',action='store',type=str,default='ath',help='Define which species. Maize = maize, Arabidopsis = ath, or any other.')
+parser.add_argument('files',action='store',nargs='*')
+args = parser.parse_args()
+
 print('Building Database...')
-geneWordBuilder()
+for n in args.files:
+	geneWordBuilder(n,args.s)
 print('Done')
-print('Counting Word Instances...')
-totalWordCounts()
-print('Done')
-print('Total Words in the Database:')
-print(numOfWords())
+#print('Counting Word Instances...')
+#totalWordCounts()
+#print('Done')
+#print('Total Words in the Database:')
+#print(numOfWords())
