@@ -14,33 +14,39 @@ class WordFreq:
 		self.total = 0
 		self.genes = []
 		
-	def forHuman(self):
+	def forHuman(self,genes=False):
 		# Standard string output function
 		ans = 'Word: ' + self.word + '\n'
 		ans += 'P-value: ' + str(self.p) + '\n'
 		ans += 'Corrected P-value: ' + str(self.pCor) + '\n'
 		ans += 'Overlap: ' + str(self.freq) + '/' + str(self.total) + '\n'
-		ans += 'Genes Appeared In: '
-		for gene in self.genes:
-			ans += gene + ' '
-		ans += '\n'
+		if(genes):
+			ans += 'Genes Appeared In: '
+			for gene in self.genes[:-1]:
+				ans += gene + ' '
+			ans += self.genes[-1]
+			ans += '\n'
 		return ans
 		
-	def forRobot(self):
+	def forRobot(self,genes=False):
 		# Returns the string output for machine readable tsv.
 		ans = self.word + '\t'
 		ans += str(self.p) + '\t'
 		ans += str(self.pCor) + '\t'
 		ans += str(self.freq) + '\t'
 		ans += str(self.total) + '\t'
-		for gene in self.genes[:-1]:
-			ans += gene + '\t'
-		ans += self.genes[-1]
+		if(genes):
+			for gene in self.genes[:-1]:
+				ans += gene + '\t'
+			ans += self.genes[-1]
 		return ans
 		
-	def robotHeaders():
+	def robotHeaders(genes=False):
 		# Returns the headers for machine readable output
-		return 'Word' + '\t' + 'Pval' + '\t' + 'CorPval' + '\t' + 'Ocurrances in Sample' + '\t' + 'Ocurrances in Database' + '\t' + 'Genes Appeared In'
+		ans = 'Word' + '\t' + 'Pval' + '\t' + 'CorPval' + '\t' + 'Ocurrances in Sample' + '\t' + 'Ocurrances in Database'
+		if(genes):
+			ans += '\t' + 'Genes Appeared In'
+		return ans
 		
 	def increment(self):
 		# Adds another tick to the word count
@@ -68,10 +74,11 @@ class GeneNote:
 		self.words = set()
 		self.links = set()
 		
-	def addWord(self,word):
+	def addWords(self,words):
 	# Adds word to the list of associated words
-		self.words.add(word)
-		
+		for word in words:
+			self.words.add(word)
+	
 	def addLink(self,link):
 	# Adds link to the list of associated links
 		self.links.add(link)
