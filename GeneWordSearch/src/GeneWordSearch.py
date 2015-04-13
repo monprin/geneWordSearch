@@ -26,17 +26,8 @@ def geneWordSearch(genes,minChance=0.05,corrected=False):
 		gene = item.lower()
 		i=1
 		
-		# Find the right gene
-		while i<x:
-			if db[i].gene == gene:
-				break
-			i += 1
+		geneData = db[gene]
 		
-		# Check to see if the entry was actually found or just ran out of entries
-		if i >= x:
-			raise ValueError('Gene: ' + gene + ' is not in the supplied database')
-			return
-		geneData = db[i]
 		# Adding words related to the gene in db to the overall list
 		for word in geneData.words:
 			words.append([word,geneData.gene])
@@ -84,7 +75,6 @@ def geneWordSearch(genes,minChance=0.05,corrected=False):
 	
 	# Sort by corrected P Value instead of original P value
 	if(corrected):
-		print('hllo')
 		wordList = sorted(wordList, key=lambda item: item.pCor)
 	
 	# Filtering out results that are higher than the minimum chance threshold

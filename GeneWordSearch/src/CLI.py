@@ -11,7 +11,7 @@ from GeneWordSearch import geneWordSearch
 from Classes import WordFreq
 
 # Function to print the results 
-def resultsPrinter(results, web, table, outfile, singles):
+def resultsPrinter(results, web, table, outfile, singles, genes):
 	# Input: 
 	#	The results from the geneWordSearch function
 	#	a boolean for wheather to print links
@@ -24,19 +24,19 @@ def resultsPrinter(results, web, table, outfile, singles):
 	
 	if(table):
 		# Print the header for the table
-		outfile.write(WordFreq.robotHeaders()+ '\n')
+		outfile.write(WordFreq.robotHeaders(genes)+ '\n')
 	
 		# Print the genes by category of multiples and singles
 		outfile.write('Multiple Gene Words:' + '\n' + '\n')
 		for item in words:
 			if(item.freq > 1):
-				outfile.write(item.forRobot() + '\n')
+				outfile.write(item.forRobot(genes) + '\n')
 		
 		if(singles):
 			outfile.write('Single Gene Words:' + '\n' + '\n')
 			for item in words:
 				if(item.freq == 1):
-					outfile.write(item.forRobot() + '\n')
+					outfile.write(item.forRobot(genes) + '\n')
 		
 	# Prints out web links if needed
 		if(web):
@@ -48,13 +48,13 @@ def resultsPrinter(results, web, table, outfile, singles):
 		outfile.write('Multiple Gene Words:' + '\n' + '\n')
 		for item in words:
 			if(item.freq > 1):
-				outfile.write(item.forHuman() + '\n')
+				outfile.write(item.forHuman(genes) + '\n')
 		
 		if(singles):
 			outfile.write('Single Gene Words:' + '\n' + '\n')
 			for item in words:
 				if(item.freq == 1):
-					outfile.write(item.forHuman() + '\n')
+					outfile.write(item.forHuman(genes) + '\n')
 	
 	# Prints out web links if needed
 		if(web):
@@ -67,6 +67,7 @@ parser = argparse.ArgumentParser(description='Find the important words associate
 parser.add_argument('-c',action='store_true',default=False,help='Sorts results by Holm–Bonferroni corrected p values to compensate for multiple hypothesis problem.')
 parser.add_argument('-d',action='store_true',default=False,help='Indicates that the input is a directory and will process all files in the directory. (Incompatible with -f and -n)')
 parser.add_argument('-f',action='store_true',default=False,help='This indicates that the input strings will be a file with genes in it. (Incompatible with -d and -n)')
+parser.add_argument('-g',action='store_true',default=False,help='Prints list of genes associated with each word')
 parser.add_argument('-n',action='store_true',default=False,help='Indicates that the input is the starting point of a network, will first return list of genes in those networks, then the traditional output on that list of genes. (Incompatible with -d and -f)')
 parser.add_argument('-o',action='store',type=str,default='out.txt',help='Location to write the file that contains the results, default is out.txt in current folder.')
 parser.add_argument('-p',action='store',type=float,default=0.05,help='This option takes one argument and sets the probability cutoff, default is 0.2.')
@@ -89,7 +90,7 @@ if(args.f):
 		for row in geneList.readlines():
 			genes += row.split()
 	results = geneWordSearch(genes,minChance=args.p,corrected=args.c)
-	resultsPrinter(results,args.w,args.t,out,args.s)
+	resultsPrinter(results,args.w,args.t,out,args.s,args.g)
 
 elif(args.n):
 # Deals with finding the gene network
@@ -106,7 +107,7 @@ elif(args.n):
 	
 	out.write('\n' + 'Results from this list:' + '\n' + '\n')
 	results = geneWordSearch(genes,minChance=args.p,corrected=args.c)
-	resultsPrinter(results,args.w,args.t,out,args.s)
+	resultsPrinter(results,args.w,args.t,out,args.s,args.g)
 
 elif(args.d):
 # Deals with directory option
@@ -127,14 +128,14 @@ elif(args.d):
 				out.write('Results for ' + fileName + ':')
 				out.write('\n' + '\n')
 				results = geneWordSearch(genes,minChance=args.p,corrected=args.c)
-				resultsPrinter(results,args.w,args.t,out,args.s)
+				resultsPrinter(results,args.w,args.t,out,args.s,args.g)
 			geneList.close()
 
 else:
 # Handles normal gene list input
 	genes = args.things
 	results = geneWordSearch(genes,minChance=args.p,corrected=args.c)
-	resultsPrinter(results,args.w,args.t,out,args.s)
+	resultsPrinter(results,args.w,args.t,out,args.s,args.g)
 
 out.close()
 print('Completed! Check ' + args.o + ' for your results.')
