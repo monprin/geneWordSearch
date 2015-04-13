@@ -3,7 +3,7 @@
 # Written by Joe Jeffers
 # Updated on Jan 12 2015
 
-def geneWordSearch(genes,minChance=0.05,corrected=False):
+def geneWordSearch(genes,species,minChance=0.05,corrected=False):
 	# Input: Takes in a list of genes and the probability cutoff.
 	# Output: Returns tuple of words and links. Only returns the genes that have a 
 	# chance probability of less than the minChance variable. 
@@ -13,7 +13,8 @@ def geneWordSearch(genes,minChance=0.05,corrected=False):
 	from Classes import GeneNote
 	
 	# Unpickle the database of words
-	dbfile = open('databases/geneNotes.p','rb')
+	
+	dbfile = open('databases/'+ species +'/geneNotes.p','rb')
 	db = pickle.load(dbfile)
 	
 	words = []
@@ -57,7 +58,7 @@ def geneWordSearch(genes,minChance=0.05,corrected=False):
 	del words
 	
 	# Finding the respective P values
-	pickleDict = open('databases/totalWordCounts.p','rb')
+	pickleDict = open('databases/'+ species +'/totalWordCounts.p','rb')
 	wordCounts = pickle.load(pickleDict)
 	for word in wordList:
 		word.computeP(wordCounts,length)
