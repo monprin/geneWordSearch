@@ -112,15 +112,19 @@ def geneWordBuilder(infiles,species):
 	
 	return
 	
-def totalWordCounts():
+def totalWordCounts(species):
 # Creates the dictionary of word occurances for use in geneWordSearch
 	import pickle
 	from Classes import WordFreq
 	from Classes import GeneNote
 	
-	# Unpickle the database of words
-	dbfile = open('databases/geneNotes.p','rb')
-	db = pickle.load(dbfile)
+	# Unpickle the database of words and make a list of all of them
+	species = species.lower()
+	dbFile = open('databases/' + species + '/geneNotes.p','rb')
+	dbDict = pickle.load(dbFile)
+	db = list(dbDict.values())
+	dbFile.close()
+	del dbDict
 	
 	# Make a list of all the words associated genes in the database
 	words = []
@@ -152,13 +156,13 @@ def totalWordCounts():
 		dictDB[word.word] = word.freq
 		
 	# Print file
-	totalsFile = open('databases/totalWordCounts.tsv','w')
+	totalsFile = open('databases/' + species + '/totalWordCounts.tsv','w')
 	for word in wordList:
 		totalsFile.write(str(word.freq) + '\t' + str(word.word) + '\n')
 	totalsFile.close()
 	
 	# Pickle the dictionary
-	pickle.dump(dictDB,open('databases/totalWordCounts.p','wb'))
+	pickle.dump(dictDB,open('databases/' + species + '/totalWordCounts.p','wb'))
 	
 	
 def networksBuilder(infile,outfile='databases/networks',headers=True):
@@ -214,8 +218,8 @@ def networksBuilder(infile,outfile='databases/networks',headers=True):
 
 	
 # Returns the total word count of the entire database using the totalWordCount.txt
-def numOfWords():
-	x = open('databases/totalWordCounts.tsv')
+def numOfWords(species):
+	x = open('databases/' + species + '/totalWordCounts.tsv')
 	sum = 0;
 	
 	for line in x.readlines():
@@ -235,8 +239,8 @@ args = parser.parse_args()
 print('Building Database...')
 geneWordBuilder(args.files,args.s)
 print('Done')
-#print('Counting Word Instances...')
-#totalWordCounts()
-#print('Done')
-#print('Total Words in the Database:')
-#print(numOfWords())
+print('Counting Word Instances...')
+totalWordCounts(args.s)
+print('Done')
+print('Total Words in the Database:')
+print(numOfWords(args.s))
