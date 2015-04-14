@@ -1,7 +1,7 @@
 # File contains the custom classes need for the operation of the program.
 
 # Written by Joe Jeffers
-# Updated Jan 12 2015
+# Updated Apr 14 2015
 
 class WordFreq:
 	# Class for keeping the words and their frequencies together and 
