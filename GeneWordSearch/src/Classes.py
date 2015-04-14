@@ -56,13 +56,13 @@ class WordFreq:
 		# Adds the gene to the list of represented genes
 		self.genes.append(gene)
 		
-	def computeP(self,db,length):
+	def computeP(self,db,length,totWords):
 		# Computes the p value using hypergeometric distribution
 		# Also finds and assigns the total word count from the database
 		# Word count database must be dictionary with 'word' as the key, and count as value
 		from scipy.stats import hypergeom
 		self.total = db[self.word]
-		self.p = hypergeom.sf((self.freq-1),986373,self.total,length)
+		self.p = hypergeom.sf((self.freq-1),totWords,self.total,length)
 		
 	def pCorrect(self,tot,pos):
 		self.pCor = (self.p * (tot-pos))
