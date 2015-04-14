@@ -60,8 +60,10 @@ def geneWordSearch(genes,species,minChance=0.05,corrected=False):
 	# Finding the respective P values
 	pickleDict = open('databases/'+ species +'/totalWordCounts.p','rb')
 	wordCounts = pickle.load(pickleDict)
+	totalWords = wordCounts['Total Count']
 	for word in wordList:
-		word.computeP(wordCounts,length)
+		word.computeP(wordCounts,length,totalWords)
+	pickleDict.close()
 	del wordCounts
 	
 	# Sorting now by P Value instead of alphabetical
