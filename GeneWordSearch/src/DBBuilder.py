@@ -3,7 +3,7 @@
 # but that is for a future versaion, included now for reference.
 
 # Written by Joseph Jeffers
-# Updated Jan 12 2015
+# Updated Apr 14 2015
 
 def geneWordBuilder(infiles,species):
 # Function that makes the annotation database
@@ -16,15 +16,18 @@ def geneWordBuilder(infiles,species):
 	for infile in infiles:
 		print('For file \'' + infile + '\', please answer the following questions:')
 		geneCol = input('What column contains the gene identifiers (numbered from 1)? ')
-		desCol = input('What columns contain the description fields (please type each number seperated by a space)? ')
+		desCol = input('What columns contain the description fields (please type each number seperated by a space; write \"end\" after the last number to inicate the rest of the columns)? ')
 		
 		# Convert from human column numbering to computer column numbering
 		geneCol = int(geneCol)-1
 		desCol = desCol.split(' ')
+		if (desCol[-1] == 'end'):
+			toEnd = True
+			desCol = desCol[:-1]
+		else:
+			toEnd = False
 		desCol = [int(x)-1 for x in desCol]
 		maxDes = max(desCol)
-		
-		matrix = open(infile)
 		
 		# Figure out the file type
 		if(infile[-3:] == 'tsv'):
@@ -35,6 +38,8 @@ def geneWordBuilder(infiles,species):
 			splitter = input('Please type the charachter used to seperate columns in this document (tab = \t, rest are just the charachter): ')
 		
 		# Dealing with headers
+		matrix = open(infile)
+		rowNum = 0
 		headers = input('Does this file have headers (y or n)? ')
 		if(headers == 'y' or headers == 'Y'):
 			headers == True
@@ -44,19 +49,22 @@ def geneWordBuilder(infiles,species):
 			raise ValueError('Please indicate whether your data has headers using y or n.')
 		if(headers):
 			garb = matrix.readline()
+			rowNum += 1
 			del garb
 		
 		# Process file line by line, each line has different gene.
-		skippedRows = 0
+		skippedRows = []
 		for line in matrix.readlines():
 			# Get rid of newline char, make fully lowercase, and split into columns
 			line = line[:-1]
 			row = line.split(splitter)
 			
 			# Handle short lines in the database
-			if(len(row) <= maxDes):
-				skippedRows += 1
+			if(len(row)-1 <= maxDes):
+				skippedRows.append(rowNum)
+				rowNum += 1
 				continue
+			rowNum += 1
 			
 			# Get the gene name, free of any sublocus notation
 			geneName = row[geneCol].lower()
@@ -68,9 +76,14 @@ def geneWordBuilder(infiles,species):
 				db[geneName] = GeneNote(geneName)
 			
 			# Getting the columns that have the descriptions
-			rowed = [row[x] for x in desCol]
+			desColTemp = desCol[:]
+			if(toEnd):
+				last = desColTemp[-1]
+				desColTemp += list(range((last+1),len(row)))
+			rowed = [row[x] for x in desColTemp]
 			row = rowed
 			del rowed
+			del desColTemp
 			words = []
 			
 			# Putting weblinks in their container if needed
@@ -92,7 +105,11 @@ def geneWordBuilder(infiles,species):
 			
 		matrix.close()
 		
-		print('Number of rows skipped due to different formatting: ' + str(skippedRows))
+		if(len(skippedRows) > 0):
+			print()
+			print('Number of rows skipped due to different formatting: ' + str(len(skippedRows)))
+			print('Please check the following rows for problems: ')
+			print(skippedRows)
 		print()
 		
 	# Determine outfile locations
@@ -146,6 +163,12 @@ def totalWordCounts(species):
 		else:
 			wordList[0].increment()
 	del words
+	
+	# Find the total word count, add it to the list
+	total = 0
+	for word in wordList:
+		total += word.freq
+	wordList.insert(0,WordFreq('Total Count',total))
 	
 	# Sorting now by frequency instead of alphabetical
 	wordList = sorted(wordList, key=lambda item: item.freq,reverse=True)
@@ -216,19 +239,6 @@ def networksBuilder(infile,outfile='databases/networks',headers=True):
 		networkFile.write(thing[0] + '\t' + str(thing[1]) + '\n')
 	networkFile.close()
 
-	
-# Returns the total word count of the entire database using the totalWordCount.txt
-def numOfWords(species):
-	x = open('databases/' + species + '/totalWordCounts.tsv')
-	sum = 0;
-	
-	for line in x.readlines():
-		row = line.split()
-		sum += int(row[0])
-		
-	return sum
-# Answer: There are 989,373 words in the database as it is split and counted now.
-
 # Just run it from the command line to rebuild and count everything.
 import argparse
 parser = argparse.ArgumentParser(description='Build the database for geneWordSearch.')
@@ -241,6 +251,4 @@ geneWordBuilder(args.files,args.s)
 print('Done')
 print('Counting Word Instances...')
 totalWordCounts(args.s)
-print('Done')
-print('Total Words in the Database:')
-print(numOfWords(args.s))
+print('Done, please check out put in the species folder you defined.')
