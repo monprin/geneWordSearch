@@ -5,94 +5,96 @@
 # Written by Joseph Jeffers
 # Updated Jan 12 2015
 
-def geneWordBuilder(infile,species):
+def geneWordBuilder(infiles,species):
 # Function that makes the annotation database
 	import re
 	import pickle
 	from Classes import GeneNote
-	skippedRows = 0
-
-	print('For file \'' + infile + '\', please answer the following questions:')
-	geneCol = input('What column contains the gene identifiers (numbered from 1)? ')
-	desCol = input('What columns contain the description fields (please type each number seperated by a space)? ')
 	
-	# Convert from human column numbering to computer column numbering
-	geneCol = int(geneCol)-1
-	desCol = desCol.split(' ')
-	desCol = [int(x)-1 for x in desCol]
-	maxDes = max(desCol)
-	print(desCol)
-	print(maxDes)
-	
-	matrix = open(infile)
 	db = dict()
 	
-	# Figure out the file type
-	if(infile[-3:] == 'tsv'):
-		splitter = '\t'
-	elif(infile[-3:] == 'csv'):
-		splitter = ','
-	else:
-		splitter = input('Please type the charachter used to seperate columns in this document (tab = \t, rest are just the charachter): ')
-	
-	# Dealing with headers
-	headers = input('Does this file have headers (y or n)? ')
-	if(headers == 'y' or headers == 'Y'):
-		headers == True
-	elif(headers == 'n' or headers == 'N'):
-		headers == False
-	else:
-		raise ValueError('Please indicate whether your data has headers using y or n.')
-	if(headers):
-		garb = matrix.readline()
-		del garb
-	
-	# Process file line by line, each line has different gene.
-	for line in matrix.readlines():
-		# Get rid of newline char, make fully lowercase, and split into columns
-		line = line[:-1]
-		row = line.split(splitter)
+	for infile in infiles:
+		print('For file \'' + infile + '\', please answer the following questions:')
+		geneCol = input('What column contains the gene identifiers (numbered from 1)? ')
+		desCol = input('What columns contain the description fields (please type each number seperated by a space)? ')
 		
-		# Handle short lines in the database
-		if(len(row) <= maxDes):
-			skippedRows += 1
-			continue
+		# Convert from human column numbering to computer column numbering
+		geneCol = int(geneCol)-1
+		desCol = desCol.split(' ')
+		desCol = [int(x)-1 for x in desCol]
+		maxDes = max(desCol)
 		
-		# Get the gene name, free of an sublocus notation
-		geneName = row[geneCol].lower()
-		geneName = re.split('\.',geneName)
-		geneName = geneName[0]
+		matrix = open(infile)
 		
-		# Add Gene Object to db if not there already
-		if(geneName not in db):
-			db[geneName] = GeneNote(geneName)
+		# Figure out the file type
+		if(infile[-3:] == 'tsv'):
+			splitter = '\t'
+		elif(infile[-3:] == 'csv'):
+			splitter = ','
+		else:
+			splitter = input('Please type the charachter used to seperate columns in this document (tab = \t, rest are just the charachter): ')
 		
-		# Getting the columns that have the descriptions
-		rowed = [row[x] for x in desCol]
-		row = rowed
-		words = []
+		# Dealing with headers
+		headers = input('Does this file have headers (y or n)? ')
+		if(headers == 'y' or headers == 'Y'):
+			headers == True
+		elif(headers == 'n' or headers == 'N'):
+			headers == False
+		else:
+			raise ValueError('Please indicate whether your data has headers using y or n.')
+		if(headers):
+			garb = matrix.readline()
+			del garb
 		
-		# Putting weblinks in their container if needed
-		for entry in row:
-			if(entry[:4] == 'http'):
-				db[geneName].addLink(entry)
-				row.remove(entry)
+		# Process file line by line, each line has different gene.
+		skippedRows = 0
+		for line in matrix.readlines():
+			# Get rid of newline char, make fully lowercase, and split into columns
+			line = line[:-1]
+			row = line.split(splitter)
+			
+			# Handle short lines in the database
+			if(len(row) <= maxDes):
+				skippedRows += 1
+				continue
+			
+			# Get the gene name, free of any sublocus notation
+			geneName = row[geneCol].lower()
+			geneName = re.split('\.',geneName)
+			geneName = geneName[0]
+			
+			# Add Gene Object to db if not there already
+			if(geneName not in db):
+				db[geneName] = GeneNote(geneName)
+			
+			# Getting the columns that have the descriptions
+			rowed = [row[x] for x in desCol]
+			row = rowed
+			del rowed
+			words = []
+			
+			# Putting weblinks in their container if needed
+			for entry in row:
+				if(entry[:4] == 'http'):
+					db[geneName].addLink(entry)
+					row.remove(entry)
+			
+			# Splitting the words up by various delimiations
+			for entry in row:
+				words += re.split(' |_|,|\.|/|\(|\)|\;|\:',entry.lower())
+			
+			# Get rid of the blank entries, and other useless stuff
+			f = lambda x: not((x == '-') or (x == None) or (x.isdigit()) or (x == '') or (len(x) <= 1))
+			words = list(filter(f,words))
+			
+			# Add all of the words into the database
+			db[geneName].addWords(words)
+			
+		matrix.close()
 		
-		# Splitting the words up by various delimiations
-		for entry in row:
-			words += re.split(' |_|,|\.|/|\(|\)|\;|\:',entry.lower())
+		print('Number of rows skipped due to different formatting: ' + str(skippedRows))
+		print()
 		
-		# Get rid of the blank entries, and other useless stuff
-		f = lambda x: not((x == '-') or (x == None) or (x.isdigit()) or (x == ''))
-		words = list(filter(f,words))
-		
-		# Add all of the words into the database
-		db[geneName].addWords(words)
-		
-	matrix.close()
-	
-	print('Number of rows skipped due to different formatting: ' + str(skippedRows))
-	
 	# Determine outfile locations
 	species = species.lower()
 	folder = 'databases/' + species + '/'
@@ -231,8 +233,7 @@ parser.add_argument('files',action='store',nargs='*')
 args = parser.parse_args()
 
 print('Building Database...')
-for n in args.files:
-	geneWordBuilder(n,args.s)
+geneWordBuilder(args.files,args.s)
 print('Done')
 #print('Counting Word Instances...')
 #totalWordCounts()
