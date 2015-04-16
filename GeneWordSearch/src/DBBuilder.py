@@ -243,7 +243,7 @@ def buildDBs(species,files):
 	# Make the folder for the defined species if it doesn't exist
 	import os
 	species = species.lower()
-	spath = 'database/'+ species + '/'
+	spath = 'databases/'+ species + '/'
 	os.makedirs(spath, exist_ok=True)
 	
 	print('Building Database...')
