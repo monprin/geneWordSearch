@@ -238,17 +238,30 @@ def networksBuilder(infile,outfile='databases/networks',headers=True):
 			break
 		networkFile.write(thing[0] + '\t' + str(thing[1]) + '\n')
 	networkFile.close()
+	
+def buildDBs(species,files):
+	# Make the folder for the defined species if it doesn't exist
+	import os
+	species = species.lower()
+	spath = 'database/'+ species + '/'
+	os.makedirs(spath, exist_ok=True)
+	
+	print('Building Database...')
+	geneWordBuilder(files,species)
+	print('Done')
+	print('Counting Word Instances...')
+	totalWordCounts(species)
+	print('Done, please check out put in the species folder you defined.')
 
 # Just run it from the command line to rebuild and count everything.
-import argparse
-parser = argparse.ArgumentParser(description='Build the database for geneWordSearch.')
-parser.add_argument('-s',action='store',type=str,default='ath',help='Define which species. Maize = maize, Arabidopsis = ath, or any other.')
-parser.add_argument('files',action='store',nargs='*')
-args = parser.parse_args()
+if __name__ == '__main__':
+	import argparse
+	import os
+	parser = argparse.ArgumentParser(description='Build the database for geneWordSearch.')
+	parser.add_argument('-s',action='store',type=str,default='ath',help='Define which species. Maize = maize, Arabidopsis = ath, or any other.')
+	parser.add_argument('files',action='store',nargs='*')
+	args = parser.parse_args()
+	
+	buildDBs(args.s,args.files)
 
-print('Building Database...')
-geneWordBuilder(args.files,args.s)
-print('Done')
-print('Counting Word Instances...')
-totalWordCounts(args.s)
-print('Done, please check out put in the species folder you defined.')
+
