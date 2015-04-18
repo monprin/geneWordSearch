@@ -5,7 +5,6 @@ Enrichment Things
 - Give context for word (Surrounding sentance, reserve for gui version)
 
 Database Things
-- Be able to change the universe of genes (Subset of all genes)
 
 Other Things
 - GUI (look at flask) (On ice for the time being)
