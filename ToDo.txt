@@ -2,10 +2,9 @@ To-Do List of features/capabilities:
 (In categorical, but not priority order)
 
 Enrichment Things
-- Give context for word (Surrounding sentance, may reserve for gui version)
+- Give context for word (Surrounding sentance, reserve for gui version)
 
 Database Things
-- Look at sqlite for new data structure (along with code generalization for other species)
 - Be able to change the universe of genes (Subset of all genes)
 
 Other Things
