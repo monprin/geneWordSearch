@@ -78,10 +78,12 @@ parser.add_argument('-o',action='store',type=str,default='out.txt',help=
 'Location to write the file that contains the results, default is out.txt in current folder.')
 parser.add_argument('-p',action='store',type=float,default=0.05,help=
 'This option takes one argument and sets the probability cutoff, default is 0.05.')
-parser.add_argument('-s',action='store',type=str,default='maize',help=
+parser.add_argument('-s',action='store',type=str,help=
 'Allows indication of species to work with, \'maize\' and \'ath\' are currently available.')
 parser.add_argument('-t',action='store_true',default=False,help=
 'This will give a tsv output for machine readable purposes. Default is human readable output.')
+parser.add_argument('-u',action='store',type=str,help=
+'Takes one argument, file with list of genes to be used as universe for enrichment query. One gene per line or split by comma.')
 parser.add_argument('-w',action='store_true',default=False,help=
 'This will output associated weblinks with standard gene output.')
 parser.add_argument('--file',action='store_true',default=False,help=
@@ -93,6 +95,19 @@ parser.add_argument('things',action='store',nargs='*')
 # Parse the arguments
 args = parser.parse_args()
 args.s = args.s.lower()
+
+# Build alternate universe if it is so ordained
+if(args.u):
+	import DBBuilder
+	genes = []
+	geneUni = open(args.u)
+	for row in geneUni.readlines():
+		rowsy = row[:-1]
+		genes += rowsy.split(',')
+	DBBuilder.tempBuilder(genes,args.s)
+	args.s = 'tmp'
+	geneUni.close()
+	del genes
 
 # Open the output file for writing
 out = open(args.o,'w')
@@ -151,7 +166,7 @@ elif(args.d):
 	DBBuilder.buildDBs(args.s,args.things)
 	print('Database has been built in /databases/'+args.s)
 	print('Please run this program again to do the gene analysis, and use the options -s')
-
+	
 else:
 # Handles normal gene list input
 	genes = args.things
@@ -160,6 +175,9 @@ else:
 
 if not(args.d):
 	out.close()
+	if(args.u):
+		import shutil
+		shutil.rmtree('databases/tmp/')
 	print('Completed! Check ' + args.o + ' for your results.')
 
 

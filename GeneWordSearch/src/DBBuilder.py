@@ -188,14 +188,22 @@ def totalWordCounts(species):
 	pickle.dump(dictDB,open('databases/' + species + '/totalWordCounts.p','wb'))
 	
 	
-def networksBuilder(infile,outfile='databases/networks',headers=True):
+def networksBuilder(infile,species):
 # Creates dictionary for gene networks. Used by CLI for network finder
 	import pickle
 	
 	sheet = open(infile)
 	networks = {}
 	
-	# Get rid of headers if indicated
+	# Dealing with headers
+	sheet = open(infile)
+	headers = input('Does this file have headers (y or n)? ')
+	if(headers == 'y' or headers == 'Y'):
+		headers == True
+	elif(headers == 'n' or headers == 'N'):
+		headers == False
+	else:
+		raise ValueError('Please indicate whether your data has headers using y or n.')
 	if(headers):
 		garb = sheet.readline()
 		del garb
@@ -252,6 +260,28 @@ def buildDBs(species,files):
 	print('Counting Word Instances...')
 	totalWordCounts(species)
 	print('Done, please check out put in the species folder you defined.')
+
+def tempBuilder(genes,species):
+	import os
+	import pickle
+	
+	species = species.lower()
+	spath = 'databases/'+ species + '/'
+	tpath = 'databases/tmp/'
+	os.makedirs(tpath, exist_ok=True)
+	
+	fullDB = pickle.load(open(spath +'geneNotes.p','rb'))
+	newDB = dict()
+	
+	for gene in genes:
+		name = gene.lower()
+		data = fullDB[name]
+		newDB[name] = data
+	
+	pickle.dump(newDB,open(tpath+'geneNotes.p','wb'))
+	
+	totalWordCounts('tmp')
+	return
 
 # Just run it from the command line to rebuild and count everything.
 if __name__ == '__main__':
