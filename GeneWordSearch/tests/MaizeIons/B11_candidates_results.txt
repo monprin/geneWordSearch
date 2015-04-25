@@ -1,0 +1,4142 @@
+Multiple Gene Words:
+
+Word: v-atpases
+P-value: 4.43861411876e-05
+Corrected P-value: 0.0473156265059
+Overlap: 5/80
+Genes Appeared In: grmzm2g019404 grmzm2g020043 grmzm2g128877 grmzm2g180211 grmzm5g893252
+
+Word: p-
+P-value: 5.6107153871e-05
+Corrected P-value: 0.0597541188726
+Overlap: 5/84
+Genes Appeared In: grmzm2g019404 grmzm2g020043 grmzm2g128877 grmzm2g180211 grmzm5g893252
+
+Word: put-169a-panicum
+P-value: 0.00260180009711
+Corrected P-value: 2.73709370216
+Overlap: 168/28229
+Genes Appeared In: grmzm2g000093 grmzm2g003742 grmzm2g004828 grmzm2g004909 grmzm2g006252 grmzm2g006450 grmzm2g006762 grmzm2g010987 grmzm2g014089 grmzm2g014560 grmzm2g015889 grmzm2g016503 grmzm2g016827 grmzm2g017269 grmzm2g017305 grmzm2g018070 grmzm2g019404 grmzm2g026065 grmzm2g030280 grmzm2g031991 grmzm2g037185 grmzm2g039532 grmzm2g039588 grmzm2g039954 grmzm2g040095 grmzm2g041015 grmzm2g041506 grmzm2g046733 grmzm2g047777 grmzm2g048008 grmzm2g052562 grmzm2g057243 grmzm2g057450 grmzm2g058394 grmzm2g059891 grmzm2g059937 grmzm2g060505 grmzm2g060611 grmzm2g060726 grmzm2g060817 grmzm2g063328 grmzm2g066169 grmzm2g067865 grmzm2g067943 grmzm2g068506 grmzm2g074589 grmzm2g075417 grmzm2g075505 grmzm2g076212 grmzm2g076499 grmzm2g080537 grmzm2g081582 grmzm2g082318 grmzm2g082365 grmzm2g082683 grmzm2g083138 grmzm2g086906 grmzm2g087196 grmzm2g089506 grmzm2g090087 grmzm2g090245 grmzm2g100360 grmzm2g101412 grmzm2g101438 grmzm2g101463 grmzm2g101613 grmzm2g102521 grmzm2g102596 grmzm2g102959 grmzm2g103128 grmzm2g103137 grmzm2g103512 grmzm2g105682 grmzm2g106683 grmzm2g107556 grmzm2g107639 grmzm2g107651 grmzm2g107696 grmzm2g111017 grmzm2g112149 grmzm2g112366 grmzm2g115049 grmzm2g118363 grmzm2g118441 grmzm2g120975 grmzm2g121186 grmzm2g126706 grmzm2g126839 grmzm2g128114 grmzm2g128268 grmzm2g128466 grmzm2g128877 grmzm2g131442 grmzm2g133653 grmzm2g135808 grmzm2g135839 grmzm2g136067 grmzm2g139973 grmzm2g140070 grmzm2g140082 grmzm2g142664 grmzm2g143767 grmzm2g143782 grmzm2g145213 grmzm2g146514 grmzm2g148881 grmzm2g150408 grmzm2g152126 grmzm2g153332 grmzm2g153991 grmzm2g159475 grmzm2g160005 grmzm2g163776 grmzm2g164696 grmzm2g171986 grmzm2g171994 grmzm2g178046 grmzm2g179737 grmzm2g180211 grmzm2g181336 grmzm2g181354 grmzm2g301909 grmzm2g311919 grmzm2g316907 grmzm2g319130 grmzm2g319187 grmzm2g320373 grmzm2g320399 grmzm2g324111 grmzm2g334734 grmzm2g339336 grmzm2g351387 grmzm2g352756 grmzm2g356714 grmzm2g358931 grmzm2g359874 grmzm2g360681 grmzm2g380784 grmzm2g402242 grmzm2g404762 grmzm2g405178 grmzm2g405203 grmzm2g420926 grmzm2g427073 grmzm2g427090 grmzm2g433591 grmzm2g436981 grmzm2g438840 grmzm2g444801 grmzm2g445854 grmzm2g448511 grmzm2g452896 grmzm2g468747 grmzm2g474546 grmzm2g501450 grmzm2g521862 grmzm2g587327 grmzm2g703466 grmzm5g812555 grmzm5g821411 grmzm5g823017 grmzm5g829946 grmzm5g835704 grmzm5g856738 grmzm5g863420 grmzm5g874163 grmzm5g892675 grmzm5g893252
+
+Word: xi
+P-value: 0.00514244930487
+Corrected P-value: 3.71284839812
+Overlap: 4/143
+Genes Appeared In: grmzm2g080537 grmzm2g316904 grmzm2g316907 grmzm2g438840
+
+Word: atpase
+P-value: 0.00983767882076
+Corrected P-value: 5.90260729245
+Overlap: 5/268
+Genes Appeared In: grmzm2g019404 grmzm2g128877 grmzm2g157758 grmzm2g587327 grmzm5g893252
+
+Word: peptidase
+P-value: 0.0117762957231
+Corrected P-value: 7.00689595527
+Overlap: 4/182
+Genes Appeared In: grmzm2g101438 grmzm2g102596 grmzm2g106683 grmzm2g112366
+
+Word: response
+P-value: 0.0143243211813
+Corrected P-value: 7.63486318965
+Overlap: 4/193
+Genes Appeared In: grmzm2g160005 grmzm2g319187 grmzm2g427073 grmzm5g874163
+
+Word: protein
+P-value: 0.0151705155166
+Corrected P-value: 8.07071425485
+Overlap: 156/27373
+Genes Appeared In: grmzm2g000093 grmzm2g003742 grmzm2g004828 grmzm2g004909 grmzm2g006252 grmzm2g006450 grmzm2g006762 grmzm2g010987 grmzm2g014089 grmzm2g015889 grmzm2g016827 grmzm2g017269 grmzm2g017305 grmzm2g018070 grmzm2g020043 grmzm2g026065 grmzm2g030280 grmzm2g031991 grmzm2g037185 grmzm2g039532 grmzm2g039588 grmzm2g039954 grmzm2g041015 grmzm2g041506 grmzm2g046733 grmzm2g047777 grmzm2g057450 grmzm2g059891 grmzm2g059937 grmzm2g060505 grmzm2g060611 grmzm2g060726 grmzm2g060817 grmzm2g063328 grmzm2g064896 grmzm2g064984 grmzm2g066169 grmzm2g067865 grmzm2g067943 grmzm2g068566 grmzm2g074589 grmzm2g075227 grmzm2g075417 grmzm2g075505 grmzm2g076212 grmzm2g076499 grmzm2g082318 grmzm2g082365 grmzm2g082683 grmzm2g083138 grmzm2g086906 grmzm2g087196 grmzm2g089506 grmzm2g090087 grmzm2g090245 grmzm2g100360 grmzm2g101412 grmzm2g101438 grmzm2g101463 grmzm2g102521 grmzm2g102596 grmzm2g102959 grmzm2g103128 grmzm2g103137 grmzm2g103512 grmzm2g105682 grmzm2g106683 grmzm2g107556 grmzm2g107651 grmzm2g107696 grmzm2g111017 grmzm2g112149 grmzm2g112366 grmzm2g115049 grmzm2g118363 grmzm2g118441 grmzm2g120975 grmzm2g121186 grmzm2g126706 grmzm2g126839 grmzm2g128268 grmzm2g128466 grmzm2g133653 grmzm2g135808 grmzm2g135839 grmzm2g139973 grmzm2g140070 grmzm2g140082 grmzm2g142664 grmzm2g143767 grmzm2g143782 grmzm2g145213 grmzm2g146514 grmzm2g148881 grmzm2g150408 grmzm2g152126 grmzm2g153332 grmzm2g153488 grmzm2g153648 grmzm2g153991 grmzm2g159475 grmzm2g163776 grmzm2g164696 grmzm2g171986 grmzm2g171994 grmzm2g177019 grmzm2g178046 grmzm2g179737 grmzm2g180211 grmzm2g180218 grmzm2g181336 grmzm2g181354 grmzm2g301909 grmzm2g316904 grmzm2g316907 grmzm2g319130 grmzm2g319187 grmzm2g320373 grmzm2g320399 grmzm2g324111 grmzm2g334734 grmzm2g351387 grmzm2g352756 grmzm2g356714 grmzm2g358931 grmzm2g359874 grmzm2g360681 grmzm2g380784 grmzm2g402242 grmzm2g404762 grmzm2g405178 grmzm2g405203 grmzm2g420926 grmzm2g427073 grmzm2g427090 grmzm2g433591 grmzm2g436981 grmzm2g438840 grmzm2g452896 grmzm2g462537 grmzm2g468747 grmzm2g474546 grmzm2g477325 grmzm2g521862 grmzm2g587327 grmzm2g703466 grmzm5g821411 grmzm5g823017 grmzm5g827575 grmzm5g829946 grmzm5g835704 grmzm5g856738 grmzm5g872417 grmzm5g873681 grmzm5g874163 grmzm5g892675
+
+Word: inhibitor
+P-value: 0.0167849337272
+Corrected P-value: 8.87922994171
+Overlap: 5/307
+Genes Appeared In: grmzm2g004909 grmzm2g067865 grmzm2g101613 grmzm2g320373 grmzm2g358931
+
+Word: transport
+P-value: 0.0181427227334
+Corrected P-value: 9.57935760322
+Overlap: 16/1843
+Genes Appeared In: grmzm2g014089 grmzm2g019404 grmzm2g020043 grmzm2g059937 grmzm2g102521 grmzm2g111017 grmzm2g115049 grmzm2g118363 grmzm2g128877 grmzm2g157758 grmzm2g171994 grmzm2g180211 grmzm2g444801 grmzm5g812555 grmzm5g892675 grmzm5g893252
+
+Word: rich
+P-value: 0.0239248584798
+Corrected P-value: 11.5796315042
+Overlap: 5/337
+Genes Appeared In: grmzm2g080537 grmzm2g135808 grmzm2g316904 grmzm2g316907 grmzm2g438840
+
+Word: ubiquitin
+P-value: 0.0275304209588
+Corrected P-value: 13.2971933231
+Overlap: 12/1320
+Genes Appeared In: grmzm2g018070 grmzm2g037185 grmzm2g066169 grmzm2g067865 grmzm2g102596 grmzm2g107696 grmzm2g143782 grmzm2g301909 grmzm2g320399 grmzm2g324111 grmzm2g405203 grmzm2g587327
+
+Word: and
+P-value: 0.0317557076147
+Corrected P-value: 14.9251825789
+Overlap: 17/2140
+Genes Appeared In: grmzm2g010987 grmzm2g014089 grmzm2g019404 grmzm2g020043 grmzm2g026065 grmzm2g048008 grmzm2g075417 grmzm2g118363 grmzm2g128877 grmzm2g143782 grmzm2g180211 grmzm2g339336 grmzm2g501450 grmzm5g821411 grmzm5g863420 grmzm5g892675 grmzm5g893252
+
+Word: ligase
+P-value: 0.0334265362507
+Corrected P-value: 15.0753678491
+Overlap: 5/369
+Genes Appeared In: grmzm2g075417 grmzm2g101463 grmzm2g320399 grmzm2g339336 grmzm2g351387
+
+Word: isoform
+P-value: 0.0350135753346
+Corrected P-value: 15.7561089006
+Overlap: 4/255
+Genes Appeared In: grmzm2g420926 grmzm2g433591 grmzm5g856738 grmzm5g893252
+
+Word: leucine
+P-value: 0.0361195619658
+Corrected P-value: 16.1815637607
+Overlap: 5/377
+Genes Appeared In: grmzm2g080537 grmzm2g135808 grmzm2g316904 grmzm2g316907 grmzm2g438840
+
+Word: stress
+P-value: 0.0368038723046
+Corrected P-value: 16.4513309201
+Overlap: 10/1076
+Genes Appeared In: grmzm2g004828 grmzm2g058394 grmzm2g060611 grmzm2g090245 grmzm2g103512 grmzm2g140070 grmzm2g356714 grmzm2g360681 grmzm2g380784 grmzm2g427073
+
+Word: resistance
+P-value: 0.0407728543268
+Corrected P-value: 17.4915545062
+Overlap: 5/390
+Genes Appeared In: grmzm2g014089 grmzm2g316907 grmzm2g380784 grmzm2g427073 grmzm5g892675
+
+Word: transporters
+P-value: 0.044101512148
+Corrected P-value: 18.6990411507
+Overlap: 4/275
+Genes Appeared In: grmzm2g014089 grmzm2g102521 grmzm2g111017 grmzm5g892675
+
+Word: abiotic
+P-value: 0.0489016257047
+Corrected P-value: 20.1474697903
+Overlap: 6/545
+Genes Appeared In: grmzm2g060611 grmzm2g090245 grmzm2g103512 grmzm2g140070 grmzm2g356714 grmzm2g360681
+
+Single Gene Words:
+
+Word: wis1
+P-value: 0.00477986730722
+Corrected P-value: 5.00452107066
+Overlap: 1/1
+Genes Appeared In: grmzm2g090087
+
+Word: wc1
+P-value: 0.00477986730722
+Corrected P-value: 4.99974120336
+Overlap: 1/1
+Genes Appeared In: grmzm2g057243
+
+Word: virgatum-99594
+P-value: 0.00477986730722
+Corrected P-value: 4.99496133605
+Overlap: 1/1
+Genes Appeared In: grmzm2g139973
+
+Word: virgatum-99208
+P-value: 0.00477986730722
+Corrected P-value: 4.99018146874
+Overlap: 1/1
+Genes Appeared In: grmzm2g436981
+
+Word: virgatum-96763
+P-value: 0.00477986730722
+Corrected P-value: 4.98540160144
+Overlap: 1/1
+Genes Appeared In: grmzm2g128268
+
+Word: virgatum-93200
+P-value: 0.00477986730722
+Corrected P-value: 4.98062173413
+Overlap: 1/1
+Genes Appeared In: grmzm2g107556
+
+Word: virgatum-90860
+P-value: 0.00477986730722
+Corrected P-value: 4.97584186682
+Overlap: 1/1
+Genes Appeared In: grmzm2g037185
+
+Word: virgatum-90073
+P-value: 0.00477986730722
+Corrected P-value: 4.97106199951
+Overlap: 1/1
+Genes Appeared In: grmzm2g060817
+
+Word: virgatum-89880
+P-value: 0.00477986730722
+Corrected P-value: 4.96628213221
+Overlap: 1/1
+Genes Appeared In: grmzm2g128466
+
+Word: virgatum-89547
+P-value: 0.00477986730722
+Corrected P-value: 4.9615022649
+Overlap: 1/1
+Genes Appeared In: grmzm2g703466
+
+Word: virgatum-86511
+P-value: 0.00477986730722
+Corrected P-value: 4.95672239759
+Overlap: 1/1
+Genes Appeared In: grmzm2g057450
+
+Word: virgatum-85249
+P-value: 0.00477986730722
+Corrected P-value: 4.95194253028
+Overlap: 1/1
+Genes Appeared In: grmzm2g090087
+
+Word: virgatum-82944
+P-value: 0.00477986730722
+Corrected P-value: 4.94716266298
+Overlap: 1/1
+Genes Appeared In: grmzm2g145213
+
+Word: virgatum-8249
+P-value: 0.00477986730722
+Corrected P-value: 4.94238279567
+Overlap: 1/1
+Genes Appeared In: grmzm2g118363
+
+Word: virgatum-81921
+P-value: 0.00477986730722
+Corrected P-value: 4.93760292836
+Overlap: 1/1
+Genes Appeared In: grmzm2g140082
+
+Word: virgatum-81256
+P-value: 0.00477986730722
+Corrected P-value: 4.93282306106
+Overlap: 1/1
+Genes Appeared In: grmzm2g319130
+
+Word: virgatum-80648
+P-value: 0.00477986730722
+Corrected P-value: 4.92804319375
+Overlap: 1/1
+Genes Appeared In: grmzm2g086906
+
+Word: virgatum-79417
+P-value: 0.00477986730722
+Corrected P-value: 4.92326332644
+Overlap: 1/1
+Genes Appeared In: grmzm2g142664
+
+Word: virgatum-77118
+P-value: 0.00477986730722
+Corrected P-value: 4.91848345913
+Overlap: 1/1
+Genes Appeared In: grmzm2g059891
+
+Word: virgatum-77092
+P-value: 0.00477986730722
+Corrected P-value: 4.91370359183
+Overlap: 1/1
+Genes Appeared In: grmzm2g126839
+
+Word: virgatum-75493
+P-value: 0.00477986730722
+Corrected P-value: 4.90892372452
+Overlap: 1/1
+Genes Appeared In: grmzm2g101438
+
+Word: virgatum-72021
+P-value: 0.00477986730722
+Corrected P-value: 4.90414385721
+Overlap: 1/1
+Genes Appeared In: grmzm2g060726
+
+Word: virgatum-72020
+P-value: 0.00477986730722
+Corrected P-value: 4.89936398991
+Overlap: 1/1
+Genes Appeared In: grmzm2g060726
+
+Word: virgatum-70808
+P-value: 0.00477986730722
+Corrected P-value: 4.8945841226
+Overlap: 1/1
+Genes Appeared In: grmzm2g179737
+
+Word: virgatum-70064
+P-value: 0.00477986730722
+Corrected P-value: 4.88980425529
+Overlap: 1/1
+Genes Appeared In: grmzm2g405178
+
+Word: virgatum-69324
+P-value: 0.00477986730722
+Corrected P-value: 4.88502438798
+Overlap: 1/1
+Genes Appeared In: grmzm2g427090
+
+Word: virgatum-68079
+P-value: 0.00477986730722
+Corrected P-value: 4.88024452068
+Overlap: 1/1
+Genes Appeared In: grmzm2g501450
+
+Word: virgatum-63506
+P-value: 0.00477986730722
+Corrected P-value: 4.87546465337
+Overlap: 1/1
+Genes Appeared In: grmzm2g014089
+
+Word: virgatum-63035
+P-value: 0.00477986730722
+Corrected P-value: 4.87068478606
+Overlap: 1/1
+Genes Appeared In: grmzm2g703466
+
+Word: virgatum-62958
+P-value: 0.00477986730722
+Corrected P-value: 4.86590491875
+Overlap: 1/1
+Genes Appeared In: grmzm2g052562
+
+Word: virgatum-57591
+P-value: 0.00477986730722
+Corrected P-value: 4.86112505145
+Overlap: 1/1
+Genes Appeared In: grmzm2g057243
+
+Word: virgatum-56965
+P-value: 0.00477986730722
+Corrected P-value: 4.85634518414
+Overlap: 1/1
+Genes Appeared In: grmzm2g039588
+
+Word: virgatum-5467
+P-value: 0.00477986730722
+Corrected P-value: 4.85156531683
+Overlap: 1/1
+Genes Appeared In: grmzm2g320373
+
+Word: virgatum-52372
+P-value: 0.00477986730722
+Corrected P-value: 4.84678544953
+Overlap: 1/1
+Genes Appeared In: grmzm2g016503
+
+Word: virgatum-5149
+P-value: 0.00477986730722
+Corrected P-value: 4.84200558222
+Overlap: 1/1
+Genes Appeared In: grmzm2g111017
+
+Word: virgatum-50543
+P-value: 0.00477986730722
+Corrected P-value: 4.83722571491
+Overlap: 1/1
+Genes Appeared In: grmzm2g076499
+
+Word: virgatum-49657
+P-value: 0.00477986730722
+Corrected P-value: 4.8324458476
+Overlap: 1/1
+Genes Appeared In: grmzm2g356714
+
+Word: virgatum-49438
+P-value: 0.00477986730722
+Corrected P-value: 4.8276659803
+Overlap: 1/1
+Genes Appeared In: grmzm2g000093
+
+Word: virgatum-49341
+P-value: 0.00477986730722
+Corrected P-value: 4.82288611299
+Overlap: 1/1
+Genes Appeared In: grmzm2g181336
+
+Word: virgatum-48542
+P-value: 0.00477986730722
+Corrected P-value: 4.81810624568
+Overlap: 1/1
+Genes Appeared In: grmzm2g444801
+
+Word: virgatum-4665
+P-value: 0.00477986730722
+Corrected P-value: 4.81332637838
+Overlap: 1/1
+Genes Appeared In: grmzm2g047777
+
+Word: virgatum-44835
+P-value: 0.00477986730722
+Corrected P-value: 4.80854651107
+Overlap: 1/1
+Genes Appeared In: grmzm2g066169
+
+Word: virgatum-40459
+P-value: 0.00477986730722
+Corrected P-value: 4.80376664376
+Overlap: 1/1
+Genes Appeared In: grmzm2g139973
+
+Word: virgatum-40275
+P-value: 0.00477986730722
+Corrected P-value: 4.79898677645
+Overlap: 1/1
+Genes Appeared In: grmzm2g107696
+
+Word: virgatum-40026
+P-value: 0.00477986730722
+Corrected P-value: 4.79420690915
+Overlap: 1/1
+Genes Appeared In: grmzm2g006762
+
+Word: virgatum-39739
+P-value: 0.00477986730722
+Corrected P-value: 4.78942704184
+Overlap: 1/1
+Genes Appeared In: grmzm2g135808
+
+Word: virgatum-38316
+P-value: 0.00477986730722
+Corrected P-value: 4.78464717453
+Overlap: 1/1
+Genes Appeared In: grmzm2g016827
+
+Word: virgatum-37869
+P-value: 0.00477986730722
+Corrected P-value: 4.77986730722
+Overlap: 1/1
+Genes Appeared In: grmzm2g030280
+
+Word: virgatum-36924
+P-value: 0.00477986730722
+Corrected P-value: 4.77508743992
+Overlap: 1/1
+Genes Appeared In: grmzm2g058394
+
+Word: virgatum-3502
+P-value: 0.00477986730722
+Corrected P-value: 4.77030757261
+Overlap: 1/1
+Genes Appeared In: grmzm2g101463
+
+Word: virgatum-34103
+P-value: 0.00477986730722
+Corrected P-value: 4.7655277053
+Overlap: 1/1
+Genes Appeared In: grmzm2g106683
+
+Word: virgatum-33006
+P-value: 0.00477986730722
+Corrected P-value: 4.760747838
+Overlap: 1/1
+Genes Appeared In: grmzm2g060505
+
+Word: virgatum-31239
+P-value: 0.00477986730722
+Corrected P-value: 4.75596797069
+Overlap: 1/1
+Genes Appeared In: grmzm2g148881
+
+Word: virgatum-30742
+P-value: 0.00477986730722
+Corrected P-value: 4.75118810338
+Overlap: 1/1
+Genes Appeared In: grmzm2g171986
+
+Word: virgatum-3066
+P-value: 0.00477986730722
+Corrected P-value: 4.74640823607
+Overlap: 1/1
+Genes Appeared In: grmzm2g066169
+
+Word: virgatum-28623
+P-value: 0.00477986730722
+Corrected P-value: 4.74162836877
+Overlap: 1/1
+Genes Appeared In: grmzm2g126706
+
+Word: virgatum-25212
+P-value: 0.00477986730722
+Corrected P-value: 4.73684850146
+Overlap: 1/1
+Genes Appeared In: grmzm2g427073
+
+Word: virgatum-230102804
+P-value: 0.00477986730722
+Corrected P-value: 4.73206863415
+Overlap: 1/1
+Genes Appeared In: grmzm2g102596
+
+Word: virgatum-22729
+P-value: 0.00477986730722
+Corrected P-value: 4.72728876685
+Overlap: 1/1
+Genes Appeared In: grmzm2g083138
+
+Word: virgatum-20677
+P-value: 0.00477986730722
+Corrected P-value: 4.72250889954
+Overlap: 1/1
+Genes Appeared In: grmzm2g352756
+
+Word: virgatum-19481
+P-value: 0.00477986730722
+Corrected P-value: 4.71772903223
+Overlap: 1/1
+Genes Appeared In: grmzm5g893252
+
+Word: virgatum-16351
+P-value: 0.00477986730722
+Corrected P-value: 4.71294916492
+Overlap: 1/1
+Genes Appeared In: grmzm2g102596
+
+Word: virgatum-16120
+P-value: 0.00477986730722
+Corrected P-value: 4.70816929762
+Overlap: 1/1
+Genes Appeared In: grmzm2g101412
+
+Word: virgatum-15285
+P-value: 0.00477986730722
+Corrected P-value: 4.70338943031
+Overlap: 1/1
+Genes Appeared In: grmzm2g105682
+
+Word: virgatum-142102805
+P-value: 0.00477986730722
+Corrected P-value: 4.698609563
+Overlap: 1/1
+Genes Appeared In: grmzm2g143767
+
+Word: virgatum-11252
+P-value: 0.00477986730722
+Corrected P-value: 4.69382969569
+Overlap: 1/1
+Genes Appeared In: grmzm2g082683
+
+Word: virgatum-109102801
+P-value: 0.00477986730722
+Corrected P-value: 4.68904982839
+Overlap: 1/1
+Genes Appeared In: grmzm2g136067
+
+Word: virgatum-102047
+P-value: 0.00477986730722
+Corrected P-value: 4.68426996108
+Overlap: 1/1
+Genes Appeared In: grmzm2g402242
+
+Word: virgatum-101941
+P-value: 0.00477986730722
+Corrected P-value: 4.67949009377
+Overlap: 1/1
+Genes Appeared In: grmzm2g360681
+
+Word: virgatum-100269
+P-value: 0.00477986730722
+Corrected P-value: 4.67471022647
+Overlap: 1/1
+Genes Appeared In: grmzm2g311919
+
+Word: virgatum-100189
+P-value: 0.00477986730722
+Corrected P-value: 4.66993035916
+Overlap: 1/1
+Genes Appeared In: grmzm2g103137
+
+Word: virgatum-100164
+P-value: 0.00477986730722
+Corrected P-value: 4.66515049185
+Overlap: 1/1
+Genes Appeared In: grmzm2g103137
+
+Word: upf0082
+P-value: 0.00477986730722
+Corrected P-value: 4.66037062454
+Overlap: 1/1
+Genes Appeared In: grmzm2g060726
+
+Word: ubiquitin-hydrolase
+P-value: 0.00477986730722
+Corrected P-value: 4.65559075724
+Overlap: 1/1
+Genes Appeared In: grmzm2g066169
+
+Word: tub1
+P-value: 0.00477986730722
+Corrected P-value: 4.65081088993
+Overlap: 1/1
+Genes Appeared In: grmzm2g164696
+
+Word: thiopurine
+P-value: 0.00477986730722
+Corrected P-value: 4.64603102262
+Overlap: 1/1
+Genes Appeared In: grmzm2g405178
+
+Word: synthetaseputative
+P-value: 0.00477986730722
+Corrected P-value: 4.64125115532
+Overlap: 1/1
+Genes Appeared In: grmzm2g074589
+
+Word: si946054f08
+P-value: 0.00477986730722
+Corrected P-value: 4.63647128801
+Overlap: 1/1
+Genes Appeared In: grmzm2g121186
+
+Word: sb10g025070
+P-value: 0.00477986730722
+Corrected P-value: 4.6316914207
+Overlap: 1/1
+Genes Appeared In: grmzm2g140082
+
+Word: sb10g024890
+P-value: 0.00477986730722
+Corrected P-value: 4.62691155339
+Overlap: 1/1
+Genes Appeared In: grmzm2g301909
+
+Word: sb10g003800
+P-value: 0.00477986730722
+Corrected P-value: 4.62213168609
+Overlap: 1/1
+Genes Appeared In: grmzm2g103137
+
+Word: sb10g003780
+P-value: 0.00477986730722
+Corrected P-value: 4.61735181878
+Overlap: 1/1
+Genes Appeared In: grmzm2g405178
+
+Word: sb10g003770
+P-value: 0.00477986730722
+Corrected P-value: 4.61257195147
+Overlap: 1/1
+Genes Appeared In: grmzm2g102596
+
+Word: sb09g027640
+P-value: 0.00477986730722
+Corrected P-value: 4.60779208416
+Overlap: 1/1
+Genes Appeared In: grmzm2g017269
+
+Word: sb09g027580
+P-value: 0.00477986730722
+Corrected P-value: 4.60301221686
+Overlap: 1/1
+Genes Appeared In: grmzm2g004828
+
+Word: sb09g026910
+P-value: 0.00477986730722
+Corrected P-value: 4.59823234955
+Overlap: 1/1
+Genes Appeared In: grmzm2g121186
+
+Word: sb09g026900
+P-value: 0.00477986730722
+Corrected P-value: 4.59345248224
+Overlap: 1/1
+Genes Appeared In: grmzm2g111017
+
+Word: sb09g026810
+P-value: 0.00477986730722
+Corrected P-value: 4.58867261494
+Overlap: 1/1
+Genes Appeared In: grmzm2g090087
+
+Word: sb09g025910
+P-value: 0.00477986730722
+Corrected P-value: 4.58389274763
+Overlap: 1/1
+Genes Appeared In: grmzm2g060726
+
+Word: sb09g025880
+P-value: 0.00477986730722
+Corrected P-value: 4.57911288032
+Overlap: 1/1
+Genes Appeared In: grmzm2g060817
+
+Word: sb09g004010
+P-value: 0.00477986730722
+Corrected P-value: 4.57433301301
+Overlap: 1/1
+Genes Appeared In: grmzm5g823017
+
+Word: sb08g018860
+P-value: 0.00477986730722
+Corrected P-value: 4.56955314571
+Overlap: 1/1
+Genes Appeared In: grmzm2g177019
+
+Word: sb07g027720
+P-value: 0.00477986730722
+Corrected P-value: 4.5647732784
+Overlap: 1/1
+Genes Appeared In: grmzm2g006450
+
+Word: sb07g022520
+P-value: 0.00477986730722
+Corrected P-value: 4.55999341109
+Overlap: 1/1
+Genes Appeared In: grmzm2g090245
+
+Word: sb07g018230
+P-value: 0.00477986730722
+Corrected P-value: 4.55521354379
+Overlap: 1/1
+Genes Appeared In: grmzm2g136067
+
+Word: sb06g031370
+P-value: 0.00477986730722
+Corrected P-value: 4.55043367648
+Overlap: 1/1
+Genes Appeared In: grmzm2g039532
+
+Word: sb06g031360
+P-value: 0.00477986730722
+Corrected P-value: 4.54565380917
+Overlap: 1/1
+Genes Appeared In: grmzm2g039588
+
+Word: sb06g030640
+P-value: 0.00477986730722
+Corrected P-value: 4.54087394186
+Overlap: 1/1
+Genes Appeared In: grmzm2g000093
+
+Word: sb06g025360
+P-value: 0.00477986730722
+Corrected P-value: 4.53609407456
+Overlap: 1/1
+Genes Appeared In: grmzm2g142664
+
+Word: sb06g014310
+P-value: 0.00477986730722
+Corrected P-value: 4.53131420725
+Overlap: 1/1
+Genes Appeared In: grmzm2g015889
+
+Word: sb05g027850
+P-value: 0.00477986730722
+Corrected P-value: 4.52653433994
+Overlap: 1/1
+Genes Appeared In: grmzm2g058394
+
+Word: sb05g026820
+P-value: 0.00477986730722
+Corrected P-value: 4.52175447263
+Overlap: 1/1
+Genes Appeared In: grmzm2g131442
+
+Word: sb05g026740
+P-value: 0.00477986730722
+Corrected P-value: 4.51697460533
+Overlap: 1/1
+Genes Appeared In: grmzm2g057450
+
+Word: sb05g020790
+P-value: 0.00477986730722
+Corrected P-value: 4.51219473802
+Overlap: 1/1
+Genes Appeared In: grmzm2g067943
+
+Word: sb05g005400
+P-value: 0.00477986730722
+Corrected P-value: 4.50741487071
+Overlap: 1/1
+Genes Appeared In: grmzm2g128268
+
+Word: sb05g002940
+P-value: 0.00477986730722
+Corrected P-value: 4.50263500341
+Overlap: 1/1
+Genes Appeared In: grmzm2g006252
+
+Word: sb05g001560
+P-value: 0.00477986730722
+Corrected P-value: 4.4978551361
+Overlap: 1/1
+Genes Appeared In: grmzm2g006762
+
+Word: sb04g035260
+P-value: 0.00477986730722
+Corrected P-value: 4.49307526879
+Overlap: 1/1
+Genes Appeared In: grmzm2g181336
+
+Word: sb04g034160
+P-value: 0.00477986730722
+Corrected P-value: 4.48829540148
+Overlap: 1/1
+Genes Appeared In: grmzm2g102959
+
+Word: sb04g034120
+P-value: 0.00477986730722
+Corrected P-value: 4.48351553418
+Overlap: 1/1
+Genes Appeared In: grmzm2g404762
+
+Word: sb04g034100
+P-value: 0.00477986730722
+Corrected P-value: 4.47873566687
+Overlap: 1/1
+Genes Appeared In: grmzm2g103128
+
+Word: sb04g034030
+P-value: 0.00477986730722
+Corrected P-value: 4.47395579956
+Overlap: 1/1
+Genes Appeared In: grmzm2g402242
+
+Word: sb04g034010
+P-value: 0.00477986730722
+Corrected P-value: 4.46917593226
+Overlap: 1/1
+Genes Appeared In: grmzm2g101438
+
+Word: sb04g034000
+P-value: 0.00477986730722
+Corrected P-value: 4.46439606495
+Overlap: 1/1
+Genes Appeared In: grmzm2g101412
+
+Word: sb04g028330
+P-value: 0.00477986730722
+Corrected P-value: 4.45961619764
+Overlap: 1/1
+Genes Appeared In: grmzm5g821411
+
+Word: sb04g028300
+P-value: 0.00477986730722
+Corrected P-value: 4.45483633033
+Overlap: 1/1
+Genes Appeared In: grmzm5g812555
+
+Word: sb04g026710
+P-value: 0.00477986730722
+Corrected P-value: 4.45005646303
+Overlap: 1/1
+Genes Appeared In: grmzm2g153332
+
+Word: sb04g026660
+P-value: 0.00477986730722
+Corrected P-value: 4.44527659572
+Overlap: 1/1
+Genes Appeared In: grmzm2g080537
+
+Word: sb04g008910
+P-value: 0.00477986730722
+Corrected P-value: 4.44049672841
+Overlap: 1/1
+Genes Appeared In: grmzm2g311919
+
+Word: sb04g005550
+P-value: 0.00477986730722
+Corrected P-value: 4.4357168611
+Overlap: 1/1
+Genes Appeared In: grmzm2g037185
+
+Word: sb04g004900
+P-value: 0.00477986730722
+Corrected P-value: 4.4309369938
+Overlap: 1/1
+Genes Appeared In: grmzm2g082683
+
+Word: sb03g046100
+P-value: 0.00477986730722
+Corrected P-value: 4.42615712649
+Overlap: 1/1
+Genes Appeared In: grmzm2g356714
+
+Word: sb03g046030
+P-value: 0.00477986730722
+Corrected P-value: 4.42137725918
+Overlap: 1/1
+Genes Appeared In: grmzm2g016827
+
+Word: sb03g038450
+P-value: 0.00477986730722
+Corrected P-value: 4.41659739188
+Overlap: 1/1
+Genes Appeared In: grmzm2g118363
+
+Word: sb03g034830
+P-value: 0.00477986730722
+Corrected P-value: 4.41181752457
+Overlap: 1/1
+Genes Appeared In: grmzm2g148881
+
+Word: sb03g032050
+P-value: 0.00477986730722
+Corrected P-value: 4.40703765726
+Overlap: 1/1
+Genes Appeared In: grmzm2g010987
+
+Word: sb03g032000
+P-value: 0.00477986730722
+Corrected P-value: 4.40225778995
+Overlap: 1/1
+Genes Appeared In: grmzm2g014089
+
+Word: sb03g031360
+P-value: 0.00477986730722
+Corrected P-value: 4.39747792265
+Overlap: 1/1
+Genes Appeared In: grmzm2g017305
+
+Word: sb03g028350
+P-value: 0.00477986730722
+Corrected P-value: 4.39269805534
+Overlap: 1/1
+Genes Appeared In: grmzm2g041015
+
+Word: sb03g027490
+P-value: 0.00477986730722
+Corrected P-value: 4.38791818803
+Overlap: 1/1
+Genes Appeared In: grmzm5g892675
+
+Word: sb03g004040
+P-value: 0.00477986730722
+Corrected P-value: 4.38313832072
+Overlap: 1/1
+Genes Appeared In: grmzm2g107696
+
+Word: sb03g003970
+P-value: 0.00477986730722
+Corrected P-value: 4.37835845342
+Overlap: 1/1
+Genes Appeared In: grmzm2g107556
+
+Word: sb02g040565
+P-value: 0.00477986730722
+Corrected P-value: 4.37357858611
+Overlap: 1/1
+Genes Appeared In: grmzm2g126706
+
+Word: sb02g040550
+P-value: 0.00477986730722
+Corrected P-value: 4.3687987188
+Overlap: 1/1
+Genes Appeared In: grmzm2g082318
+
+Word: sb02g027685
+P-value: 0.00477986730722
+Corrected P-value: 4.3640188515
+Overlap: 1/1
+Genes Appeared In: grmzm2g047777
+
+Word: sb02g000640
+P-value: 0.00477986730722
+Corrected P-value: 4.35923898419
+Overlap: 1/1
+Genes Appeared In: grmzm2g135808
+
+Word: sb02g000620
+P-value: 0.00477986730722
+Corrected P-value: 4.35445911688
+Overlap: 1/1
+Genes Appeared In: grmzm2g135839
+
+Word: sb02g000530
+P-value: 0.00477986730722
+Corrected P-value: 4.34967924957
+Overlap: 1/1
+Genes Appeared In: grmzm2g105682
+
+Word: sb01g050310
+P-value: 0.00477986730722
+Corrected P-value: 4.34489938227
+Overlap: 1/1
+Genes Appeared In: grmzm2g164696
+
+Word: sb01g048560
+P-value: 0.00477986730722
+Corrected P-value: 4.34011951496
+Overlap: 1/1
+Genes Appeared In: grmzm2g171994
+
+Word: sb01g048510
+P-value: 0.00477986730722
+Corrected P-value: 4.33533964765
+Overlap: 1/1
+Genes Appeared In: grmzm2g171986
+
+Word: sb01g048430
+P-value: 0.00477986730722
+Corrected P-value: 4.33055978035
+Overlap: 1/1
+Genes Appeared In: grmzm2g075227
+
+Word: sb01g047730
+P-value: 0.00477986730722
+Corrected P-value: 4.32577991304
+Overlap: 1/1
+Genes Appeared In: grmzm2g126839
+
+Word: sb01g047540
+P-value: 0.00477986730722
+Corrected P-value: 4.32100004573
+Overlap: 1/1
+Genes Appeared In: grmzm2g057243
+
+Word: sb01g047250
+P-value: 0.00477986730722
+Corrected P-value: 4.31622017842
+Overlap: 1/1
+Genes Appeared In: grmzm2g438840
+
+Word: sb01g047200
+P-value: 0.00477986730722
+Corrected P-value: 4.31144031112
+Overlap: 1/1
+Genes Appeared In: grmzm2g107651
+
+Word: sb01g046020
+P-value: 0.00477986730722
+Corrected P-value: 4.30666044381
+Overlap: 1/1
+Genes Appeared In: grmzm2g420926
+
+Word: s12e
+P-value: 0.00477986730722
+Corrected P-value: 4.3018805765
+Overlap: 1/1
+Genes Appeared In: grmzm2g126706
+
+Word: plasma-membrane
+P-value: 0.00477986730722
+Corrected P-value: 4.29710070919
+Overlap: 1/1
+Genes Appeared In: grmzm2g019404
+
+Word: pco115429b
+P-value: 0.00477986730722
+Corrected P-value: 4.29232084189
+Overlap: 1/1
+Genes Appeared In: grmzm5g812555
+
+Word: osrad54
+P-value: 0.00477986730722
+Corrected P-value: 4.28754097458
+Overlap: 1/1
+Genes Appeared In: grmzm2g083138
+
+Word: ospp2ac-5
+P-value: 0.00477986730722
+Corrected P-value: 4.28276110727
+Overlap: 1/1
+Genes Appeared In: grmzm2g420926
+
+Word: osfbx338
+P-value: 0.00477986730722
+Corrected P-value: 4.27798123997
+Overlap: 1/1
+Genes Appeared In: grmzm2g047777
+
+Word: os12g44310
+P-value: 0.00477986730722
+Corrected P-value: 4.27320137266
+Overlap: 1/1
+Genes Appeared In: grmzm2g057243
+
+Word: os12g38250
+P-value: 0.00477986730722
+Corrected P-value: 4.26842150535
+Overlap: 1/1
+Genes Appeared In: grmzm2g076499
+
+Word: os12g30610
+P-value: 0.00477986730722
+Corrected P-value: 4.26364163804
+Overlap: 1/1
+Genes Appeared In: grmzm2g177019
+
+Word: os12g29620
+P-value: 0.00477986730722
+Corrected P-value: 4.25886177074
+Overlap: 1/1
+Genes Appeared In: grmzm2g067943
+
+Word: os12g05200
+P-value: 0.00477986730722
+Corrected P-value: 4.25408190343
+Overlap: 1/1
+Genes Appeared In: grmzm2g006252
+
+Word: os11g47944
+P-value: 0.00477986730722
+Corrected P-value: 4.24930203612
+Overlap: 1/1
+Genes Appeared In: grmzm2g058394
+
+Word: os11g45740
+P-value: 0.00477986730722
+Corrected P-value: 4.24452216882
+Overlap: 1/1
+Genes Appeared In: grmzm2g131442
+
+Word: os11g34090
+P-value: 0.00477986730722
+Corrected P-value: 4.23974230151
+Overlap: 1/1
+Genes Appeared In: grmzm2g067943
+
+Word: os11g08100
+P-value: 0.00477986730722
+Corrected P-value: 4.2349624342
+Overlap: 1/1
+Genes Appeared In: grmzm2g128268
+
+Word: os11g05160
+P-value: 0.00477986730722
+Corrected P-value: 4.23018256689
+Overlap: 1/1
+Genes Appeared In: grmzm2g006252
+
+Word: os10g34320
+P-value: 0.00477986730722
+Corrected P-value: 4.22540269959
+Overlap: 1/1
+Genes Appeared In: grmzm2g006450
+
+Word: os09g34200
+P-value: 0.00477986730722
+Corrected P-value: 4.22062283228
+Overlap: 1/1
+Genes Appeared In: grmzm2g047777
+
+Word: os08g42189
+P-value: 0.00477986730722
+Corrected P-value: 4.21584296497
+Overlap: 1/1
+Genes Appeared In: grmzm2g017269
+
+Word: os08g25570
+P-value: 0.00477986730722
+Corrected P-value: 4.21106309766
+Overlap: 1/1
+Genes Appeared In: grmzm2g136067
+
+Word: os08g20270
+P-value: 0.00477986730722
+Corrected P-value: 4.20628323036
+Overlap: 1/1
+Genes Appeared In: grmzm2g016827
+
+Word: os07g44230
+P-value: 0.00477986730722
+Corrected P-value: 4.20150336305
+Overlap: 1/1
+Genes Appeared In: grmzm2g126706
+
+Word: os07g01550
+P-value: 0.00477986730722
+Corrected P-value: 4.19672349574
+Overlap: 1/1
+Genes Appeared In: grmzm2g135808
+
+Word: os07g01540
+P-value: 0.00477986730722
+Corrected P-value: 4.19194362844
+Overlap: 1/1
+Genes Appeared In: grmzm2g135839
+
+Word: os07g01440
+P-value: 0.00477986730722
+Corrected P-value: 4.18716376113
+Overlap: 1/1
+Genes Appeared In: grmzm2g105682
+
+Word: os06g43270
+P-value: 0.00477986730722
+Corrected P-value: 4.18238389382
+Overlap: 1/1
+Genes Appeared In: grmzm2g140082
+
+Word: os06g43020
+P-value: 0.00477986730722
+Corrected P-value: 4.17760402651
+Overlap: 1/1
+Genes Appeared In: grmzm2g301909
+
+Word: os06g06080
+P-value: 0.00477986730722
+Corrected P-value: 4.17282415921
+Overlap: 1/1
+Genes Appeared In: grmzm2g103137
+
+Word: os06g06040
+P-value: 0.00477986730722
+Corrected P-value: 4.1680442919
+Overlap: 1/1
+Genes Appeared In: grmzm2g405178
+
+Word: os06g06030
+P-value: 0.00477986730722
+Corrected P-value: 4.16326442459
+Overlap: 1/1
+Genes Appeared In: grmzm2g102596
+
+Word: os05g51650
+P-value: 0.00477986730722
+Corrected P-value: 4.15848455729
+Overlap: 1/1
+Genes Appeared In: grmzm5g872417
+
+Word: os05g47690
+P-value: 0.00477986730722
+Corrected P-value: 4.15370468998
+Overlap: 1/1
+Genes Appeared In: grmzm2g004828
+
+Word: os05g46230
+P-value: 0.00477986730722
+Corrected P-value: 4.14892482267
+Overlap: 1/1
+Genes Appeared In: grmzm2g121186
+
+Word: os05g46220
+P-value: 0.00477986730722
+Corrected P-value: 4.14414495536
+Overlap: 1/1
+Genes Appeared In: grmzm2g111017
+
+Word: os05g45960
+P-value: 0.00477986730722
+Corrected P-value: 4.13936508806
+Overlap: 1/1
+Genes Appeared In: grmzm2g090087
+
+Word: os05g44350
+P-value: 0.00477986730722
+Corrected P-value: 4.13458522075
+Overlap: 1/1
+Genes Appeared In: grmzm2g060726
+
+Word: os05g44320
+P-value: 0.00477986730722
+Corrected P-value: 4.12980535344
+Overlap: 1/1
+Genes Appeared In: grmzm2g060817
+
+Word: os04g56290
+P-value: 0.00477986730722
+Corrected P-value: 4.12502548613
+Overlap: 1/1
+Genes Appeared In: grmzm2g039588
+
+Word: os04g55500
+P-value: 0.00477986730722
+Corrected P-value: 4.12024561883
+Overlap: 1/1
+Genes Appeared In: grmzm2g000093
+
+Word: os04g47520
+P-value: 0.00477986730722
+Corrected P-value: 4.11546575152
+Overlap: 1/1
+Genes Appeared In: grmzm2g142664
+
+Word: os04g32310
+P-value: 0.00477986730722
+Corrected P-value: 4.11068588421
+Overlap: 1/1
+Genes Appeared In: grmzm2g015889
+
+Word: os04g22080
+P-value: 0.00477986730722
+Corrected P-value: 4.10590601691
+Overlap: 1/1
+Genes Appeared In: grmzm2g090245
+
+Word: os03g07150
+P-value: 0.00477986730722
+Corrected P-value: 4.1011261496
+Overlap: 1/1
+Genes Appeared In: grmzm2g420926
+
+Word: os03g05200
+P-value: 0.00477986730722
+Corrected P-value: 4.09634628229
+Overlap: 1/1
+Genes Appeared In: grmzm2g107651
+
+Word: os03g05140
+P-value: 0.00477986730722
+Corrected P-value: 4.09156641498
+Overlap: 1/1
+Genes Appeared In: grmzm2g438840
+
+Word: os03g04520
+P-value: 0.00477986730722
+Corrected P-value: 4.08678654768
+Overlap: 1/1
+Genes Appeared In: grmzm2g126839
+
+Word: os03g03690
+P-value: 0.00477986730722
+Corrected P-value: 4.08200668037
+Overlap: 1/1
+Genes Appeared In: grmzm2g171986
+
+Word: os03g01530
+P-value: 0.00477986730722
+Corrected P-value: 4.07722681306
+Overlap: 1/1
+Genes Appeared In: grmzm2g164696
+
+Word: os02g52640
+P-value: 0.00477986730722
+Corrected P-value: 4.07244694576
+Overlap: 1/1
+Genes Appeared In: grmzm2g404762
+
+Word: os02g52610
+P-value: 0.00477986730722
+Corrected P-value: 4.06766707845
+Overlap: 1/1
+Genes Appeared In: grmzm2g103128
+
+Word: os02g52470
+P-value: 0.00477986730722
+Corrected P-value: 4.06288721114
+Overlap: 1/1
+Genes Appeared In: grmzm2g402242
+
+Word: os02g52420
+P-value: 0.00477986730722
+Corrected P-value: 4.05810734383
+Overlap: 1/1
+Genes Appeared In: grmzm2g101438
+
+Word: os02g52410
+P-value: 0.00477986730722
+Corrected P-value: 4.05332747653
+Overlap: 1/1
+Genes Appeared In: grmzm2g101412
+
+Word: os02g50820
+P-value: 0.00477986730722
+Corrected P-value: 4.04854760922
+Overlap: 1/1
+Genes Appeared In: grmzm5g812555
+
+Word: os02g50780
+P-value: 0.00477986730722
+Corrected P-value: 4.04376774191
+Overlap: 1/1
+Genes Appeared In: grmzm5g821411
+
+Word: os02g41990
+P-value: 0.00477986730722
+Corrected P-value: 4.0389878746
+Overlap: 1/1
+Genes Appeared In: grmzm2g153332
+
+Word: os02g41890
+P-value: 0.00477986730722
+Corrected P-value: 4.0342080073
+Overlap: 1/1
+Genes Appeared In: grmzm2g080537
+
+Word: os02g34510
+P-value: 0.00477986730722
+Corrected P-value: 4.02942813999
+Overlap: 1/1
+Genes Appeared In: grmzm5g893252
+
+Word: os02g21920
+P-value: 0.00477986730722
+Corrected P-value: 4.02464827268
+Overlap: 1/1
+Genes Appeared In: grmzm2g075227
+
+Word: os02g21520
+P-value: 0.00477986730722
+Corrected P-value: 4.01986840538
+Overlap: 1/1
+Genes Appeared In: grmzm2g311919
+
+Word: os02g20844
+P-value: 0.00477986730722
+Corrected P-value: 4.01508853807
+Overlap: 1/1
+Genes Appeared In: grmzm2g148881
+
+Word: os02g08480
+P-value: 0.00477986730722
+Corrected P-value: 4.01030867076
+Overlap: 1/1
+Genes Appeared In: grmzm2g037185
+
+Word: os02g07740
+P-value: 0.00477986730722
+Corrected P-value: 4.00552880345
+Overlap: 1/1
+Genes Appeared In: grmzm2g082683
+
+Word: os01g72420
+P-value: 0.00477986730722
+Corrected P-value: 4.00074893615
+Overlap: 1/1
+Genes Appeared In: grmzm2g356714
+
+Word: os01g50310
+P-value: 0.00477986730722
+Corrected P-value: 3.99596906884
+Overlap: 1/1
+Genes Appeared In: grmzm5g835704
+
+Word: os01g50200
+P-value: 0.00477986730722
+Corrected P-value: 3.99118920153
+Overlap: 1/1
+Genes Appeared In: grmzm2g010987
+
+Word: os01g50100
+P-value: 0.00477986730722
+Corrected P-value: 3.98640933423
+Overlap: 1/1
+Genes Appeared In: grmzm2g014089
+
+Word: os01g49000
+P-value: 0.00477986730722
+Corrected P-value: 3.98162946692
+Overlap: 1/1
+Genes Appeared In: grmzm2g017305
+
+Word: os01g43420
+P-value: 0.00477986730722
+Corrected P-value: 3.97684959961
+Overlap: 1/1
+Genes Appeared In: grmzm2g041015
+
+Word: os01g25484
+P-value: 0.00477986730722
+Corrected P-value: 3.9720697323
+Overlap: 1/1
+Genes Appeared In: grmzm2g102959
+
+Word: os01g08280
+P-value: 0.00477986730722
+Corrected P-value: 3.967289865
+Overlap: 1/1
+Genes Appeared In: grmzm2g107556
+
+Word: os01g08200
+P-value: 0.00477986730722
+Corrected P-value: 3.96250999769
+Overlap: 1/1
+Genes Appeared In: grmzm2g107696
+
+Word: mis1putative
+P-value: 0.00477986730722
+Corrected P-value: 3.95773013038
+Overlap: 1/1
+Genes Appeared In: grmzm2g090087
+
+Word: mis1
+P-value: 0.00477986730722
+Corrected P-value: 3.95295026307
+Overlap: 1/1
+Genes Appeared In: grmzm2g090087
+
+Word: mha2
+P-value: 0.00477986730722
+Corrected P-value: 3.94817039577
+Overlap: 1/1
+Genes Appeared In: grmzm2g019404
+
+Word: memo1
+P-value: 0.00477986730722
+Corrected P-value: 3.94339052846
+Overlap: 1/1
+Genes Appeared In: grmzm2g016827
+
+Word: loc542588
+P-value: 0.00477986730722
+Corrected P-value: 3.93861066115
+Overlap: 1/1
+Genes Appeared In: grmzm2g121186
+
+Word: loc541902
+P-value: 0.00477986730722
+Corrected P-value: 3.93383079385
+Overlap: 1/1
+Genes Appeared In: grmzm2g068506
+
+Word: loc100384717
+P-value: 0.00477986730722
+Corrected P-value: 3.92905092654
+Overlap: 1/1
+Genes Appeared In: grmzm2g102959
+
+Word: loc100384182
+P-value: 0.00477986730722
+Corrected P-value: 3.92427105923
+Overlap: 1/1
+Genes Appeared In: grmzm2g082365
+
+Word: loc100383918
+P-value: 0.00477986730722
+Corrected P-value: 3.91949119192
+Overlap: 1/1
+Genes Appeared In: grmzm2g126839
+
+Word: loc100383602
+P-value: 0.00477986730722
+Corrected P-value: 3.91471132462
+Overlap: 1/1
+Genes Appeared In: grmzm5g856738
+
+Word: loc100383407
+P-value: 0.00477986730722
+Corrected P-value: 3.90993145731
+Overlap: 1/1
+Genes Appeared In: grmzm2g181354
+
+Word: loc100383234
+P-value: 0.00477986730722
+Corrected P-value: 3.90515159
+Overlap: 1/1
+Genes Appeared In: grmzm2g059891
+
+Word: loc100383215
+P-value: 0.00477986730722
+Corrected P-value: 3.9003717227
+Overlap: 1/1
+Genes Appeared In: grmzm5g829946
+
+Word: loc100383171
+P-value: 0.00477986730722
+Corrected P-value: 3.89559185539
+Overlap: 1/1
+Genes Appeared In: grmzm2g100360
+
+Word: loc100383086
+P-value: 0.00477986730722
+Corrected P-value: 3.89081198808
+Overlap: 1/1
+Genes Appeared In: grmzm2g107696
+
+Word: loc100382848
+P-value: 0.00477986730722
+Corrected P-value: 3.88603212077
+Overlap: 1/1
+Genes Appeared In: grmzm2g082683
+
+Word: loc100382477
+P-value: 0.00477986730722
+Corrected P-value: 3.88125225347
+Overlap: 1/1
+Genes Appeared In: grmzm2g017305
+
+Word: loc100382440
+P-value: 0.00477986730722
+Corrected P-value: 3.87647238616
+Overlap: 1/1
+Genes Appeared In: grmzm2g140070
+
+Word: loc100382179
+P-value: 0.00477986730722
+Corrected P-value: 3.87169251885
+Overlap: 1/1
+Genes Appeared In: grmzm2g089506
+
+Word: loc100382060
+P-value: 0.00477986730722
+Corrected P-value: 3.86691265154
+Overlap: 1/1
+Genes Appeared In: grmzm2g587327
+
+Word: loc100381992
+P-value: 0.00477986730722
+Corrected P-value: 3.86213278424
+Overlap: 1/1
+Genes Appeared In: grmzm2g103137
+
+Word: loc100381838
+P-value: 0.00477986730722
+Corrected P-value: 3.85735291693
+Overlap: 1/1
+Genes Appeared In: grmzm2g041506
+
+Word: loc100381787
+P-value: 0.00477986730722
+Corrected P-value: 3.85257304962
+Overlap: 1/1
+Genes Appeared In: grmzm2g405203
+
+Word: loc100304420
+P-value: 0.00477986730722
+Corrected P-value: 3.84779318232
+Overlap: 1/1
+Genes Appeared In: grmzm2g703466
+
+Word: loc100303788
+P-value: 0.00477986730722
+Corrected P-value: 3.84301331501
+Overlap: 1/1
+Genes Appeared In: grmzm2g106683
+
+Word: loc100285983
+P-value: 0.00477986730722
+Corrected P-value: 3.8382334477
+Overlap: 1/1
+Genes Appeared In: grmzm2g112366
+
+Word: loc100285866
+P-value: 0.00477986730722
+Corrected P-value: 3.83345358039
+Overlap: 1/1
+Genes Appeared In: grmzm2g143767
+
+Word: loc100284246
+P-value: 0.00477986730722
+Corrected P-value: 3.82867371309
+Overlap: 1/1
+Genes Appeared In: grmzm5g823017
+
+Word: loc100284021
+P-value: 0.00477986730722
+Corrected P-value: 3.82389384578
+Overlap: 1/1
+Genes Appeared In: grmzm5g872417
+
+Word: loc100283904
+P-value: 0.00477986730722
+Corrected P-value: 3.81911397847
+Overlap: 1/1
+Genes Appeared In: grmzm5g893252
+
+Word: loc100283633
+P-value: 0.00477986730722
+Corrected P-value: 3.81433411117
+Overlap: 1/1
+Genes Appeared In: grmzm2g143782
+
+Word: loc100282805
+P-value: 0.00477986730722
+Corrected P-value: 3.80955424386
+Overlap: 1/1
+Genes Appeared In: grmzm2g037185
+
+Word: loc100282103
+P-value: 0.00477986730722
+Corrected P-value: 3.80477437655
+Overlap: 1/1
+Genes Appeared In: grmzm5g812555
+
+Word: loc100280976
+P-value: 0.00477986730722
+Corrected P-value: 3.79999450924
+Overlap: 1/1
+Genes Appeared In: grmzm2g105682
+
+Word: loc100280611
+P-value: 0.00477986730722
+Corrected P-value: 3.79521464194
+Overlap: 1/1
+Genes Appeared In: grmzm2g153488
+
+Word: loc100280379
+P-value: 0.00477986730722
+Corrected P-value: 3.79043477463
+Overlap: 1/1
+Genes Appeared In: grmzm2g319187
+
+Word: loc100280296
+P-value: 0.00477986730722
+Corrected P-value: 3.78565490732
+Overlap: 1/1
+Genes Appeared In: grmzm2g039588
+
+Word: loc100280062
+P-value: 0.00477986730722
+Corrected P-value: 3.78087504001
+Overlap: 1/1
+Genes Appeared In: grmzm5g873681
+
+Word: loc100278701
+P-value: 0.00477986730722
+Corrected P-value: 3.77609517271
+Overlap: 1/1
+Genes Appeared In: grmzm2g039954
+
+Word: loc100278670
+P-value: 0.00477986730722
+Corrected P-value: 3.7713153054
+Overlap: 1/1
+Genes Appeared In: grmzm2g000093
+
+Word: loc100278663
+P-value: 0.00477986730722
+Corrected P-value: 3.76653543809
+Overlap: 1/1
+Genes Appeared In: grmzm2g334734
+
+Word: loc100278570
+P-value: 0.00477986730722
+Corrected P-value: 3.76175557079
+Overlap: 1/1
+Genes Appeared In: grmzm2g107556
+
+Word: loc100278508
+P-value: 0.00477986730722
+Corrected P-value: 3.75697570348
+Overlap: 1/1
+Genes Appeared In: grmzm2g152126
+
+Word: loc100277687
+P-value: 0.00477986730722
+Corrected P-value: 3.75219583617
+Overlap: 1/1
+Genes Appeared In: grmzm2g031991
+
+Word: loc100277555
+P-value: 0.00477986730722
+Corrected P-value: 3.74741596886
+Overlap: 1/1
+Genes Appeared In: grmzm2g076499
+
+Word: loc100277172
+P-value: 0.00477986730722
+Corrected P-value: 3.74263610156
+Overlap: 1/1
+Genes Appeared In: grmzm5g827575
+
+Word: loc100277147
+P-value: 0.00477986730722
+Corrected P-value: 3.73785623425
+Overlap: 1/1
+Genes Appeared In: grmzm2g006450
+
+Word: loc100277070
+P-value: 0.00477986730722
+Corrected P-value: 3.73307636694
+Overlap: 1/1
+Genes Appeared In: grmzm2g150408
+
+Word: loc100277041
+P-value: 0.00477986730722
+Corrected P-value: 3.72829649964
+Overlap: 1/1
+Genes Appeared In: grmzm2g153332
+
+Word: loc100276908
+P-value: 0.00477986730722
+Corrected P-value: 3.72351663233
+Overlap: 1/1
+Genes Appeared In: grmzm2g177019
+
+Word: loc100276760
+P-value: 0.00477986730722
+Corrected P-value: 3.71873676502
+Overlap: 1/1
+Genes Appeared In: grmzm2g179737
+
+Word: loc100276149
+P-value: 0.00477986730722
+Corrected P-value: 3.71395689771
+Overlap: 1/1
+Genes Appeared In: grmzm2g153648
+
+Word: loc100276020
+P-value: 0.00477986730722
+Corrected P-value: 3.70917703041
+Overlap: 1/1
+Genes Appeared In: grmzm2g163776
+
+Word: loc100275729
+P-value: 0.00477986730722
+Corrected P-value: 3.7043971631
+Overlap: 1/1
+Genes Appeared In: grmzm2g352756
+
+Word: loc100275694
+P-value: 0.00477986730722
+Corrected P-value: 3.69961729579
+Overlap: 1/1
+Genes Appeared In: grmzm2g316904
+
+Word: loc100275472
+P-value: 0.00477986730722
+Corrected P-value: 3.69483742848
+Overlap: 1/1
+Genes Appeared In: grmzm2g462537
+
+Word: loc100274441
+P-value: 0.00477986730722
+Corrected P-value: 3.69005756118
+Overlap: 1/1
+Genes Appeared In: grmzm2g103128
+
+Word: loc100274135
+P-value: 0.00477986730722
+Corrected P-value: 3.68527769387
+Overlap: 1/1
+Genes Appeared In: grmzm2g026065
+
+Word: loc100273839
+P-value: 0.00477986730722
+Corrected P-value: 3.68049782656
+Overlap: 1/1
+Genes Appeared In: grmzm2g356714
+
+Word: loc100273797
+P-value: 0.00477986730722
+Corrected P-value: 3.67571795926
+Overlap: 1/1
+Genes Appeared In: grmzm2g060726
+
+Word: loc100273762
+P-value: 0.00477986730722
+Corrected P-value: 3.67093809195
+Overlap: 1/1
+Genes Appeared In: grmzm2g067943
+
+Word: loc100273726
+P-value: 0.00477986730722
+Corrected P-value: 3.66615822464
+Overlap: 1/1
+Genes Appeared In: grmzm2g017269
+
+Word: loc100273696
+P-value: 0.00477986730722
+Corrected P-value: 3.66137835733
+Overlap: 1/1
+Genes Appeared In: grmzm2g082318
+
+Word: loc100273243
+P-value: 0.00477986730722
+Corrected P-value: 3.65659849003
+Overlap: 1/1
+Genes Appeared In: grmzm2g146514
+
+Word: loc100273137
+P-value: 0.00477986730722
+Corrected P-value: 3.65181862272
+Overlap: 1/1
+Genes Appeared In: grmzm2g016827
+
+Word: loc100217167
+P-value: 0.00477986730722
+Corrected P-value: 3.64703875541
+Overlap: 1/1
+Genes Appeared In: grmzm2g006252
+
+Word: loc100217123
+P-value: 0.00477986730722
+Corrected P-value: 3.64225888811
+Overlap: 1/1
+Genes Appeared In: grmzm2g060611
+
+Word: loc100217118
+P-value: 0.00477986730722
+Corrected P-value: 3.6374790208
+Overlap: 1/1
+Genes Appeared In: grmzm2g148881
+
+Word: loc100216916
+P-value: 0.00477986730722
+Corrected P-value: 3.63269915349
+Overlap: 1/1
+Genes Appeared In: grmzm2g101438
+
+Word: loc100194358
+P-value: 0.00477986730722
+Corrected P-value: 3.62791928618
+Overlap: 1/1
+Genes Appeared In: grmzm2g060505
+
+Word: loc100194311
+P-value: 0.00477986730722
+Corrected P-value: 3.62313941888
+Overlap: 1/1
+Genes Appeared In: grmzm2g102596
+
+Word: loc100194264
+P-value: 0.00477986730722
+Corrected P-value: 3.61835955157
+Overlap: 1/1
+Genes Appeared In: grmzm2g075505
+
+Word: loc100194194
+P-value: 0.00477986730722
+Corrected P-value: 3.61357968426
+Overlap: 1/1
+Genes Appeared In: grmzm2g120975
+
+Word: loc100194157
+P-value: 0.00477986730722
+Corrected P-value: 3.60879981695
+Overlap: 1/1
+Genes Appeared In: grmzm2g159475
+
+Word: loc100194117
+P-value: 0.00477986730722
+Corrected P-value: 3.60401994965
+Overlap: 1/1
+Genes Appeared In: grmzm2g101463
+
+Word: loc100193847
+P-value: 0.00477986730722
+Corrected P-value: 3.59924008234
+Overlap: 1/1
+Genes Appeared In: grmzm2g358931
+
+Word: loc100193779
+P-value: 0.00477986730722
+Corrected P-value: 3.59446021503
+Overlap: 1/1
+Genes Appeared In: grmzm2g030280
+
+Word: loc100193672
+P-value: 0.00477986730722
+Corrected P-value: 3.58968034773
+Overlap: 1/1
+Genes Appeared In: grmzm2g181336
+
+Word: loc100193637
+P-value: 0.00477986730722
+Corrected P-value: 3.58490048042
+Overlap: 1/1
+Genes Appeared In: grmzm2g402242
+
+Word: loc100193401
+P-value: 0.00477986730722
+Corrected P-value: 3.58012061311
+Overlap: 1/1
+Genes Appeared In: grmzm2g145213
+
+Word: loc100193102
+P-value: 0.00477986730722
+Corrected P-value: 3.5753407458
+Overlap: 1/1
+Genes Appeared In: grmzm2g474546
+
+Word: loc100192903
+P-value: 0.00477986730722
+Corrected P-value: 3.5705608785
+Overlap: 1/1
+Genes Appeared In: grmzm2g057450
+
+Word: loc100192820
+P-value: 0.00477986730722
+Corrected P-value: 3.56578101119
+Overlap: 1/1
+Genes Appeared In: grmzm2g139973
+
+Word: loc100192727
+P-value: 0.00477986730722
+Corrected P-value: 3.56100114388
+Overlap: 1/1
+Genes Appeared In: grmzm2g171986
+
+Word: loc100191976
+P-value: 0.00477986730722
+Corrected P-value: 3.55622127658
+Overlap: 1/1
+Genes Appeared In: grmzm2g090245
+
+Word: loc100191866
+P-value: 0.00477986730722
+Corrected P-value: 3.55144140927
+Overlap: 1/1
+Genes Appeared In: grmzm2g063328
+
+Word: loc100191553
+P-value: 0.00477986730722
+Corrected P-value: 3.54666154196
+Overlap: 1/1
+Genes Appeared In: grmzm2g066169
+
+Word: loc100191510
+P-value: 0.00477986730722
+Corrected P-value: 3.54188167465
+Overlap: 1/1
+Genes Appeared In: grmzm2g060817
+
+Word: loc100191442
+P-value: 0.00477986730722
+Corrected P-value: 3.53710180735
+Overlap: 1/1
+Genes Appeared In: grmzm2g351387
+
+Word: loc100191189
+P-value: 0.00477986730722
+Corrected P-value: 3.53232194004
+Overlap: 1/1
+Genes Appeared In: grmzm2g420926
+
+Word: loc100191149
+P-value: 0.00477986730722
+Corrected P-value: 3.52754207273
+Overlap: 1/1
+Genes Appeared In: grmzm2g101412
+
+Word: lipoxygenase6
+P-value: 0.00477986730722
+Corrected P-value: 3.52276220542
+Overlap: 1/1
+Genes Appeared In: grmzm2g040095
+
+Word: l30e
+P-value: 0.00477986730722
+Corrected P-value: 3.51798233812
+Overlap: 1/1
+Genes Appeared In: grmzm2g126706
+
+Word: knox
+P-value: 0.00477986730722
+Corrected P-value: 3.51320247081
+Overlap: 1/1
+Genes Appeared In: grmzm2g433591
+
+Word: jhl25h03
+P-value: 0.00477986730722
+Corrected P-value: 3.5084226035
+Overlap: 1/1
+Genes Appeared In: grmzm2g060817
+
+Word: hda108
+P-value: 0.00477986730722
+Corrected P-value: 3.5036427362
+Overlap: 1/1
+Genes Appeared In: grmzm2g136067
+
+Word: h+atpase2
+P-value: 0.00477986730722
+Corrected P-value: 3.49886286889
+Overlap: 1/1
+Genes Appeared In: grmzm2g019404
+
+Word: gadd45
+P-value: 0.00477986730722
+Corrected P-value: 3.49408300158
+Overlap: 1/1
+Genes Appeared In: grmzm2g126706
+
+Word: cpuorf24
+P-value: 0.00477986730722
+Corrected P-value: 3.48930313427
+Overlap: 1/1
+Genes Appeared In: grmzm2g075227
+
+Word: cl51743
+P-value: 0.00477986730722
+Corrected P-value: 3.48452326697
+Overlap: 1/1
+Genes Appeared In: grmzm2g039954
+
+Word: carboxy
+P-value: 0.00477986730722
+Corrected P-value: 3.47974339966
+Overlap: 1/1
+Genes Appeared In: grmzm2g106683
+
+Word: c2orf4
+P-value: 0.00477986730722
+Corrected P-value: 3.47496353235
+Overlap: 1/1
+Genes Appeared In: grmzm2g016827
+
+Word: bt2
+P-value: 0.00477986730722
+Corrected P-value: 3.47018366505
+Overlap: 1/1
+Genes Appeared In: grmzm2g068506
+
+Word: briz1
+P-value: 0.00477986730722
+Corrected P-value: 3.46540379774
+Overlap: 1/1
+Genes Appeared In: grmzm2g066169
+
+Word: beta-1-tubulin
+P-value: 0.00477986730722
+Corrected P-value: 3.46062393043
+Overlap: 1/1
+Genes Appeared In: grmzm2g164696
+
+Word: at5g19950
+P-value: 0.00477986730722
+Corrected P-value: 3.45584406312
+Overlap: 1/1
+Genes Appeared In: grmzm2g107556
+
+Word: wak2
+P-value: 0.00953689564873
+Corrected P-value: 6.87610176273
+Overlap: 1/2
+Genes Appeared In: grmzm2g014560
+
+Word: virgatum-95173
+P-value: 0.00953689564873
+Corrected P-value: 6.86656486709
+Overlap: 1/2
+Genes Appeared In: grmzm2g039954
+
+Word: virgatum-9251
+P-value: 0.00953689564873
+Corrected P-value: 6.85702797144
+Overlap: 1/2
+Genes Appeared In: grmzm2g087196
+
+Word: virgatum-90428
+P-value: 0.00953689564873
+Corrected P-value: 6.84749107579
+Overlap: 1/2
+Genes Appeared In: grmzm2g352756
+
+Word: virgatum-89505
+P-value: 0.00953689564873
+Corrected P-value: 6.83795418014
+Overlap: 1/2
+Genes Appeared In: grmzm2g041015
+
+Word: virgatum-88704
+P-value: 0.00953689564873
+Corrected P-value: 6.82841728449
+Overlap: 1/2
+Genes Appeared In: grmzm2g115049
+
+Word: virgatum-88452
+P-value: 0.00953689564873
+Corrected P-value: 6.81888038884
+Overlap: 1/2
+Genes Appeared In: grmzm2g006450
+
+Word: virgatum-83910
+P-value: 0.00953689564873
+Corrected P-value: 6.80934349319
+Overlap: 1/2
+Genes Appeared In: grmzm2g120975
+
+Word: virgatum-80623
+P-value: 0.00953689564873
+Corrected P-value: 6.79980659754
+Overlap: 1/2
+Genes Appeared In: grmzm5g823017
+
+Word: virgatum-79955
+P-value: 0.00953689564873
+Corrected P-value: 6.7902697019
+Overlap: 1/2
+Genes Appeared In: grmzm2g433591
+
+Word: virgatum-79580
+P-value: 0.00953689564873
+Corrected P-value: 6.78073280625
+Overlap: 1/2
+Genes Appeared In: grmzm2g587327
+
+Word: virgatum-78770
+P-value: 0.00953689564873
+Corrected P-value: 6.7711959106
+Overlap: 1/2
+Genes Appeared In: grmzm2g081582
+
+Word: virgatum-77335
+P-value: 0.00953689564873
+Corrected P-value: 6.76165901495
+Overlap: 1/2
+Genes Appeared In: grmzm2g153332
+
+Word: virgatum-76209
+P-value: 0.00953689564873
+Corrected P-value: 6.7521221193
+Overlap: 1/2
+Genes Appeared In: grmzm2g133653
+
+Word: virgatum-75983
+P-value: 0.00953689564873
+Corrected P-value: 6.74258522365
+Overlap: 1/2
+Genes Appeared In: grmzm2g060611
+
+Word: virgatum-72637
+P-value: 0.00953689564873
+Corrected P-value: 6.733048328
+Overlap: 1/2
+Genes Appeared In: grmzm2g178046
+
+Word: virgatum-72102803
+P-value: 0.00953689564873
+Corrected P-value: 6.72351143235
+Overlap: 1/2
+Genes Appeared In: grmzm2g004909
+
+Word: virgatum-70811
+P-value: 0.00953689564873
+Corrected P-value: 6.71397453671
+Overlap: 1/2
+Genes Appeared In: grmzm2g179737
+
+Word: virgatum-70356
+P-value: 0.00953689564873
+Corrected P-value: 6.70443764106
+Overlap: 1/2
+Genes Appeared In: grmzm5g835704
+
+Word: virgatum-6471
+P-value: 0.00953689564873
+Corrected P-value: 6.69490074541
+Overlap: 1/2
+Genes Appeared In: grmzm2g128877
+
+Word: virgatum-62209
+P-value: 0.00953689564873
+Corrected P-value: 6.68536384976
+Overlap: 1/2
+Genes Appeared In: grmzm2g319187
+
+Word: virgatum-56789
+P-value: 0.00953689564873
+Corrected P-value: 6.67582695411
+Overlap: 1/2
+Genes Appeared In: grmzm2g004828
+
+Word: virgatum-53818
+P-value: 0.00953689564873
+Corrected P-value: 6.66629005846
+Overlap: 1/2
+Genes Appeared In: grmzm2g324111
+
+Word: virgatum-51638
+P-value: 0.00953689564873
+Corrected P-value: 6.65675316281
+Overlap: 1/2
+Genes Appeared In: grmzm2g052562
+
+Word: virgatum-4967
+P-value: 0.00953689564873
+Corrected P-value: 6.64721626716
+Overlap: 1/2
+Genes Appeared In: grmzm2g112366
+
+Word: virgatum-45665
+P-value: 0.00953689564873
+Corrected P-value: 6.63767937152
+Overlap: 1/2
+Genes Appeared In: grmzm2g102959
+
+Word: virgatum-44161
+P-value: 0.00953689564873
+Corrected P-value: 6.62814247587
+Overlap: 1/2
+Genes Appeared In: grmzm2g359874
+
+Word: virgatum-44018
+P-value: 0.00953689564873
+Corrected P-value: 6.61860558022
+Overlap: 1/2
+Genes Appeared In: grmzm2g018070
+
+Word: virgatum-38050
+P-value: 0.00953689564873
+Corrected P-value: 6.60906868457
+Overlap: 1/2
+Genes Appeared In: grmzm2g121186
+
+Word: virgatum-37761
+P-value: 0.00953689564873
+Corrected P-value: 6.59953178892
+Overlap: 1/2
+Genes Appeared In: grmzm2g135839
+
+Word: virgatum-33194
+P-value: 0.00953689564873
+Corrected P-value: 6.58999489327
+Overlap: 1/2
+Genes Appeared In: grmzm2g160005
+
+Word: virgatum-289102805
+P-value: 0.00953689564873
+Corrected P-value: 6.58045799762
+Overlap: 1/2
+Genes Appeared In: grmzm2g405203
+
+Word: virgatum-26769
+P-value: 0.00953689564873
+Corrected P-value: 6.57092110197
+Overlap: 1/2
+Genes Appeared In: grmzm2g448511
+
+Word: virgatum-25361
+P-value: 0.00953689564873
+Corrected P-value: 6.56138420633
+Overlap: 1/2
+Genes Appeared In: grmzm2g452896
+
+Word: virgatum-224102810
+P-value: 0.00953689564873
+Corrected P-value: 6.55184731068
+Overlap: 1/2
+Genes Appeared In: grmzm2g146514
+
+Word: virgatum-22102
+P-value: 0.00953689564873
+Corrected P-value: 6.54231041503
+Overlap: 1/2
+Genes Appeared In: grmzm5g821411
+
+Word: virgatum-21326
+P-value: 0.00953689564873
+Corrected P-value: 6.53277351938
+Overlap: 1/2
+Genes Appeared In: grmzm2g067865
+
+Word: virgatum-19662
+P-value: 0.00953689564873
+Corrected P-value: 6.52323662373
+Overlap: 1/2
+Genes Appeared In: grmzm2g128114
+
+Word: virgatum-15234
+P-value: 0.00953689564873
+Corrected P-value: 6.51369972808
+Overlap: 1/2
+Genes Appeared In: grmzm2g107651
+
+Word: virgatum-124102809
+P-value: 0.00953689564873
+Corrected P-value: 6.50416283243
+Overlap: 1/2
+Genes Appeared In: grmzm2g140070
+
+Word: virgatum-10498
+P-value: 0.00953689564873
+Corrected P-value: 6.49462593679
+Overlap: 1/2
+Genes Appeared In: grmzm2g048008
+
+Word: virgatum-10042
+P-value: 0.00953689564873
+Corrected P-value: 6.48508904114
+Overlap: 1/2
+Genes Appeared In: grmzm2g153991
+
+Word: vesicle-fusing
+P-value: 0.00953689564873
+Corrected P-value: 6.47555214549
+Overlap: 1/2
+Genes Appeared In: grmzm2g587327
+
+Word: tubulin1
+P-value: 0.00953689564873
+Corrected P-value: 6.46601524984
+Overlap: 1/2
+Genes Appeared In: grmzm2g164696
+
+Word: stk
+P-value: 0.00953689564873
+Corrected P-value: 6.45647835419
+Overlap: 1/2
+Genes Appeared In: grmzm2g015889
+
+Word: spl11
+P-value: 0.00953689564873
+Corrected P-value: 6.44694145854
+Overlap: 1/2
+Genes Appeared In: grmzm2g351387
+
+Word: sb10g022610
+P-value: 0.00953689564873
+Corrected P-value: 6.43740456289
+Overlap: 1/2
+Genes Appeared In: grmzm2g181354
+
+Word: sb10g006620
+P-value: 0.00953689564873
+Corrected P-value: 6.42786766724
+Overlap: 1/2
+Genes Appeared In: grmzm2g086906
+
+Word: sb10g003750
+P-value: 0.00953689564873
+Corrected P-value: 6.4183307716
+Overlap: 1/2
+Genes Appeared In: grmzm2g102521
+
+Word: sb10g001730
+P-value: 0.00953689564873
+Corrected P-value: 6.40879387595
+Overlap: 1/2
+Genes Appeared In: grmzm2g087196
+
+Word: sb09g027600
+P-value: 0.00953689564873
+Corrected P-value: 6.3992569803
+Overlap: 1/2
+Genes Appeared In: grmzm2g004909
+
+Word: sb09g026830
+P-value: 0.00953689564873
+Corrected P-value: 6.38972008465
+Overlap: 1/2
+Genes Appeared In: grmzm5g863420
+
+Word: sb09g024910
+P-value: 0.00953689564873
+Corrected P-value: 6.380183189
+Overlap: 1/2
+Genes Appeared In: grmzm2g359874
+
+Word: sb08g018940
+P-value: 0.00953689564873
+Corrected P-value: 6.37064629335
+Overlap: 1/2
+Genes Appeared In: grmzm2g159475
+
+Word: sb06g025340
+P-value: 0.00953689564873
+Corrected P-value: 6.3611093977
+Overlap: 1/2
+Genes Appeared In: grmzm2g041506
+
+Word: sb06g014330
+P-value: 0.00953689564873
+Corrected P-value: 6.35157250205
+Overlap: 1/2
+Genes Appeared In: grmzm2g468747
+
+Word: sb05g001570
+P-value: 0.00953689564873
+Corrected P-value: 6.34203560641
+Overlap: 1/2
+Genes Appeared In: grmzm2g380784
+
+Word: sb04g026520
+P-value: 0.00953689564873
+Corrected P-value: 6.33249871076
+Overlap: 1/2
+Genes Appeared In: grmzm2g081582
+
+Word: sb04g005610
+P-value: 0.00953689564873
+Corrected P-value: 6.32296181511
+Overlap: 1/2
+Genes Appeared In: grmzm2g133653
+
+Word: sb03g046020
+P-value: 0.00953689564873
+Corrected P-value: 6.31342491946
+Overlap: 1/2
+Genes Appeared In: grmzm2g319130
+
+Word: sb03g032070
+P-value: 0.00953689564873
+Corrected P-value: 6.30388802381
+Overlap: 1/2
+Genes Appeared In: grmzm5g835704
+
+Word: sb03g032040
+P-value: 0.00953689564873
+Corrected P-value: 6.29435112816
+Overlap: 1/2
+Genes Appeared In: grmzm5g823017
+
+Word: sb03g028340
+P-value: 0.00953689564873
+Corrected P-value: 6.28481423251
+Overlap: 1/2
+Genes Appeared In: grmzm5g856738
+
+Word: sb03g001270
+P-value: 0.00953689564873
+Corrected P-value: 6.27527733686
+Overlap: 1/2
+Genes Appeared In: grmzm2g352756
+
+Word: sb02g040880
+P-value: 0.00953689564873
+Corrected P-value: 6.26574044122
+Overlap: 1/2
+Genes Appeared In: grmzm2g039954
+
+Word: sb02g027630
+P-value: 0.00953689564873
+Corrected P-value: 6.25620354557
+Overlap: 1/2
+Genes Appeared In: grmzm2g026065
+
+Word: sb02g016301
+P-value: 0.00953689564873
+Corrected P-value: 6.24666664992
+Overlap: 1/2
+Genes Appeared In: grmzm2g462537
+
+Word: sb01g048390
+P-value: 0.00953689564873
+Corrected P-value: 6.23712975427
+Overlap: 1/2
+Genes Appeared In: grmzm2g075417
+
+Word: sb01g048350
+P-value: 0.00953689564873
+Corrected P-value: 6.22759285862
+Overlap: 1/2
+Genes Appeared In: grmzm2g120975
+
+Word: sb01g047710
+P-value: 0.00953689564873
+Corrected P-value: 6.21805596297
+Overlap: 1/2
+Genes Appeared In: grmzm2g150408
+
+Word: sb01g014140
+P-value: 0.00953689564873
+Corrected P-value: 6.20851906732
+Overlap: 1/2
+Genes Appeared In: grmzm2g587327
+
+Word: sb01g013000
+P-value: 0.00953689564873
+Corrected P-value: 6.19898217167
+Overlap: 1/2
+Genes Appeared In: grmzm2g448511
+
+Word: s17-4
+P-value: 0.00953689564873
+Corrected P-value: 6.18944527603
+Overlap: 1/2
+Genes Appeared In: grmzm2g086906
+
+Word: rr4-corn
+P-value: 0.00953689564873
+Corrected P-value: 6.17990838038
+Overlap: 1/2
+Genes Appeared In: grmzm2g319187
+
+Word: rad26
+P-value: 0.00953689564873
+Corrected P-value: 6.17037148473
+Overlap: 1/2
+Genes Appeared In: grmzm2g083138
+
+Word: periodic
+P-value: 0.00953689564873
+Corrected P-value: 6.16083458908
+Overlap: 1/2
+Genes Appeared In: grmzm2g060817
+
+Word: oswrky7
+P-value: 0.00953689564873
+Corrected P-value: 6.15129769343
+Overlap: 1/2
+Genes Appeared In: grmzm5g863420
+
+Word: os12g02980
+P-value: 0.00953689564873
+Corrected P-value: 6.14176079778
+Overlap: 1/2
+Genes Appeared In: grmzm2g006762
+
+Word: os11g45590
+P-value: 0.00953689564873
+Corrected P-value: 6.13222390213
+Overlap: 1/2
+Genes Appeared In: grmzm2g057450
+
+Word: os11g17720
+P-value: 0.00953689564873
+Corrected P-value: 6.12268700648
+Overlap: 1/2
+Genes Appeared In: grmzm2g380784
+
+Word: os10g27190
+P-value: 0.00953689564873
+Corrected P-value: 6.11315011084
+Overlap: 1/2
+Genes Appeared In: grmzm2g086906
+
+Word: os10g22869
+P-value: 0.00953689564873
+Corrected P-value: 6.10361321519
+Overlap: 1/2
+Genes Appeared In: grmzm2g316904
+
+Word: os09g30150
+P-value: 0.00953689564873
+Corrected P-value: 6.09407631954
+Overlap: 1/2
+Genes Appeared In: grmzm2g026065
+
+Word: os08g34750
+P-value: 0.00953689564873
+Corrected P-value: 6.08453942389
+Overlap: 1/2
+Genes Appeared In: grmzm2g103137
+
+Word: os08g14364
+P-value: 0.00953689564873
+Corrected P-value: 6.07500252824
+Overlap: 1/2
+Genes Appeared In: grmzm2g020043
+
+Word: os07g44744
+P-value: 0.00953689564873
+Corrected P-value: 6.06546563259
+Overlap: 1/2
+Genes Appeared In: grmzm2g039954
+
+Word: os07g02850
+P-value: 0.00953689564873
+Corrected P-value: 6.05592873694
+Overlap: 1/2
+Genes Appeared In: grmzm2g468747
+
+Word: os06g03780
+P-value: 0.00953689564873
+Corrected P-value: 6.04639184129
+Overlap: 1/2
+Genes Appeared In: grmzm2g087196
+
+Word: os05g46020
+P-value: 0.00953689564873
+Corrected P-value: 6.03685494565
+Overlap: 1/2
+Genes Appeared In: grmzm5g863420
+
+Word: os05g44310
+P-value: 0.00953689564873
+Corrected P-value: 6.02731805
+Overlap: 1/2
+Genes Appeared In: grmzm2g587327
+
+Word: os05g39760
+P-value: 0.00953689564873
+Corrected P-value: 6.01778115435
+Overlap: 1/2
+Genes Appeared In: grmzm2g118363
+
+Word: os05g28190
+P-value: 0.00953689564873
+Corrected P-value: 6.0082442587
+Overlap: 1/2
+Genes Appeared In: grmzm5g823017
+
+Word: os03g25430
+P-value: 0.00953689564873
+Corrected P-value: 5.99870736305
+Overlap: 1/2
+Genes Appeared In: grmzm2g082318
+
+Word: os03g04550
+P-value: 0.00953689564873
+Corrected P-value: 5.9891704674
+Overlap: 1/2
+Genes Appeared In: grmzm2g150408
+
+Word: os03g03830
+P-value: 0.00953689564873
+Corrected P-value: 5.97963357175
+Overlap: 1/2
+Genes Appeared In: grmzm2g120975
+
+Word: os03g03790
+P-value: 0.00953689564873
+Corrected P-value: 5.9700966761
+Overlap: 1/2
+Genes Appeared In: grmzm2g075417
+
+Word: os02g41650
+P-value: 0.00953689564873
+Corrected P-value: 5.96055978046
+Overlap: 1/2
+Genes Appeared In: grmzm2g081582
+
+Word: os02g34700
+P-value: 0.00953689564873
+Corrected P-value: 5.95102288481
+Overlap: 1/2
+Genes Appeared In: grmzm2g171994
+
+Word: os02g08540
+P-value: 0.00953689564873
+Corrected P-value: 5.94148598916
+Overlap: 1/2
+Genes Appeared In: grmzm2g133653
+
+Word: os01g43410
+P-value: 0.00953689564873
+Corrected P-value: 5.93194909351
+Overlap: 1/2
+Genes Appeared In: grmzm5g856738
+
+Word: os01g33030
+P-value: 0.00953689564873
+Corrected P-value: 5.92241219786
+Overlap: 1/2
+Genes Appeared In: grmzm2g359874
+
+Word: os01g12480
+P-value: 0.00953689564873
+Corrected P-value: 5.91287530221
+Overlap: 1/2
+Genes Appeared In: grmzm2g352756
+
+Word: optic
+P-value: 0.00953689564873
+Corrected P-value: 5.90333840656
+Overlap: 1/2
+Genes Appeared In: grmzm2g148881
+
+Word: nuc153
+P-value: 0.00953689564873
+Corrected P-value: 5.89380151092
+Overlap: 1/2
+Genes Appeared In: grmzm2g087196
+
+Word: nap
+P-value: 0.00953689564873
+Corrected P-value: 5.88426461527
+Overlap: 1/2
+Genes Appeared In: grmzm2g121186
+
+Word: n-ethylmaleimide
+P-value: 0.00953689564873
+Corrected P-value: 5.87472771962
+Overlap: 1/2
+Genes Appeared In: grmzm2g587327
+
+Word: max2
+P-value: 0.00953689564873
+Corrected P-value: 5.86519082397
+Overlap: 1/2
+Genes Appeared In: grmzm2g405203
+
+Word: lcr69
+P-value: 0.00953689564873
+Corrected P-value: 5.85565392832
+Overlap: 1/2
+Genes Appeared In: grmzm2g153488
+
+Word: glycosylphosphatidylinositol
+P-value: 0.00953689564873
+Corrected P-value: 5.84611703267
+Overlap: 1/2
+Genes Appeared In: grmzm2g171986
+
+Word: e61570
+P-value: 0.00953689564873
+Corrected P-value: 5.83658013702
+Overlap: 1/2
+Genes Appeared In: grmzm2g120975
+
+Word: denn
+P-value: 0.00953689564873
+Corrected P-value: 5.82704324137
+Overlap: 1/2
+Genes Appeared In: grmzm2g107651
+
+Word: degradation-enhancing
+P-value: 0.00953689564873
+Corrected P-value: 5.81750634573
+Overlap: 1/2
+Genes Appeared In: grmzm5g821411
+
+Word: cap1
+P-value: 0.00953689564873
+Corrected P-value: 5.80796945008
+Overlap: 1/2
+Genes Appeared In: grmzm2g057243
+
+Word: brca1-associated
+P-value: 0.00953689564873
+Corrected P-value: 5.79843255443
+Overlap: 1/2
+Genes Appeared In: grmzm2g066169
+
+Word: au031435
+P-value: 0.00953689564873
+Corrected P-value: 5.78889565878
+Overlap: 1/2
+Genes Appeared In: grmzm2g120975
+
+Word: atrophy
+P-value: 0.00953689564873
+Corrected P-value: 5.77935876313
+Overlap: 1/2
+Genes Appeared In: grmzm2g148881
+
+Word: asp1
+P-value: 0.00953689564873
+Corrected P-value: 5.76982186748
+Overlap: 1/2
+Genes Appeared In: grmzm2g128268
+
+Word: alpha-mannosidase-like
+P-value: 0.00953689564873
+Corrected P-value: 5.76028497183
+Overlap: 1/2
+Genes Appeared In: grmzm5g821411
+
+Word: aex-3
+P-value: 0.00953689564873
+Corrected P-value: 5.75074807618
+Overlap: 1/2
+Genes Appeared In: grmzm2g107651
+
+Word: abp20
+P-value: 0.00953689564873
+Corrected P-value: 5.74121118054
+Overlap: 1/2
+Genes Appeared In: grmzm2g090245
+
+Word: 2-thiolation
+P-value: 0.00953689564873
+Corrected P-value: 5.73167428489
+Overlap: 1/2
+Genes Appeared In: grmzm2g402242
+
+Word: virgatum-98668
+P-value: 0.0142711940878
+Corrected P-value: 8.4485469
+Overlap: 1/3
+Genes Appeared In: grmzm2g152126
+
+Word: virgatum-9610
+P-value: 0.0142711940878
+Corrected P-value: 8.43427570591
+Overlap: 1/3
+Genes Appeared In: grmzm5g829946
+
+Word: virgatum-87494
+P-value: 0.0142711940878
+Corrected P-value: 8.42000451182
+Overlap: 1/3
+Genes Appeared In: grmzm2g074589
+
+Word: virgatum-84466
+P-value: 0.0142711940878
+Corrected P-value: 8.40573331773
+Overlap: 1/3
+Genes Appeared In: grmzm5g856738
+
+Word: virgatum-81450
+P-value: 0.0142711940878
+Corrected P-value: 8.39146212365
+Overlap: 1/3
+Genes Appeared In: grmzm2g150408
+
+Word: virgatum-72313
+P-value: 0.0142711940878
+Corrected P-value: 8.37719092956
+Overlap: 1/3
+Genes Appeared In: grmzm2g041506
+
+Word: virgatum-69530
+P-value: 0.0142711940878
+Corrected P-value: 8.36291973547
+Overlap: 1/3
+Genes Appeared In: grmzm2g082365
+
+Word: virgatum-63565
+P-value: 0.0142711940878
+Corrected P-value: 8.34864854138
+Overlap: 1/3
+Genes Appeared In: grmzm2g438840
+
+Word: virgatum-63065
+P-value: 0.0142711940878
+Corrected P-value: 8.33437734729
+Overlap: 1/3
+Genes Appeared In: grmzm2g181354
+
+Word: virgatum-60706
+P-value: 0.0142711940878
+Corrected P-value: 8.32010615321
+Overlap: 1/3
+Genes Appeared In: grmzm2g320399
+
+Word: virgatum-57592
+P-value: 0.0142711940878
+Corrected P-value: 8.30583495912
+Overlap: 1/3
+Genes Appeared In: grmzm2g057243
+
+Word: virgatum-56649
+P-value: 0.0142711940878
+Corrected P-value: 8.29156376503
+Overlap: 1/3
+Genes Appeared In: grmzm2g075505
+
+Word: virgatum-55560
+P-value: 0.0142711940878
+Corrected P-value: 8.27729257094
+Overlap: 1/3
+Genes Appeared In: grmzm2g112149
+
+Word: virgatum-40082
+P-value: 0.0142711940878
+Corrected P-value: 8.26302137686
+Overlap: 1/3
+Genes Appeared In: grmzm2g107639
+
+Word: virgatum-39858
+P-value: 0.0142711940878
+Corrected P-value: 8.24875018277
+Overlap: 1/3
+Genes Appeared In: grmzm2g031991
+
+Word: virgatum-36724
+P-value: 0.0142711940878
+Corrected P-value: 8.23447898868
+Overlap: 1/3
+Genes Appeared In: grmzm2g067943
+
+Word: virgatum-35306
+P-value: 0.0142711940878
+Corrected P-value: 8.22020779459
+Overlap: 1/3
+Genes Appeared In: grmzm2g351387
+
+Word: virgatum-3145
+P-value: 0.0142711940878
+Corrected P-value: 8.2059366005
+Overlap: 1/3
+Genes Appeared In: grmzm2g103512
+
+Word: virgatum-276102810
+P-value: 0.0142711940878
+Corrected P-value: 8.19166540642
+Overlap: 1/3
+Genes Appeared In: grmzm5g812555
+
+Word: virgatum-2589
+P-value: 0.0142711940878
+Corrected P-value: 8.17739421233
+Overlap: 1/3
+Genes Appeared In: grmzm2g380784
+
+Word: virgatum-22933
+P-value: 0.0142711940878
+Corrected P-value: 8.16312301824
+Overlap: 1/3
+Genes Appeared In: grmzm2g017305
+
+Word: virgatum-184102801
+P-value: 0.0142711940878
+Corrected P-value: 8.14885182415
+Overlap: 1/3
+Genes Appeared In: grmzm5g892675
+
+Word: virgatum-1408
+P-value: 0.0142711940878
+Corrected P-value: 8.13458063007
+Overlap: 1/3
+Genes Appeared In: grmzm2g059937
+
+Word: virgatum-13526
+P-value: 0.0142711940878
+Corrected P-value: 8.12030943598
+Overlap: 1/3
+Genes Appeared In: grmzm2g420926
+
+Word: trke
+P-value: 0.0142711940878
+Corrected P-value: 8.10603824189
+Overlap: 1/3
+Genes Appeared In: grmzm2g316907
+
+Word: sensitive
+P-value: 0.0142711940878
+Corrected P-value: 8.0917670478
+Overlap: 1/3
+Genes Appeared In: grmzm2g587327
+
+Word: sb10g026770
+P-value: 0.0142711940878
+Corrected P-value: 8.07749585371
+Overlap: 1/3
+Genes Appeared In: grmzm2g143782
+
+Word: sb07g012320
+P-value: 0.0142711940878
+Corrected P-value: 8.06322465963
+Overlap: 1/3
+Genes Appeared In: grmzm2g068506
+
+Word: sb05g026770
+P-value: 0.0142711940878
+Corrected P-value: 8.04895346554
+Overlap: 1/3
+Genes Appeared In: grmzm2g178046
+
+Word: sb03g011590
+P-value: 0.0142711940878
+Corrected P-value: 8.03468227145
+Overlap: 1/3
+Genes Appeared In: grmzm2g103512
+
+Word: os12g38490
+P-value: 0.0142711940878
+Corrected P-value: 8.02041107736
+Overlap: 1/3
+Genes Appeared In: grmzm2g159475
+
+Word: os08g35760
+P-value: 0.0142711940878
+Corrected P-value: 8.00613988327
+Overlap: 1/3
+Genes Appeared In: grmzm2g090245
+
+Word: os08g25734
+P-value: 0.0142711940878
+Corrected P-value: 7.99186868919
+Overlap: 1/3
+Genes Appeared In: grmzm2g068506
+
+Word: os06g45730
+P-value: 0.0142711940878
+Corrected P-value: 7.9775974951
+Overlap: 1/3
+Genes Appeared In: grmzm2g143782
+
+Word: os06g37510
+P-value: 0.0142711940878
+Corrected P-value: 7.96332630101
+Overlap: 1/3
+Genes Appeared In: grmzm2g181354
+
+Word: os06g05980
+P-value: 0.0142711940878
+Corrected P-value: 7.94905510692
+Overlap: 1/3
+Genes Appeared In: grmzm2g102521
+
+Word: os04g56300
+P-value: 0.0142711940878
+Corrected P-value: 7.93478391284
+Overlap: 1/3
+Genes Appeared In: grmzm2g039532
+
+Word: os04g47480
+P-value: 0.0142711940878
+Corrected P-value: 7.92051271875
+Overlap: 1/3
+Genes Appeared In: grmzm2g041506
+
+Word: os02g54470
+P-value: 0.0142711940878
+Corrected P-value: 7.90624152466
+Overlap: 1/3
+Genes Appeared In: grmzm2g181336
+
+Word: os02g36210
+P-value: 0.0142711940878
+Corrected P-value: 7.89197033057
+Overlap: 1/3
+Genes Appeared In: grmzm2g445854
+
+Word: os01g50160
+P-value: 0.0142711940878
+Corrected P-value: 7.87769913648
+Overlap: 1/3
+Genes Appeared In: grmzm2g014089
+
+Word: os01g49640
+P-value: 0.0142711940878
+Corrected P-value: 7.8634279424
+Overlap: 1/3
+Genes Appeared In: grmzm2g004909
+
+Word: os01g18170
+P-value: 0.0142711940878
+Corrected P-value: 7.84915674831
+Overlap: 1/3
+Genes Appeared In: grmzm2g103512
+
+Word: nitrite
+P-value: 0.0142711940878
+Corrected P-value: 7.83488555422
+Overlap: 1/3
+Genes Appeared In: grmzm2g102959
+
+Word: mutarotase
+P-value: 0.0142711940878
+Corrected P-value: 7.82061436013
+Overlap: 1/3
+Genes Appeared In: grmzm2g039588
+
+Word: mbtb11
+P-value: 0.0142711940878
+Corrected P-value: 7.80634316604
+Overlap: 1/3
+Genes Appeared In: grmzm2g143782
+
+Word: ltpl149
+P-value: 0.0142711940878
+Corrected P-value: 7.79207197196
+Overlap: 1/3
+Genes Appeared In: grmzm2g004909
+
+Word: lti6a
+P-value: 0.0142711940878
+Corrected P-value: 7.77780077787
+Overlap: 1/3
+Genes Appeared In: grmzm2g477325
+
+Word: l35a-3
+P-value: 0.0142711940878
+Corrected P-value: 7.76352958378
+Overlap: 1/3
+Genes Appeared In: grmzm2g181336
+
+Word: hsp101
+P-value: 0.0142711940878
+Corrected P-value: 7.74925838969
+Overlap: 1/3
+Genes Appeared In: grmzm2g360681
+
+Word: ferredoxin--nitrite
+P-value: 0.0142711940878
+Corrected P-value: 7.73498719561
+Overlap: 1/3
+Genes Appeared In: grmzm2g102959
+
+Word: endosperm2
+P-value: 0.0142711940878
+Corrected P-value: 7.72071600152
+Overlap: 1/3
+Genes Appeared In: grmzm2g068506
+
+Word: elongator
+P-value: 0.0142711940878
+Corrected P-value: 7.70644480743
+Overlap: 1/3
+Genes Appeared In: grmzm2g139973
+
+Word: duf2296
+P-value: 0.0142711940878
+Corrected P-value: 7.69217361334
+Overlap: 1/3
+Genes Appeared In: grmzm2g153332
+
+Word: atl5h
+P-value: 0.0142711940878
+Corrected P-value: 7.67790241925
+Overlap: 1/3
+Genes Appeared In: grmzm2g324111
+
+Word: acyl-activating
+P-value: 0.0142711940878
+Corrected P-value: 7.66363122517
+Overlap: 1/3
+Genes Appeared In: grmzm2g075417
+
+Word: 5-methyltetrahydropteroyltriglutamate--homocysteine
+P-value: 0.0142711940878
+Corrected P-value: 7.64936003108
+Overlap: 1/3
+Genes Appeared In: grmzm2g112149
+
+Word: 2-fucosyltransferase
+P-value: 0.0142711940878
+Corrected P-value: 7.63508883699
+Overlap: 1/3
+Genes Appeared In: grmzm2g404762
+
+Word: 10-9
+P-value: 0.0142711940878
+Corrected P-value: 7.6208176429
+Overlap: 1/3
+Genes Appeared In: grmzm2g057243
+
+Word: virgatum-995
+P-value: 0.0189828712085
+Corrected P-value: 10.0039731269
+Overlap: 1/4
+Genes Appeared In: grmzm2g017269
+
+Word: virgatum-87874
+P-value: 0.0189828712085
+Corrected P-value: 9.98499025569
+Overlap: 1/4
+Genes Appeared In: grmzm2g057450
+
+Word: virgatum-80874
+P-value: 0.0189828712085
+Corrected P-value: 9.96600738448
+Overlap: 1/4
+Genes Appeared In: grmzm2g474546
+
+Word: virgatum-75681
+P-value: 0.0189828712085
+Corrected P-value: 9.94702451328
+Overlap: 1/4
+Genes Appeared In: grmzm2g301909
+
+Word: virgatum-62025
+P-value: 0.0189828712085
+Corrected P-value: 9.92804164207
+Overlap: 1/4
+Genes Appeared In: grmzm2g068506
+
+Word: virgatum-57250
+P-value: 0.0189828712085
+Corrected P-value: 9.90905877086
+Overlap: 1/4
+Genes Appeared In: grmzm2g159475
+
+Word: virgatum-56733
+P-value: 0.0189828712085
+Corrected P-value: 9.89007589965
+Overlap: 1/4
+Genes Appeared In: grmzm2g100360
+
+Word: virgatum-36706
+P-value: 0.0189828712085
+Corrected P-value: 9.87109302844
+Overlap: 1/4
+Genes Appeared In: grmzm2g101613
+
+Word: virgatum-34767
+P-value: 0.0189828712085
+Corrected P-value: 9.85211015723
+Overlap: 1/4
+Genes Appeared In: grmzm2g358931
+
+Word: virgatum-3258
+P-value: 0.0189828712085
+Corrected P-value: 9.83312728602
+Overlap: 1/4
+Genes Appeared In: grmzm2g181336
+
+Word: virgatum-29319
+P-value: 0.0189828712085
+Corrected P-value: 9.81414441482
+Overlap: 1/4
+Genes Appeared In: grmzm2g090245
+
+Word: sb05g004510
+P-value: 0.0189828712085
+Corrected P-value: 9.79516154361
+Overlap: 1/4
+Genes Appeared In: grmzm5g893252
+
+Word: sb03g034660
+P-value: 0.0189828712085
+Corrected P-value: 9.7761786724
+Overlap: 1/4
+Genes Appeared In: grmzm2g102521
+
+Word: sb01g021990
+P-value: 0.0189828712085
+Corrected P-value: 9.75719580119
+Overlap: 1/4
+Genes Appeared In: grmzm2g445854
+
+Word: rhicadhesin
+P-value: 0.0189828712085
+Corrected P-value: 9.73821292998
+Overlap: 1/4
+Genes Appeared In: grmzm2g103512
+
+Word: phenylalanyl-trna
+P-value: 0.0189828712085
+Corrected P-value: 9.71923005877
+Overlap: 1/4
+Genes Appeared In: grmzm2g101463
+
+Word: os08g02820
+P-value: 0.0189828712085
+Corrected P-value: 9.70024718757
+Overlap: 1/4
+Genes Appeared In: grmzm2g178046
+
+Word: os01g42380
+P-value: 0.0189828712085
+Corrected P-value: 9.68126431636
+Overlap: 1/4
+Genes Appeared In: grmzm5g892675
+
+Word: mppn
+P-value: 0.0189828712085
+Corrected P-value: 9.66228144515
+Overlap: 1/4
+Genes Appeared In: grmzm2g060505
+
+Word: mitochodrial
+P-value: 0.0189828712085
+Corrected P-value: 9.64329857394
+Overlap: 1/4
+Genes Appeared In: grmzm2g177019
+
+Word: l35a
+P-value: 0.0189828712085
+Corrected P-value: 9.62431570273
+Overlap: 1/4
+Genes Appeared In: grmzm2g181336
+
+Word: l33-b
+P-value: 0.0189828712085
+Corrected P-value: 9.60533283152
+Overlap: 1/4
+Genes Appeared In: grmzm2g181336
+
+Word: 8-14
+P-value: 0.0189828712085
+Corrected P-value: 9.58634996031
+Overlap: 1/4
+Genes Appeared In: grmzm2g090245
+
+Word: 3-like
+P-value: 0.0189828712085
+Corrected P-value: 9.56736708911
+Overlap: 1/4
+Genes Appeared In: grmzm2g148881
+
+Word: zr1
+P-value: 0.0236720351063
+Corrected P-value: 11.9070336585
+Overlap: 1/5
+Genes Appeared In: grmzm2g319130
+
+Word: white
+P-value: 0.0236720351063
+Corrected P-value: 11.8833616234
+Overlap: 1/5
+Genes Appeared In: grmzm2g057243
+
+Word: virgatum-91793
+P-value: 0.0236720351063
+Corrected P-value: 11.8596895883
+Overlap: 1/5
+Genes Appeared In: grmzm2g102521
+
+Word: virgatum-66097
+P-value: 0.0236720351063
+Corrected P-value: 11.8360175532
+Overlap: 1/5
+Genes Appeared In: grmzm2g339336
+
+Word: virgatum-49520
+P-value: 0.0236720351063
+Corrected P-value: 11.8123455181
+Overlap: 1/5
+Genes Appeared In: grmzm2g445854
+
+Word: virgatum-28897
+P-value: 0.0236720351063
+Corrected P-value: 11.788673483
+Overlap: 1/5
+Genes Appeared In: grmzm2g082318
+
+Word: virgatum-21096
+P-value: 0.0236720351063
+Corrected P-value: 11.7650014479
+Overlap: 1/5
+Genes Appeared In: grmzm2g143782
+
+Word: virgatum-18501
+P-value: 0.0236720351063
+Corrected P-value: 11.7413294127
+Overlap: 1/5
+Genes Appeared In: grmzm2g163776
+
+Word: phenylalanine-trna
+P-value: 0.0236720351063
+Corrected P-value: 11.7176573776
+Overlap: 1/5
+Genes Appeared In: grmzm2g101463
+
+Word: p60
+P-value: 0.0236720351063
+Corrected P-value: 11.6939853425
+Overlap: 1/5
+Genes Appeared In: grmzm2g017305
+
+Word: oligosaccharyl
+P-value: 0.0236720351063
+Corrected P-value: 11.6703133074
+Overlap: 1/5
+Genes Appeared In: grmzm2g060611
+
+Word: ent-copalyl
+P-value: 0.0236720351063
+Corrected P-value: 11.6466412723
+Overlap: 1/5
+Genes Appeared In: grmzm2g445854
+
+Word: duf3527
+P-value: 0.0236720351063
+Corrected P-value: 11.6229692372
+Overlap: 1/5
+Genes Appeared In: grmzm2g703466
+
+Word: copalyl
+P-value: 0.0236720351063
+Corrected P-value: 11.5992972021
+Overlap: 1/5
+Genes Appeared In: grmzm2g445854
+
+Word: contain
+P-value: 0.0236720351063
+Corrected P-value: 11.575625167
+Overlap: 1/5
+Genes Appeared In: grmzm5g821411
+
+Word: belonging
+P-value: 0.0236720351063
+Corrected P-value: 11.5519531319
+Overlap: 1/5
+Genes Appeared In: grmzm2g420926
+
+Word: auxin-binding
+P-value: 0.0236720351063
+Corrected P-value: 11.5282810968
+Overlap: 1/5
+Genes Appeared In: grmzm2g090245
+
+Word: atpase-containing
+P-value: 0.0236720351063
+Corrected P-value: 11.5046090617
+Overlap: 1/5
+Genes Appeared In: grmzm2g017305
+
+Word: abil1
+P-value: 0.0236720351063
+Corrected P-value: 11.4809370266
+Overlap: 1/5
+Genes Appeared In: grmzm2g041015
+
+Word: wrky67-superfamily
+P-value: 0.028338793173
+Corrected P-value: 13.6309595162
+Overlap: 1/6
+Genes Appeared In: grmzm5g863420
+
+Word: virgatum-92274
+P-value: 0.028338793173
+Corrected P-value: 13.602620723
+Overlap: 1/6
+Genes Appeared In: grmzm2g180211
+
+Word: virgatum-78848
+P-value: 0.028338793173
+Corrected P-value: 13.5742819298
+Overlap: 1/6
+Genes Appeared In: grmzm5g874163
+
+Word: virgatum-45705
+P-value: 0.028338793173
+Corrected P-value: 13.5459431367
+Overlap: 1/6
+Genes Appeared In: grmzm2g006252
+
+Word: virgatum-34038
+P-value: 0.028338793173
+Corrected P-value: 13.5176043435
+Overlap: 1/6
+Genes Appeared In: grmzm2g040095
+
+Word: virgatum-25608
+P-value: 0.028338793173
+Corrected P-value: 13.4892655503
+Overlap: 1/6
+Genes Appeared In: grmzm2g164696
+
+Word: virgatum-17506
+P-value: 0.028338793173
+Corrected P-value: 13.4609267572
+Overlap: 1/6
+Genes Appeared In: grmzm5g863420
+
+Word: gda1
+P-value: 0.028338793173
+Corrected P-value: 13.432587964
+Overlap: 1/6
+Genes Appeared In: grmzm2g006762
+
+Word: ests
+P-value: 0.028338793173
+Corrected P-value: 13.4042491708
+Overlap: 1/6
+Genes Appeared In: grmzm2g120975
+
+Word: essential
+P-value: 0.028338793173
+Corrected P-value: 13.3759103776
+Overlap: 1/6
+Genes Appeared In: grmzm2g000093
+
+Word: cd39
+P-value: 0.028338793173
+Corrected P-value: 13.3475715845
+Overlap: 1/6
+Genes Appeared In: grmzm2g006762
+
+Word: xa26
+P-value: 0.0329832526164
+Corrected P-value: 15.4361622245
+Overlap: 1/7
+Genes Appeared In: grmzm2g316907
+
+Word: voltage-dependent
+P-value: 0.0329832526164
+Corrected P-value: 15.4031789718
+Overlap: 1/7
+Genes Appeared In: grmzm2g115049
+
+Word: virgatum-88459
+P-value: 0.0329832526164
+Corrected P-value: 15.3701957192
+Overlap: 1/7
+Genes Appeared In: grmzm2g316907
+
+Word: virgatum-55221
+P-value: 0.0329832526164
+Corrected P-value: 15.3372124666
+Overlap: 1/7
+Genes Appeared In: grmzm2g026065
+
+Word: virgatum-48407
+P-value: 0.0329832526164
+Corrected P-value: 15.304229214
+Overlap: 1/7
+Genes Appeared In: grmzm2g075417
+
+Word: virgatum-41661
+P-value: 0.0329832526164
+Corrected P-value: 15.2712459614
+Overlap: 1/7
+Genes Appeared In: grmzm2g118441
+
+Word: virgatum-30722
+P-value: 0.0329832526164
+Corrected P-value: 15.2382627088
+Overlap: 1/7
+Genes Appeared In: grmzm2g080537
+
+Word: virgatum-18075
+P-value: 0.0329832526164
+Corrected P-value: 15.2052794561
+Overlap: 1/7
+Genes Appeared In: grmzm2g006762
+
+Word: virgatum-174102802
+P-value: 0.0329832526164
+Corrected P-value: 15.1722962035
+Overlap: 1/7
+Genes Appeared In: grmzm2g076212
+
+Word: uracil
+P-value: 0.0329832526164
+Corrected P-value: 15.1393129509
+Overlap: 1/7
+Genes Appeared In: grmzm5g812555
+
+Word: thiolesterase
+P-value: 0.0329832526164
+Corrected P-value: 15.1063296983
+Overlap: 1/7
+Genes Appeared In: grmzm2g301909
+
+Word: s-methyltransferase
+P-value: 0.0329832526164
+Corrected P-value: 15.0733464457
+Overlap: 1/7
+Genes Appeared In: grmzm2g405178
+
+Word: ranbp1
+P-value: 0.0329832526164
+Corrected P-value: 15.0403631931
+Overlap: 1/7
+Genes Appeared In: grmzm5g823017
+
+Word: hbp-1b
+P-value: 0.0329832526164
+Corrected P-value: 15.0073799405
+Overlap: 1/7
+Genes Appeared In: grmzm2g030280
+
+Word: defensin
+P-value: 0.0329832526164
+Corrected P-value: 14.9743966878
+Overlap: 1/7
+Genes Appeared In: grmzm2g153488
+
+Word: cm0545
+P-value: 0.0329832526164
+Corrected P-value: 14.9414134352
+Overlap: 1/7
+Genes Appeared In: grmzm2g067943
+
+Word: apyrase
+P-value: 0.0329832526164
+Corrected P-value: 14.9084301826
+Overlap: 1/7
+Genes Appeared In: grmzm2g006762
+
+Word: virgatum-7194
+P-value: 0.0376055198281
+Corrected P-value: 16.7720618433
+Overlap: 1/8
+Genes Appeared In: grmzm2g015889
+
+Word: virgatum-18994
+P-value: 0.0376055198281
+Corrected P-value: 16.7344563235
+Overlap: 1/8
+Genes Appeared In: grmzm2g039532
+
+Word: type-a
+P-value: 0.0376055198281
+Corrected P-value: 16.6968508037
+Overlap: 1/8
+Genes Appeared In: grmzm2g319187
+
+Word: sulphate
+P-value: 0.0376055198281
+Corrected P-value: 16.6592452839
+Overlap: 1/8
+Genes Appeared In: grmzm2g444801
+
+Word: semialdehyde
+P-value: 0.0376055198281
+Corrected P-value: 16.621639764
+Overlap: 1/8
+Genes Appeared In: grmzm2g128114
+
+Word: pro-x
+P-value: 0.0376055198281
+Corrected P-value: 16.5840342442
+Overlap: 1/8
+Genes Appeared In: grmzm2g452896
+
+Word: m24
+P-value: 0.0376055198281
+Corrected P-value: 16.5464287244
+Overlap: 1/8
+Genes Appeared In: grmzm2g101438
+
+Word: low-molecular-weight
+P-value: 0.0376055198281
+Corrected P-value: 16.5088232045
+Overlap: 1/8
+Genes Appeared In: grmzm2g153488
+
+Word: long-chain
+P-value: 0.0376055198281
+Corrected P-value: 16.4712176847
+Overlap: 1/8
+Genes Appeared In: grmzm2g339336
+
+Word: l5e
+P-value: 0.0376055198281
+Corrected P-value: 16.4336121649
+Overlap: 1/8
+Genes Appeared In: grmzm2g006450
+
+Word: l18p
+P-value: 0.0376055198281
+Corrected P-value: 16.3960066451
+Overlap: 1/8
+Genes Appeared In: grmzm2g006450
+
+Word: kaurene
+P-value: 0.0376055198281
+Corrected P-value: 16.3584011252
+Overlap: 1/8
+Genes Appeared In: grmzm2g445854
+
+Word: hydrophobic
+P-value: 0.0376055198281
+Corrected P-value: 16.3207956054
+Overlap: 1/8
+Genes Appeared In: grmzm2g477325
+
+Word: dehydrin
+P-value: 0.0376055198281
+Corrected P-value: 16.2831900856
+Overlap: 1/8
+Genes Appeared In: grmzm2g448511
+
+Word: atl5f
+P-value: 0.0376055198281
+Corrected P-value: 16.2455845657
+Overlap: 1/8
+Genes Appeared In: grmzm2g324111
+
+Word: adp
+P-value: 0.0376055198281
+Corrected P-value: 16.2079790459
+Overlap: 1/8
+Genes Appeared In: grmzm2g111017
+
+Word: vip1
+P-value: 0.0422057007743
+Corrected P-value: 18.0640399314
+Overlap: 1/9
+Genes Appeared In: grmzm5g835704
+
+Word: glucose-1-phosphate
+P-value: 0.0422057007743
+Corrected P-value: 18.0218342306
+Overlap: 1/9
+Genes Appeared In: grmzm2g068506
+
+Word: duf573
+P-value: 0.0422057007743
+Corrected P-value: 17.9796285298
+Overlap: 1/9
+Genes Appeared In: grmzm2g082318
+
+Word: agpase
+P-value: 0.0422057007743
+Corrected P-value: 17.9374228291
+Overlap: 1/9
+Genes Appeared In: grmzm2g068506
+
+Word: virgatum-22361
+P-value: 0.0467839010038
+Corrected P-value: 19.7895901246
+Overlap: 1/10
+Genes Appeared In: grmzm2g131442
+
+Word: quinone
+P-value: 0.0467839010038
+Corrected P-value: 19.7428062236
+Overlap: 1/10
+Genes Appeared In: grmzm2g128466
+
+Word: proteolipid
+P-value: 0.0467839010038
+Corrected P-value: 19.6960223226
+Overlap: 1/10
+Genes Appeared In: grmzm5g893252
+
+Word: nitrogenous
+P-value: 0.0467839010038
+Corrected P-value: 19.6492384216
+Overlap: 1/10
+Genes Appeared In: grmzm2g107639
+
+Word: l7ae
+P-value: 0.0467839010038
+Corrected P-value: 19.6024545206
+Overlap: 1/10
+Genes Appeared In: grmzm2g126706
+
+Word: katanin
+P-value: 0.0467839010038
+Corrected P-value: 19.5556706196
+Overlap: 1/10
+Genes Appeared In: grmzm2g017305
+
+Word: fk506-binding
+P-value: 0.0467839010038
+Corrected P-value: 19.5088867186
+Overlap: 1/10
+Genes Appeared In: grmzm2g153991
+
+Word: brix
+P-value: 0.0467839010038
+Corrected P-value: 19.4621028176
+Overlap: 1/10
+Genes Appeared In: grmzm2g359874
+
+Word: brittle
+P-value: 0.0467839010038
+Corrected P-value: 19.4153189166
+Overlap: 1/10
+Genes Appeared In: grmzm2g068506
+
+Word: blight
+P-value: 0.0467839010038
+Corrected P-value: 19.3685350156
+Overlap: 1/10
+Genes Appeared In: grmzm2g316907
+
+Word: aca
+P-value: 0.0467839010038
+Corrected P-value: 19.3217511146
+Overlap: 1/10
+Genes Appeared In: grmzm2g082365
+
+Web Links associated with these genes:
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g103137&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g120975&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g082365&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g128268&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g067943&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g152126&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g018070&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g039954&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g041506&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g128466&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g087196&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g311919&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g436981&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g521862&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g060817&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm5g893252&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g107556&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g112366&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm5g812555&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g046733&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g145213&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g181336&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g703466&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g058394&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g501450&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g060611&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g080537&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g037185&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g083138&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g135839&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g052562&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g039532&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g101438&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g131442&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g041015&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm5g821411&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g163776&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g102521&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g068506&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g004828&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g076499&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g177019&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g157758&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g003742&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g014560&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g115049&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm5g823017&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g462537&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g040095&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g016503&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g352756&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g159475&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g181354&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g039588&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g164696&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g316907&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g068566&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g107696&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g448511&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g081582&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g171994&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g064896&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g477325&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g111017&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g101463&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g319130&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g150408&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g133746&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g031991&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g019404&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g143782&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g090245&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g157389&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g334734&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm5g827575&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g433591&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm5g872417&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g153648&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g153488&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm5g892675&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g153332&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g063328&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g118441&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g128877&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g136067&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g064984&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm5g856738&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g107639&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g468747&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g076212&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g075505&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm5g874163&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g082683&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g179737&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g100360&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g128114&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g405203&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g148881&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g438840&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g474546&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g118363&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g380784&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g427073&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g014089&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g153991&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g000093&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g017269&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g320373&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g074589&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g017305&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g133653&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g020043&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g089506&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g059891&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g172159&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g142664&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g126706&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g004909&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g358931&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g135808&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g351387&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g427090&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g359874&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm5g873681&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g066169&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g006762&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g101412&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm5g829946&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g402242&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g026065&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm5g863420&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g006252&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g067865&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g356714&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g452896&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g057243&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g057450&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g301909&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g126839&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g010987&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g102959&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g320399&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g324111&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g082318&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g319187&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g006450&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g140070&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g102596&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g016827&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g015889&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g139973&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g075227&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g420926&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g339336&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g060505&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g101613&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g143767&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g180211&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g086906&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g405178&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g445854&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g090087&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g107651&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g059937&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g047777&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g121186&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g103512&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g160005&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g180218&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g060726&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g103128&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm5g835704&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g146514&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g075417&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g106683&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g404762&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g048008&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g030280&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g587327&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g105682&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g316904&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g360681&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g112149&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g140082&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g178046&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g444801&modeinput=absolute
+
+http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g171986&modeinput=absolute
+
