@@ -2,16 +2,18 @@
 # Needs to be run from the main program folder.
 
 # Written by Joe Jeffers 
-# Updated Jan 12 2015
+# Updated 25 Apr 2015
 
 import sys
+import math
 import pickle
 import argparse
-from GeneWordSearch import geneWordSearch
+import DBBuilder
 from Classes import WordFreq
+from GeneWordSearch import geneWordSearch
 
+def resultsPrinter(results, web, table, outfile, lowFreqBool, genes):
 # Function to print the results 
-def resultsPrinter(results, web, table, outfile, singles, genes):
 	# Input: 
 	#	The results from the geneWordSearch function
 	#	a boolean for wheather to print links
@@ -22,23 +24,26 @@ def resultsPrinter(results, web, table, outfile, singles, genes):
 	words = results[0]
 	links = results[1]
 	
+	# Determine the minimum ammount of genes a word must occur in
+	lowFreq = int(math.ceil(math.log10(len(words))))
+	
 	if(table):
 		# Print the header for the table
 		outfile.write(WordFreq.robotHeaders(genes)+ '\n')
 	
 		# Print the genes by category of multiples and singles
-		outfile.write('Multiple Gene Words:' + '\n' + '\n')
+		outfile.write('Multiple Gene Words:' + '\n')
 		for item in words:
-			if(item.freq > 1):
+			if(item.freq > lowFreq):
 				outfile.write(item.forRobot(genes) + '\n')
 		
-		if(singles):
-			outfile.write('Single Gene Words:' + '\n' + '\n')
+		if(lowFreqBool):
+			outfile.write('Single Gene Words:' + '\n')
 			for item in words:
 				if(item.freq == 1):
 					outfile.write(item.forRobot(genes) + '\n')
 		
-	# Prints out web links if needed
+		# Prints out web links if needed
 		if(web):
 			for link in links:
 				outfile.write(link + '\n')
@@ -46,17 +51,18 @@ def resultsPrinter(results, web, table, outfile, singles, genes):
 	else:
 		# Print the genes by category of multiples and singles
 		outfile.write('Multiple Gene Words:' + '\n' + '\n')
+		
 		for item in words:
-			if(item.freq > 1):
+			if(item.freq > lowFreq):
 				outfile.write(item.forHuman(genes) + '\n')
 		
-		if(singles):
+		if(lowFreqBool):
 			outfile.write('Single Gene Words:' + '\n' + '\n')
 			for item in words:
 				if(item.freq == 1):
 					outfile.write(item.forHuman(genes) + '\n')
 	
-	# Prints out web links if needed
+		# Prints out web links if needed
 		if(web):
 			outfile.write('Web Links associated with these genes:'+'\n' + '\n')
 			for link in links:
@@ -64,40 +70,40 @@ def resultsPrinter(results, web, table, outfile, singles, genes):
 
 # Setup the Parser
 parser = argparse.ArgumentParser(description='Find the important words associated with supplied genes.')
-parser.add_argument('-c',action='store_true',default=False,help=
-'Sorts results by Holm–Bonferroni corrected p values to compensate for multiple hypothesis problem.')
-parser.add_argument('-d',action='store_true',default=False,help=
-'Indicates that input are database files, will start interactive DB builder. Please run again to indicate anlysis options after db is built (requires -s).')
-parser.add_argument('-g',action='store_true',default=False,help=
+parser.add_argument('-c','--correctedP',dest='c',action='store_true',default=False,help=
+'Sorts results by Holm–Bonferroni corrected p values, compensating for the multiple hypothesis problem.')
+parser.add_argument('-g','--gene_list',dest='g',action='store_true',default=False,help=
 'Prints list of genes associated with each word.')
-parser.add_argument('-m',action='store_false',default=True,help=
-'This prevents the writing of the words that only occur in one of the genes inputed.')
-parser.add_argument('-n',action='store_true',default=False,help=
-'Indicates the input is the starting point of a network, will first return list of genes in those networks, then the traditional output on that list of genes. Only works with maize at the momment (Incompatible with -d and -f).')
-parser.add_argument('-o',action='store',type=str,default='out.txt',help=
+parser.add_argument('-l','--low_rep',dest='l',action='store_true',default=False,help=
+'Prints the words that occur in relatively few of the genes inputed.')
+parser.add_argument('-o','--out',dest='o',action='store',type=str,default='out.txt',help=
 'Location to write the file that contains the results, default is out.txt in current folder.')
-parser.add_argument('-p',action='store',type=float,default=0.05,help=
+parser.add_argument('-p','--prob_cut',dest='p',action='store',type=float,default=0.05,help=
 'This option takes one argument and sets the probability cutoff, default is 0.05.')
-parser.add_argument('-s',action='store',type=str,help=
-'Allows indication of species to work with, \'maize\' and \'ath\' are currently available.')
-parser.add_argument('-t',action='store_true',default=False,help=
+parser.add_argument('-s','--species',dest='s',action='store',type=str,required=True,help=
+'REQUIRED. Indicates species to use, maize and ath included. More can be added with \'--buildDB\'.')
+parser.add_argument('-t','--tsv',dest='t',action='store_true',default=False,help=
 'This will give a tsv output for machine readable purposes. Default is human readable output.')
-parser.add_argument('-u',action='store',type=str,help=
-'Takes one argument, file with list of genes to be used as universe for enrichment query. One gene per line or split by comma.')
-parser.add_argument('-w',action='store_true',default=False,help=
-'This will output associated weblinks with standard gene output.')
+parser.add_argument('-u','--universe',dest='u',action='store',type=str,help=
+'Takes one argument, file with list of genes to use as universe for enrichment query. One gene per line or split by comma.')
+parser.add_argument('-w','--webLinks',dest='w',action='store_true',default=False,help=
+'Outputs associated web links with standard gene output.')
+parser.add_argument('--buildDB',action='store_true',default=False,help=
+'Indicates the input are database files, will start interactive DB builder. No analysis will be done.')
 parser.add_argument('--file',action='store_true',default=False,help=
-'This indicates that the input strings will be a file with genes in it (Incompatible with -d and -n).')
+'Indicates the input is a file with genes in it.')
 parser.add_argument('--folder',action='store_true',default=False,help=
-'Indicates that the input is a directory and will process all files in the directory (Incompatible with -f and -n).')
+'Indicates the input are directorys and will process all files in the directory.')
+parser.add_argument('--network',action='store_true',default=False,help=
+'Indicates the input are starting points of a network, will first return list of genes in those networks, then traditional output of that list of genes (Only works with maize at the momment).')
 parser.add_argument('things',action='store',nargs='*')
 
 # Parse the arguments
 args = parser.parse_args()
 args.s = args.s.lower()
 
-# Build alternate universe if it is so ordained
 if(args.u):
+# Build alternate universe if it is so ordained
 	import DBBuilder
 	genes = []
 	geneUni = open(args.u)
@@ -109,9 +115,6 @@ if(args.u):
 	geneUni.close()
 	del genes
 
-# Open the output file for writing
-out = open(args.o,'w')
-
 if(args.file):
 # Deals with input if it is a file name
 	genes = []
@@ -119,66 +122,96 @@ if(args.file):
 		geneList = open(name)
 		for row in geneList.readlines():
 			genes += row.split()
+	
 	results = geneWordSearch(genes,args.s,minChance=args.p,corrected=args.c)
-	resultsPrinter(results,args.w,args.t,out,args.m,args.g)
+	
+	# Open the output file and write
+	out = open(args.o,'w')
+	resultsPrinter(results,args.w,args.t,out,args.l,args.g)
+	out.close()
+	print('Completed! Check ' + args.o + ' for your results.')
 
-elif(args.n):
-# Deals with finding the gene network
+elif(args.network):
+# Deals with finding the gene network and running the relevant analysis
+	# Loads the network db and get the genes
 	genes = []
 	nets = open('databases/'+ args.s +'/networks.p','rb')
 	networks = pickle.load(nets)
-	
+	nets.close()
 	for gene in args.things:
 		genes += networks[gene]
 	
+	# Open the out file and print the network
+	out = open(args.o,'w')
 	out.write('These are the genes related to the gene(s) you identified:'+'\n')	
 	for gene in genes:
 		out.write(gene + '\n')
 	
-	out.write('\n' + 'Results from this list:' + '\n' + '\n')
+	# Run the analysis
 	results = geneWordSearch(genes,args.s,minChance=args.p,corrected=args.c)
-	resultsPrinter(results,args.w,args.t,out,args.m,args.g)
+	
+	# Print the Results
+	out.write('\n' + 'Results from this list:' + '\n' + '\n')
+	resultsPrinter(results,args.w,args.t,out,args.l,args.g)
+	out.close()
+	print('Completed! Check ' + args.o + ' for your results.')
 
 elif(args.folder):
-# Deals with directory option
+# Deals with directory option by analyzing file by file and doing output
+# individually for each file
+	# Find the folders indicated by the input
 	import glob
-	
 	results = []
 	for folder in args.things:
+		# Find the files in each folder seperately
 		if(not(folder[-1] == '/')):
 			folder += '/'
 		fileList = glob.glob(folder + '*.txt')
+		fileList.sort()
+		fileList = filter(lambda x: ((len(x) <= 13) or not(x[-12:] == '_results.txt')),fileList)
+		
+		# For each file, run the analysis and output the results
 		for fileName in fileList:
+			print('Analysing ' + fileName + '...')
+			# Read the genes in the file
 			genes = []
 			geneList = open(fileName)
 			for row in geneList.readlines():
 				genes += row.split()
-			if((len(genes) >= 10) and (len(genes) <= 300)):
-				out.write('\n' + '\n')
-				out.write('Results for ' + fileName + ':')
-				out.write('\n' + '\n')
-				results = geneWordSearch(genes,args.s,minChance=args.p,corrected=args.c)
-				resultsPrinter(results,args.w,args.t,out,args.m,args.g)
 			geneList.close()
+			
+			# Run the analysis
+			results = geneWordSearch(genes,args.s,minChance=args.p,corrected=args.c)
+			
+			# Print the results
+			resultFile = fileName[:-4] + '_results.txt'
+			out = open(resultFile,'w')
+			resultsPrinter(results,args.w,args.t,out,args.l,args.g)
+			out.close()
+		print('Completed folder! Check ' + folder + ' for your results.')
 
-elif(args.d):
-	import DBBuilder
+elif(args.buildDB):
+# Handles running the database builder program from the main CLI
 	DBBuilder.buildDBs(args.s,args.things)
 	print('Database has been built in /databases/'+args.s)
 	print('Please run this program again to do the gene analysis, and use the options -s')
 	
 else:
 # Handles normal gene list input
-	genes = args.things
-	results = geneWordSearch(genes,args.s,minChance=args.p,corrected=args.c)
-	resultsPrinter(results,args.w,args.t,out,args.m,args.g)
-
-if not(args.d):
+	# Run the analysis
+	results = geneWordSearch(args.things,args.s,minChance=args.p,corrected=args.c)
+	
+	# Print the Results
+	out = open(args.o,'w')
+	resultsPrinter(results,args.w,args.t,out,args.l,args.g)
 	out.close()
-	if(args.u):
-		import shutil
-		shutil.rmtree('databases/tmp/')
 	print('Completed! Check ' + args.o + ' for your results.')
+
+if(args.u):
+# If they used a custom universe, then delete the temp folder and all 
+# associated database files
+	import shutil
+	shutil.rmtree('databases/tmp/')
 
 
 
