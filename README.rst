@@ -35,7 +35,7 @@ This code is hosted on GitHub and can be accessed  `here <https://github.com/mon
 Use and Output Examples
 -----------------------
 
-For full output samples, check out `this <https://github.com/monprin/geneWordSearch/tree/master/GeneWordSearch/tests>`_ folder.
+For full output samples, check out `this <https://github.com/monprin/geneWordSearch/tree/master/GeneWordSearch/tests/MaizeIons>`_ folder.
 
 Example 1 (Human Output)
 ~~~~~~~~~~~~~~~~~~~~~~~~
