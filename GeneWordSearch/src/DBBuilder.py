@@ -3,17 +3,18 @@
 # but that is for a future versaion, included now for reference.
 
 # Written by Joseph Jeffers
-# Updated Apr 14 2015
+# Updated 25 Apr 2015
 
 def geneWordBuilder(infiles,species):
 # Function that makes the annotation database
 	import re
 	import pickle
 	from Classes import GeneNote
-	
 	db = dict()
 	
 	for infile in infiles:
+	# For each of the given files, process all the genes present
+		# Get the necessary info from the user for processing
 		print('For file \'' + infile + '\', please answer the following questions:')
 		geneCol = input('What column contains the gene identifiers (numbered from 1)? ')
 		desCol = input('What columns contain the description fields (please type each number seperated by a space; write \"end\" after the last number to inicate the rest of the columns)? ')
@@ -55,8 +56,10 @@ def geneWordBuilder(infiles,species):
 		# Process file line by line, each line has different gene.
 		skippedRows = []
 		for line in matrix.readlines():
-			# Get rid of newline char, make fully lowercase, and split into columns
+			# Get rid of newline char
 			line = line[:-1]
+			
+			# Split into columns
 			row = line.split(splitter)
 			
 			# Handle short lines in the database
@@ -71,7 +74,7 @@ def geneWordBuilder(infiles,species):
 			geneName = re.split('\.',geneName)
 			geneName = geneName[0]
 			
-			# Add Gene Object to db if not there already
+			# Add gene object to db if not there already
 			if(geneName not in db):
 				db[geneName] = GeneNote(geneName)
 			
@@ -86,7 +89,7 @@ def geneWordBuilder(infiles,species):
 			del desColTemp
 			words = []
 			
-			# Putting weblinks in their container if needed
+			# Putting web links in their container if needed
 			for entry in row:
 				if(entry[:4] == 'http'):
 					db[geneName].addLink(entry)
@@ -113,8 +116,7 @@ def geneWordBuilder(infiles,species):
 		print()
 		
 	# Determine outfile locations
-	species = species.lower()
-	folder = 'databases/' + species + '/'
+	folder = 'databases/' + species.lower() + '/'
 	
 	# Make a text version for posterity (and error checking)
 	printList = list(db.values())
@@ -128,7 +130,7 @@ def geneWordBuilder(infiles,species):
 	pickle.dump(db,open(folder+'geneNotes.p','wb'))
 	
 	return
-	
+
 def totalWordCounts(species):
 # Creates the dictionary of word occurances for use in geneWordSearch
 	import pickle
@@ -152,11 +154,13 @@ def totalWordCounts(species):
 	
 	# Sorting the words into alphabetical order
 	words.sort()
-
-	# Counting the words
 	wordList = []
+	
+	# Add the web links count to the list
 	wordList.append(WordFreq('Web Links',len(links)))
 	del links
+	
+	# Counting the words
 	for item in words:
 		if(wordList == [] or wordList[0].word != item):
 			wordList.insert(0, WordFreq(item,1))
@@ -177,17 +181,18 @@ def totalWordCounts(species):
 	dictDB = dict()
 	for word in wordList:
 		dictDB[word.word] = word.freq
-		
-	# Print file
+	
+	# Make a text version for posterity (and error checking)
 	totalsFile = open('databases/' + species + '/totalWordCounts.tsv','w')
 	for word in wordList:
 		totalsFile.write(str(word.freq) + '\t' + str(word.word) + '\n')
 	totalsFile.close()
 	
-	# Pickle the dictionary
+	# Pickle that stuff! (for geneWordSearch function)
 	pickle.dump(dictDB,open('databases/' + species + '/totalWordCounts.p','wb'))
 	
-	
+	return
+
 def networksBuilder(infile,species):
 # Creates dictionary for gene networks. Used by CLI for network finder
 	import pickle
@@ -248,12 +253,16 @@ def networksBuilder(infile,species):
 	networkFile.close()
 	
 def buildDBs(species,files):
+# Take in species name and db files and build a compatible database
+# files for use with GeneWordSearch
+# This function meant to be wrapper fof CLI usage
 	# Make the folder for the defined species if it doesn't exist
 	import os
 	species = species.lower()
 	spath = 'databases/'+ species + '/'
 	os.makedirs(spath, exist_ok=True)
 	
+	# Run the database functions
 	print('Building Database...')
 	geneWordBuilder(files,species)
 	print('Done')
@@ -262,36 +271,28 @@ def buildDBs(species,files):
 	print('Done, please check out put in the species folder you defined.')
 
 def tempBuilder(genes,species):
+# Function to build temporary database for running genes against smaller
+# subset of all species genes
 	import os
 	import pickle
 	
+	# Make the 'tmp' folder to hold the database files
 	species = species.lower()
 	spath = 'databases/'+ species + '/'
 	tpath = 'databases/tmp/'
 	os.makedirs(tpath, exist_ok=True)
 	
+	# Load the full DB to exatract items from 
 	fullDB = pickle.load(open(spath +'geneNotes.p','rb'))
 	newDB = dict()
 	
+	# Find all of the needed genes and add them to the new DB
 	for gene in genes:
 		name = gene.lower()
-		data = fullDB[name]
-		newDB[name] = data
+		newDB[name] = fullDB[name]
 	
+	# Save the dictionary and run 'totalWordCounts'
 	pickle.dump(newDB,open(tpath+'geneNotes.p','wb'))
-	
 	totalWordCounts('tmp')
-	return
-
-# Just run it from the command line to rebuild and count everything.
-if __name__ == '__main__':
-	import argparse
-	import os
-	parser = argparse.ArgumentParser(description='Build the database for geneWordSearch.')
-	parser.add_argument('-s',action='store',type=str,default='ath',help='Define which species. Maize = maize, Arabidopsis = ath, or any other.')
-	parser.add_argument('files',action='store',nargs='*')
-	args = parser.parse_args()
 	
-	buildDBs(args.s,args.files)
-
-
+	return

@@ -1,12 +1,14 @@
-# File contains the custom classes need for the operation of the program.
+# This file contains the custom classes need for the operation of the 
+# rest of the GeneWordSearch program.
 
 # Written by Joe Jeffers
-# Updated Apr 14 2015
+# Updated 25 Apr 2015
 
 class WordFreq:
-	# Class for keeping the words and their frequencies together and 
-	# and some useful functions to outsource some work
+# Class for keeping the words and their frequencies together and 
+# and some useful functions to outsource some work
 	def __init__(self, word, freq):
+	# Constructor
 		self.word = word
 		self.p = 0
 		self.pCor = 0
@@ -15,7 +17,7 @@ class WordFreq:
 		self.genes = []
 		
 	def forHuman(self,genes=False):
-		# Standard string output function
+	# Standard string output function for humans
 		ans = 'Word: ' + self.word + '\n'
 		ans += 'P-value: ' + str(self.p) + '\n'
 		ans += 'Corrected P-value: ' + str(self.pCor) + '\n'
@@ -29,7 +31,7 @@ class WordFreq:
 		return ans
 		
 	def forRobot(self,genes=False):
-		# Returns the string output for machine readable tsv.
+	# Returns the string output for machine readable output (tsv)
 		ans = self.word + '\t'
 		ans += str(self.p) + '\t'
 		ans += str(self.pCor) + '\t'
@@ -42,29 +44,30 @@ class WordFreq:
 		return ans
 		
 	def robotHeaders(genes=False):
-		# Returns the headers for machine readable output
+	# Returns the headers for machine readable output (tsv)
 		ans = 'Word' + '\t' + 'Pval' + '\t' + 'CorPval' + '\t' + 'Ocurrances in Sample' + '\t' + 'Ocurrances in Database'
 		if(genes):
 			ans += '\t' + 'Genes Appeared In'
 		return ans
 		
 	def increment(self):
-		# Adds another tick to the word count
+	# Adds another tick to the word count
 		self.freq += 1
 		
 	def addGene(self,gene):
-		# Adds the gene to the list of represented genes
+	# Adds the gene to the list of represented genes
 		self.genes.append(gene)
 		
 	def computeP(self,db,length,totWords):
-		# Computes the p value using hypergeometric distribution
-		# Also finds and assigns the total word count from the database
-		# Word count database must be dictionary with 'word' as the key, and count as value
+	# Computes the p value using hypergeometric distribution
+	# Also finds and assigns the total word count from the database
+	# Word count database must be built by 'totalWordCounts' function
 		from scipy.stats import hypergeom
 		self.total = db[self.word]
 		self.p = hypergeom.sf((self.freq-1),totWords,self.total,length)
 		
 	def pCorrect(self,tot,pos):
+	# Computes the corrected P value using the Holm-Bonferroni method
 		self.pCor = (self.p * (tot-pos))
 		
 class GeneNote:

@@ -1,32 +1,31 @@
 # Main logic function for finding the annotations associated with the genes.
 
 # Written by Joe Jeffers
-# Updated on Jan 12 2015
+# Updated on 25 Apr 2015
 
 def geneWordSearch(genes,species,minChance=0.05,corrected=False):
-	# Input: Takes in a list of genes and the probability cutoff.
-	# Output: Returns tuple of words and links. Only returns the genes that have a 
-	# chance probability of less than the minChance variable. 
+# Input: Takes in a list of genes, the species, and the probability cutoff.
+# Output: Returns tuple of words and links. Only returns the genes that have a 
+#         chance probability of less than the minChance variable. 
 	import re
 	import pickle
 	from Classes import WordFreq
 	from Classes import GeneNote
 	
 	# Unpickle the database of words
-	
 	dbfile = open('databases/'+ species +'/geneNotes.p','rb')
 	db = pickle.load(dbfile)
 	
+	# Build the word list up for all of the genes provided.
 	words = []
 	webSites = []
-	x = len(db)
-	# Build the word list up for all of the genes provided.
 	links = WordFreq('Web Links',0)
 	for item in genes:
 		# Make the input all lowercase to match the database
 		gene = item.lower()
 		i=1
 		
+		# Get the object from the DB
 		geneData = db[gene]
 		
 		# Adding words related to the gene in db to the overall list
@@ -53,8 +52,7 @@ def geneWordSearch(genes,species,minChance=0.05,corrected=False):
 			wordList[0].addGene(item[1])
 		else:
 			wordList[0].increment()
-			if(item[1] not in wordList[0].genes):
-				wordList[0].addGene(item[1])
+			wordList[0].addGene(item[1])
 	del words
 	
 	# Finding the respective P values
@@ -70,13 +68,11 @@ def geneWordSearch(genes,species,minChance=0.05,corrected=False):
 	wordList = sorted(wordList, key=lambda item: item.p)
 	
 	# Finding corrected P Values using Holm–Bonferroni method
-	i = 0
 	count = len(wordList)
-	while(i < count):
+	for i in range(0,count):
 		wordList[i].pCorrect(count,(i+1))
-		i += 1
 	
-	# Sort by corrected P Value instead of original P value
+	# Sort by corrected P Value instead of original P value if desired
 	if(corrected):
 		wordList = sorted(wordList, key=lambda item: item.pCor)
 	
