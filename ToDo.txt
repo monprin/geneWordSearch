@@ -1,11 +1,6 @@
 To-Do List of features/capabilities:
-(In categorical, but not priority order)
 
-Enrichment Things
-- Give context for word (Surrounding sentance, reserve for gui version)
-
-Database Things
-
-Other Things
 - GUI (look at flask) (On ice for the time being)
+-- Tag Cloud Library (http://www.goat1000.com/tagcanvas.php)
+-- Give context for word from orriginal DB
 - Multiple network deep search
