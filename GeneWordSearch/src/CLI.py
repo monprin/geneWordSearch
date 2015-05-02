@@ -12,7 +12,7 @@ import DBBuilder
 from Classes import WordFreq
 from GeneWordSearch import geneWordSearch
 
-def resultsPrinter(results, web, table, outfile, lowFreqBool, genes):
+def resultsPrinter(results, web, table, outfile, genes):
 # Function to print the results 
 	# Input: 
 	#	The results from the geneWordSearch function
@@ -25,23 +25,15 @@ def resultsPrinter(results, web, table, outfile, lowFreqBool, genes):
 	links = results[1]
 	
 	# Determine the minimum ammount of genes a word must occur in
-	lowFreq = int(math.ceil(math.log10(len(words))))
+	# to be printed in the interesting list
 	
 	if(table):
 		# Print the header for the table
 		outfile.write(WordFreq.robotHeaders(genes)+ '\n')
 	
 		# Print the genes by category of multiples and singles
-		outfile.write('Multiple Gene Words:' + '\n')
 		for item in words:
-			if(item.freq > lowFreq):
-				outfile.write(item.forRobot(genes) + '\n')
-		
-		if(lowFreqBool):
-			outfile.write('Single Gene Words:' + '\n')
-			for item in words:
-				if(item.freq == 1):
-					outfile.write(item.forRobot(genes) + '\n')
+			outfile.write(item.forRobot(genes) + '\n')
 		
 		# Prints out web links if needed
 		if(web):
@@ -49,18 +41,9 @@ def resultsPrinter(results, web, table, outfile, lowFreqBool, genes):
 				outfile.write(link + '\n')
 	
 	else:
-		# Print the genes by category of multiples and singles
-		outfile.write('Multiple Gene Words:' + '\n' + '\n')
-		
+		# Print the genes out
 		for item in words:
-			if(item.freq > lowFreq):
-				outfile.write(item.forHuman(genes) + '\n')
-		
-		if(lowFreqBool):
-			outfile.write('Single Gene Words:' + '\n' + '\n')
-			for item in words:
-				if(item.freq == 1):
-					outfile.write(item.forHuman(genes) + '\n')
+			outfile.write(item.forHuman(genes) + '\n')
 	
 		# Prints out web links if needed
 		if(web):
@@ -74,8 +57,8 @@ parser.add_argument('-c','--correctedP',dest='c',action='store_true',default=Fal
 'Sorts results by Holm–Bonferroni corrected p values, compensating for the multiple hypothesis problem.')
 parser.add_argument('-g','--gene_list',dest='g',action='store_true',default=False,help=
 'Prints list of genes associated with each word.')
-parser.add_argument('-l','--low_rep',dest='l',action='store_true',default=False,help=
-'Prints the words that occur in relatively few of the genes inputed.')
+#parser.add_argument('-l','--low_rep',dest='l',action='store_true',default=False,help=
+#'Prints the words that occur in relatively few of the genes inputed.')
 parser.add_argument('-o','--out',dest='o',action='store',type=str,default='out.txt',help=
 'Location to write the file that contains the results, default is out.txt in current folder.')
 parser.add_argument('-p','--prob_cut',dest='p',action='store',type=float,default=0.05,help=
@@ -127,7 +110,7 @@ if(args.file):
 	
 	# Open the output file and write
 	out = open(args.o,'w')
-	resultsPrinter(results,args.w,args.t,out,args.l,args.g)
+	resultsPrinter(results,args.w,args.t,out,args.g)
 	out.close()
 	print('Completed! Check ' + args.o + ' for your results.')
 
@@ -152,7 +135,7 @@ elif(args.network):
 	
 	# Print the Results
 	out.write('\n' + 'Results from this list:' + '\n' + '\n')
-	resultsPrinter(results,args.w,args.t,out,args.l,args.g)
+	resultsPrinter(results,args.w,args.t,out,args.g)
 	out.close()
 	print('Completed! Check ' + args.o + ' for your results.')
 
@@ -168,7 +151,7 @@ elif(args.folder):
 			folder += '/'
 		fileList = glob.glob(folder + '*.txt')
 		fileList.sort()
-		fileList = filter(lambda x: ((len(x) <= 13) or not(x[-12:] == '_results.txt')),fileList)
+		fileList = filter(lambda x: ((len(x) <= 13) or (not(x[-12:] == '_results.txt') and not(x[-16:] == '_results_new.txt'))),fileList)
 		
 		# For each file, run the analysis and output the results
 		for fileName in fileList:
@@ -184,17 +167,17 @@ elif(args.folder):
 			results = geneWordSearch(genes,args.s,minChance=args.p,corrected=args.c)
 			
 			# Print the results
-			resultFile = fileName[:-4] + '_results.txt'
+			resultFile = fileName[:-4] + '_results_new.txt'
 			out = open(resultFile,'w')
-			resultsPrinter(results,args.w,args.t,out,args.l,args.g)
+			resultsPrinter(results,args.w,args.t,out,args.g)
 			out.close()
 		print('Completed folder! Check ' + folder + ' for your results.')
 
 elif(args.buildDB):
 # Handles running the database builder program from the main CLI
-	DBBuilder.buildDBs(args.s,args.things)
+	DBBuilder.geneWordBuilder(args.s,args.things)
 	print('Database has been built in /databases/'+args.s)
-	print('Please run this program again to do the gene analysis, and use the options -s')
+	print('Please run this program again to do the gene analysis, and use the options -s to define the species')
 	
 else:
 # Handles normal gene list input
@@ -203,7 +186,7 @@ else:
 	
 	# Print the Results
 	out = open(args.o,'w')
-	resultsPrinter(results,args.w,args.t,out,args.l,args.g)
+	resultsPrinter(results,args.w,args.t,out,args.g)
 	out.close()
 	print('Completed! Check ' + args.o + ' for your results.')
 

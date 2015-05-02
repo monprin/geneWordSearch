@@ -1,0 +1,325 @@
+Word: modification
+P-value: 1.55434155297e-07
+Corrected P-value: 2.64238064005e-05
+Overlap: 32/1132
+
+Word: beta-expansin
+P-value: 6.21248310824e-07
+Corrected P-value: 0.000104990964529
+Overlap: 6/32
+
+Word: degradation
+P-value: 1.8478676935e-06
+Corrected P-value: 0.000310441772508
+Overlap: 49/2400
+
+Word: postranslational
+P-value: 3.1354562509e-06
+Corrected P-value: 0.000523621193901
+Overlap: 27/998
+
+Word: serine
+P-value: 7.23998140313e-06
+Corrected P-value: 0.00120183691292
+Overlap: 21/694
+
+Word: mpk17-1-putative
+P-value: 9.11879216958e-06
+Corrected P-value: 0.00150460070798
+Overlap: 3/5
+
+Word: sulphate
+P-value: 4.99566923541e-05
+Corrected P-value: 0.00819289754608
+Overlap: 3/8
+
+Word: ubiquitin
+P-value: 6.34148174327e-05
+Corrected P-value: 0.0103366152415
+Overlap: 29/1320
+
+Word: acting
+P-value: 0.000176093484643
+Corrected P-value: 0.0285271445121
+Overlap: 4/29
+
+Word: regulatory
+P-value: 0.000292709812175
+Corrected P-value: 0.0471262797602
+Overlap: 8/170
+
+Word: kinase
+P-value: 0.000383876187638
+Corrected P-value: 0.0614201900221
+Overlap: 35/1909
+
+Word: phosphatase
+P-value: 0.000406511844002
+Corrected P-value: 0.0646353831963
+Overlap: 13/433
+
+Word: transport
+P-value: 0.000414045447584
+Corrected P-value: 0.0654191807183
+Overlap: 34/1843
+
+Word: bonds
+P-value: 0.000471242838826
+Corrected P-value: 0.0739851256957
+Overlap: 3/16
+
+Word: permease
+P-value: 0.000928616408243
+Corrected P-value: 0.144864159686
+Overlap: 6/114
+
+Word: v-atpases
+P-value: 0.00115044915263
+Corrected P-value: 0.178319618658
+Overlap: 5/80
+
+Word: signalling
+P-value: 0.00119109065071
+Corrected P-value: 0.18342796021
+Overlap: 29/1585
+
+Word: nuclease
+P-value: 0.00124060100401
+Corrected P-value: 0.189811953613
+Overlap: 3/22
+
+Word: p-
+P-value: 0.00143097265085
+Corrected P-value: 0.217507842929
+Overlap: 5/84
+
+Word: containing
+P-value: 0.00150276960479
+Corrected P-value: 0.226918210324
+Overlap: 90/6670
+
+Word: peptidase
+P-value: 0.00221175299571
+Corrected P-value: 0.331762949357
+Overlap: 7/182
+
+Word: ester
+P-value: 0.00252678021334
+Corrected P-value: 0.376490251788
+Overlap: 3/28
+
+Word: hydrolase
+P-value: 0.00281990043517
+Corrected P-value: 0.417345264405
+Overlap: 12/475
+
+Word: two-sector
+P-value: 0.00405884435191
+Corrected P-value: 0.596650119731
+Overlap: 3/33
+
+Word: domain
+P-value: 0.00475434122942
+Corrected P-value: 0.694133819495
+Overlap: 89/6870
+
+Word: h+-transporting
+P-value: 0.0047992219147
+Corrected P-value: 0.695887177632
+Overlap: 3/35
+
+Word: polymerase
+P-value: 0.00563868146382
+Corrected P-value: 0.81197013079
+Overlap: 7/216
+
+Word: factor
+P-value: 0.00600974076927
+Corrected P-value: 0.859392930005
+Overlap: 41/2755
+
+Word: thaumatin
+P-value: 0.00605354404429
+Corrected P-value: 0.859603254289
+Overlap: 3/38
+
+Word: delta
+P-value: 0.00651097065251
+Corrected P-value: 0.918046862003
+Overlap: 3/39
+
+Word: finger
+P-value: 0.00784506998966
+Corrected P-value: 1.09830979855
+Overlap: 22/1268
+
+Word: thioredoxin
+P-value: 0.00865101195019
+Corrected P-value: 1.20249066108
+Overlap: 5/128
+
+Word: zipper
+P-value: 0.0090012462813
+Corrected P-value: 1.24217198682
+Overlap: 4/83
+
+Word: f-box
+P-value: 0.0107784391535
+Corrected P-value: 1.47664616403
+Overlap: 9/367
+
+Word: kinases
+P-value: 0.0113775764013
+Corrected P-value: 1.54735039058
+Overlap: 17/931
+
+Word: mitogen-activated
+P-value: 0.0115513359756
+Corrected P-value: 1.55943035671
+Overlap: 3/48
+
+Word: subunit
+P-value: 0.0115867540613
+Corrected P-value: 1.55262504421
+Overlap: 30/1956
+
+Word: leucine
+P-value: 0.0126539157545
+Corrected P-value: 1.68297079534
+Overlap: 9/377
+
+Word: organisation
+P-value: 0.0135049852079
+Corrected P-value: 1.78265804744
+Overlap: 11/515
+
+Word: transcription
+P-value: 0.0152033814134
+Corrected P-value: 1.99164296515
+Overlap: 50/3707
+
+Word: expansin
+P-value: 0.01666617188
+Corrected P-value: 2.1666023444
+Overlap: 3/55
+
+Word: lysophospholipases
+P-value: 0.0183246268277
+Corrected P-value: 2.36387686078
+Overlap: 3/57
+
+Word: transporter
+P-value: 0.0193649911727
+Corrected P-value: 2.4787188701
+Overlap: 16/913
+
+Word: phosphatidylinositol
+P-value: 0.0200713787707
+Corrected P-value: 2.54906510388
+Overlap: 3/59
+
+Word: dihydroflavonols
+P-value: 0.020977924992
+Corrected P-value: 2.64321854899
+Overlap: 3/60
+
+Word: similar
+P-value: 0.0224537272448
+Corrected P-value: 2.8067159056
+Overlap: 7/284
+
+Word: 3-beta-glucosidase
+P-value: 0.0248253950857
+Corrected P-value: 3.07834899062
+Overlap: 3/64
+
+Word: threonine-protein
+P-value: 0.0251970025179
+Corrected P-value: 3.09923130971
+Overlap: 7/291
+
+Word: g-proteins
+P-value: 0.0264398824221
+Corrected P-value: 3.2256656555
+Overlap: 7/294
+
+Word: c3hc4
+P-value: 0.0272016130805
+Corrected P-value: 3.29139518274
+Overlap: 6/232
+
+Word: family
+P-value: 0.0278193073968
+Corrected P-value: 3.33831688762
+Overlap: 80/6580
+
+Word: include
+P-value: 0.0290262929686
+Corrected P-value: 3.45412886326
+Overlap: 3/68
+
+Word: homologs
+P-value: 0.0290262929686
+Corrected P-value: 3.42510257029
+Overlap: 3/68
+
+Word: translation
+P-value: 0.034587863471
+Corrected P-value: 4.04678002611
+Overlap: 4/125
+
+Word: ethylene-responsive
+P-value: 0.0352959371703
+Corrected P-value: 4.09432871175
+Overlap: 6/247
+
+Word: calcium
+P-value: 0.0364117438103
+Corrected P-value: 4.18735053818
+Overlap: 9/455
+
+Word: repeat
+P-value: 0.0364821832051
+Corrected P-value: 4.15896888539
+Overlap: 17/1070
+
+Word: glycosyl
+P-value: 0.0370815146255
+Corrected P-value: 4.19021115268
+Overlap: 6/250
+
+Word: threonine
+P-value: 0.0386916697653
+Corrected P-value: 4.33346701371
+Overlap: 5/189
+
+Word: isoform
+P-value: 0.0401837504487
+Corrected P-value: 4.4603962998
+Overlap: 6/255
+
+Word: regulation
+P-value: 0.0410355554033
+Corrected P-value: 4.51391109437
+Overlap: 42/3238
+
+Word: amino
+P-value: 0.0431591000921
+Corrected P-value: 4.70434191004
+Overlap: 9/470
+
+Word: signal
+P-value: 0.0472995084136
+Corrected P-value: 5.10834690866
+Overlap: 5/200
+
+Word: alpha
+P-value: 0.0477414299797
+Corrected P-value: 5.10833300783
+Overlap: 7/335
+
+Word: complex
+P-value: 0.0481731457358
+Corrected P-value: 5.106353448
+Overlap: 10/555
+

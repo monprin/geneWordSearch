@@ -1,0 +1,235 @@
+Word: domain
+P-value: 1.40076657627e-05
+Corrected P-value: 0.00148481257085
+Overlap: 62/6870
+
+Word: transport
+P-value: 3.86874303513e-05
+Corrected P-value: 0.00406218018688
+Overlap: 24/1843
+
+Word: containing
+P-value: 0.000130283770583
+Corrected P-value: 0.0135495121406
+Overlap: 57/6670
+
+Word: gibberellin
+P-value: 0.000140729722753
+Corrected P-value: 0.0144951614436
+Overlap: 5/96
+
+Word: gid1l2
+P-value: 0.00016001346278
+Corrected P-value: 0.0163213732035
+Overlap: 4/53
+
+Word: amino
+P-value: 0.000180072424505
+Corrected P-value: 0.018187314875
+Overlap: 10/470
+
+Word: synthesis
+P-value: 0.000277083241121
+Corrected P-value: 0.0277083241121
+Overlap: 24/2104
+
+Word: factor
+P-value: 0.000559473027837
+Corrected P-value: 0.0553878297558
+Overlap: 28/2755
+
+Word: aminotransferase
+P-value: 0.0006079621864
+Corrected P-value: 0.0595802942672
+Overlap: 4/75
+
+Word: transcription
+P-value: 0.000910861453507
+Corrected P-value: 0.0883535609901
+Overlap: 34/3707
+
+Word: systems
+P-value: 0.00133131081059
+Corrected P-value: 0.127805837816
+Overlap: 5/157
+
+Word: multidrug
+P-value: 0.00165642169277
+Corrected P-value: 0.157360060813
+Overlap: 5/165
+
+Word: proteinase
+P-value: 0.00179217960307
+Corrected P-value: 0.168464882689
+Overlap: 5/168
+
+Word: motif-containing
+P-value: 0.00215467923984
+Corrected P-value: 0.200385169305
+Overlap: 3/50
+
+Word: hormone
+P-value: 0.002918962664
+Corrected P-value: 0.268544565088
+Overlap: 9/570
+
+Word: transporters
+P-value: 0.00306440293996
+Corrected P-value: 0.278860667537
+Overlap: 6/275
+
+Word: subtilisin
+P-value: 0.00362304344351
+Corrected P-value: 0.326073909916
+Overlap: 3/60
+
+Word: n-methyltransferase
+P-value: 0.00362304344351
+Corrected P-value: 0.322450866472
+Overlap: 3/60
+
+Word: regulator
+P-value: 0.00495900142713
+Corrected P-value: 0.436392125588
+Overlap: 8/508
+
+Word: inhibitor
+P-value: 0.00521210337861
+Corrected P-value: 0.453452993939
+Overlap: 6/307
+
+Word: metabolism
+P-value: 0.00557327306708
+Corrected P-value: 0.479301483769
+Overlap: 23/2502
+
+Word: family
+P-value: 0.00591374800258
+Corrected P-value: 0.50266858022
+Overlap: 49/6580
+
+Word: synthesis-degradation
+P-value: 0.00631337889139
+Corrected P-value: 0.530323826877
+Overlap: 5/226
+
+Word: aspartate
+P-value: 0.00734465979477
+Corrected P-value: 0.609606762966
+Overlap: 4/149
+
+Word: binding
+P-value: 0.00815348415869
+Corrected P-value: 0.668585701013
+Overlap: 24/2737
+
+Word: dna-directed
+P-value: 0.00835001112198
+Corrected P-value: 0.676350900881
+Overlap: 3/81
+
+Word: atp-binding
+P-value: 0.00952307340415
+Corrected P-value: 0.761845872332
+Overlap: 3/85
+
+Word: regulation
+P-value: 0.00975729864584
+Corrected P-value: 0.770826593021
+Overlap: 27/3238
+
+Word: 1a
+P-value: 0.0124978752206
+Corrected P-value: 0.974834267206
+Overlap: 3/94
+
+Word: aspartic
+P-value: 0.0132229658525
+Corrected P-value: 1.01816837064
+Overlap: 3/96
+
+Word: oxidase
+P-value: 0.0149056767187
+Corrected P-value: 1.13283143062
+Overlap: 5/280
+
+Word: resistance
+P-value: 0.0156307698643
+Corrected P-value: 1.17230773982
+Overlap: 6/390
+
+Word: precursor
+P-value: 0.0165612093299
+Corrected P-value: 1.22552949041
+Overlap: 14/1430
+
+Word: acids
+P-value: 0.0180704558557
+Corrected P-value: 1.31914327747
+Overlap: 3/108
+
+Word: transporter
+P-value: 0.0201373675985
+Corrected P-value: 1.44989046709
+Overlap: 10/913
+
+Word: permease
+P-value: 0.0208164270733
+Corrected P-value: 1.4779663222
+Overlap: 3/114
+
+Word: gdsl-motif
+P-value: 0.0208164270733
+Corrected P-value: 1.45714989513
+Overlap: 3/114
+
+Word: repeat
+P-value: 0.0230284325926
+Corrected P-value: 1.58896184889
+Overlap: 11/1070
+
+Word: metal
+P-value: 0.0237807212208
+Corrected P-value: 1.61708904302
+Overlap: 4/212
+
+Word: polymerase
+P-value: 0.025242956218
+Corrected P-value: 1.69127806661
+Overlap: 4/216
+
+Word: ethylene
+P-value: 0.0280630123579
+Corrected P-value: 1.85215881562
+Overlap: 3/128
+
+Word: polypeptide
+P-value: 0.0286254929413
+Corrected P-value: 1.86065704118
+Overlap: 3/129
+
+Word: transmembrane
+P-value: 0.0333547931099
+Corrected P-value: 2.13470675903
+Overlap: 4/236
+
+Word: protease
+P-value: 0.0335888972341
+Corrected P-value: 2.11610052575
+Overlap: 8/723
+
+Word: glycosyltransferase
+P-value: 0.042492335532
+Corrected P-value: 2.63452480299
+Overlap: 3/151
+
+Word: other
+P-value: 0.0474918086145
+Corrected P-value: 2.89700032549
+Overlap: 3/158
+
+Word: organisation
+P-value: 0.0498697444002
+Corrected P-value: 2.99218466401
+Overlap: 6/515
+

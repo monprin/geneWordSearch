@@ -1,0 +1,345 @@
+Word: binding
+P-value: 1.11724716133e-05
+Corrected P-value: 0.00232387409558
+Overlap: 61/2737
+
+Word: degradation
+P-value: 1.39247024179e-05
+Corrected P-value: 0.0028824134005
+Overlap: 55/2400
+
+Word: amidase
+P-value: 4.81634835874e-05
+Corrected P-value: 0.00992167761901
+Overlap: 4/17
+
+Word: finger
+P-value: 7.06105218727e-05
+Corrected P-value: 0.0144751569839
+Overlap: 33/1268
+
+Word: asparagine
+P-value: 7.69100222087e-05
+Corrected P-value: 0.0156896445306
+Overlap: 4/19
+
+Word: ubiquitin
+P-value: 0.000147407234442
+Corrected P-value: 0.0299236685917
+Overlap: 33/1320
+
+Word: postranslational
+P-value: 0.000166989170002
+Corrected P-value: 0.0337318123405
+Overlap: 27/998
+
+Word: syndrome
+P-value: 0.000200745811742
+Corrected P-value: 0.0403499081601
+Overlap: 4/24
+
+Word: domain-containing
+P-value: 0.000246064907092
+Corrected P-value: 0.0492129814184
+Overlap: 23/809
+
+Word: metalloprotease
+P-value: 0.000344017540568
+Corrected P-value: 0.0684594905731
+Overlap: 5/49
+
+Word: domain
+P-value: 0.000509845742288
+Corrected P-value: 0.100949456973
+Overlap: 116/6870
+
+Word: modification
+P-value: 0.000527187432891
+Corrected P-value: 0.10385592428
+Overlap: 28/1132
+
+Word: uncharacterized
+P-value: 0.00060893749973
+Corrected P-value: 0.119351749947
+Overlap: 41/1913
+
+Word: phosphoribosyltransferase
+P-value: 0.000989563107446
+Corrected P-value: 0.192964805952
+Overlap: 4/36
+
+Word: containing
+P-value: 0.00108163339075
+Corrected P-value: 0.209836877805
+Overlap: 111/6670
+
+Word: serine
+P-value: 0.00125539509361
+Corrected P-value: 0.242291253066
+Overlap: 19/694
+
+Word: 2c
+P-value: 0.00171059925895
+Corrected P-value: 0.328435057718
+Overlap: 7/138
+
+Word: cytoplasmic
+P-value: 0.00290854630078
+Corrected P-value: 0.55553234345
+Overlap: 4/48
+
+Word: non-specific
+P-value: 0.00311783561936
+Corrected P-value: 0.592388767678
+Overlap: 3/24
+
+Word: ascorbate
+P-value: 0.00352649280682
+Corrected P-value: 0.666507140488
+Overlap: 5/82
+
+Word: redox
+P-value: 0.00464901601984
+Corrected P-value: 0.874015011729
+Overlap: 9/254
+
+Word: factor
+P-value: 0.0051973742901
+Corrected P-value: 0.97190899225
+Overlap: 50/2755
+
+Word: anthranilate
+P-value: 0.00541169390916
+Corrected P-value: 1.0065750671
+Overlap: 4/57
+
+Word: kinase
+P-value: 0.00558265823111
+Corrected P-value: 1.03279177275
+Overlap: 37/1909
+
+Word: family
+P-value: 0.00676629517826
+Corrected P-value: 1.2449983128
+Overlap: 104/6580
+
+Word: nucleic
+P-value: 0.00725422024481
+Corrected P-value: 1.3275223048
+Overlap: 8/225
+
+Word: repair
+P-value: 0.00729729963999
+Corrected P-value: 1.32810853448
+Overlap: 6/137
+
+Word: glycine-rich
+P-value: 0.00747687043296
+Corrected P-value: 1.35331354837
+Overlap: 5/98
+
+Word: c3hc4
+P-value: 0.00864069761973
+Corrected P-value: 1.55532557155
+Overlap: 8/232
+
+Word: guanine
+P-value: 0.00911978559343
+Corrected P-value: 1.63244162122
+Overlap: 3/35
+
+Word: lipid-transfer
+P-value: 0.00985889672889
+Corrected P-value: 1.75488361774
+Overlap: 3/36
+
+Word: threonine-protein
+P-value: 0.0108364643534
+Corrected P-value: 1.91805419055
+Overlap: 9/291
+
+Word: factors
+P-value: 0.0121988950278
+Corrected P-value: 2.14700552489
+Overlap: 4/72
+
+Word: remodeling
+P-value: 0.012782867347
+Corrected P-value: 2.23700178573
+Overlap: 4/73
+
+Word: outer
+P-value: 0.0131563138992
+Corrected P-value: 2.28919861846
+Overlap: 3/40
+
+Word: methionine
+P-value: 0.0131563138992
+Corrected P-value: 2.27604230456
+Overlap: 3/40
+
+Word: arginine
+P-value: 0.0133843725714
+Corrected P-value: 2.30211208228
+Overlap: 4/74
+
+Word: orphans
+P-value: 0.0147048172865
+Corrected P-value: 2.51452375599
+Overlap: 10/359
+
+Word: amino
+P-value: 0.0150742731116
+Corrected P-value: 2.56262642897
+Overlap: 12/470
+
+Word: cytosolic
+P-value: 0.0157854778157
+Corrected P-value: 2.66774575086
+Overlap: 5/118
+
+Word: cytoplasmatic
+P-value: 0.0164523258105
+Corrected P-value: 2.76399073616
+Overlap: 7/211
+
+Word: receptor
+P-value: 0.0171482636457
+Corrected P-value: 2.86376002883
+Overlap: 23/1145
+
+Word: glutathione
+P-value: 0.0179887131405
+Corrected P-value: 2.98612638133
+Overlap: 6/167
+
+Word: casein
+P-value: 0.0191469842753
+Corrected P-value: 3.15925240543
+Overlap: 3/46
+
+Word: leucine
+P-value: 0.019895739764
+Corrected P-value: 3.26290132129
+Overlap: 10/377
+
+Word: atp-binding
+P-value: 0.021201909369
+Corrected P-value: 3.45591122714
+Overlap: 4/85
+
+Word: transcription
+P-value: 0.0221476877235
+Corrected P-value: 3.58792541121
+Overlap: 60/3707
+
+Word: dependent
+P-value: 0.0229339533622
+Corrected P-value: 3.69236649132
+Overlap: 5/130
+
+Word: signalling
+P-value: 0.0252841869352
+Corrected P-value: 4.04546990963
+Overlap: 29/1585
+
+Word: subunit
+P-value: 0.0313739957635
+Corrected P-value: 4.98846532639
+Overlap: 34/1956
+
+Word: ribonucleoprotein
+P-value: 0.0323703923051
+Corrected P-value: 5.11452198421
+Overlap: 4/97
+
+Word: synthesis
+P-value: 0.0333906122544
+Corrected P-value: 5.24232612394
+Overlap: 36/2104
+
+Word: having
+P-value: 0.0345089918702
+Corrected P-value: 5.38340273175
+Overlap: 4/99
+
+Word: troponine
+P-value: 0.0349433889899
+Corrected P-value: 5.41622529344
+Overlap: 3/58
+
+Word: reticuline
+P-value: 0.0349433889899
+Corrected P-value: 5.38128190445
+Overlap: 3/58
+
+Word: reductases
+P-value: 0.0349433889899
+Corrected P-value: 5.34633851546
+Overlap: 3/58
+
+Word: nitrilases
+P-value: 0.0349433889899
+Corrected P-value: 5.31139512647
+Overlap: 3/58
+
+Word: glutaredoxin
+P-value: 0.0349433889899
+Corrected P-value: 5.27645173748
+Overlap: 3/58
+
+Word: enzymes
+P-value: 0.0349433889899
+Corrected P-value: 5.24150834849
+Overlap: 3/58
+
+Word: bridge
+P-value: 0.0349433889899
+Corrected P-value: 5.2065649595
+Overlap: 3/58
+
+Word: berberine
+P-value: 0.0349433889899
+Corrected P-value: 5.17162157051
+Overlap: 3/58
+
+Word: *nitrile
+P-value: 0.0349433889899
+Corrected P-value: 5.13667818152
+Overlap: 3/58
+
+Word: regulation
+P-value: 0.0351257836871
+Corrected P-value: 5.12836441831
+Overlap: 52/3238
+
+Word: small
+P-value: 0.0361960651903
+Corrected P-value: 5.24842945259
+Overlap: 5/147
+
+Word: phenylpropanoids
+P-value: 0.0408334171262
+Corrected P-value: 5.88001206618
+Overlap: 5/152
+
+Word: chromatin
+P-value: 0.0414478436579
+Corrected P-value: 5.92704164309
+Overlap: 11/487
+
+Word: domains
+P-value: 0.0437804486218
+Corrected P-value: 6.21682370429
+Overlap: 5/155
+
+Word: h2a
+P-value: 0.0447233218764
+Corrected P-value: 6.30598838457
+Overlap: 3/64
+
+Word: repeat
+P-value: 0.0463786453002
+Corrected P-value: 6.49301034203
+Overlap: 20/1070
+

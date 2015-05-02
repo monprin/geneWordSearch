@@ -1,0 +1,275 @@
+Word: containing
+P-value: 1.24529036285e-06
+Corrected P-value: 0.000145698972453
+Overlap: 77/6670
+
+Word: domain
+P-value: 3.60140600506e-06
+Corrected P-value: 0.000417763096587
+Overlap: 77/6870
+
+Word: nepenthesin-1
+P-value: 0.000272730906284
+Corrected P-value: 0.0313640542226
+Overlap: 4/48
+
+Word: sigma
+P-value: 0.000381952699525
+Corrected P-value: 0.0435426077458
+Overlap: 3/22
+
+Word: aspartic
+P-value: 0.000426631868231
+Corrected P-value: 0.0482094011101
+Overlap: 5/96
+
+Word: endotransglucosylase
+P-value: 0.000708155415262
+Corrected P-value: 0.0793134065093
+Overlap: 3/27
+
+Word: constituent
+P-value: 0.000789316998158
+Corrected P-value: 0.0876141867955
+Overlap: 3/28
+
+Word: flowering
+P-value: 0.000968825117837
+Corrected P-value: 0.106570762962
+Overlap: 3/30
+
+Word: ubiquitin
+P-value: 0.00128420663693
+Corrected P-value: 0.139978523425
+Overlap: 19/1320
+
+Word: precursor
+P-value: 0.00136284227015
+Corrected P-value: 0.147186965177
+Overlap: 20/1430
+
+Word: synthesis
+P-value: 0.00167335583505
+Corrected P-value: 0.17904907435
+Overlap: 26/2104
+
+Word: xyloglucan
+P-value: 0.00188211072064
+Corrected P-value: 0.199503736388
+Overlap: 4/80
+
+Word: uncharacterized
+P-value: 0.00203707594197
+Corrected P-value: 0.213892973907
+Overlap: 24/1913
+
+Word: mutase
+P-value: 0.0020883617364
+Corrected P-value: 0.217189620585
+Overlap: 3/39
+
+Word: member
+P-value: 0.0024103264479
+Corrected P-value: 0.248263624133
+Overlap: 7/277
+
+Word: transcription
+P-value: 0.00266832492638
+Corrected P-value: 0.27216914249
+Overlap: 39/3707
+
+Word: regulation
+P-value: 0.00282297438964
+Corrected P-value: 0.285120413354
+Overlap: 35/3238
+
+Word: glycine-rich
+P-value: 0.00392269514843
+Corrected P-value: 0.392269514843
+Overlap: 4/98
+
+Word: degradation
+P-value: 0.0048561195639
+Corrected P-value: 0.480755836826
+Overlap: 27/2400
+
+Word: proteinase
+P-value: 0.00501065762631
+Corrected P-value: 0.491044447378
+Overlap: 5/168
+
+Word: tubulin
+P-value: 0.00583877923819
+Corrected P-value: 0.566361586105
+Overlap: 3/56
+
+Word: glutamate
+P-value: 0.0061337842944
+Corrected P-value: 0.588843292263
+Overlap: 3/57
+
+Word: early
+P-value: 0.00643753894596
+Corrected P-value: 0.611566199866
+Overlap: 3/58
+
+Word: group
+P-value: 0.00713849271518
+Corrected P-value: 0.671018315227
+Overlap: 5/183
+
+Word: domain-containing
+P-value: 0.00745305827499
+Corrected P-value: 0.693134419574
+Overlap: 12/809
+
+Word: prokaryotic
+P-value: 0.00796927497625
+Corrected P-value: 0.733173297815
+Overlap: 5/188
+
+Word: structural
+P-value: 0.00808969592168
+Corrected P-value: 0.736162328873
+Overlap: 3/63
+
+Word: modification
+P-value: 0.00815665762767
+Corrected P-value: 0.734099186491
+Overlap: 15/1132
+
+Word: specific
+P-value: 0.00957476507001
+Corrected P-value: 0.852154091231
+Overlap: 3/67
+
+Word: similar
+P-value: 0.0111443974287
+Corrected P-value: 0.980706973725
+Overlap: 6/284
+
+Word: hydroxyproline-rich
+P-value: 0.0144311592096
+Corrected P-value: 1.25551085123
+Overlap: 3/78
+
+Word: chloroplast
+P-value: 0.0154854650298
+Corrected P-value: 1.33174999256
+Overlap: 9/586
+
+Word: subunit
+P-value: 0.0189282239763
+Corrected P-value: 1.60889903798
+Overlap: 21/1956
+
+Word: folding
+P-value: 0.019268031483
+Corrected P-value: 1.61851464457
+Overlap: 3/87
+
+Word: transport
+P-value: 0.0195572596142
+Corrected P-value: 1.62325254798
+Overlap: 20/1843
+
+Word: rna-binding
+P-value: 0.0217535323055
+Corrected P-value: 1.78378964905
+Overlap: 4/162
+
+Word: factor
+P-value: 0.0246860181421
+Corrected P-value: 1.99956746951
+Overlap: 27/2755
+
+Word: stress
+P-value: 0.0255830420497
+Corrected P-value: 2.04664336398
+Overlap: 13/1076
+
+Word: aromatic
+P-value: 0.0276467171643
+Corrected P-value: 2.18409065598
+Overlap: 3/100
+
+Word: complex
+P-value: 0.0300451851502
+Corrected P-value: 2.34352444171
+Overlap: 8/555
+
+Word: glycoprotein
+P-value: 0.0304264301652
+Corrected P-value: 2.34283512272
+Overlap: 4/180
+
+Word: postranslational
+P-value: 0.0320564281101
+Corrected P-value: 2.43628853637
+Overlap: 12/998
+
+Word: family
+P-value: 0.0357298786593
+Corrected P-value: 2.67974089945
+Overlap: 55/6580
+
+Word: hydrolase
+P-value: 0.0369788789178
+Corrected P-value: 2.73643703992
+Overlap: 7/475
+
+Word: transporter
+P-value: 0.0384809011169
+Corrected P-value: 2.80910578153
+Overlap: 11/913
+
+Word: metabolism
+P-value: 0.0400751261973
+Corrected P-value: 2.88540908621
+Overlap: 24/2502
+
+Word: finger
+P-value: 0.0401172292436
+Corrected P-value: 2.8483232763
+Overlap: 14/1268
+
+Word: conserved
+P-value: 0.0409750611314
+Corrected P-value: 2.8682542792
+Overlap: 65/8020
+
+Word: atp-dependent
+P-value: 0.0415024408851
+Corrected P-value: 2.86366842107
+Overlap: 4/199
+
+Word: sugars
+P-value: 0.0419432103032
+Corrected P-value: 2.85213830062
+Overlap: 3/118
+
+Word: c-terminal
+P-value: 0.0421406133732
+Corrected P-value: 2.823421096
+Overlap: 4/200
+
+Word: leucine-rich
+P-value: 0.0428274230257
+Corrected P-value: 2.8266099197
+Overlap: 3/119
+
+Word: plant
+P-value: 0.0449686745849
+Corrected P-value: 2.92296384802
+Overlap: 5/296
+
+Word: protease
+P-value: 0.0486905491754
+Corrected P-value: 3.11619514723
+Overlap: 9/723
+
+Word: cytoplasmatic
+P-value: 0.0495248415104
+Corrected P-value: 3.12006501515
+Overlap: 4/211
+

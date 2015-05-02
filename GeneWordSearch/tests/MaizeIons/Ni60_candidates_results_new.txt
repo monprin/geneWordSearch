@@ -1,0 +1,305 @@
+Word: kinases
+P-value: 1.73392211472e-06
+Corrected P-value: 0.000253152628749
+Overlap: 24/931
+
+Word: receptor
+P-value: 2.14098087594e-06
+Corrected P-value: 0.000310442227011
+Overlap: 27/1145
+
+Word: signalling
+P-value: 6.48165998128e-06
+Corrected P-value: 0.000933359037305
+Overlap: 32/1585
+
+Word: uncharacterized
+P-value: 1.93716299717e-05
+Corrected P-value: 0.00277014308595
+Overlap: 35/1913
+
+Word: leucine
+P-value: 2.18189495183e-05
+Corrected P-value: 0.0030982908316
+Overlap: 13/377
+
+Word: steroids
+P-value: 3.65343663929e-05
+Corrected P-value: 0.0051513456614
+Overlap: 7/108
+
+Word: squalene
+P-value: 4.11002391617e-05
+Corrected P-value: 0.00575403348263
+Overlap: 7/110
+
+Word: kinase
+P-value: 4.27408329038e-05
+Corrected P-value: 0.00594097577363
+Overlap: 34/1909
+
+Word: repeat
+P-value: 0.00013135205427
+Corrected P-value: 0.0181265834893
+Overlap: 22/1070
+
+Word: ''exotics''
+P-value: 0.000151903074393
+Corrected P-value: 0.0208107211918
+Overlap: 6/95
+
+Word: carbonyl
+P-value: 0.000242643347559
+Corrected P-value: 0.032999495268
+Overlap: 3/15
+
+Word: signal
+P-value: 0.000304556879916
+Corrected P-value: 0.0411151787886
+Overlap: 8/200
+
+Word: transport
+P-value: 0.00105876385818
+Corrected P-value: 0.141874356996
+Overlap: 29/1843
+
+Word: binding
+P-value: 0.00106324604046
+Corrected P-value: 0.141411723381
+Overlap: 39/2737
+
+Word: domain
+P-value: 0.00131372534645
+Corrected P-value: 0.173411745731
+Overlap: 81/6870
+
+Word: unspecified
+P-value: 0.00159578040517
+Corrected P-value: 0.209047233078
+Overlap: 19/1049
+
+Word: reductase
+P-value: 0.0016550653982
+Corrected P-value: 0.215158501766
+Overlap: 10/385
+
+Word: mitochondrial
+P-value: 0.00226020022365
+Corrected P-value: 0.291565828851
+Overlap: 13/614
+
+Word: transporters
+P-value: 0.00235629504989
+Corrected P-value: 0.301605766386
+Overlap: 8/275
+
+Word: hydrolase
+P-value: 0.00243230551232
+Corrected P-value: 0.308902800065
+Overlap: 11/475
+
+Word: ribonucleases
+P-value: 0.00313449744673
+Corrected P-value: 0.394946678288
+Overlap: 4/72
+
+Word: glycosylation
+P-value: 0.00313449744673
+Corrected P-value: 0.391812180842
+Overlap: 4/72
+
+Word: n-metabolism
+P-value: 0.00390216559484
+Corrected P-value: 0.48386853376
+Overlap: 3/38
+
+Word: glycoprotein
+P-value: 0.00419390994233
+Corrected P-value: 0.515850922906
+Overlap: 6/180
+
+Word: stress
+P-value: 0.00472853459169
+Corrected P-value: 0.576881220187
+Overlap: 18/1076
+
+Word: short
+P-value: 0.00543649396088
+Corrected P-value: 0.657815769267
+Overlap: 4/84
+
+Word: transcription
+P-value: 0.00564828275428
+Corrected P-value: 0.677793930513
+Overlap: 46/3707
+
+Word: secretory
+P-value: 0.00615152785276
+Corrected P-value: 0.732031814479
+Overlap: 6/195
+
+Word: particle
+P-value: 0.00668489515175
+Corrected P-value: 0.788817627906
+Overlap: 3/46
+
+Word: processing
+P-value: 0.0070571597261
+Corrected P-value: 0.825687687954
+Overlap: 9/401
+
+Word: sphingolipids
+P-value: 0.00796565522004
+Corrected P-value: 0.924016005525
+Overlap: 3/49
+
+Word: pre-mrna-splicing
+P-value: 0.00842236952121
+Corrected P-value: 0.968572494939
+Overlap: 3/50
+
+Word: motif-containing
+P-value: 0.00842236952121
+Corrected P-value: 0.960150125418
+Overlap: 3/50
+
+Word: class
+P-value: 0.00994888893543
+Corrected P-value: 1.1242244497
+Overlap: 7/282
+
+Word: regulation
+P-value: 0.0100138718467
+Corrected P-value: 1.12155364683
+Overlap: 40/3238
+
+Word: protein-like
+P-value: 0.0104009856734
+Corrected P-value: 1.15450940975
+Overlap: 3/54
+
+Word: targeting
+P-value: 0.0106734190435
+Corrected P-value: 1.17407609479
+Overlap: 8/356
+
+Word: chain
+P-value: 0.0109571292661
+Corrected P-value: 1.19432709
+Overlap: 9/431
+
+Word: plastocyanin-like
+P-value: 0.0138334584061
+Corrected P-value: 1.49401350786
+Overlap: 3/60
+
+Word: containing
+P-value: 0.0165474535045
+Corrected P-value: 1.77057752498
+Overlap: 72/6670
+
+Word: abiotic
+P-value: 0.0172888320473
+Corrected P-value: 1.83261619701
+Overlap: 10/545
+
+Word: sugars
+P-value: 0.0173519517484
+Corrected P-value: 1.82195493358
+Overlap: 4/118
+
+Word: ethylene-responsive
+P-value: 0.0180704124176
+Corrected P-value: 1.87932289143
+Overlap: 6/247
+
+Word: metabolite
+P-value: 0.0188426245012
+Corrected P-value: 1.94079032363
+Overlap: 4/121
+
+Word: proton
+P-value: 0.0192971204373
+Corrected P-value: 1.9683062846
+Overlap: 3/68
+
+Word: branch
+P-value: 0.0249202408909
+Corrected P-value: 2.51694432998
+Overlap: 3/75
+
+Word: factor
+P-value: 0.0262397356854
+Corrected P-value: 2.62397356854
+Overlap: 33/2755
+
+Word: cytochrome
+P-value: 0.0301111788056
+Corrected P-value: 2.98100670175
+Overlap: 8/433
+
+Word: development
+P-value: 0.030251070711
+Corrected P-value: 2.96460492968
+Overlap: 11/684
+
+Word: auxin-responsive
+P-value: 0.0303662322592
+Corrected P-value: 2.94552452914
+Overlap: 3/81
+
+Word: ap2-erebp
+P-value: 0.0325413697859
+Corrected P-value: 3.12397149944
+Overlap: 5/211
+
+Word: similar
+P-value: 0.032719424964
+Corrected P-value: 3.10834537158
+Overlap: 6/284
+
+Word: electron
+P-value: 0.032719424964
+Corrected P-value: 3.07562594662
+Overlap: 6/284
+
+Word: lipid
+P-value: 0.0334233506499
+Corrected P-value: 3.10837161044
+Overlap: 10/609
+
+Word: finger
+P-value: 0.0397867194298
+Corrected P-value: 3.66037818754
+Overlap: 17/1268
+
+Word: nucleic
+P-value: 0.0410309535806
+Corrected P-value: 3.73381677583
+Overlap: 5/225
+
+Word: systems
+P-value: 0.0429282618266
+Corrected P-value: 3.8635435644
+Overlap: 4/157
+
+Word: gtpase
+P-value: 0.0429675755818
+Corrected P-value: 3.82411422678
+Overlap: 3/93
+
+Word: oxidoreductase
+P-value: 0.0442873817763
+Corrected P-value: 3.89728959632
+Overlap: 6/306
+
+Word: resistance
+P-value: 0.0464680691808
+Corrected P-value: 4.04272201873
+Overlap: 7/390
+
+Word: multidrug
+P-value: 0.0498737862704
+Corrected P-value: 4.28914561925
+Overlap: 4/165
+

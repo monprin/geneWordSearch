@@ -1,0 +1,215 @@
+Word: containing
+P-value: 0.000132299736491
+Corrected P-value: 0.0124361752302
+Overlap: 54/6670
+
+Word: nucleotide
+P-value: 0.000150148809604
+Corrected P-value: 0.0139638392932
+Overlap: 8/314
+
+Word: domain
+P-value: 0.000151698458628
+Corrected P-value: 0.0139562581938
+Overlap: 55/6870
+
+Word: postranslational
+P-value: 0.00038207883587
+Corrected P-value: 0.0347691740641
+Overlap: 14/998
+
+Word: binding
+P-value: 0.000385507425642
+Corrected P-value: 0.0346956683078
+Overlap: 27/2737
+
+Word: stress
+P-value: 0.000790303865667
+Corrected P-value: 0.0703370440443
+Overlap: 14/1076
+
+Word: factor
+P-value: 0.000923594623112
+Corrected P-value: 0.0812763268339
+Overlap: 26/2755
+
+Word: regulation
+P-value: 0.00107381856406
+Corrected P-value: 0.0934222150728
+Overlap: 29/3238
+
+Word: modification
+P-value: 0.0012716061297
+Corrected P-value: 0.109358127154
+Overlap: 14/1132
+
+Word: pyrophosphatases
+P-value: 0.00157427411608
+Corrected P-value: 0.133813299867
+Overlap: 3/48
+
+Word: family
+P-value: 0.00157432852225
+Corrected P-value: 0.132243595869
+Overlap: 49/6580
+
+Word: replication
+P-value: 0.00209507371879
+Corrected P-value: 0.17389111866
+Overlap: 3/53
+
+Word: transcription
+P-value: 0.00211186597363
+Corrected P-value: 0.173173009838
+Overlap: 31/3707
+
+Word: phosphotransfer
+P-value: 0.00221053458294
+Corrected P-value: 0.179053301218
+Overlap: 3/54
+
+Word: response
+P-value: 0.00242838609045
+Corrected P-value: 0.194270887236
+Overlap: 5/193
+
+Word: chromatin
+P-value: 0.00255488807497
+Corrected P-value: 0.201836157923
+Overlap: 8/487
+
+Word: subtilisin
+P-value: 0.00298613890956
+Corrected P-value: 0.232918834946
+Overlap: 3/60
+
+Word: induced
+P-value: 0.00327722309063
+Corrected P-value: 0.252346177978
+Overlap: 3/62
+
+Word: processing
+P-value: 0.00334778721267
+Corrected P-value: 0.254431828163
+Overlap: 7/401
+
+Word: polymerase
+P-value: 0.00392451641922
+Corrected P-value: 0.294338731441
+Overlap: 5/216
+
+Word: subtilases
+P-value: 0.00407904161474
+Corrected P-value: 0.30184907949
+Overlap: 3/67
+
+Word: 2c
+P-value: 0.00442007678474
+Corrected P-value: 0.322665605286
+Overlap: 4/138
+
+Word: factors
+P-value: 0.00499019143231
+Corrected P-value: 0.359293783127
+Overlap: 3/72
+
+Word: remodeling
+P-value: 0.00518589384025
+Corrected P-value: 0.368198462658
+Overlap: 3/73
+
+Word: complex
+P-value: 0.00555324148792
+Corrected P-value: 0.388726904155
+Overlap: 8/555
+
+Word: zipper
+P-value: 0.0073981617192
+Corrected P-value: 0.510473158625
+Overlap: 3/83
+
+Word: kinase
+P-value: 0.0112201644367
+Corrected P-value: 0.762971181694
+Overlap: 17/1909
+
+Word: synthesis
+P-value: 0.0134278048354
+Corrected P-value: 0.899662923975
+Overlap: 18/2104
+
+Word: abiotic
+P-value: 0.0163767916965
+Corrected P-value: 1.08086825197
+Overlap: 7/545
+
+Word: 40s
+P-value: 0.0165207927359
+Corrected P-value: 1.07385152784
+Overlap: 4/203
+
+Word: homologue
+P-value: 0.0178921879564
+Corrected P-value: 1.14510002921
+Overlap: 4/208
+
+Word: phosphatase
+P-value: 0.018266916669
+Corrected P-value: 1.15081575015
+Overlap: 6/433
+
+Word: signalling
+P-value: 0.021327576341
+Corrected P-value: 1.32230973314
+Overlap: 14/1585
+
+Word: pathway
+P-value: 0.0254461792233
+Corrected P-value: 1.55221693262
+Overlap: 4/232
+
+Word: ubiquitin
+P-value: 0.0260367513701
+Corrected P-value: 1.5622050822
+Overlap: 12/1320
+
+Word: subunit
+P-value: 0.0271435886989
+Corrected P-value: 1.60147173324
+Overlap: 16/1956
+
+Word: orphans
+P-value: 0.0294278212993
+Corrected P-value: 1.70681363536
+Overlap: 5/359
+
+Word: recognition
+P-value: 0.0294597016816
+Corrected P-value: 1.67920299585
+Overlap: 4/243
+
+Word: leucine
+P-value: 0.0351700785897
+Corrected P-value: 1.96952440102
+Overlap: 5/377
+
+Word: structure
+P-value: 0.0400824420984
+Corrected P-value: 2.20453431541
+Overlap: 5/391
+
+Word: light
+P-value: 0.040713318103
+Corrected P-value: 2.19851917756
+Overlap: 3/159
+
+Word: similar
+P-value: 0.0475538103778
+Corrected P-value: 2.52035195002
+Overlap: 4/284
+
+Word: receptor
+P-value: 0.0495982732464
+Corrected P-value: 2.57911020881
+Overlap: 10/1145
+

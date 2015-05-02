@@ -75,6 +75,7 @@ class GeneNote:
 	def __init__(self, gene):
 		self.gene = gene
 		self.words = set()
+		self.littleWords = set()
 		self.links = set()
 		
 	def addWords(self,words):
@@ -85,7 +86,11 @@ class GeneNote:
 	def addLink(self,link):
 	# Adds link to the list of associated links
 		self.links.add(link)
-		
+	
+	def demoteWords(self,wordSet):
+		self.links = self.words & wordSet
+		self.words = self.words - wordSet
+	
 	def __str__(self):
 	# Method for implicit string conversion, usually for printing
 		ans = self.gene + '\t'

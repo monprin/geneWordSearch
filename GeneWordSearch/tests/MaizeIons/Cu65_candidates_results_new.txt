@@ -1,0 +1,460 @@
+Word: phospho1
+P-value: 1.30491518759e-05
+Corrected P-value: 0.00331448457649
+Overlap: 3/4
+
+Word: phenylalanine
+P-value: 1.44039145117e-05
+Corrected P-value: 0.00364419037146
+Overlap: 6/36
+
+Word: subfamily
+P-value: 2.44512095583e-05
+Corrected P-value: 0.00616170480869
+Overlap: 8/79
+
+Word: cupin
+P-value: 2.79494187489e-05
+Corrected P-value: 0.00701530410597
+Overlap: 7/59
+
+Word: germin
+P-value: 6.10094987072e-05
+Corrected P-value: 0.0152523746768
+Overlap: 6/46
+
+Word: ubiquitin
+P-value: 6.18437402001e-05
+Corrected P-value: 0.0153990913098
+Overlap: 39/1320
+
+Word: oxidase-2
+P-value: 6.37996857217e-05
+Corrected P-value: 0.015822322059
+Overlap: 3/6
+
+Word: aldehyde
+P-value: 0.000105122950497
+Corrected P-value: 0.0259653687728
+Overlap: 5/32
+
+Word: wound
+P-value: 0.000196476727436
+Corrected P-value: 0.0483332749492
+Overlap: 4/20
+
+Word: metabolism
+P-value: 0.000298763584668
+Corrected P-value: 0.0731970782437
+Overlap: 60/2502
+
+Word: degradation
+P-value: 0.000308870923123
+Corrected P-value: 0.0753645052421
+Overlap: 58/2400
+
+Word: group
+P-value: 0.000466437785597
+Corrected P-value: 0.1133443819
+Overlap: 10/183
+
+Word: serine-glycine-cysteine
+P-value: 0.000489046082785
+Corrected P-value: 0.118349152034
+Overlap: 5/44
+
+Word: u2af
+P-value: 0.000656294267174
+Corrected P-value: 0.158166918389
+Overlap: 3/12
+
+Word: oastl
+P-value: 0.000656294267174
+Corrected P-value: 0.157510624122
+Overlap: 3/12
+
+Word: udp-glucuronosyl
+P-value: 0.000843728820361
+Corrected P-value: 0.201651188066
+Overlap: 3/13
+
+Word: prolyl
+P-value: 0.0009872390698
+Corrected P-value: 0.234962898612
+Overlap: 4/30
+
+Word: ammonia-lyase
+P-value: 0.00106194714393
+Corrected P-value: 0.251681473111
+Overlap: 3/14
+
+Word: synthesis
+P-value: 0.00108982434039
+Corrected P-value: 0.257198544333
+Overlap: 50/2104
+
+Word: homologue
+P-value: 0.0012427519258
+Corrected P-value: 0.292046702563
+Overlap: 10/208
+
+Word: serine
+P-value: 0.0020997973202
+Corrected P-value: 0.491352572927
+Overlap: 21/694
+
+Word: induced
+P-value: 0.00233778007882
+Corrected P-value: 0.544702758365
+Overlap: 5/62
+
+Word: n-metabolism
+P-value: 0.00241989432101
+Corrected P-value: 0.561415482475
+Overlap: 4/38
+
+Word: yeast
+P-value: 0.00266494354417
+Corrected P-value: 0.615601958702
+Overlap: 4/39
+
+Word: probable
+P-value: 0.00292646535601
+Corrected P-value: 0.673087031883
+Overlap: 4/40
+
+Word: wounding
+P-value: 0.00311152679625
+Corrected P-value: 0.712539636341
+Overlap: 3/20
+
+Word: touch
+P-value: 0.00311152679625
+Corrected P-value: 0.709428109544
+Overlap: 3/20
+
+Word: include
+P-value: 0.00350053918146
+Corrected P-value: 0.794622394192
+Overlap: 5/68
+
+Word: homologs
+P-value: 0.00350053918146
+Corrected P-value: 0.791121855011
+Overlap: 5/68
+
+Word: sterile
+P-value: 0.00350102739725
+Corrected P-value: 0.787731164381
+Overlap: 4/42
+
+Word: oligopeptidase
+P-value: 0.00359014079046
+Corrected P-value: 0.804191537062
+Overlap: 3/21
+
+Word: kinase
+P-value: 0.00359555537678
+Corrected P-value: 0.801808849021
+Overlap: 44/1909
+
+Word: uncharacterized
+P-value: 0.0037295929962
+Corrected P-value: 0.827969645156
+Overlap: 44/1913
+
+Word: abiotic
+P-value: 0.00392224352088
+Corrected P-value: 0.866815818114
+Overlap: 17/545
+
+Word: synthase
+P-value: 0.00409499119628
+Corrected P-value: 0.900898063182
+Overlap: 22/784
+
+Word: lysosomal
+P-value: 0.00411126550749
+Corrected P-value: 0.90036714614
+Overlap: 3/22
+
+Word: cysteine
+P-value: 0.00429256831551
+Corrected P-value: 0.935779892781
+Overlap: 9/208
+
+Word: phosphatase
+P-value: 0.00617609713722
+Corrected P-value: 1.34021307878
+Overlap: 14/433
+
+Word: chorismate
+P-value: 0.00664119742565
+Corrected P-value: 1.43449864394
+Overlap: 3/26
+
+Word: small
+P-value: 0.0067667079419
+Corrected P-value: 1.45484220751
+Overlap: 7/147
+
+Word: cellulose
+P-value: 0.00697911251537
+Corrected P-value: 1.49353007829
+Overlap: 5/80
+
+Word: processing
+P-value: 0.00795417099727
+Corrected P-value: 1.69423842242
+Overlap: 13/401
+
+Word: nucleotide
+P-value: 0.00814905498216
+Corrected P-value: 1.72759965622
+Overlap: 11/314
+
+Word: pyrophosphorylase
+P-value: 0.0081855754023
+Corrected P-value: 1.72715640989
+Overlap: 3/28
+
+Word: heterogeneous
+P-value: 0.0081855754023
+Corrected P-value: 1.71897083448
+Overlap: 3/28
+
+Word: udp-glucosyltransferase
+P-value: 0.0090301678645
+Corrected P-value: 1.88730508368
+Overlap: 3/29
+
+Word: o-acyltransferase
+P-value: 0.00992382662101
+Corrected P-value: 2.06415593717
+Overlap: 3/30
+
+Word: finger
+P-value: 0.0101816838537
+Corrected P-value: 2.10760855771
+Overlap: 30/1268
+
+Word: synthase-like
+P-value: 0.0118603699587
+Corrected P-value: 2.44323621149
+Overlap: 3/32
+
+Word: stress
+P-value: 0.0124699121592
+Corrected P-value: 2.55633199264
+Overlap: 26/1076
+
+Word: subunit
+P-value: 0.0134271182901
+Corrected P-value: 2.73913213117
+Overlap: 42/1956
+
+Word: nucleoside
+P-value: 0.0139986854095
+Corrected P-value: 2.84173313812
+Overlap: 3/34
+
+Word: kinases
+P-value: 0.0142185078014
+Corrected P-value: 2.87213857588
+Overlap: 23/931
+
+Word: gibberellin
+P-value: 0.0146315977123
+Corrected P-value: 2.94095114016
+Overlap: 5/96
+
+Word: myo-inositol
+P-value: 0.017589962807
+Corrected P-value: 3.51799256141
+Overlap: 3/37
+
+Word: oswak
+P-value: 0.0202423636298
+Corrected P-value: 4.02823036232
+Overlap: 3/39
+
+Word: mutase
+P-value: 0.0202423636298
+Corrected P-value: 4.00798799869
+Overlap: 3/39
+
+Word: vesicle
+P-value: 0.0209173027156
+Corrected P-value: 4.12070863497
+Overlap: 8/226
+
+Word: steroids
+P-value: 0.0231098947688
+Corrected P-value: 4.52953937469
+Overlap: 5/108
+
+Word: abscisic
+P-value: 0.0231098947688
+Corrected P-value: 4.50642947993
+Overlap: 5/108
+
+Word: organisation
+P-value: 0.0242400988466
+Corrected P-value: 4.70257917625
+Overlap: 14/515
+
+Word: member
+P-value: 0.0242562257424
+Corrected P-value: 4.68145156828
+Overlap: 9/277
+
+Word: anthocyanidin
+P-value: 0.0246100394753
+Corrected P-value: 4.72512757925
+Overlap: 3/42
+
+Word: receptor
+P-value: 0.0247095613893
+Corrected P-value: 4.71952622536
+Overlap: 26/1145
+
+Word: squalene
+P-value: 0.0247755242761
+Corrected P-value: 4.70734961246
+Overlap: 5/110
+
+Word: dead-box
+P-value: 0.0248109851182
+Corrected P-value: 4.68927618734
+Overlap: 4/74
+
+Word: bifunctional
+P-value: 0.0261696600385
+Corrected P-value: 4.91989608724
+Overlap: 3/43
+
+Word: 3-o-glucosyltransferase
+P-value: 0.0261696600385
+Corrected P-value: 4.8937264272
+Overlap: 3/43
+
+Word: response
+P-value: 0.0264550902608
+Corrected P-value: 4.92064678851
+Overlap: 7/193
+
+Word: wall-associated
+P-value: 0.0277810226725
+Corrected P-value: 5.1394891944
+Overlap: 3/44
+
+Word: vacuole
+P-value: 0.0277810226725
+Corrected P-value: 5.11170817173
+Overlap: 3/44
+
+Word: tyrosine
+P-value: 0.0281909635818
+Corrected P-value: 5.15894633546
+Overlap: 4/77
+
+Word: splicing
+P-value: 0.0291221529552
+Corrected P-value: 5.30023183785
+Overlap: 7/197
+
+Word: transport
+P-value: 0.0305967439611
+Corrected P-value: 5.53801065695
+Overlap: 38/1843
+
+Word: particle
+P-value: 0.0311584315189
+Corrected P-value: 5.60851767341
+Overlap: 3/46
+
+Word: v-atpases
+P-value: 0.0318314950888
+Corrected P-value: 5.69783762089
+Overlap: 4/80
+
+Word: tramtrack
+P-value: 0.0318314950888
+Corrected P-value: 5.66600612581
+Overlap: 4/80
+
+Word: broad
+P-value: 0.0318314950888
+Corrected P-value: 5.63417463072
+Overlap: 4/80
+
+Word: bric-a-brac
+P-value: 0.0318314950888
+Corrected P-value: 5.60234313563
+Overlap: 4/80
+
+Word: light
+P-value: 0.0325607457818
+Corrected P-value: 5.69813051182
+Overlap: 6/159
+
+Word: zinc-finger
+P-value: 0.0329241232317
+Corrected P-value: 5.72879744231
+Overlap: 3/47
+
+Word: cyclin
+P-value: 0.0331033225575
+Corrected P-value: 5.72687480245
+Overlap: 4/81
+
+Word: mitogen-activated
+P-value: 0.0347408508057
+Corrected P-value: 5.97542633858
+Overlap: 3/48
+
+Word: p-
+P-value: 0.037094605336
+Corrected P-value: 6.34317751246
+Overlap: 4/84
+
+Word: lipid
+P-value: 0.042230514956
+Corrected P-value: 7.17918754252
+Overlap: 15/609
+
+Word: thioredoxin
+P-value: 0.0432429004517
+Corrected P-value: 7.30805017635
+Overlap: 5/128
+
+Word: gid1l2
+P-value: 0.0445801627602
+Corrected P-value: 7.48946734371
+Overlap: 3/53
+
+Word: unspecified
+P-value: 0.0455574536733
+Corrected P-value: 7.60809476344
+Overlap: 23/1049
+
+Word: protease
+P-value: 0.0461877371214
+Corrected P-value: 7.66716436216
+Overlap: 17/723
+
+Word: protein-like
+P-value: 0.0466968175714
+Corrected P-value: 7.70497489928
+Overlap: 3/54
+
+Word: postranslational
+P-value: 0.0473215903808
+Corrected P-value: 7.76074082244
+Overlap: 22/998
+
+Word: endo-1
+P-value: 0.0474359712089
+Corrected P-value: 7.73206330706
+Overlap: 4/91
+
