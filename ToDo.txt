@@ -1,8 +1,5 @@
 To-Do List of features/capabilities:
 
-- Filter insignificant words
-- Filter very common words
-
 - Run a Positive Control
 
 - GUI (look at flask) (On ice indefinitly)
