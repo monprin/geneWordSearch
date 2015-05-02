@@ -5,12 +5,15 @@
 # Written by Joseph Jeffers
 # Updated 25 Apr 2015
 
-def geneWordBuilder(infiles,species):
+def geneWordBuilder(species,infiles):
 # Function that makes the annotation database
 	import re
 	import pickle
 	from Classes import GeneNote
+	from Classes import WordFreq
 	db = dict()
+	
+	#----------------Building the gene database---------------------
 	
 	for infile in infiles:
 	# For each of the given files, process all the genes present
@@ -54,6 +57,7 @@ def geneWordBuilder(infiles,species):
 			del garb
 		
 		# Process file line by line, each line has different gene.
+		print('Adding information to Database...')
 		skippedRows = []
 		for line in matrix.readlines():
 			# Get rid of newline char
@@ -100,7 +104,14 @@ def geneWordBuilder(infiles,species):
 				words += re.split(' |_|,|\.|/|\(|\)|\;|\:',entry.lower())
 			
 			# Get rid of the blank entries, and other useless stuff
-			f = lambda x: not((x == '-') or (x == None) or (x.isdigit()) or (x == '') or (len(x) <= 1))
+			locPattern = 'loc.*'
+			genePattern = '[a-z]{1,3}\d{1,2}g\d*'
+			alphaNumPattern = '[a-z]{1,4}\d*'
+			virgPattern = 'virgatum.*'
+			f = lambda x: not((x == '-') or (x == None) or (x.isdigit()) 
+			or (x == '') or (len(x) <= 1) or (re.fullmatch(locPattern,x)) 
+			or (re.fullmatch(genePattern,x)) or (re.fullmatch(virgPattern,x))
+			or (re.fullmatch(alphaNumPattern,x)))
 			words = list(filter(f,words))
 			
 			# Add all of the words into the database
@@ -110,55 +121,65 @@ def geneWordBuilder(infiles,species):
 		
 		if(len(skippedRows) > 0):
 			print()
-			print('Number of rows skipped due to different formatting: ' + str(len(skippedRows)))
+			print('Number of rows skipped due to different formatting in this file: ' + str(len(skippedRows)))
 			print('Please check the following rows for problems: ')
 			print(skippedRows)
-		print()
-		
-	# Determine outfile locations
-	folder = 'databases/' + species.lower() + '/'
+			print()
 	
-	# Make a text version for posterity (and error checking)
-	printList = list(db.values())
-	fin = open(folder+'geneNotes.tsv','w',newline='')
-	for gene in printList:
-		if not(gene.gene == ''):
-			fin.write(str(gene))
-	fin.close()
+	print('Counting the words...')
+	wordList = wordCounter(db)
 	
-	# Pickle that stuff! (for geneWordSearch function)
-	pickle.dump(db,open(folder+'geneNotes.p','wb'))
+	print('Getting rid of little and big words...')
+	x = littleWordRemover(db,wordList)
+	
+	print('Bookeeping and saving files...')
+	bookkeeper(species, x[0], x[1])
+	print('Database built. See databases/' + species.lower() + '/ for the output.')
 	
 	return
 
-def totalWordCounts(species):
-# Creates the dictionary of word occurances for use in geneWordSearch
+def tempBuilder(genes,species):
+# Function to build temporary database for running genes against smaller
+# subset of all species genes
+	import os
 	import pickle
-	from Classes import WordFreq
+	
+	# Load the full DB to exatract items from 
+	fullDB = pickle.load(open('databases/'+ species.lower() + '/geneNotes.p','rb'))
+	db = dict()
+	
+	print('Finding the requested genes...')
+	# Find all of the needed genes and add them to the new DB
+	for gene in genes:
+		name = gene.lower()
+		db[name] = fullDB[name]
+	del fullDB
+	
+	print('Counting the words...')
+	wordList = wordCounter(db)
+	
+	print('Getting rid of little and big words...')
+	x = littleWordRemover(db,wordList)
+	
+	print('Bookeeping and saving files...')
+	bookkeeper('tmp', x[0], x[1])
+	print('Database built. See databases/tmp/ for the output.')
+	return
+	
+def wordCounter(db):
+# Takes in a database dictionary and returns sorted list of WordFreq objects
+# sorted by how often they occur
 	from Classes import GeneNote
+	from Classes import WordFreq
 	
-	# Unpickle the database of words and make a list of all of them
-	species = species.lower()
-	dbFile = open('databases/' + species + '/geneNotes.p','rb')
-	dbDict = pickle.load(dbFile)
-	db = list(dbDict.values())
-	dbFile.close()
-	del dbDict
-	
-	# Make a list of all the words associated genes in the database
+	#Make a list of all the words associated genes in the database
 	words = []
-	links = []
-	for gene in db:
+	for gene in list(db.values()):
 		words += gene.words
-		links += gene.links
 	
 	# Sorting the words into alphabetical order
 	words.sort()
 	wordList = []
-	
-	# Add the web links count to the list
-	wordList.append(WordFreq('Web Links',len(links)))
-	del links
 	
 	# Counting the words
 	for item in words:
@@ -168,28 +189,72 @@ def totalWordCounts(species):
 			wordList[0].increment()
 	del words
 	
+	# Sorting now by frequency instead of alphabetical and return it
+	return sorted(wordList, key=lambda item: item.freq,reverse=True)
+
+def littleWordRemover(db, wordListRaw, upper=10000, lower=3):
+# Find the too frequent and too infrequent words and purge them from the 
+# the gene database and the word frequency list
+	from Classes import GeneNote
+	from Classes import WordFreq
+	
+	remList = set()
+	wordList = []
+	for word in wordListRaw:
+		freq = word.freq
+		if((freq >= upper) or (freq <= lower)):
+			remList.add(word.word)
+		else:
+			wordList.append(word)
+	del wordListRaw
+	
+	# Demote them in the database
+	for key in db:
+		db[key].demoteWords(remList)
+	return (db,wordList)
+
+def bookkeeper(species, geneDB, countList):
+	import os
+	import pickle
+	from Classes import WordFreq
+	from Classes import GeneNote
+	
 	# Find the total word count, add it to the list
 	total = 0
-	for word in wordList:
+	for word in countList:
 		total += word.freq
-	wordList.insert(0,WordFreq('Total Count',total))
+	countList.insert(0,WordFreq('Total Count',total))
 	
-	# Sorting now by frequency instead of alphabetical
-	wordList = sorted(wordList, key=lambda item: item.freq,reverse=True)
+	# Determine outfile locations
+	folder = 'databases/' + species.lower() + '/'
+	os.makedirs(folder, exist_ok=True)
 	
-	# Building the dictionary of the words
-	dictDB = dict()
-	for word in wordList:
-		dictDB[word.word] = word.freq
+	# --------------Save the gene database files-------------------
 	
 	# Make a text version for posterity (and error checking)
-	totalsFile = open('databases/' + species + '/totalWordCounts.tsv','w')
-	for word in wordList:
-		totalsFile.write(str(word.freq) + '\t' + str(word.word) + '\n')
-	totalsFile.close()
+	printList = list(geneDB.values())
+	geneFile = open(folder+'geneNotes.tsv','w',newline='')
+	for gene in printList:
+		if not(gene.gene == ''):
+			geneFile.write(str(gene))
+	geneFile.close()
 	
 	# Pickle that stuff! (for geneWordSearch function)
-	pickle.dump(dictDB,open('databases/' + species + '/totalWordCounts.p','wb'))
+	pickle.dump(geneDB,open(folder+'geneNotes.p','wb'))
+	
+	# ---------------Save the total word count files----------------
+	
+	# Make a text version for posterity (and error checking)
+	countFile = open(folder+'totalWordCounts.tsv','w')
+	for word in countList:
+		countFile.write(str(word.freq) + '\t' + str(word.word) + '\n')
+	countFile.close()
+	
+	# Pickle a dictionary of that stuff! (for geneWordSearch function)
+	countDB = dict()
+	for word in countList:
+		countDB[word.word] = word.freq
+	pickle.dump(countDB,open(folder+'totalWordCounts.p','wb'))
 	
 	return
 
@@ -251,48 +316,3 @@ def networksBuilder(infile,species):
 			break
 		networkFile.write(thing[0] + '\t' + str(thing[1]) + '\n')
 	networkFile.close()
-	
-def buildDBs(species,files):
-# Take in species name and db files and build a compatible database
-# files for use with GeneWordSearch
-# This function meant to be wrapper fof CLI usage
-	# Make the folder for the defined species if it doesn't exist
-	import os
-	species = species.lower()
-	spath = 'databases/'+ species + '/'
-	os.makedirs(spath, exist_ok=True)
-	
-	# Run the database functions
-	print('Building Database...')
-	geneWordBuilder(files,species)
-	print('Done')
-	print('Counting Word Instances...')
-	totalWordCounts(species)
-	print('Done, please check out put in the species folder you defined.')
-
-def tempBuilder(genes,species):
-# Function to build temporary database for running genes against smaller
-# subset of all species genes
-	import os
-	import pickle
-	
-	# Make the 'tmp' folder to hold the database files
-	species = species.lower()
-	spath = 'databases/'+ species + '/'
-	tpath = 'databases/tmp/'
-	os.makedirs(tpath, exist_ok=True)
-	
-	# Load the full DB to exatract items from 
-	fullDB = pickle.load(open(spath +'geneNotes.p','rb'))
-	newDB = dict()
-	
-	# Find all of the needed genes and add them to the new DB
-	for gene in genes:
-		name = gene.lower()
-		newDB[name] = fullDB[name]
-	
-	# Save the dictionary and run 'totalWordCounts'
-	pickle.dump(newDB,open(tpath+'geneNotes.p','wb'))
-	totalWordCounts('tmp')
-	
-	return
