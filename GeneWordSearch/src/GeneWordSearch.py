@@ -39,11 +39,9 @@ def geneWordSearch(genes,species,minChance=0.05,corrected=False):
 
 	# Sort to put words in alphabetical order for counting
 	words.sort()
-	length = len(words)
 	
 	# Adding the web link counts to the list
 	wordList = []
-	wordList.append(links)
 	
 	# Counting the words
 	for item in words:
@@ -54,6 +52,16 @@ def geneWordSearch(genes,species,minChance=0.05,corrected=False):
 			wordList[0].increment()
 			wordList[0].addGene(item[1])
 	del words
+	
+	# Getting rid of words that don't happen in enough genes to matter
+	wordListRaw = wordList[:]
+	wordList = []
+	length = 0
+	for word in wordListRaw:
+		if(word.freq >= 3):
+			wordList.append(word)
+			length += word.freq
+	del wordListRaw
 	
 	# Finding the respective P values
 	pickleDict = open('databases/'+ species +'/totalWordCounts.p','rb')
