@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Gene Word Search</title>
+    </head>
+    <body>
+        <script>
+        function validateForm() {
+            var x = document.forms["geneForm"]["genes"].value;
+            if (x == null || x == "") {
+                alert("You must enter at least one gene.");
+                return false;
+            }
+        }
+        </script>
+        <h1>Welcome to the Gene Word Search web interface!</h1>
+        
+        <p>This site is still under construction, but feel free to give it a whirl by entering some genes below.</p>
+        
+        <form id="geneForm" onsubmit="return validateForm()" method="post">
+        <p>Enter the species (maize or ath):</p>
+        <p><input name="species"></p>
+        
+        <p>Enter the Genes (comma separated or one per line): </p>
+        <p><textarea rows="20" cols="15" name="genes" form="geneForm"></textarea></p>
+        
+        <input type="submit" value="Evaluate">
+        </form>
+    </body>
+</html>

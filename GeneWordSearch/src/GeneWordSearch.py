@@ -9,8 +9,8 @@ def geneWordSearch(genes,species,minChance=0.05,corrected=False):
 #         chance probability of less than the minChance variable. 
 	import re
 	import pickle
-	from Classes import WordFreq
-	from Classes import GeneNote
+	from src.Classes import WordFreq
+	from src.Classes import GeneNote
 	
 	# Unpickle the database of words
 	dbfile = open('databases/'+ species +'/geneNotes.p','rb')
