@@ -12,10 +12,11 @@ def home():
 		genes = request.form['genes']
 		species = request.form['species'].lower()
 		genes = re.split('\n| |,',genes)
-		results = geneWordSearch(genes,species)
-		ans = '<p>' + WordFreq.robotHeaders(genes) + '</p>'
-		for word in results[0]:
-			ans += '<p>' + word.forRobot() + '</p>'
-		return ans
+		return "This is where the results will appear."
+		#results = geneWordSearch(genes,species)
+		#ans = '<p>' + WordFreq.robotHeaders(genes) + '</p>'
+		#for word in results[0]:
+			#ans += '<p>' + word.forRobot() + '</p>'
+		#return ans
 	else:
 		return render_template('home.html')
