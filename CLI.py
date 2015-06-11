@@ -8,9 +8,9 @@ import sys
 import math
 import pickle
 import argparse
-import DBBuilder
-from Classes import WordFreq
-from GeneWordSearch import geneWordSearch
+from genewordsearch import DBBuilder
+from genewordsearch.Classes import WordFreq
+from genewordsearch.GeneWordSearch import geneWordSearch
 
 def resultsPrinter(results, web, table, outfile, genes):
 # Function to print the results 
@@ -87,7 +87,7 @@ args.s = args.s.lower()
 
 if(args.u):
 # Build alternate universe if it is so ordained
-	import DBBuilder
+	import geneWordSearch.DBBuilder
 	genes = []
 	geneUni = open(args.u)
 	for row in geneUni.readlines():

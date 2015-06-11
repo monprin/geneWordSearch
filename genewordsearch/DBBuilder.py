@@ -1,7 +1,3 @@
-# Function to build the various needed databases for this function
-# These functions will be generalized to be able to make databases for any input
-# but that is for a future versaion, included now for reference.
-
 # Written by Joseph Jeffers
 # Updated 25 Apr 2015
 
@@ -9,8 +5,7 @@ def geneWordBuilder(species,infiles):
 # Function that makes the annotation database
 	import re
 	import pickle
-	from Classes import GeneNote
-	from Classes import WordFreq
+	from genewordsearch.Classes import GeneNote, WordFreq
 	db = dict()
 	
 	#----------------Building the gene database---------------------
@@ -169,8 +164,8 @@ def tempBuilder(genes,species):
 def wordCounter(db):
 # Takes in a database dictionary and returns sorted list of WordFreq objects
 # sorted by how often they occur
-	from Classes import GeneNote
-	from Classes import WordFreq
+	from genewordsearch.Classes import GeneNote
+	from genewordsearch.Classes import WordFreq
 	
 	#Make a list of all the words associated genes in the database
 	words = []
@@ -195,8 +190,8 @@ def wordCounter(db):
 def littleWordRemover(db, wordListRaw, upper=10000, lower=3):
 # Find the too frequent and too infrequent words and purge them from the 
 # the gene database and the word frequency list
-	from Classes import GeneNote
-	from Classes import WordFreq
+	from genewordsearch.Classes import GeneNote
+	from genewordsearch.Classes import WordFreq
 	
 	remList = set()
 	wordList = []
@@ -216,8 +211,8 @@ def littleWordRemover(db, wordListRaw, upper=10000, lower=3):
 def bookkeeper(species, geneDB, countList):
 	import os
 	import pickle
-	from Classes import WordFreq
-	from Classes import GeneNote
+	from genewordsearch.Classes import WordFreq
+	from genewordsearch.Classes import GeneNote
 	
 	# Find the total word count, add it to the list
 	total = 0
