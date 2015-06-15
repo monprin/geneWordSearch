@@ -1,9 +1,0 @@
-To-Do List of features/capabilities:
-
-- Run a Positive Control
-
-- GUI (look at flask) (On ice indefinitly)
--- Tag Cloud Library (http://www.goat1000.com/tagcanvas.php)
--- Give context for word from orriginal DB
-
-- Restructure Directory
