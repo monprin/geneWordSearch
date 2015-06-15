@@ -1,7 +1,6 @@
 # Main logic function for finding the annotations associated with the genes.
 
 # Written by Joe Jeffers
-# Updated on 25 Apr 2015
 
 def geneWordSearch(genes,species,minChance=0.05,corrected=False):
 # Input: Takes in a list of genes, the species, and the probability cutoff.

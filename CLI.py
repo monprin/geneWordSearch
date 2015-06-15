@@ -2,7 +2,6 @@
 # Needs to be run from the main program folder.
 
 # Written by Joe Jeffers 
-# Updated 25 Apr 2015
 
 import sys
 import math

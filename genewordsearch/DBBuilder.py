@@ -1,5 +1,4 @@
 # Written by Joseph Jeffers
-# Updated 25 Apr 2015
 
 def geneWordBuilder(species,infiles):
 # Function that makes the annotation database
