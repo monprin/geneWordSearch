@@ -1,26 +1,28 @@
 # Routing directions
+# Written by Joseph Jeffers
+
 import re
-from flask import request
-from flask import render_template
+import json
+from flask import request, render_template, jsonify
 from webapp import app
 from genewordsearch.Classes import WordFreq
 from genewordsearch.GeneWordSearch import geneWordSearch
 
-@app.route('/',methods=['GET','POST'])
+@app.route('/')
 def home():
-	if request.method == 'POST':
-		genes = request.form['genes']
-		species = request.form['species'].lower()
-		genes = re.split('\r| |,|\t|\n',genes)
-		genes = list(filter((lambda x: x != ''),genes))
-		print(genes)
-		#ans = ''
-		#for gene in genes:
-		#	ans += gene + '\n'
-		results = geneWordSearch(genes,species)
-		ans = '<p>' + WordFreq.robotHeaders(genes) + '</p>'
-		for word in results[0]:
-			ans += '<p>' + word.forRobot() + '</p>'
-		return ans
-	else:
-		return render_template('home.html')
+# Base home page
+	return render_template('home.html')
+
+@app.route('/_gene_analysis')
+def gene_analysis():
+# Run the genes through genewordsearch
+	# Sanitize the input
+	species = str(request.args.get('species'))
+	genes = str(request.args.get('genes'))
+	genes = re.split('\r| |,|\t|\n',genes)
+	genes = list(filter((lambda x: x != ''),genes))
+	
+	# Run the analysis and return the JSONified results
+	results = geneWordSearch(genes,species)
+	x = WordFreq.to_JSON_array(results[0])
+	return jsonify(result=x)

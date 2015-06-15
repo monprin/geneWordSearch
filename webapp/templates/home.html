@@ -1,13 +1,49 @@
 <html>
     <head>
         <title>Gene Word Search</title>
+        <script type="text/javascript">var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};</script>
+        <script type="text/javascript" src="{{url_for('static', filename='jquery.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static', filename='jquery.dataTables.min.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='jquery.dataTables.min.css')}}">
     </head>
     <body>
         <script>
-        function validateForm() {
-            var x = document.forms["geneForm"]["genes"].value;
-            if (x == null || x == "") {
+        function handleForm() {
+            var species = document.forms["geneForm"]["species"].value;
+            var geneList = document.forms["geneForm"]["genes"].value;
+            if (species == null || species == "") {
+            // If the species is not specified, return an alert
+                alert("You must select the name of the species.");
+                return false;
+            }
+            else if (geneList == null || geneList == "") {
+            // If no genes are specefied, return an error
                 alert("You must enter at least one gene.");
+                return false;
+            }
+            else {
+            // If everything is in order, run the analysis
+                $.getJSON(($SCRIPT_ROOT + '/_gene_analysis'),{species: species, genes: geneList})
+                // When the analysis is done, write the results to the page
+                .done(function(data){
+                    if ($('#results').length <= 0){
+                    // If there is no results table, add it to the document.
+                        $('#geneForm').after('<h2 id="results_head">Results:</h2><table cellpadding="0" cellspacing="0" border="0" class="display" id="results"><thead><tr><th>Word</th><th>P Value</th><th>Corrected P Value</th><th>Overlap</th></tr></thead></table>');
+                    }
+                    else{
+                    // If there is already a results table, delete it so it can be rebuilt
+                        var table = $('#results').DataTable();
+                        table.destroy();
+                    }
+                    $('#results').DataTable({
+                            "data": JSON.parse(data.result),
+                            "order": [[1,'asc']],
+                            "columns":
+                                [{"data": "word"},
+                                {"data": "pval"},
+                                {"data": "corpval"},
+                                {"data": "overlap"}]
+                    });});
                 return false;
             }
         }
@@ -16,9 +52,11 @@
         
         <p>This site is still under construction, but feel free to give it a whirl by entering some genes below.</p>
         
-        <form id="geneForm" onsubmit="return validateForm()" method="post">
-        <p>Enter the species (maize or ath):</p>
-        <p><input name="species"></p>
+        <form id="geneForm" onsubmit="return handleForm()">
+            
+        <p>Select the species:</p>
+        <input type="radio" name="species" value="maize">Maize<br>
+        <input type="radio" name="species" value="ath">Arabidopsis
         
         <p>Enter the Genes (comma separated or one per line): </p>
         <p><textarea rows="20" cols="15" name="genes" form="geneForm"></textarea></p>
