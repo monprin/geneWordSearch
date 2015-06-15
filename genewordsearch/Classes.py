@@ -2,7 +2,6 @@
 # rest of the GeneWordSearch program.
 
 # Written by Joe Jeffers
-# Updated 25 Apr 2015
 
 class WordFreq:
 # Class for keeping the words and their frequencies together and 
@@ -43,6 +42,29 @@ class WordFreq:
 			ans += self.genes[-1]
 		return ans
 		
+	def to_JSON(self,genes=False):
+	# Creates a JSON-formatted string representing the word. 
+		ans = '{'
+		ans += '"word": "' + self.word + '",'
+		ans += '"pval": "' + str(round(self.p,7)) + '",'
+		ans += '"corpval": "' + str(round(self.pCor,7)) + '",'
+		ans += '"overlap": "' + str(self.freq) + '/' + str(self.total) + '"'
+		if(genes):
+			ans += ', genesin: ['
+			for gene in self.genes[:-1]:
+				ans += gene + ','
+			ans += self.genes[-1]
+			ans += ']'
+		return (ans + '}')
+		
+	def to_JSON_array(words):
+	# Helper function to correctly wrap the JSON objects in to a JSON array
+		wordsJSON = '['
+		for word in words[:-1]:
+			wordsJSON += word.to_JSON() + ','
+		wordsJSON += words[-1].to_JSON() + ']'
+		return wordsJSON
+	 
 	def robotHeaders(genes=False):
 	# Returns the headers for machine readable output (tsv)
 		ans = 'Word' + '\t' + 'Pval' + '\t' + 'CorPval' + '\t' + 'Ocurrances in Sample' + '\t' + 'Ocurrances in Database'
