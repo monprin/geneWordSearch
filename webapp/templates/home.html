@@ -1,34 +1,50 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>Gene Word Search</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type="text/javascript">var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};</script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script type="text/javascript" src="http://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
+        <script type="text/javascript" src="http://cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+        
     </head>
     <body>
         <script>
         function handleForm() {
             var species = document.forms["geneForm"]["species"].value;
             var geneList = document.forms["geneForm"]["genes"].value;
-            if (species == null || species == "") {
+            var prob_cut = document.forms["geneForm"]["prob-cut"].value;
+            var geneDB = document.forms["geneForm"]["geneDB"].files;
+            if ($('#fail-warning').length > 0){$('#fail-warning').remove();}
+            if(species == null || species == "") {
             // If the species is not specified, return an alert
-                alert("You must select the name of the species.");
+                $("#titlehead").after('<div class="alert alert-danger container" id="fail-warning">You must select the species.</div>');
                 return false;
             }
-            else if (geneList == null || geneList == "") {
+            else if(geneList == null || geneList == "") {
             // If no genes are specefied, return an error
-                alert("You must enter at least one gene.");
-                return false;
-            }
-            else {
-            // If everything is in order, run the analysis
-                $.getJSON(($SCRIPT_ROOT + '/_gene_analysis'),{species: species, genes: geneList})
+                $("#titlehead").after('<div class="alert alert-danger container" id="fail-warning">You must enter at least one gene.</div>');
+                return false;}
+            else if(species == "other" && geneDB.length == 0){
+            // If no geneDBs are specefied and are needed, return an error
+                $("#titlehead").after('<div class="alert alert-danger container" id="fail-warning">You must either upload a file to use as the database or select one of the availible species.</div>');
+                return false;}
+            else{
+                // If everything is in order, run the analysis
+                $.getJSON(($SCRIPT_ROOT + '/_gene_analysis'),{species: species, genes: geneList, prob_cut: prob_cut})
+                
                 // When the analysis is done, write the results to the page
                 .done(function(data){
+                    
                     if ($('#results').length <= 0){
                     // If there is no results table, add it to the document.
-                        $('#geneForm').after('<h2 id="results_head">Results:</h2><table cellpadding="0" cellspacing="0" border="0" class="display" id="results"><thead><tr><th>Word</th><th>P Value</th><th>Corrected P Value</th><th>Overlap</th></tr></thead></table>');
+                        $('#geneFormCont').after('<div class="container"><h2 id="results_head">Results:</h2><br><table cellpadding="0" cellspacing="0" border="0" class="table table-hover" id="results"><thead><tr><th>Word</th><th>P Value</th><th>Corrected P Value</th><th>Overlap</th></tr></thead></table></div>');
                     }
                     else{
                     // If there is already a results table, delete it so it can be rebuilt
@@ -44,24 +60,47 @@
                                 {"data": "corpval"},
                                 {"data": "overlap"}]
                     });});
-                return false;
-            }
+                return false;}
         }
         </script>
-        <h1>Welcome to the Gene Word Search web interface!</h1>
+        <div id="titlehead" class="container" >
+            <div class="well" style='background-color: #b2ebba;'>
+                <h1> Gene Word Search <br> <small>Enrichment for the non-GO inclined</small></h1>
+            </div>
+        </div>
         
-        <p>This site is still under construction, but feel free to give it a whirl by entering some genes below.</p>
+        <div id="geneFormCont" class="form-group container">
+        <form class="form-horizontal" id="geneForm" role="form" onsubmit="return handleForm()">
         
-        <form id="geneForm" onsubmit="return handleForm()">
+            <label for="genes">Enter the genes:</label>
+                <textarea class="form-control" rows="10" id="genes" form="geneForm"></textarea>
+                
+            <label for="prob-cut">Probability Cutoff:</label>
+            <input type="text" size="5" name="prob-cut" value="0.050"><br>
             
-        <p>Select the species:</p>
-        <input type="radio" name="species" value="maize">Maize<br>
-        <input type="radio" name="species" value="ath">Arabidopsis
+            <label class="control-label" for="species">Species:</label>
+            <div class="radio-inline">
+              <label><input type="radio" name="species" value="maize">Maize</label>
+            </div>
+            <div class="radio-inline">
+              <label><input type="radio" name="species" value="ath">Arabidopsis</label>
+            </div>
+            <div class="radio-inline hidden">
+              <label><input type="radio" name="species" value="other">Custom (Please upload database here:)</label>
+            </div><br>
+            
+            <div class="fileinput fileinput-new input-group hidden" data-provides="fileinput">
+              <div class="form-control" data-trigger="fileinput"><i class="glyphicon glyphicon-file fileinput-exists"></i> 
+              <span class="fileinput-filename"></span></div>
+              <span class="input-group-addon btn btn-primary btn-file">
+                <span class="fileinput-new">Select DB file</span>
+                <span class="fileinput-exists">Change</span>
+                <input type="file" name="geneDB">
+              </span>
+              <a href="#" class="input-group-addon btn btn-primary fileinput-exists" data-dismiss="fileinput">Remove</a>
+            </div>
         
-        <p>Enter the Genes (comma separated or one per line): </p>
-        <p><textarea rows="20" cols="15" name="genes" form="geneForm"></textarea></p>
-        
-        <input type="submit" value="Evaluate">
-        </form>
+            <input type="submit" class="btn btn-primary btn-md" value="Evaluate">
+        </form></div>
     </body>
 </html>

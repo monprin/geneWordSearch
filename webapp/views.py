@@ -19,10 +19,11 @@ def gene_analysis():
 	# Sanitize the input
 	species = str(request.args.get('species'))
 	genes = str(request.args.get('genes'))
+	prob_cutoff = float(request.args.get('prob_cut'))
 	genes = re.split('\r| |,|\t|\n',genes)
 	genes = list(filter((lambda x: x != ''),genes))
 	
 	# Run the analysis and return the JSONified results
-	results = geneWordSearch(genes,species)
+	results = geneWordSearch(genes,species,minChance=prob_cutoff)
 	x = WordFreq.to_JSON_array(results[0])
 	return jsonify(result=x)
