@@ -2,8 +2,10 @@
 # Written by Joseph Jeffers
 
 import re
+import os
 import json
-from flask import request, render_template, jsonify
+from werkzeug import secure_filename
+from flask import request, render_template, jsonify, redirect, url_for
 from webapp import app
 from genewordsearch.Classes import WordFreq
 from genewordsearch.GeneWordSearch import geneWordSearch
@@ -31,13 +33,19 @@ def gene_analysis():
 @app.route('/_custom_db_analysis',methods=['POST'])
 def custom_db_analysis():
 # Deal with a custom database file
-	# Sanitize the input
+	# Retrieve and sanitize the input
+	print(request.form)
+	dbFiles = request.form['fStrings[]']
+	print(len(dbFiles))
+	return jsonify(result='[{"word": "File Uploaded"}]')
 	genes = str(request.form['geneList'])
 	probCutoff = float(request.form['probCut'])
+	save(request.files['geneDBs'])
 	genes = re.split('\r| |,|\t|\n',genes)
 	genes = list(filter((lambda x: x != ''),genes))
 	
 	# Build up the tmp database
 	#from genewordsearch import DBBuilder
 	#DBBuilder.tempBuilder(genes)
-	return 'Not yet...'
+	
+	

@@ -10,9 +10,22 @@
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.css">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
         <script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
         <script src="{{url_for('static', filename='formProcess.js')}}"></script>
+        <style>
+            .fileinput-new .input-group .input-group-btn .btn.btn-file {
+                -webkit-border-radius: 0 4px 4px 0;
+                -moz-border-radius: 0 4px 4px 0;
+                border-radius: 0 4px 4px 0;
+            }
+            .fileinput .fileinput-filename {
+                overflow: visible;
+            }
+            .fileinput .fileinput-filename .dropdown-menu > li { 
+                padding: 3px 20px;
+            }
+        </style>
     </head>
     <body>
         <div id="titlehead" class="container" >
@@ -23,13 +36,13 @@
         </div>
         
         <div id="geneFormCont" class="form-group container">
-        <form class="form-horizontal" id="geneForm" role="form" onsubmit="return handleForm()">
+        <form class="form-horizontal" id="geneForm" role="form" enctype="multipart/form-data" onsubmit="return handleForm()">
         
             <label for="genes">Enter the genes:</label>
                 <textarea class="form-control" rows="10" id="genes" form="geneForm"></textarea><br>
                 
             <label for="prob-cut">Probability cutoff:</label>
-            <input type="text" size="5" name="probCut" value="0.050"><br>
+                <input type="text" size="5" name="probCut" value="0.050"><br>
             
             <label class="control-label" for="species">Species:</label>
             <div class="radio-inline">
@@ -39,20 +52,35 @@
               <label><input type="radio" name="species" value="ath">Arabidopsis</label>
             </div>
             <div class="radio-inline">
-              <label><input type="radio" name="species" value="other">Custom (Please upload database here:)</label>
+              <label><input type="radio" name="species" value="other">Custom (Please upload database below)</label>
             </div><br>
+            <h5><b>Upload rules:</b></h5>
+            <ul>
+                <li>Must be eiter a csv, tsv, or txt file.</li>
+                <li>Must be some sort of table, you will be asked for delimiter if it is a txt.</li>
+                <li>Maximum of 10 files allowed.</li>
+            </ul>
             
-            <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-              <div class="form-control" data-trigger="fileinput"><i class="glyphicon glyphicon-file fileinput-exists"></i> 
-              <span class="fileinput-filename"></span></div>
-              <span class="input-group-addon btn btn-primary btn-file">
-                <span class="fileinput-new">Select DB file</span>
-                <span class="fileinput-exists">Change</span>
-                <input type="file" name="geneDB">
-              </span>
-              <a href="#" class="input-group-addon btn btn-primary fileinput-exists" data-dismiss="fileinput">Remove</a>
+            <div id="fileSelector" class="fileinput fileinput-new" data-provides="fileinput">
+                <div class="input-group">
+                    <div class="form-control uneditable-input">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span>
+                    </div>
+                    <div class="input-group-btn">
+                        <div class="btn btn-primary btn-file">
+                            <span class="fileinput-new" >Select DB Files</span>
+                            <span class="fileinput-exists">Change</span>
+                            <input type="file" multiple="true" name="geneDBs" />
+                        </div>
+                        <button type="button" class="btn btn-primary fileinput-exists" data-dismiss="fileinput" title="remove">
+                            Remove
+                        </button>    
+                    </div>
+                </div>
             </div>
-        
+            
+            <div id="dbqs"></div>
+            
             <input type="submit" class="btn btn-primary btn-md" value="Evaluate">
         </form></div>
     </body>
