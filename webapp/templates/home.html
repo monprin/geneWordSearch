@@ -39,10 +39,10 @@
         <form class="form-horizontal" id="geneForm" role="form" enctype="multipart/form-data" onsubmit="return handleForm()">
         
             <label for="genes">Enter the genes:</label>
-                <textarea class="form-control" rows="10" id="genes" form="geneForm"></textarea><br>
+                <textarea class="form-control" rows="10" id="geneList" name="geneList" form="geneForm"></textarea><br>
                 
             <label for="prob-cut">Probability cutoff:</label>
-                <input type="text" size="5" name="probCut" value="0.050"><br>
+                <input type="text" size="5" name="probCut" id="probCut" value="0.050"><br>
             
             <label class="control-label" for="species">Species:</label>
             <div class="radio-inline">
@@ -52,16 +52,16 @@
               <label><input type="radio" name="species" value="ath">Arabidopsis</label>
             </div>
             <div class="radio-inline">
-              <label><input type="radio" name="species" value="other">Custom (Please upload database below)</label>
+              <label><input type="radio" name="species" value="other">Custom (Requires upload of a database)</label>
             </div><br>
+            
+            <div id="fileSelector" class="fileinput fileinput-new hidden" data-provides="fileinput">
             <h5><b>Upload rules:</b></h5>
             <ul>
                 <li>Must be eiter a csv, tsv, or txt file.</li>
                 <li>Must be some sort of table, you will be asked for delimiter if it is a txt.</li>
                 <li>Maximum of 10 files allowed.</li>
             </ul>
-            
-            <div id="fileSelector" class="fileinput fileinput-new" data-provides="fileinput">
                 <div class="input-group">
                     <div class="form-control uneditable-input">
                         <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span>
@@ -70,9 +70,9 @@
                         <div class="btn btn-primary btn-file">
                             <span class="fileinput-new" >Select DB Files</span>
                             <span class="fileinput-exists">Change</span>
-                            <input type="file" multiple="true" name="geneDBs" />
+                            <input type="file" multiple="true"  name="geneDBs" />
                         </div>
-                        <button type="button" class="btn btn-primary fileinput-exists" data-dismiss="fileinput" title="remove">
+                        <button type="button" class="btn btn-primary fileinput-exists" data-dismiss="fileinput" id="removeFiles" title="remove">
                             Remove
                         </button>    
                     </div>
@@ -83,5 +83,6 @@
             
             <input type="submit" class="btn btn-primary btn-md" value="Evaluate">
         </form></div>
+        <div id="waitMSG" class=" container hidden"><br><p><b>Your data has been uploaded and is now being processed.</b></p><p><b>Your results will appear at bottom of page upon completion.</b></p></div>
     </body>
 </html>
