@@ -1,6 +1,6 @@
 # Written by Joseph Jeffers
 
-def geneWordBuilder(species,infiles):
+def geneWordBuilder(species,infiles,geneCols,desCols,delimiters,headers):
 # Function that makes the annotation database
 	import re
 	import pickle
@@ -8,17 +8,12 @@ def geneWordBuilder(species,infiles):
 	db = dict()
 	
 	#----------------Building the gene database---------------------
-	
+	fileNum = 0
 	for infile in infiles:
 	# For each of the given files, process all the genes present
-		# Get the necessary info from the user for processing
-		print('For file \'' + infile + '\', please answer the following questions:')
-		geneCol = input('What column contains the gene identifiers (numbered from 1)? ')
-		desCol = input('What columns contain the description fields (please type each number seperated by a space; write \"end\" after the last number to inicate the rest of the columns)? ')
-		
-		# Convert from human column numbering to computer column numbering
-		geneCol = int(geneCol)-1
-		desCol = desCol.split(' ')
+		# Convert from human column numbering to computer numbering
+		geneCol = int(geneCols[fileNum])-1
+		desCol = desCols[fileNum].split(' ')
 		if (desCol[-1] == 'end'):
 			toEnd = True
 			desCol = desCol[:-1]
@@ -27,38 +22,29 @@ def geneWordBuilder(species,infiles):
 		desCol = [int(x)-1 for x in desCol]
 		maxDes = max(desCol)
 		
-		# Figure out the file type
-		if(infile[-3:] == 'tsv'):
-			splitter = '\t'
-		elif(infile[-3:] == 'csv'):
-			splitter = ','
-		else:
-			splitter = input('Please type the charachter used to seperate columns in this document (tab = \t, rest are just the charachter): ')
-		
-		# Dealing with headers
 		matrix = open(infile)
 		rowNum = 0
-		headers = input('Does this file have headers (y or n)? ')
-		if(headers == 'y' or headers == 'Y'):
-			headers == True
-		elif(headers == 'n' or headers == 'N'):
-			headers == False
+		
+		# Find Splitter
+		if(delimiters[fileNum] == 'tab'):
+			splitter = '\t'
 		else:
-			raise ValueError('Please indicate whether your data has headers using y or n.')
-		if(headers):
+			splitter = delimiters[fileNum]
+		
+		# Deal with headers
+		if(headers[fileNum]):
 			garb = matrix.readline()
 			rowNum += 1
 			del garb
 		
 		# Process file line by line, each line has different gene.
-		print('Adding information to Database...')
 		skippedRows = []
 		for line in matrix.readlines():
 			# Get rid of newline char
 			line = line[:-1]
 			
 			# Split into columns
-			row = line.split(splitter)
+			row = line.split()
 			
 			# Handle short lines in the database
 			if(len(row)-1 <= maxDes):
@@ -110,25 +96,19 @@ def geneWordBuilder(species,infiles):
 			
 			# Add all of the words into the database
 			db[geneName].addWords(words)
+			fileNum += 1
 			
 		matrix.close()
 		
-		if(len(skippedRows) > 0):
-			print()
-			print('Number of rows skipped due to different formatting in this file: ' + str(len(skippedRows)))
-			print('Please check the following rows for problems: ')
-			print(skippedRows)
-			print()
 	
-	print('Counting the words...')
+	# Counting the words
 	wordList = wordCounter(db)
 	
-	print('Getting rid of little and big words...')
+	# Getting rid of little and big words
 	x = littleWordRemover(db,wordList)
 	
-	print('Bookeeping and saving files...')
+	# Bookeeping and saving files
 	bookkeeper(species, x[0], x[1])
-	print('Database built. See databases/' + species.lower() + '/ for the output.')
 	
 	return
 
