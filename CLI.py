@@ -56,8 +56,6 @@ parser.add_argument('-c','--correctedP',dest='c',action='store_true',default=Fal
 'Sorts results by Holm–Bonferroni corrected p values, compensating for the multiple hypothesis problem.')
 parser.add_argument('-g','--gene_list',dest='g',action='store_true',default=False,help=
 'Prints list of genes associated with each word.')
-#parser.add_argument('-l','--low_rep',dest='l',action='store_true',default=False,help=
-#'Prints the words that occur in relatively few of the genes inputed.')
 parser.add_argument('-o','--out',dest='o',action='store',type=str,default='out.txt',help=
 'Location to write the file that contains the results, default is out.txt in current folder.')
 parser.add_argument('-p','--prob_cut',dest='p',action='store',type=float,default=0.05,help=
@@ -174,7 +172,41 @@ elif(args.folder):
 
 elif(args.buildDB):
 # Handles running the database builder program from the main CLI
-	DBBuilder.geneWordBuilder(args.s,args.things)
+# Gets needed information interactively.
+	headers = []
+	delimiters = []
+	geneCols = []
+	desCols = []
+	for thing in args.things:
+		print('For file \'' + thing + '\', please answer the following questions:')
+		
+		# Find out if we have headers
+		header = input('Does this file have headers (y or n)? ')
+		if(header == 'y' or header == 'Y'):
+			headers.append(True)
+		elif(header == 'n' or header == 'N'):
+			headers.append(False)
+		else:
+			raise ValueError('Please indicate whether your data has headers using y or n.')
+		
+		# Figure out the file type
+		if(thing[-3:] == 'tsv'):
+			delimiter = '\t'
+		elif(thing[-3:] == 'csv'):
+			delimiter = ','
+		else:
+			delimiter = input('Please type the charachter used to seperate columns in this document (tab = \t, rest are just the charachter): ')
+		delimiters.append(delimiter)
+		
+		# Find out which columns have the relevant information
+		geneCol = input('What column contains the gene identifiers (numbered from 1)? ')
+		geneCols.append(geneCol)
+		desCol = input('What columns contain the description fields (please type each number seperated by a space; write \"end\" after the last number to inicate the rest of the columns)? ')
+		desCols.append(desCol)
+	
+	# Run the program to build the database
+	print('Now building the database...')
+	DBBuilder.geneWordBuilder(args.s,args.things,geneCols,desCols,delimiters,headers)
 	print('Database has been built in /databases/'+args.s)
 	print('Please run this program again to do the gene analysis, and use the options -s to define the species')
 	
