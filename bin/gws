@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # This is the Command Line interface for geneWordSearch.
 # Needs to be run from the main program folder.
 
@@ -74,8 +75,8 @@ parser.add_argument('--file',action='store_true',default=False,help=
 'Indicates the input is a file with genes in it.')
 parser.add_argument('--folder',action='store_true',default=False,help=
 'Indicates the input are directorys and will process all files in the directory.')
-parser.add_argument('--network',action='store_true',default=False,help=
-'Indicates the input are starting points of a network, will first return list of genes in those networks, then traditional output of that list of genes (Only works with maize at the momment).')
+#parser.add_argument('--network',action='store_true',default=False,help=
+#'Indicates the input are starting points of a network, will first return list of genes in those networks, then traditional output of that list of genes (Only works with maize at the momment).')
 parser.add_argument('things',action='store',nargs='*')
 
 # Parse the arguments
@@ -111,30 +112,32 @@ if(args.file):
 	out.close()
 	print('Completed! Check ' + args.o + ' for your results.')
 
-elif(args.network):
+
+#elif(args.network):
 # Deals with finding the gene network and running the relevant analysis
-	# Loads the network db and get the genes
-	genes = []
-	nets = open('databases/'+ args.s +'/networks.p','rb')
-	networks = pickle.load(nets)
-	nets.close()
-	for gene in args.things:
-		genes += networks[gene]
-	
+#	# Loads the network db and get the genes
+#	genes = []
+#	nets = open('databases/'+ args.s +'/networks.p','rb')
+#	networks = pickle.load(nets)
+#	nets.close()
+#	for gene in args.things:
+#		genes += networks[gene]
+#	
 	# Open the out file and print the network
-	out = open(args.o,'w')
-	out.write('These are the genes related to the gene(s) you identified:'+'\n')	
-	for gene in genes:
-		out.write(gene + '\n')
-	
+#	out = open(args.o,'w')
+#	out.write('These are the genes related to the gene(s) you identified:'+'\n')	
+#	for gene in genes:
+#		out.write(gene + '\n')
+#	
 	# Run the analysis
-	results = geneWordSearch(genes,args.s,minChance=args.p,corrected=args.c)
+#	results = geneWordSearch(genes,args.s,minChance=args.p,corrected=args.c)
 	
 	# Print the Results
-	out.write('\n' + 'Results from this list:' + '\n' + '\n')
-	resultsPrinter(results,args.w,args.t,out,args.g)
-	out.close()
-	print('Completed! Check ' + args.o + ' for your results.')
+#	out.write('\n' + 'Results from this list:' + '\n' + '\n')
+#	resultsPrinter(results,args.w,args.t,out,args.g)
+#	out.close()
+#	print('Completed! Check ' + args.o + ' for your results.')
+
 
 elif(args.folder):
 # Deals with directory option by analyzing file by file and doing output

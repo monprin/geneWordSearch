@@ -8,11 +8,16 @@ def geneWordSearch(genes,species,minChance=0.05,corrected=False):
 #         chance probability of less than the minChance variable. 
 	import re
 	import pickle
+	import pkg_resources
 	from genewordsearch.Classes import WordFreq
 	from genewordsearch.Classes import GeneNote
 	
 	# Unpickle the database of words
-	dbfile = open('databases/'+ species +'/geneNotes.p','rb')
+	dbFolder = 'databases/'+ species
+	if pkg_resources.resource_exists(__name__, dbFolder + '/geneNotes.p'):
+		dbfile = open(pkg_resources.resource_filename(__name__, dbFolder + '/geneNotes.p'),'rb')
+	else:
+		raise ValueError('There is no database associated with this species, please use either \'maize\' or \'ath\', or make your own using \'--buildDB\'.')
 	db = pickle.load(dbfile)
 	
 	# Build the word list up for all of the genes provided.
@@ -63,7 +68,7 @@ def geneWordSearch(genes,species,minChance=0.05,corrected=False):
 	del wordListRaw
 	
 	# Finding the respective P values
-	pickleDict = open('databases/'+ species +'/totalWordCounts.p','rb')
+	pickleDict = dbfile = open(pkg_resources.resource_filename(__name__, dbFolder + '/totalWordCounts.p'),'rb')
 	wordCounts = pickle.load(pickleDict)
 	totalWords = wordCounts['Total Count']
 	for word in wordList:

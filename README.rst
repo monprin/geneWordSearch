@@ -6,7 +6,9 @@ Basic Purpose
 
 This program takes in names of genes (in one of several ways, see options below), finds the annotations in the in the included databases or a user generate one. It will then sort the annotations it finds based on their frequency in the subset vs their frequency in the database. This is done using a hypergeometric distribution function from scipy. 
 
-Using the command line interface (src/CLI.py) will output the results to a file in one of two formats, a human readable version (default), or a tsv (tab separate value) sheet for further prossesing. It can also take in a single gene and return the network and then do the analysis on that network (maize only).
+Using the command line interface ($ gws) will output the results to a file in one of two formats, a human readable version (default), or a tsv (tab separate value) sheet for further prossesing.
+
+This can also be run as a webapp for a GUI, that is why flask is required. 
 
 Use
 ---
@@ -22,13 +24,15 @@ It takes in gene identifiers in some form and outputs the words that are associa
 --gene_list     Prints list of genes associated with each word.
 --help          Show help message (see for shorthand commands).
 --low_rep       Prints the words that occur in relatively few of the genes inputed.
---network       Indicates the input are starting points of a network, will first return list of genes in those networks, then traditional output of that list of genes (Only works with maize at the momment).
 --out           Location to write the file that contains the results, default is out.txt in current folder.
 --prob_cut      This option takes one argument and sets the probability cutoff, default is 0.05.
 --species       REQUIRED. Indicates species to use, maize and ath included. More can be added with '--buildDB'.
 --tsv           This will give a tsv output for machine readable purposes. Default is human readable output.
 --universe      Takes one argument, file with list of genes to use as universe for enrichment query. One gene per line or split by comma.
 --webLinks      Outputs associated web links with standard gene output.
+
+Option currently not enabled, due to disrepair and limited functionality
+--network       Indicates the input are starting points of a network, will first return list of genes in those networks, then traditional output of that list of genes (Only works with maize at the momment).
 
 This code is hosted on GitHub and can be accessed  `here <https://github.com/monprin/geneWordSearch/>`_. It has a dependency of SciPy. Now on to some examples.
 
@@ -44,7 +48,7 @@ Input:
 
 ::
 
-    $ python3 src/CLI.py --species maize --gene_list --webLinks --file tests/MaizeIons/Al27_candidates.txt
+    $ gws --species maize --gene_list --webLinks --file tests/MaizeIons/Al27_candidates.txt
 
 Truncated Output Sample:
 
@@ -88,7 +92,7 @@ Input:
 
 ::
 
-    $ python3 src/CLI.py --species maize --gene_list --webLinks --tsv --file tests/MaizeIons/Al27_candidates.txt
+    $ gws --species maize --gene_list --webLinks --tsv --file tests/MaizeIons/Al27_candidates.txt
 
 Output Sample:
 

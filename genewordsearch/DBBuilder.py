@@ -190,6 +190,7 @@ def littleWordRemover(db, wordListRaw, upper=10000, lower=3):
 def bookkeeper(species, geneDB, countList):
 	import os
 	import pickle
+	import pkg_resources
 	from genewordsearch.Classes import WordFreq
 	from genewordsearch.Classes import GeneNote
 	
@@ -200,8 +201,9 @@ def bookkeeper(species, geneDB, countList):
 	countList.insert(0,WordFreq('Total Count',total))
 	
 	# Determine outfile locations
-	folder = 'databases/' + species.lower() + '/'
-	os.makedirs(folder, exist_ok=True)
+	dbFolder = 'databases/' + species.lower() + '/'
+	os.makedirs(pkg_resources.resource_filename(__name__, dbFolder), exist_ok=True)
+	folder = pkg_resources.resource_filename(__name__, dbFolder)
 	
 	# --------------Save the gene database files-------------------
 	

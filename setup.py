@@ -7,13 +7,16 @@
 from setuptools import setup, find_packages
 
 setup(name='GeneWordSearch',
-version='1.0.3',
+version='2.0',
 license='GPLv2',
-description='Annotation finder for Maize genes.',
+description='Annotation finder for genes.',
 author='Joe Jeffers',
 author_email='jeffe174@umn.edu',
 url='https://github.com/monprin/geneWordSearch/',
 packages=find_packages(),
-package_data={'GeneWordSearch.databases':['totalWordCounts.*','geneNotes.*','networks.*']},
+package_data={
+'genewordsearch.databases':['*/totalWordCounts.*','*/geneNotes.*'],
+'webapp':['templates/home.html','static/formProcess.js']},
 long_description=open('README.rst').read(),
-install_requires=['numpy','scipy'])
+scripts=['bin/gws'],
+install_requires=['flask','numpy','scipy'])
