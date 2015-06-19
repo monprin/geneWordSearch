@@ -80,7 +80,7 @@ def custom_db_analysis():
 	genes = list(filter((lambda x: x != ''),genes))
 	results = geneWordSearch(genes,ip,minChance=probCutoff)
 	ans = WordFreq.to_JSON_array(results[0])
-	shutil.rmtree('databases/'+ip+'/')
+	shutil.rmtree('genewordsearch/databases/'+ip+'/')
 	return jsonify(result=ans)
 	
 	
