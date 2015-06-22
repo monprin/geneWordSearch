@@ -5,7 +5,7 @@
 
 class WordFreq:
 # Class for keeping the words and their frequencies together and 
-# and some useful functions to outsource some work
+# and some useful functions to abstract some work
 	def __init__(self, word, freq):
 	# Constructor
 		self.word = word
@@ -27,6 +27,13 @@ class WordFreq:
 				ans += gene + ' '
 			ans += self.genes[-1]
 			ans += '\n'
+		return ans
+		
+	def robotHeaders(genes=False):
+	# Returns the headers for machine readable output (tsv)
+		ans = 'Word' + '\t' + 'Pval' + '\t' + 'CorPval' + '\t' + 'Ocurrances in Sample' + '\t' + 'Ocurrances in Database'
+		if(genes):
+			ans += '\t' + 'Genes Appeared In'
 		return ans
 		
 	def forRobot(self,genes=False):
@@ -64,13 +71,6 @@ class WordFreq:
 			wordsJSON += word.to_JSON() + ','
 		wordsJSON += words[-1].to_JSON() + ']'
 		return wordsJSON
-	 
-	def robotHeaders(genes=False):
-	# Returns the headers for machine readable output (tsv)
-		ans = 'Word' + '\t' + 'Pval' + '\t' + 'CorPval' + '\t' + 'Ocurrances in Sample' + '\t' + 'Ocurrances in Database'
-		if(genes):
-			ans += '\t' + 'Genes Appeared In'
-		return ans
 		
 	def increment(self):
 	# Adds another tick to the word count

@@ -4,7 +4,7 @@
 
 # Written by Joe Jeffers 
 
-import sys
+import os
 import math
 import pickle
 import argparse
@@ -23,9 +23,6 @@ def resultsPrinter(results, web, table, outfile, genes):
 	# Split the results
 	words = results[0]
 	links = results[1]
-	
-	# Determine the minimum ammount of genes a word must occur in
-	# to be printed in the interesting list
 	
 	if(table):
 		# Print the header for the table
@@ -99,11 +96,15 @@ if(args.u):
 if(args.file):
 # Deals with input if it is a file name
 	genes = []
+	
+	# Get the list out of the file
 	for name in args.things:
 		geneList = open(name)
 		for row in geneList.readlines():
 			genes += row.split()
+		geneList.close()
 	
+	# Run the analysis
 	results = geneWordSearch(genes,args.s,minChance=args.p,corrected=args.c)
 	
 	# Open the output file and write
@@ -151,7 +152,7 @@ elif(args.folder):
 			folder += '/'
 		fileList = glob.glob(folder + '*.txt')
 		fileList.sort()
-		fileList = filter(lambda x: ((len(x) <= 13) or (not(x[-12:] == '_results.txt') and not(x[-16:] == '_results_new.txt'))),fileList)
+		fileList = filter(lambda x: ((len(x) <= 13) or (not(x[-12:] == '_results.txt'))),fileList)
 		
 		# For each file, run the analysis and output the results
 		for fileName in fileList:
@@ -167,7 +168,7 @@ elif(args.folder):
 			results = geneWordSearch(genes,args.s,minChance=args.p,corrected=args.c)
 			
 			# Print the results
-			resultFile = fileName[:-4] + '_results_new.txt'
+			resultFile = fileName[:-4] + '_results.txt'
 			out = open(resultFile,'w')
 			resultsPrinter(results,args.w,args.t,out,args.g)
 			out.close()
@@ -175,11 +176,13 @@ elif(args.folder):
 
 elif(args.buildDB):
 # Handles running the database builder program from the main CLI
-# Gets needed information interactively.
+# Gets needed information interactively and then runs the program
 	headers = []
 	delimiters = []
 	geneCols = []
 	desCols = []
+	
+	# For each individual database file, find the necessary details
 	for thing in args.things:
 		print('For file \'' + thing + '\', please answer the following questions:')
 		

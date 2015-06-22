@@ -39,7 +39,7 @@ This code is hosted on GitHub and can be accessed  `here <https://github.com/mon
 Use and Output Examples
 -----------------------
 
-For full output samples, check out `this <https://github.com/monprin/geneWordSearch/tree/master/GeneWordSearch/tests/MaizeIons>`_ folder.
+For full output samples, check out `this <https://github.com/monprin/geneWordSearch/tree/master/tests/MaizeIons>`_ folder.
 
 Example 1 (Human Output)
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -131,6 +131,11 @@ Printing
 
 Finally the results are printed out using one of two relevant class methods depending on the options set. These are fairly self-explanatory since there are output samples above.
 
+Web App
+~~~~~~~
+
+The web app is based on flask, jQuery, Bootstrap, and Jansy Bootstrap (for file selector plugin). It is run by navigating to the main folder and running run.py. It automatically starts the server on localhost:50001, which can be changed by changing by editing the __init__.py in the webapp folder.
+
 Databases
 ---------
 
@@ -149,7 +154,9 @@ This database is a dictionary that is pickled in the databases folder for the re
 
 This is created by the function DBBuilder.totalWordCounts that essentially uses the same algorithm as the main gene word search, but instead of for specific genes, it adds the annotations for all of the genes in the database and just doesn't store some of the superfluous information. It takes no arguments and creates two files in the databases folder. It runs automatically after a new database is created. 
 
-Networks Database
-~~~~~~~~~~~~~~~~~
+
+
+Networks Database (currently deprecated - may be resurrected)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is a dictionary that contains the lists of genes that are connected. it is a simple mapping from supplied gene to a list of genes. This in the future will be able to be supplied by the end user, but at the moment it is also static. It is created by DBBuilder.networksBuilder which just takes in a tsv and splits the rows. At the moment input needs to be sorted, but that functionality will be added in the future, along with support for arbitrary species, it only works with maize right now.

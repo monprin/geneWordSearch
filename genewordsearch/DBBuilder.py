@@ -1,3 +1,4 @@
+# Function to build the databases that are necessary for GeneWordSearch
 # Written by Joseph Jeffers
 
 def geneWordBuilder(species,infiles,geneCols,desCols,delimiters,headers):
@@ -233,7 +234,7 @@ def bookkeeper(species, geneDB, countList):
 	pickle.dump(countDB,open(folder+'totalWordCounts.p','wb'))
 	
 	return
-
+# ---------------------Deprecated at the momment------------------------
 def networksBuilder(infile,species):
 # Creates dictionary for gene networks. Used by CLI for network finder
 	import pickle
