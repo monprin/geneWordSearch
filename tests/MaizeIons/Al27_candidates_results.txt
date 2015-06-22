@@ -1,687 +1,285 @@
-Multiple Gene Words:
-
-Word: origin
-P-value: 0.000430713813012
-Corrected P-value: 0.423822392003
-Overlap: 3/13
-
-Word: virgatum-95883
-P-value: 0.000823497816382
-Corrected P-value: 0.809498353503
-Overlap: 2/4
-
-Word: sarcoplasmic
-P-value: 0.000823497816382
-Corrected P-value: 0.808674855687
-Overlap: 2/4
-
-Word: gar
-P-value: 0.000823497816382
-Corrected P-value: 0.807851357871
-Overlap: 2/4
-
-Word: response-related
-P-value: 0.00136171909871
-Corrected P-value: 1.33448471674
-Overlap: 2/5
-
-Word: l-asparaginase
-P-value: 0.00136171909871
-Corrected P-value: 1.33312299764
-Overlap: 2/5
-
-Word: beta'-3
-P-value: 0.00136171909871
-Corrected P-value: 1.33176127854
-Overlap: 2/5
-
-Word: tmv
-P-value: 0.00202655562528
-Corrected P-value: 1.9799448459
-Overlap: 2/6
-
-Word: mannosyl-oligosaccharide
-P-value: 0.00202655562528
-Corrected P-value: 1.97791829028
-Overlap: 2/6
-
-Word: 2-alpha-mannosidase
-P-value: 0.00202655562528
-Corrected P-value: 1.97589173465
-Overlap: 2/6
-
-Word: response
-P-value: 0.00226227953289
-Corrected P-value: 2.20346026503
-Overlap: 8/193
-
-Word: chromatin
-P-value: 0.002321737
-Corrected P-value: 2.259050101
-Overlap: 14/487
-
-Word: virgatum-61764
-P-value: 0.00281494377202
-Corrected P-value: 2.73612534641
-Overlap: 2/7
-
-Word: virgatum-249102805
-P-value: 0.00281494377202
-Corrected P-value: 2.73331040263
-Overlap: 2/7
-
-Word: gamma-tau
-P-value: 0.00281494377202
-Corrected P-value: 2.73049545886
-Overlap: 2/7
-
-Word: coronatine-insensitive
-P-value: 0.00281494377202
-Corrected P-value: 2.72768051509
-Overlap: 2/7
-
-Word: barley
-P-value: 0.00281494377202
-Corrected P-value: 2.72486557132
-Overlap: 2/7
-
-Word: replication
-P-value: 0.00358894098041
-Corrected P-value: 3.47050592805
-Overlap: 4/53
-
-Word: rpp13-like
-P-value: 0.0037238745757
-Corrected P-value: 3.59726284013
-Overlap: 2/8
-
-Word: beta'-2
-P-value: 0.0037238745757
-Corrected P-value: 3.59353896555
-Overlap: 2/8
-
-Word: vascular
-P-value: 0.00475039287278
-Corrected P-value: 4.57937872936
-Overlap: 2/9
-
-Word: ternary
-P-value: 0.00475039287278
-Corrected P-value: 4.57462833648
-Overlap: 2/9
-
-Word: mip1
-P-value: 0.00475039287278
-Corrected P-value: 4.56987794361
-Overlap: 2/9
-
-Word: ia
-P-value: 0.00589159643346
-Corrected P-value: 5.66182417255
-Overlap: 2/10
-
-Word: virgatum-45298
-P-value: 0.00714463514194
-Corrected P-value: 6.85884973626
-Overlap: 2/11
-
-Word: electron
-P-value: 0.00721969360424
-Corrected P-value: 6.92368616647
-Overlap: 9/284
-
-Word: structure
-P-value: 0.00755747732205
-Corrected P-value: 7.24006327453
-Overlap: 11/391
-
-Word: mlo
-P-value: 0.0115470253661
-Corrected P-value: 11.0505032754
-Overlap: 2/14
-
-Word: defense
-P-value: 0.0115470253661
-Corrected P-value: 11.03895625
-Overlap: 2/14
-
-Word: udp-glycosyltransferase
-P-value: 0.0132199170202
-Corrected P-value: 12.6250207543
-Overlap: 2/15
-
-Word: ii
-P-value: 0.0151114539733
-Corrected P-value: 14.4163270905
-Overlap: 9/321
-
-Word: vacuole
-P-value: 0.0152059762452
-Corrected P-value: 14.4912953616
-Overlap: 3/44
-
-Word: atp
-P-value: 0.016094517948
-Corrected P-value: 15.3219810865
-Overlap: 13/554
-
-Word: divaricata
-P-value: 0.0168581590949
-Corrected P-value: 16.0321092992
-Overlap: 2/17
-
 Word: containing
-P-value: 0.0180393076378
-Corrected P-value: 17.1373422559
+P-value: 7.94556530326e-08
+Corrected P-value: 1.07265131594e-05
 Overlap: 98/6670
 
-Word: er
-P-value: 0.0181398451752
-Corrected P-value: 17.2147130712
-Overlap: 3/47
-
-Word: stress
-P-value: 0.0193536916544
-Corrected P-value: 18.3472996884
-Overlap: 21/1076
-
-Word: synthesis
-P-value: 0.019665677303
-Corrected P-value: 18.623396406
-Overlap: 36/2104
-
-Word: nak
-P-value: 0.0208695491498
-Corrected P-value: 19.7425934957
-Overlap: 2/19
-
-Word: asparagine
-P-value: 0.0208695491498
-Corrected P-value: 19.7217239465
-Overlap: 2/19
-
 Word: domain
-P-value: 0.0211870444464
-Corrected P-value: 20.0005699574
+P-value: 9.00692526137e-08
+Corrected P-value: 1.20692798502e-05
 Overlap: 100/6870
 
-Word: h1
-P-value: 0.02300904768
-Corrected P-value: 21.6975319622
-Overlap: 2/20
+Word: synthesis
+P-value: 6.03887946152e-05
+Corrected P-value: 0.00803170968382
+Overlap: 36/2104
 
-Word: and
-P-value: 0.0244669150054
-Corrected P-value: 23.0478339351
-Overlap: 36/2140
+Word: chromatin
+P-value: 7.83261567641e-05
+Corrected P-value: 0.0103390526929
+Overlap: 14/487
 
-Word: disease
-P-value: 0.0245156351798
-Corrected P-value: 23.0692127042
-Overlap: 5/138
+Word: origin
+P-value: 0.000155389193007
+Corrected P-value: 0.0203559842839
+Overlap: 3/13
 
-Word: beta-catenin-like
-P-value: 0.0252345704266
-Corrected P-value: 23.720496201
-Overlap: 2/21
+Word: response
+P-value: 0.000243085701772
+Corrected P-value: 0.0316011412304
+Overlap: 8/193
 
-Word: alternative
-P-value: 0.0252345704266
-Corrected P-value: 23.6952616306
-Overlap: 2/21
+Word: stress
+P-value: 0.000375693554829
+Corrected P-value: 0.0484644685729
+Overlap: 21/1076
 
-Word: arf
-P-value: 0.0261221676134
-Corrected P-value: 24.5025932213
-Overlap: 3/54
+Word: structure
+P-value: 0.000528154450391
+Corrected P-value: 0.0676037696501
+Overlap: 11/391
+
+Word: electron
+P-value: 0.000722286119033
+Corrected P-value: 0.0917303371172
+Overlap: 9/284
+
+Word: replication
+P-value: 0.00101826997389
+Corrected P-value: 0.12830201671
+Overlap: 4/53
+
+Word: kinase
+P-value: 0.00182805182817
+Corrected P-value: 0.228506478521
+Overlap: 29/1909
+
+Word: transport
+P-value: 0.00216377753704
+Corrected P-value: 0.268308414593
+Overlap: 28/1843
+
+Word: serine
+P-value: 0.00247134398839
+Corrected P-value: 0.303975310572
+Overlap: 14/694
+
+Word: signalling
+P-value: 0.00446202418926
+Corrected P-value: 0.54436695109
+Overlap: 24/1585
 
 Word: recognition
-P-value: 0.0264856463592
-Corrected P-value: 24.8170506385
+P-value: 0.00461197828672
+Corrected P-value: 0.558049372693
 Overlap: 7/243
 
-Word: ras-related
-P-value: 0.0273924951226
-Corrected P-value: 25.6393754347
-Overlap: 3/55
+Word: subunit
+P-value: 0.00482788222325
+Corrected P-value: 0.579345866791
+Overlap: 28/1956
 
-Word: reticulum
-P-value: 0.0275437886221
-Corrected P-value: 25.7534423616
-Overlap: 2/22
+Word: vacuole
+P-value: 0.00593871779247
+Corrected P-value: 0.706707417304
+Overlap: 3/44
 
-Word: nuclease
-P-value: 0.0275437886221
-Corrected P-value: 25.725898573
-Overlap: 2/22
+Word: disease
+P-value: 0.00623332483112
+Corrected P-value: 0.735532330072
+Overlap: 5/138
 
-Word: histidine-rich
-P-value: 0.0275437886221
-Corrected P-value: 25.6983547844
-Overlap: 2/22
+Word: biotic
+P-value: 0.00658623390115
+Corrected P-value: 0.770589366435
+Overlap: 10/468
 
-Word: fbox
-P-value: 0.0285846924017
-Corrected P-value: 26.6409333184
-Overlap: 7/247
+Word: amino
+P-value: 0.00677652843393
+Corrected P-value: 0.786077298335
+Overlap: 10/470
 
-Word: wd
-P-value: 0.0287472922368
-Corrected P-value: 26.7637290725
-Overlap: 5/144
+Word: complex
+P-value: 0.00772885627602
+Corrected P-value: 0.888818471743
+Overlap: 11/555
 
 Word: small
-P-value: 0.0310255403683
-Corrected P-value: 28.8537525426
+P-value: 0.0080820871195
+Corrected P-value: 0.921357931623
 Overlap: 5/147
 
+Word: receptor
+P-value: 0.00883942167548
+Corrected P-value: 0.998854649329
+Overlap: 18/1145
+
+Word: ras-related
+P-value: 0.0109961551252
+Corrected P-value: 1.23156937402
+Overlap: 3/55
+
+Word: transporter
+P-value: 0.011052615462
+Corrected P-value: 1.22684031628
+Overlap: 15/913
+
+Word: threonine-protein
+P-value: 0.0117907253723
+Corrected P-value: 1.29697979096
+Overlap: 7/291
+
+Word: ligase
+P-value: 0.0131547902217
+Corrected P-value: 1.43387213417
+Overlap: 8/369
+
 Word: chelation
-P-value: 0.0342281721268
-Corrected P-value: 31.7979719058
+P-value: 0.013911170916
+Corrected P-value: 1.50240645892
 Overlap: 3/60
 
+Word: chaperone
+P-value: 0.0142662235237
+Corrected P-value: 1.52648591704
+Overlap: 4/111
+
 Word: nbs-lrr
-P-value: 0.0356914190877
-Corrected P-value: 33.1216369134
+P-value: 0.0145416590259
+Corrected P-value: 1.54141585675
 Overlap: 3/61
 
 Word: armadillo
-P-value: 0.0356914190877
-Corrected P-value: 33.0859454943
+P-value: 0.0145416590259
+Corrected P-value: 1.52687419772
 Overlap: 3/61
 
-Word: one
-P-value: 0.0375725294211
-Corrected P-value: 34.7921622439
-Overlap: 2/26
-
-Word: serine
-P-value: 0.0391750275096
-Corrected P-value: 36.2369004463
-Overlap: 14/694
-
-Word: indole-3-acetate
-P-value: 0.0430316177518
-Corrected P-value: 39.7612148026
-Overlap: 2/28
-
-Word: beta-oxidation
-P-value: 0.0430316177518
-Corrected P-value: 39.7181831849
-Overlap: 2/28
-
-Word: avr9
-P-value: 0.0430316177518
-Corrected P-value: 39.6751515671
-Overlap: 2/28
-
-Word: alpha-l-fucosidase
-P-value: 0.0430316177518
-Corrected P-value: 39.6321199494
-Overlap: 2/28
-
-Word: chaperone
-P-value: 0.0431391699513
-Corrected P-value: 39.6880363552
-Overlap: 4/111
-
-Word: virgatum-69955
-P-value: 0.0458650217666
-Corrected P-value: 42.1499550035
-Overlap: 2/29
-
-Word: virgatum-98118
-P-value: 0.0464113932913
-Corrected P-value: 42.6056590414
-Overlap: 1/4
-
-Word: virgatum-96016
-P-value: 0.0464113932913
-Corrected P-value: 42.5592476481
-Overlap: 1/4
-
-Word: virgatum-95146
-P-value: 0.0464113932913
-Corrected P-value: 42.5128362548
-Overlap: 1/4
-
-Word: virgatum-91773
-P-value: 0.0464113932913
-Corrected P-value: 42.4664248615
-Overlap: 1/4
-
-Word: virgatum-80010
-P-value: 0.0464113932913
-Corrected P-value: 42.4200134682
-Overlap: 1/4
-
-Word: virgatum-76610
-P-value: 0.0464113932913
-Corrected P-value: 42.3736020749
-Overlap: 1/4
-
-Word: virgatum-76125
-P-value: 0.0464113932913
-Corrected P-value: 42.3271906816
-Overlap: 1/4
-
-Word: virgatum-72023
-P-value: 0.0464113932913
-Corrected P-value: 42.2807792884
-Overlap: 1/4
-
-Word: virgatum-68176
-P-value: 0.0464113932913
-Corrected P-value: 42.2343678951
-Overlap: 1/4
-
-Word: virgatum-67043
-P-value: 0.0464113932913
-Corrected P-value: 42.1879565018
-Overlap: 1/4
-
-Word: virgatum-6314
-P-value: 0.0464113932913
-Corrected P-value: 42.1415451085
-Overlap: 1/4
-
-Word: virgatum-57635
-P-value: 0.0464113932913
-Corrected P-value: 42.0951337152
-Overlap: 1/4
-
-Word: virgatum-56900
-P-value: 0.0464113932913
-Corrected P-value: 42.0487223219
-Overlap: 1/4
-
-Word: virgatum-55393
-P-value: 0.0464113932913
-Corrected P-value: 42.0023109286
-Overlap: 1/4
-
-Word: virgatum-54673
-P-value: 0.0464113932913
-Corrected P-value: 41.9558995353
-Overlap: 1/4
-
-Word: virgatum-54204
-P-value: 0.0464113932913
-Corrected P-value: 41.909488142
-Overlap: 1/4
-
-Word: virgatum-49387
-P-value: 0.0464113932913
-Corrected P-value: 41.8630767487
-Overlap: 1/4
-
-Word: virgatum-46792
-P-value: 0.0464113932913
-Corrected P-value: 41.8166653554
-Overlap: 1/4
-
-Word: virgatum-4522
-P-value: 0.0464113932913
-Corrected P-value: 41.7702539621
-Overlap: 1/4
-
-Word: virgatum-36083
-P-value: 0.0464113932913
-Corrected P-value: 41.7238425689
-Overlap: 1/4
-
-Word: virgatum-310
-P-value: 0.0464113932913
-Corrected P-value: 41.6774311756
-Overlap: 1/4
-
-Word: virgatum-27324
-P-value: 0.0464113932913
-Corrected P-value: 41.6310197823
-Overlap: 1/4
-
-Word: virgatum-25854
-P-value: 0.0464113932913
-Corrected P-value: 41.584608389
-Overlap: 1/4
-
-Word: virgatum-238102801
-P-value: 0.0464113932913
-Corrected P-value: 41.5381969957
-Overlap: 1/4
-
-Word: virgatum-15703
-P-value: 0.0464113932913
-Corrected P-value: 41.4917856024
-Overlap: 1/4
-
-Word: virgatum-15664
-P-value: 0.0464113932913
-Corrected P-value: 41.4453742091
-Overlap: 1/4
-
-Word: virgatum-12
-P-value: 0.0464113932913
-Corrected P-value: 41.3989628158
-Overlap: 1/4
-
-Word: virgatum-10377
-P-value: 0.0464113932913
-Corrected P-value: 41.3525514225
-Overlap: 1/4
-
-Word: virgatum-100740
-P-value: 0.0464113932913
-Corrected P-value: 41.3061400292
-Overlap: 1/4
-
-Word: tom20
-P-value: 0.0464113932913
-Corrected P-value: 41.2597286359
-Overlap: 1/4
-
-Word: tahdzipi-1
-P-value: 0.0464113932913
-Corrected P-value: 41.2133172427
-Overlap: 1/4
-
-Word: snf
-P-value: 0.0464113932913
-Corrected P-value: 41.1669058494
-Overlap: 1/4
-
-Word: sigma-2
-P-value: 0.0464113932913
-Corrected P-value: 41.1204944561
-Overlap: 1/4
-
-Word: sb09g019590
-P-value: 0.0464113932913
-Corrected P-value: 41.0740830628
-Overlap: 1/4
-
-Word: sb01g039590
-P-value: 0.0464113932913
-Corrected P-value: 41.0276716695
-Overlap: 1/4
-
-Word: rhythmically
-P-value: 0.0464113932913
-Corrected P-value: 40.9812602762
-Overlap: 1/4
-
-Word: rhm1
-P-value: 0.0464113932913
-Corrected P-value: 40.9348488829
-Overlap: 1/4
-
-Word: pa3
-P-value: 0.0464113932913
-Corrected P-value: 40.8884374896
-Overlap: 1/4
-
-Word: os08g24750
-P-value: 0.0464113932913
-Corrected P-value: 40.8420260963
-Overlap: 1/4
-
-Word: os06g46770
-P-value: 0.0464113932913
-Corrected P-value: 40.795614703
-Overlap: 1/4
-
-Word: os06g10430
-P-value: 0.0464113932913
-Corrected P-value: 40.7492033097
-Overlap: 1/4
-
-Word: os05g33030
-P-value: 0.0464113932913
-Corrected P-value: 40.7027919164
-Overlap: 1/4
-
-Word: os03g16800
-P-value: 0.0464113932913
-Corrected P-value: 40.6563805232
-Overlap: 1/4
-
-Word: os02g11830
-P-value: 0.0464113932913
-Corrected P-value: 40.6099691299
-Overlap: 1/4
-
-Word: os01g65780
-P-value: 0.0464113932913
-Corrected P-value: 40.5635577366
-Overlap: 1/4
-
-Word: os01g64640
-P-value: 0.0464113932913
-Corrected P-value: 40.5171463433
-Overlap: 1/4
-
-Word: opaque-2
-P-value: 0.0464113932913
-Corrected P-value: 40.47073495
-Overlap: 1/4
-
-Word: mla1
-P-value: 0.0464113932913
-Corrected P-value: 40.4243235567
-Overlap: 1/4
-
-Word: homeodomain-leucine
-P-value: 0.0464113932913
-Corrected P-value: 40.3779121634
-Overlap: 1/4
-
-Word: hexokinase-2
-P-value: 0.0464113932913
-Corrected P-value: 40.3315007701
-Overlap: 1/4
-
-Word: hemoglobin
-P-value: 0.0464113932913
-Corrected P-value: 40.2850893768
-Overlap: 1/4
-
-Word: heat-and
-P-value: 0.0464113932913
-Corrected P-value: 40.2386779835
-Overlap: 1/4
-
-Word: hat7
-P-value: 0.0464113932913
-Corrected P-value: 40.1922665902
-Overlap: 1/4
-
-Word: glu-trna
-P-value: 0.0464113932913
-Corrected P-value: 40.145855197
-Overlap: 1/4
-
-Word: farnesylated
-P-value: 0.0464113932913
-Corrected P-value: 40.0994438037
-Overlap: 1/4
-
-Word: duf2921
-P-value: 0.0464113932913
-Corrected P-value: 40.0530324104
-Overlap: 1/4
-
-Word: defence
-P-value: 0.0464113932913
-Corrected P-value: 40.0066210171
-Overlap: 1/4
-
-Word: death1
-P-value: 0.0464113932913
-Corrected P-value: 39.9602096238
-Overlap: 1/4
-
-Word: calmodulin-regulated
-P-value: 0.0464113932913
-Corrected P-value: 39.9137982305
-Overlap: 1/4
-
-Word: aminotransferases
-P-value: 0.0464113932913
-Corrected P-value: 39.8673868372
-Overlap: 1/4
-
-Word: alr1346
-P-value: 0.0464113932913
-Corrected P-value: 39.8209754439
-Overlap: 1/4
-
-Word: acid-stable
-P-value: 0.0464113932913
-Corrected P-value: 39.7745640506
-Overlap: 1/4
-
-Word: 4-reductase
-P-value: 0.0464113932913
-Corrected P-value: 39.7281526573
-Overlap: 1/4
-
-Word: 3-like
-P-value: 0.0464113932913
-Corrected P-value: 39.681741264
-Overlap: 1/4
-
-Word: 3-dehydroquinate
-P-value: 0.0464113932913
-Corrected P-value: 39.6353298707
-Overlap: 1/4
-
-Word: gtp
-P-value: 0.0485268387755
-Corrected P-value: 41.3933934755
-Overlap: 3/69
-
-Word: u-box
-P-value: 0.0487649811953
-Corrected P-value: 41.5477639784
-Overlap: 2/30
-
-Word: seven
-P-value: 0.0487649811953
-Corrected P-value: 41.4989989972
-Overlap: 2/30
-
-Word: beta-glucosyltransferase
-P-value: 0.0487649811953
-Corrected P-value: 41.450234016
-Overlap: 2/30
-
-Word: dnaj
-P-value: 0.0490707535244
-Corrected P-value: 41.6610697422
-Overlap: 5/167
+Word: transmembrane
+P-value: 0.0149193125957
+Corrected P-value: 1.55160850995
+Overlap: 6/236
 
 Word: myb-like
-P-value: 0.0493003556312
-Corrected P-value: 41.8067015752
+P-value: 0.0165143299732
+Corrected P-value: 1.70097598724
 Overlap: 4/116
+
+Word: g-beta
+P-value: 0.0169889648468
+Corrected P-value: 1.73287441437
+Overlap: 4/117
+
+Word: nucleotide
+P-value: 0.0171898270506
+Corrected P-value: 1.73617253211
+Overlap: 7/314
+
+Word: resistance
+P-value: 0.0177231029713
+Corrected P-value: 1.77231029713
+Overlap: 8/390
+
+Word: peptidase
+P-value: 0.0188428687614
+Corrected P-value: 1.86544400738
+Overlap: 5/182
+
+Word: transcription
+P-value: 0.0210401752298
+Corrected P-value: 2.06193717252
+Overlap: 43/3707
+
+Word: secretory
+P-value: 0.0244878568307
+Corrected P-value: 2.37532211258
+Overlap: 5/195
+
+Word: aminotransferase
+P-value: 0.0250555312634
+Corrected P-value: 2.40533100129
+Overlap: 3/75
+
+Word: auxin
+P-value: 0.0267305858179
+Corrected P-value: 2.5394056527
+Overlap: 6/270
+
+Word: kinases
+P-value: 0.0267349898496
+Corrected P-value: 2.51308904587
+Overlap: 14/931
+
+Word: tyrosine
+P-value: 0.0268156552761
+Corrected P-value: 2.49385594068
+Overlap: 3/77
+
+Word: handling
+P-value: 0.0268156552761
+Corrected P-value: 2.4670402854
+Overlap: 3/77
+
+Word: vacuolar
+P-value: 0.0296265080334
+Corrected P-value: 2.69601223104
+Overlap: 4/139
+
+Word: phosphatase
+P-value: 0.0304314828216
+Corrected P-value: 2.73883345395
+Overlap: 8/433
+
+Word: zipper
+P-value: 0.0324814151815
+Corrected P-value: 2.89084595116
+Overlap: 3/83
+
+Word: cytoplasmatic
+P-value: 0.0327921350655
+Corrected P-value: 2.88570788576
+Overlap: 5/211
+
+Word: similar
+P-value: 0.0330047159807
+Corrected P-value: 2.87141029032
+Overlap: 6/284
+
+Word: synthetase
+P-value: 0.0333624864804
+Corrected P-value: 2.86917383731
+Overlap: 5/212
+
+Word: uncharacterized
+P-value: 0.0341637682361
+Corrected P-value: 2.90392030007
+Overlap: 24/1913
+
+Word: phosphatases
+P-value: 0.0355295043026
+Corrected P-value: 2.98447836142
+Overlap: 3/86
+
+Word: polymerase
+P-value: 0.0357053489218
+Corrected P-value: 2.96354396051
+Overlap: 5/216
+
+Word: f-box
+P-value: 0.0357917299493
+Corrected P-value: 2.93492185584
+Overlap: 7/367
+
+Word: regulation
+P-value: 0.0366532522207
+Corrected P-value: 2.96891342987
+Overlap: 37/3238
+
+Word: abiotic
+P-value: 0.0413716204837
+Corrected P-value: 3.3097296387
+Overlap: 9/545
+
+Word: gtp-binding
+P-value: 0.0420501266511
+Corrected P-value: 3.32196000544
+Overlap: 3/92
 
