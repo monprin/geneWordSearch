@@ -28,16 +28,24 @@ function handleForm() {
     
     // If everything is in order, run the analysis and write the results
     if(species == 'other') {customDB();}
-    else {builtInDB(species,geneList,probCut);}
+    else {builtInDB();}
     
     return false;
 }
 
-function builtInDB(species,geneList,probCut){
+function builtInDB(){
 // Handles the request if the client is using a built in database
     $('#waitMSG').removeClass("hidden");
-    $.post(($SCRIPT_ROOT + "/_gene_analysis"),{species: species, geneList: geneList, probCut: probCut})
-    .done(function(data){tableMaker(data.result);});
+    var fd = new FormData(document.querySelector('#geneForm'));
+    $.ajax({
+        url: ($SCRIPT_ROOT + '/_gene_analysis'),
+        data: fd,
+        processData: false,
+        contentType: false,
+        type: 'POST',
+        success: function(data){tableMaker(data.result);},
+        statusCode: {400: function(){alert('At least one of the genes inputted is not present in the database');}}
+    });
     return;
 }
 
@@ -51,7 +59,8 @@ function customDB(){
         processData: false,
         contentType: false,
         type: 'POST',
-        success: function(data){tableMaker(data.result);}
+        success: function(data){tableMaker(data.result);},
+        statusCode: {400: function(){alert('At least one of the genes inputted is not present in the database');}}
         });
     return;}
 

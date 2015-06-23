@@ -5,7 +5,7 @@ import re
 
 import json
 from werkzeug import secure_filename
-from flask import request, render_template, jsonify, redirect, url_for
+from flask import request, render_template, jsonify, redirect, url_for, abort
 from webapp import app
 from genewordsearch.Classes import WordFreq
 from genewordsearch.GeneWordSearch import geneWordSearch
@@ -26,7 +26,10 @@ def gene_analysis():
 	genes = list(filter((lambda x: x != ''),genes))
 	
 	# Run the analysis and return the JSONified results
-	results = geneWordSearch(genes,species,minChance=probCutoff)
+	try:
+		results = geneWordSearch(genes,species,minChance=probCutoff)
+	except KeyError:
+		abort(400)
 	ans = WordFreq.to_JSON_array(results[0])
 	return jsonify(result=ans)
 
@@ -78,7 +81,10 @@ def custom_db_analysis():
 	probCutoff = float(request.form['probCut'])
 	genes = re.split('\r| |,|\t|\n',genes)
 	genes = list(filter((lambda x: x != ''),genes))
-	results = geneWordSearch(genes,ip,minChance=probCutoff)
+	try:
+		results = geneWordSearch(genes,ip,minChance=probCutoff)
+	except KeyError:
+		abort(400)
 	ans = WordFreq.to_JSON_array(results[0])
 	shutil.rmtree('genewordsearch/databases/'+ip+'/')
 	return jsonify(result=ans)
