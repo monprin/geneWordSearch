@@ -5,10 +5,11 @@ import re
 
 import json
 from werkzeug import secure_filename
-from flask import request, render_template, jsonify, redirect, url_for, abort
-from webapp import app
+from flask import Flask, request, render_template, jsonify, redirect, url_for, abort
 from genewordsearch.Classes import WordFreq
 from genewordsearch.GeneWordSearch import geneWordSearch
+
+app = Flask(__name__)
 
 @app.route('/')
 def home():
@@ -89,4 +90,5 @@ def custom_db_analysis():
 	shutil.rmtree('genewordsearch/databases/'+ip+'/')
 	return jsonify(result=ans)
 	
-	
+if __name__ == '__main__':
+	app.run(host='0.0.0.0')	
