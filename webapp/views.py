@@ -9,7 +9,10 @@ from flask import Flask, request, render_template, jsonify, redirect, url_for, a
 from genewordsearch.Classes import WordFreq
 from genewordsearch.GeneWordSearch import geneWordSearch
 
+UPLOAD_FOLDER = os.getcwd() + '/webapp/tmp/'
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
 def home():
