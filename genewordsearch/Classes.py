@@ -9,8 +9,8 @@ class WordFreq:
 	def __init__(self, word, freq):
 	# Constructor
 		self.word = word
-		self.p = 0
-		self.pCor = 0
+		self.p = None
+		self.pCor = None
 		self.freq = freq
 		self.total = 0
 		self.genes = []
