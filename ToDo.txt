@@ -1,0 +1,11 @@
+This a list of future potential enhancements, presence on this list does not ensure eventual implementation nor is there a guarantee of time frame. Potential additions are welcome.
+
+1.  import modules so they are available in the namespace and can be used
+       when other modules in the namespace. e.g.
+       > import geneWordSearch as gws
+       > x = gws.geneWordSeach(['gene1','gene2','gene3'],'arabidopsis')
+       #from genewordsearch import *
+2.  Put example searches on the websites
+3.  Implement REST protocols
+4.  Implement a translation matrix for homologous genes to better leverage interspecies data
+5.  Look into Dirchlet analysis

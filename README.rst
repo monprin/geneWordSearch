@@ -4,11 +4,11 @@ GeneWordSearch
 Basic Purpose
 -------------
 
-This program takes in names of genes (in one of several ways, see options below), finds the annotations in the in the included databases or a user generate one. It will then sort the annotations it finds based on their frequency in the subset vs their frequency in the database. This is done using a hypergeometric distribution function from scipy. 
+This program takes in names of genes (in one of several ways, see options below), finds the annotations in the in the included databases or a user generate one. It will then sort the annotations it finds based on their frequency in the subset vs their frequency in the database. This is done using a hypergeometric distribution function from scipy.
 
 Using the command line interface ($ gws) will output the results to a file in one of two formats, a human readable version (default), or a tsv (tab separate value) sheet for further prossesing.
 
-This can also be run as a webapp for a GUI, that is why flask is required. 
+This can also be run as a webapp for a GUI, that is why flask is required.
 
 Use
 ---
@@ -53,21 +53,21 @@ Input:
 Truncated Output Sample:
 
 ::
-	
+
 	Multiple Gene Words:
-	
+
 	Word: put-169a-panicum
 	P-value: 0.000104078977059
 	Corrected P-value: 0.233345066566
 	Overlap: 370/28229
-	Genes Appeared In: grmzm2g000510 grmzm2g001255 grmzm2g001296 ... 
-	
+	Genes Appeared In: grmzm2g000510 grmzm2g001255 grmzm2g001296 ...
+
 	Word: expressed
 	P-value: 0.000289040114643
 	Corrected P-value: 0.646293696342
 	Overlap: 258/19207
-	Genes Appeared In: grmzm2g001296 grmzm2g002023 grmzm2g004531 ... 
-	
+	Genes Appeared In: grmzm2g001296 grmzm2g002023 grmzm2g004531 ...
+
 	Word: chromatin
 	P-value: 0.00103289214074
 	Corrected P-value: 2.30025079743
@@ -75,13 +75,13 @@ Truncated Output Sample:
 	Genes Appeared In: grmzm2g003002 grmzm2g010342 grmzm2g023983 ...
 
 	...
-      
+
 	Web Links associated with these genes:
 
 	ttp://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g164141&modeinput=absolute
 
 	http://bbc.botany.utoronto.ca/efp_maize/cgi-bin/efpweb.cgi?primarygene=grmzm2g132212&modeinput=absolute
-	
+
 	...
 
 
@@ -134,7 +134,7 @@ Finally the results are printed out using one of two relevant class methods depe
 Web App
 ~~~~~~~
 
-The web app is based on flask, jQuery, Bootstrap, and Jansy Bootstrap (for file selector plugin). It is run by navigating to the main folder and running run.py. It automatically starts the server on localhost:50001, which can be changed by changing by editing the __init__.py in the webapp folder.
+The web app is based on flask, jQuery, Bootstrap, and Jansy Bootstrap (for file selector plugin). It is run by navigating to the main folder and running views.py. It automatically starts the server on localhost:5000, which can be changed by changing by editing the views.py file in the webapp folder.
 
 Databases
 ---------
@@ -152,9 +152,7 @@ Word Count Database
 
 This database is a dictionary that is pickled in the databases folder for the relevant species. There is also a textual representation of this information in a tsv sheet for references purposes.
 
-This is created by the function DBBuilder.totalWordCounts that essentially uses the same algorithm as the main gene word search, but instead of for specific genes, it adds the annotations for all of the genes in the database and just doesn't store some of the superfluous information. It takes no arguments and creates two files in the databases folder. It runs automatically after a new database is created. 
-
-
+This is created by the function DBBuilder.totalWordCounts that essentially uses the same algorithm as the main gene word search, but instead of for specific genes, it adds the annotations for all of the genes in the database and just doesn't store some of the superfluous information. It takes no arguments and creates two files in the databases folder. It runs automatically after a new database is created.
 
 Networks Database (currently deprecated - may be resurrected)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -2,12 +2,12 @@
 # Requires Python3
 
 # Written by Joseph Jeffers
-# Updated Feb 15 2015
+# Updated Aug 18, 2015
 
 from setuptools import setup, find_packages
 
 setup(name='GeneWordSearch',
-version='2.0',
+version='2.1',
 license='GPLv2',
 description='Annotation finder for genes.',
 author='Joe Jeffers',

@@ -4,9 +4,12 @@
 import re
 import os
 import json
+import glob
+import shutil
 from werkzeug import secure_filename
 from flask import Flask, request, render_template, jsonify, redirect, url_for, abort
 from genewordsearch.Classes import WordFreq
+from genewordsearch.DBBuilder import geneWordBuilder
 from genewordsearch.GeneWordSearch import geneWordSearch
 
 UPLOAD_FOLDER = os.getcwd() + '/webapp/tmp/'
@@ -28,7 +31,7 @@ def gene_analysis():
 	probCutoff = float(request.form['probCut'])
 	genes = re.split('\r| |,|\t|\n',genes)
 	genes = list(filter((lambda x: x != ''),genes))
-	
+
 	# Run the analysis and return the JSONified results
 	try:
 		results = geneWordSearch(genes,species,minChance=probCutoff)
@@ -40,10 +43,6 @@ def gene_analysis():
 @app.route('/_custom_db_analysis',methods=['POST'])
 def custom_db_analysis():
 # Deal with a custom database file
-	import os
-	import glob
-	import shutil
-	from genewordsearch.DBBuilder import geneWordBuilder 
 	
 	# Prep the database files for processing
 	ip = str(request.environ['REMOTE_ADDR'])
@@ -58,7 +57,7 @@ def custom_db_analysis():
 		fileNum += 1
 	fileList = glob.glob(folder+'/*')
 	fileList.sort()
-	
+
 	# Pull and organize the rest of the database info
 	headers = []
 	headtxt = []
@@ -79,7 +78,7 @@ def custom_db_analysis():
 			headers.append(False)
 	geneWordBuilder(ip,fileList,geneCols,desCols,delimiters,headers)
 	shutil.rmtree(folder+'/')
-	
+
 	# Run the enrichment analysis
 	genes = str(request.form['geneList'])
 	probCutoff = float(request.form['probCut'])
@@ -92,6 +91,6 @@ def custom_db_analysis():
 	ans = WordFreq.to_JSON_array(results[0])
 	shutil.rmtree('genewordsearch/databases/'+ip+'/')
 	return jsonify(result=ans)
-	
+
 if __name__ == '__main__':
-	app.run(host='0.0.0.0')	
+	app.run(host='0.0.0.0')

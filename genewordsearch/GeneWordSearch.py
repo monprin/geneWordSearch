@@ -2,16 +2,21 @@
 
 # Written by Joe Jeffers
 
-def geneWordSearch(genes,species,minChance=0.05,corrected=False):
-# Input: Takes in a list of genes, the species, and the probability cutoff.
-# Output: Returns tuple of words and links. Only returns the genes that have a 
-#         chance probability of less than the minChance variable. 
-	import re
-	import pickle
-	import pkg_resources
-	from genewordsearch.Classes import WordFreq
-	from genewordsearch.Classes import GeneNote
-	
+import re
+import pickle
+import pkg_resources
+from genewordsearch.Classes import WordFreq
+from genewordsearch.Classes import GeneNote
+
+def geneWordSearch(genes,species,minChance=0.05,minWordFreq=3,corrected=False):
+# Does the analysis work of making of looking at the genes and doing the statistics
+#	genes - list of strings of the gene ids in the set to be analysed
+#	species - str of the species these genes belong to
+#	minChance - the minimum probability that is acceptable for the word to be included in the Results
+#	minWordFreq - the minimum amount of genes the word must appear in in the set to be counted
+#	corrected - boolean saying whether the results should be cutoff using the corrected p value or the
+#	            original p, if true, results are more reliable, but less numerous
+
 	# Unpickle the database of words
 	dbFolder = 'databases/'+ species
 	if pkg_resources.resource_exists(__name__, dbFolder + '/geneNotes.p'):
@@ -19,23 +24,28 @@ def geneWordSearch(genes,species,minChance=0.05,corrected=False):
 	else:
 		raise ValueError('There is no database associated with this species, please use either \'maize\' or \'ath\', or make your own using \'--buildDB\'.')
 	db = pickle.load(dbfile)
-	
+
 	# Build the word list up for all of the genes provided.
 	words = []
 	webSites = []
+	badGenes = []
 	links = WordFreq('Web Links',0)
 	for item in genes:
 		# Make the input all lowercase to match the database
 		gene = item.lower()
 		i=1
-		
-		# Get the object from the DB
-		geneData = db[gene]
-		
+
+		# Get the object from the DB, skip term if it is not there
+		try:
+			geneData = db[gene]
+		except KeyError:
+			badGenes.append(gene)
+			continue
+
 		# Adding words related to the gene in db to the overall list
 		for word in geneData.words:
 			words.append([word,geneData.gene])
-		
+
 		# Dealing with the websites
 		for link in geneData.links:
 			links.addGene(geneData.gene)
@@ -43,10 +53,10 @@ def geneWordSearch(genes,species,minChance=0.05,corrected=False):
 
 	# Sort to put words in alphabetical order for counting
 	words.sort()
-	
+
 	# Adding the web link counts to the list
 	wordList = []
-	
+
 	# Counting the words
 	for item in words:
 		if(wordList == [] or wordList[0].word != item[0]):
@@ -56,17 +66,17 @@ def geneWordSearch(genes,species,minChance=0.05,corrected=False):
 			wordList[0].increment()
 			wordList[0].addGene(item[1])
 	del words
-	
+
 	# Getting rid of words that don't happen in enough genes to matter
 	wordListRaw = wordList[:]
 	wordList = []
 	length = 0
 	for word in wordListRaw:
-		if(word.freq >= 3):
+		if(word.freq >= minWordFreq):
 			wordList.append(word)
 			length += word.freq
 	del wordListRaw
-	
+
 	# Finding the respective P values
 	pickleDict = dbfile = open(pkg_resources.resource_filename(__name__, dbFolder + '/totalWordCounts.p'),'rb')
 	wordCounts = pickle.load(pickleDict)
@@ -75,20 +85,20 @@ def geneWordSearch(genes,species,minChance=0.05,corrected=False):
 		word.computeP(wordCounts,length,totalWords)
 	pickleDict.close()
 	del wordCounts
-	
+
 	# Sorting now by P Value instead of alphabetical
 	wordList = sorted(wordList, key=lambda item: item.p)
-	
+
 	# Finding corrected P Values using Holm–Bonferroni method
 	count = len(wordList)
 	for i in range(0,count):
 		wordList[i].pCorrect(count,(i+1))
-	
+
 	# Sort by corrected P Value instead of original P value if desired
 	if(corrected):
 		wordList = sorted(wordList, key=lambda item: item.pCor)
-	
+
 	# Filtering out results that are higher than the minimum chance threshold
 	wordList = filter(lambda x: x.p <= minChance,wordList)
-	
+
 	return (list(wordList),list(webSites))
