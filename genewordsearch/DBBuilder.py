@@ -4,6 +4,7 @@
 import re
 import os
 import pickle
+import shutil
 import pkg_resources
 from genewordsearch.Classes import GeneNote, WordFreq
 
@@ -129,14 +130,22 @@ def tempBuilder(genes,species):
 #	species - str of the species name to be saved under
 
 	# Load the full DB to exatract items from
-	fullDB = pickle.load(open('databases/'+ species.lower() + '/geneNotes.p','rb'))
+	dbFolder = 'databases/'+ species.lower()
+	if pkg_resources.resource_exists(__name__, dbFolder + '/geneNotes.p'):
+		dbfile = open(pkg_resources.resource_filename(__name__, dbFolder + '/geneNotes.p'),'rb')
+	else:
+		raise ValueError('There is no database associated with this species, please use either \'maize\' or \'ath\', or make your own using \'--buildDB\'.')
+	fullDB = pickle.load(dbfile)
 	db = dict()
 
 	print('Finding the requested genes...')
 	# Find all of the needed genes and add them to the new DB
 	for gene in genes:
 		name = gene.lower()
-		db[name] = fullDB[name]
+		try:
+			db[name] = fullDB[name]
+		except KeyError:
+			print(name + ' is not in the full database')
 	del fullDB
 
 	print('Counting the words...')
@@ -148,6 +157,11 @@ def tempBuilder(genes,species):
 	print('Bookeeping and saving files...')
 	bookkeeper('tmp', x[0], x[1])
 	print('Database built. See databases/tmp/ for the output.')
+	return
+
+def cleanTmp():
+	# Function to clean up the temporary database files
+	shutil.rmtree(pkg_resources.resource_filename(__name__, '/databases/tmp/'))
 	return
 
 def wordCounter(db):
