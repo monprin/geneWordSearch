@@ -19,7 +19,7 @@ def resultsPrinter(results, web, table, outfile, genes):
 # Function to print the results
 	# Input:
 	#	The results from the geneWordSearch function
-	#	a boolean for wheather to print links
+	#	a boolean for whether to print links
 	#	A boolean for whether it should be table output
 	#	A writeable file object
 	#   A boolean for whether or not to print genes

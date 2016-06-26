@@ -7,7 +7,7 @@
 from setuptools import setup, find_packages
 
 setup(name='GeneWordSearch',
-version='2.2',
+version='2.3',
 license='GPLv2',
 description='Annotation finder for genes.',
 author='Joe Jeffers',
