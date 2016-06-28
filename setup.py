@@ -29,7 +29,7 @@ class SetupDBFolder(install):
         install.run(self)
 
 setup(name='GeneWordSearch',
-version='2.4.1',
+version='2.4.2',
 license='GPLv2',
 description='Annotation finder for genes.',
 author='Joe Jeffers',
