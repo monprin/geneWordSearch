@@ -104,21 +104,24 @@ def geneWordSearch(genes,species,minChance=0.05,minWordFreq=3,corrected=False):
 	return (list(wordList),list(webSites))
 
 # Pull all annotation words for a list of genes
-def geneAnnotations(genes, species):
+def geneWords(genes, species, raw=False):
 	# Unpickle the database of words
 	if pkg_resources.resource_exists(__name__, 'databases/' + species + '/geneNotes.p'):
 		dbfile = open(pkg_resources.resource_filename(__name__, 'databases/' + species + '/geneNotes.p'),'rb')
 	else:
 		raise ValueError('There is no database associated with this species, please use either \'maize\' or \'ath\', or make your own using \'--buildDB\'.')
 	db = pickle.load(dbfile)
-	
+
 	# Get terms from DB if present, otherwise just make it an empty list
 	words = {}
 	for gene in genes:
 		try:
-			words[gene] = list(db[gene.lower()].words)
+			if(raw):
+				words[gene] = list(db[gene.lower()].annotations)
+			else:
+				words[gene] = list(db[gene.lower()].words)
 		except KeyError:
 			words[gene] = []
 			continue
-	
+
 	return words

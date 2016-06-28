@@ -120,11 +120,16 @@ class GeneNote:
 		self.words = set()
 		self.littleWords = set()
 		self.links = set()
+		self.annotations = set()
 
 	def addWords(self,words):
 	# Adds words to the list of associated words
 		for word in words:
 			self.words.add(word)
+	
+	def addAnnotations(self,annotations):
+		for anote in annotations:
+			self.annotations.add(anote)
 
 	def addLink(self,link):
 	# Adds link to the list of associated links

@@ -56,7 +56,7 @@ def geneWordBuilder(species,infiles,geneCols,desCols,delimiters,headers):
 			line = line[:-1]
 
 			# Split into columns
-			row = line.split()
+			row = line.split(splitter)
 
 			# Handle short lines in the database
 			if(len(row)-1 <= maxDes):
@@ -92,6 +92,7 @@ def geneWordBuilder(species,infiles,geneCols,desCols,delimiters,headers):
 					row.remove(entry)
 
 			# Splitting the words up by various delimiations
+			db[geneName].addAnnotations(row)
 			for entry in row:
 				words += re.split(' |_|,|\.|/|\(|\)|\;|\:',entry.lower())
 
@@ -211,7 +212,7 @@ def littleWordRemover(db, wordListRaw, upper=10000, lower=3):
 
 def bookkeeper(species, geneDB, countList):
 # Internal Method
-# Make all of the necessary files 
+# Make all of the necessary files
 
 	# Find the total word count, add it to the list
 	total = 0
