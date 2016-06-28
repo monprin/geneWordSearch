@@ -3,8 +3,8 @@
 # Written by Joe Jeffers
 
 import re
+import os
 import pickle
-import pkg_resources
 from genewordsearch.Classes import WordFreq
 from genewordsearch.Classes import GeneNote
 
@@ -18,11 +18,11 @@ def geneWordSearch(genes,species,minChance=0.05,minWordFreq=3,corrected=False):
 #	            original p, if true, results are more reliable, but less numerous
 
 	# Unpickle the database of words
-	dbFolder = 'databases/'+ species
-	if pkg_resources.resource_exists(__name__, dbFolder + '/geneNotes.p'):
-		dbfile = open(pkg_resources.resource_filename(__name__, dbFolder + '/geneNotes.p'),'rb')
-	else:
-		raise ValueError('There is no database associated with this species, please use either \'maize\' or \'ath\', or make your own using \'--buildDB\'.')
+	dbFolder = os.getenv('GWS_STORE', '~/.gws/') + species.lower().replace(' ','')
+	try:
+		dbfile = open(dbFolder + '/geneNotes.p','rb')
+	except:
+		raise ValueError('There is no database associated with '+species+', please use either \'maize\' or \'ath\', or make your own using \'--buildDB\'.')
 	db = pickle.load(dbfile)
 
 	# Build the word list up for all of the genes provided.
@@ -78,7 +78,7 @@ def geneWordSearch(genes,species,minChance=0.05,minWordFreq=3,corrected=False):
 	del wordListRaw
 
 	# Finding the respective P values
-	pickleDict = dbfile = open(pkg_resources.resource_filename(__name__, dbFolder + '/totalWordCounts.p'),'rb')
+	pickleDict = dbfile = open(dbFolder + '/totalWordCounts.p','rb')
 	wordCounts = pickle.load(pickleDict)
 	totalWords = wordCounts['Total Count']
 	for word in wordList:
@@ -106,11 +106,12 @@ def geneWordSearch(genes,species,minChance=0.05,minWordFreq=3,corrected=False):
 # Pull all annotation words for a list of genes
 def geneWords(genes, species, raw=False):
 	# Unpickle the database of words
-	if pkg_resources.resource_exists(__name__, 'databases/' + species + '/geneNotes.p'):
-		dbfile = open(pkg_resources.resource_filename(__name__, 'databases/' + species + '/geneNotes.p'),'rb')
-	else:
-		raise ValueError('There is no database associated with this species, please use either \'maize\' or \'ath\', or make your own using \'--buildDB\'.')
-	db = pickle.load(dbfile)
+	dbFolder = os.getenv('GWS_STORE', '~/.gws/') + species.lower().replace(' ','')
+	try:
+		dbFile = open(dbFolder + '/geneNotes.p','rb')
+	except:
+		raise ValueError('There is no database associated with \''+species+'\', please use either \'maize\' or \'ath\', or make your own using \'--buildDB\'.')
+	db = pickle.load(dbFile)
 
 	# Get terms from DB if present, otherwise just make it an empty list
 	words = {}

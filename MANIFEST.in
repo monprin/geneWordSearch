@@ -1,0 +1,4 @@
+include genewordsearch/databases/maize/geneNotes.p
+include genewordsearch/databases/maize/totalWordCounts.p
+include genewordsearch/databases/ath/geneNotes.p
+include genewordsearch/databases/ath/totalWordCounts.p

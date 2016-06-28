@@ -5,7 +5,6 @@ import re
 import os
 import pickle
 import shutil
-import pkg_resources
 from genewordsearch.Classes import GeneNote, WordFreq
 
 def geneWordBuilder(species,infiles,geneCols,desCols,delimiters,headers):
@@ -131,10 +130,10 @@ def tempBuilder(genes,species):
 #	species - str of the species name to be saved under
 
 	# Load the full DB to exatract items from
-	dbFolder = 'databases/'+ species.lower()
-	if pkg_resources.resource_exists(__name__, dbFolder + '/geneNotes.p'):
-		dbfile = open(pkg_resources.resource_filename(__name__, dbFolder + '/geneNotes.p'),'rb')
-	else:
+	dbFolder = os.getenv('GWS_STORE', '~/.gws/') + species.lower().replace(' ','')
+	try:
+		dbfile = open(dbFolder + '/geneNotes.p','rb')
+	except:
 		raise ValueError('There is no database associated with this species, please use either \'maize\' or \'ath\', or make your own using \'--buildDB\'.')
 	fullDB = pickle.load(dbfile)
 	db = dict()
@@ -162,7 +161,7 @@ def tempBuilder(genes,species):
 
 def cleanTmp():
 	# Function to clean up the temporary database files
-	shutil.rmtree(pkg_resources.resource_filename(__name__, '/databases/tmp/'))
+	shutil.rmtree(os.getenv('GWS_STORE', '~/.gws/') + 'tmp')
 	return
 
 def wordCounter(db):
@@ -221,27 +220,26 @@ def bookkeeper(species, geneDB, countList):
 	countList.insert(0,WordFreq('Total Count',total))
 
 	# Determine outfile locations
-	dbFolder = 'databases/' + species.lower() + '/'
-	os.makedirs(pkg_resources.resource_filename(__name__, dbFolder), exist_ok=True)
-	folder = pkg_resources.resource_filename(__name__, dbFolder)
+	dbFolder = os.getenv('GWS_STORE', '~/.gws/') + species.lower().replace(' ','')
+	os.makedirs(dbFolder, exist_ok=True)
 
 	# --------------Save the gene database files-------------------
 
 	# Make a text version for posterity (and error checking)
 	printList = list(geneDB.values())
-	geneFile = open(folder+'geneNotes.tsv','w',newline='')
+	geneFile = open(dbFolder+'/geneNotes.tsv','w',newline='')
 	for gene in printList:
 		if not(gene.gene == ''):
 			geneFile.write(str(gene))
 	geneFile.close()
 
 	# Pickle that stuff! (for geneWordSearch function)
-	pickle.dump(geneDB,open(folder+'geneNotes.p','wb'))
+	pickle.dump(geneDB,open(dbFolder+'/geneNotes.p','wb'))
 
 	# ---------------Save the total word count files----------------
 
 	# Make a text version for posterity (and error checking)
-	countFile = open(folder+'totalWordCounts.tsv','w')
+	countFile = open(dbFolder+'/totalWordCounts.tsv','w')
 	for word in countList:
 		countFile.write(str(word.freq) + '\t' + str(word.word) + '\n')
 	countFile.close()
@@ -250,7 +248,7 @@ def bookkeeper(species, geneDB, countList):
 	countDB = dict()
 	for word in countList:
 		countDB[word.word] = word.freq
-	pickle.dump(countDB,open(folder+'totalWordCounts.p','wb'))
+	pickle.dump(countDB,open(dbFolder+'/totalWordCounts.p','wb'))
 
 	return
 # ---------------------Deprecated at the momment------------------------
