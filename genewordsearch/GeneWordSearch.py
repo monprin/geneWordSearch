@@ -8,6 +8,10 @@ import pickle
 from genewordsearch.Classes import WordFreq
 from genewordsearch.Classes import GeneNote
 
+def getPath(species):
+	base = os.getenv('GWS_STORE', os.path.expandvars('$HOME/.gws/'))
+	return os.path.join(base, species.lower().replace(' ',''))
+
 def geneWordSearch(genes,species,minChance=0.05,minWordFreq=3,corrected=False):
 # Does the analysis work of making of looking at the genes and doing the statistics
 #	genes - list of strings of the gene ids in the set to be analysed
@@ -18,9 +22,9 @@ def geneWordSearch(genes,species,minChance=0.05,minWordFreq=3,corrected=False):
 #	            original p, if true, results are more reliable, but less numerous
 
 	# Unpickle the database of words
-	dbFolder = os.getenv('GWS_STORE', '~/.gws/') + species.lower().replace(' ','')
+	dbFolder = getPath(species)
 	try:
-		dbfile = open(dbFolder + '/geneNotes.p','rb')
+		dbfile = open(os.path.join(dbFolder, 'geneNotes.p'),'rb')
 	except:
 		raise ValueError('There is no database associated with '+species+', please use either \'maize\' or \'ath\', or make your own using \'--buildDB\'.')
 	db = pickle.load(dbfile)
@@ -78,7 +82,7 @@ def geneWordSearch(genes,species,minChance=0.05,minWordFreq=3,corrected=False):
 	del wordListRaw
 
 	# Finding the respective P values
-	pickleDict = dbfile = open(dbFolder + '/totalWordCounts.p','rb')
+	pickleDict = dbfile = open(os.path.join(dbFolder, 'totalWordCounts.p'),'rb')
 	wordCounts = pickle.load(pickleDict)
 	totalWords = wordCounts['Total Count']
 	for word in wordList:
@@ -106,9 +110,9 @@ def geneWordSearch(genes,species,minChance=0.05,minWordFreq=3,corrected=False):
 # Pull all annotation words for a list of genes
 def geneWords(genes, species, raw=False):
 	# Unpickle the database of words
-	dbFolder = os.getenv('GWS_STORE', '~/.gws/') + species.lower().replace(' ','')
+	dbFolder = getPath(species)
 	try:
-		dbFile = open(dbFolder + '/geneNotes.p','rb')
+		dbFile = open(os.path.join(dbFolder, 'geneNotes.p'),'rb')
 	except:
 		raise ValueError('There is no database associated with \''+species+'\', please use either \'maize\' or \'ath\', or make your own using \'--buildDB\'.')
 	db = pickle.load(dbFile)

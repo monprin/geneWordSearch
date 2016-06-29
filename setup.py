@@ -11,11 +11,11 @@ from setuptools.command.install import install
 class SetupDBFolder(install):
     def run(self):
         # Find the database folder
-        folder = os.getenv('GWS_STORE', '~/.gws/')
+        base = os.getenv('GWS_STORE', os.path.expandvars('$HOME/.gws/'))
 
         # Make folders for the default data sets
-        zmDir = folder + 'maize'
-        atDir = folder + 'ath'
+        zmDir = os.path.join(base,'maize')
+        atDir = os.path.join(base, 'ath')
         os.makedirs(zmDir, exist_ok=True)
         os.makedirs(atDir, exist_ok=True)
 
@@ -29,7 +29,7 @@ class SetupDBFolder(install):
         install.run(self)
 
 setup(name='GeneWordSearch',
-version='2.4.2',
+version='2.5',
 license='GPLv2',
 description='Annotation finder for genes.',
 author='Joe Jeffers',
@@ -39,4 +39,4 @@ packages=find_packages(),
 cmdclass={'install': SetupDBFolder},
 long_description=open('README.rst').read(),
 scripts=['bin/gws'],
-install_requires=['flask','numpy','scipy'])
+install_requires=['numpy','scipy'])
