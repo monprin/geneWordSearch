@@ -20,9 +20,8 @@ def geneWordBuilder(species,infiles,geneCols,desCols,delimiters,headers):
 #	delimeters - list of strings containing the delimeters for the respective files
 #	headers - list of booleans denoting whether or not the respective files have headers
 
-	db = dict()
-
 	#----------------Building the gene database---------------------
+	db = dict()
 	fileNum = 0
 	for infile in infiles:
 	# For each of the given files, process all the genes present
@@ -60,9 +59,9 @@ def geneWordBuilder(species,infiles,geneCols,desCols,delimiters,headers):
 
 			# Split into columns
 			row = line.split(splitter)
-
+			
 			# Handle short lines in the database
-			if(len(row)-1 <= maxDes):
+			if(len(row)-1 <= maxDes and not(toEnd)):
 				skippedRows.append(rowNum)
 				rowNum += 1
 				continue
@@ -76,7 +75,7 @@ def geneWordBuilder(species,infiles,geneCols,desCols,delimiters,headers):
 			# Add gene object to db if not there already
 			if(geneName not in db):
 				db[geneName] = GeneNote(geneName)
-
+			
 			# Getting the columns that have the descriptions
 			desColTemp = desCol[:]
 			if(toEnd):
@@ -109,7 +108,7 @@ def geneWordBuilder(species,infiles,geneCols,desCols,delimiters,headers):
 			or (re.fullmatch(genePattern,x)) or (re.fullmatch(virgPattern,x))
 			or (re.fullmatch(alphaNumPattern,x)))
 			words = list(filter(f,words))
-
+			
 			# Add all of the words into the database
 			db[geneName].addWords(words)
 			fileNum += 1

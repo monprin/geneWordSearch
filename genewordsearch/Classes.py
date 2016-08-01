@@ -79,6 +79,8 @@ class WordFreq:
 
 	def to_JSON_array(words):
 	# Helper function to correctly wrap the JSON objects in to a JSON array
+		if len(words) < 1:
+			return '[]'
 		wordsJSON = '['
 		for word in words[:-1]:
 			wordsJSON += word.to_JSON() + ','
